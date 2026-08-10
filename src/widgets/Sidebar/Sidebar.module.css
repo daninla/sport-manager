@@ -1,0 +1,6 @@
+.sidebar {
+  height: 100%;
+  width: 100%;
+  background-color: #ff4949; /* Поставил белый вместо chocolate, но можете вернуть любой */
+  padding: 16px;
+}

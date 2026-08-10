@@ -1,62 +1,50 @@
 import js from '@eslint/js';
-import importPlugin from 'eslint-plugin-import';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 
-export default defineConfig([
-  globalIgnores(['dist']),
-
+export default [
+  {
+    ignores: ['dist', 'node_modules'],
+  },
+  js.configs.recommended,
   {
     files: ['**/*.{js,jsx}'],
-
-    extends: [
-      js.configs.recommended,
-      react.configs.flat.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
-    ],
-
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+    },
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-
       globals: {
         ...globals.browser,
       },
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+      },
     },
-
     settings: {
       react: {
         version: 'detect',
       },
     },
-
-    plugins: {
-      react,
-      import: importPlugin,
-    },
-
     rules: {
-      'react/react-in-jsx-scope': 'off',
+      ...reactHooks.configs.recommended.rules,
+      'react/jsx-uses-vars': 'error',
       'react/jsx-uses-react': 'off',
-      'react/prop-types': 'off',
-      'react-refresh/only-export-components': 'warn',
-      'react-hooks/set-state-in-effect': 'warn',
-
-      'no-console': 'warn',
       'no-unused-vars': 'warn',
-      'no-redeclare': 'error',
-      'prefer-const': 'error',
+      'no-undef': 'error',
+      eqeqeq: 'error',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
       'no-var': 'error',
+      'object-shorthand': 'error',
+      'no-restricted-globals': ['error'],
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'off',
     },
   },
-]);
+];
