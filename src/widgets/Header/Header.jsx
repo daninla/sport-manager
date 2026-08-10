@@ -1,197 +1,136 @@
-import * as React from 'react';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import MoreIcon from '@mui/icons-material/MoreVert';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import SearchIcon from '@mui/icons-material/Search';
-import AppBar from '@mui/material/AppBar';
-import Badge from '@mui/material/Badge';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import InputBase from '@mui/material/InputBase';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import { alpha, styled } from '@mui/material/styles';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import { useState } from 'react';
+import {
+  AccountCircle,
+  Mail as MailIcon,
+  MoreVert as MoreIcon,
+  Notifications as NotificationsIcon,
+  Search as SearchIcon,
+} from '@mui/icons-material';
+import {
+  AppBar,
+  Badge,
+  Box,
+  Container,
+  IconButton,
+  InputBase,
+  Menu,
+  MenuItem,
+  Toolbar,
+} from '@mui/material';
+import { alpha } from '@mui/material/styles';
 
 import sportIcon from './assets/icons/ping-pong.png';
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: theme.spacing(2),
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    width: 'auto',
-  },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '24ch',
-    },
-  },
-}));
-
 function Header() {
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const [anchorEl, setAnchorEl] = useState(null);
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
+  const isMenuOpen = Boolean(anchorEl);
+
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
   };
 
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
+  const handleMenuClose = () => {
+    setAnchorEl(null);
   };
-
-  const handleProfileClick = () => {};
-
-  const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileClick}>
-        <IconButton size="large" color="inherit">
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Container maxWidth="xl" disableGutters>
-          <Toolbar sx={{ px: { xs: 2, sm: 3 } }}>
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar sx={{ px: { xs: 2, sm: 3 }, gap: 2 }}>
+          {/* Logo */}
+          <Box
+            sx={{
+              display: { xs: 'none', sm: 'flex' },
+              alignItems: 'center',
+              gap: 1,
+              fontWeight: 'bold',
+            }}
+          >
+            Sport Manager
             <Box
+              component="img"
+              src={sportIcon}
+              alt="Sport Manager"
+              sx={{ width: 28, height: 28 }}
+            />
+          </Box>
+
+          {/* Search */}
+          <Box
+            sx={{
+              display: { xs: 'none', sm: 'flex' },
+              alignItems: 'center',
+              width: { sm: 200, md: 300 },
+              px: 1.5,
+              borderRadius: 1,
+              bgcolor: (theme) => alpha(theme.palette.common.white, 0.15),
+              '&:hover': {
+                bgcolor: (theme) => alpha(theme.palette.common.white, 0.25),
+              },
+            }}
+          >
+            <SearchIcon />
+
+            <InputBase
+              placeholder="Search…"
               sx={{
-                display: { xs: 'none', sm: 'flex' },
-                alignItems: 'center',
-                gap: 1.5,
-                mr: 3,
+                ml: 1,
+                flex: 1,
+                color: 'inherit',
               }}
-            >
-              <Typography variant="h6" noWrap component="div">
-                Sport Manager
-              </Typography>
-              <Box
-                component="img"
-                src={sportIcon}
-                alt="Sport Manager Logo"
-                sx={{ width: 28, height: 28, objectFit: 'contain' }}
-              />
-            </Box>
+            />
+          </Box>
 
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </Search>
+          <Box sx={{ flexGrow: 1 }} />
 
-            <Box sx={{ flexGrow: 1 }} />
+          {/* Desktop actions */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <IconButton color="inherit">
+              <Badge badgeContent={4} color="error">
+                <MailIcon />
+              </Badge>
+            </IconButton>
 
-            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
-              >
-                <Badge badgeContent={4} color="error">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                size="large"
-                aria-label="show 17 new notifications"
-                color="inherit"
-              >
-                <Badge badgeContent={17} color="error">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                onClick={handleProfileClick}
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
-            </Box>
+            <IconButton color="inherit">
+              <Badge badgeContent={17} color="error">
+                <NotificationsIcon />
+              </Badge>
+            </IconButton>
 
-            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-              <IconButton
-                size="large"
-                aria-label="show more"
-                aria-controls={mobileMenuId}
-                aria-haspopup="true"
-                onClick={handleMobileMenuOpen}
-                color="inherit"
-              >
-                <MoreIcon />
-              </IconButton>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-      {renderMobileMenu}
-    </Box>
+            <IconButton color="inherit">
+              <AccountCircle />
+            </IconButton>
+          </Box>
+
+          {/* Mobile menu */}
+          <IconButton
+            color="inherit"
+            sx={{ display: { xs: 'flex', md: 'none' } }}
+            onClick={handleMenuOpen}
+          >
+            <MoreIcon />
+          </IconButton>
+
+          <Menu anchorEl={anchorEl} open={isMenuOpen} onClose={handleMenuClose}>
+            <MenuItem onClick={handleMenuClose}>
+              <MailIcon sx={{ mr: 1 }} />
+              Messages
+            </MenuItem>
+
+            <MenuItem onClick={handleMenuClose}>
+              <NotificationsIcon sx={{ mr: 1 }} />
+              Notifications
+            </MenuItem>
+
+            <MenuItem onClick={handleMenuClose}>
+              <AccountCircle sx={{ mr: 1 }} />
+              Profile
+            </MenuItem>
+          </Menu>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
 
