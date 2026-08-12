@@ -1,3 +1,7 @@
 {
-    
+  "players": [
+    { "id": 0, "name": "Danila" },
+    { "id": 1, "name": "Vladislav" },
+    { "id": 2, "name": "Oleg" }
+  ]
 }
