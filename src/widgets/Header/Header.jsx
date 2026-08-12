@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router';
 import {
   AccountCircle,
   Mail as MailIcon,
@@ -16,6 +17,7 @@ import {
   Menu,
   MenuItem,
   Toolbar,
+  Typography,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 
@@ -35,19 +37,38 @@ function Header() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{
+        background: (theme) =>
+          `linear-gradient(90deg, ${theme.palette.primary.main} 20%, ${theme.palette.secondary.main} 90%)`,
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar sx={{ px: { xs: 2, sm: 3 }, gap: 2 }}>
           {/* Logo */}
           <Box
+            component={NavLink}
+            to="/"
             sx={{
               display: { xs: 'none', sm: 'flex' },
               alignItems: 'center',
               gap: 1,
               fontWeight: 'bold',
+              textDecoration: 'none',
             }}
           >
-            Sport Manager
+            <Typography
+              sx={{
+                fontWeight: 'bold',
+                color: 'white',
+                fontSize: 20,
+                textDecoration: 'none',
+                '&:hover': { color: '#c27f2e' },
+              }}
+            >
+              Sport Manager
+            </Typography>
             <Box
               component="img"
               src={sportIcon}
@@ -55,7 +76,6 @@ function Header() {
               sx={{ width: 28, height: 28 }}
             />
           </Box>
-
           {/* Search */}
           <Box
             sx={{

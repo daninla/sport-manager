@@ -1,17 +1,14 @@
-import Header from '@/widgets/Header/Header';
-import Sidebar from '@/widgets/Sidebar/Sidebar';
-
 import s from './DashboardPage.module.css';
 
 function DashboardPage() {
   return (
     <div className={s['app-layout']}>
-      <header className={s['app-header']}>
-        <Header />
-      </header>
-      <aside className={s['app-sidebar']}>
-        <Sidebar />
-      </aside>
+      <main className={s['app-main']}>
+        <section className={s['app-content']}>
+          <h1>Dashboard</h1>
+          <p>Welcome to the Dashboard!</p>
+        </section>
+      </main>
     </div>
   );
 }
