@@ -7,9 +7,11 @@
     "^react",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^(\\.\/|\\.\\.\/)+[a-z][\\d\\D]*(.js)?(?<!css|scss|sass)$",
+    "^@\\/[\\D\\d]*\/[a-z][A-Za-z0-9]*(\\.js)?(?<!\\.(css|scss|sass))$",
+    "^(\\.\\/|\\.\\.\\/)+[\\d\\D]*\\/[a-z][A-Za-z0-9]*(\\.js)?(?<!\\.(css|scss|sass))$",
     "",
-    "^(\\.\/|\\.\\.\/)+[A-Z][\\d\\D]*(.jsx)?(?<!css|scss|sass)$",
+    "^@\\/[\\D\\d]*\/[A-Z][A-Za-z0-9]*(\\.jsx)?(?<!\\.(css|scss|sass))$",
+    "^(\\.\\/|\\.\\.\\/)+[\\d\\D]*\\/[A-Z][A-Za-z0-9]*(\\.jsx)?(?<!\\.(css|scss|sass))$",
     "",
     "\\.(css|scss|sass)$",
     ""
