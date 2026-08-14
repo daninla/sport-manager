@@ -1,4 +1,4 @@
-import { useGetPlayersQuery } from '../../entities/player/api/playerApi';
+import { useGetPlayersQuery } from '../../../entities/player';
 
 function PlayersPage() {
   const { data: players, isLoading, isError } = useGetPlayersQuery();

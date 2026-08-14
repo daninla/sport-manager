@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router';
+import sportIcon from '../iconAssets/icons/ping-pong.png';
 import {
   AccountCircle,
   Mail as MailIcon,
@@ -20,8 +21,6 @@ import {
   Typography,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
-
-import sportIcon from './assets/icons/ping-pong.png';
 
 function Header() {
   const [anchorEl, setAnchorEl] = useState(null);

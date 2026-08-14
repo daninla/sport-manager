@@ -5,9 +5,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import App from './app/App.jsx';
-import { store } from './app/store.js';
+import { store } from './app/reduxStore.js';
 import { theme } from './shared/config/theme.js';
+
+import App from './app/App.jsx';
 
 import './index.css';
 

@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import { Box } from '@mui/material';
 
-import Header from '../../widgets/Header/Header';
-import Sidebar from '../../widgets/Sidebar/ui/Sidebar';
+import { Header } from '../../widgets/Header';
+import { Sidebar } from '../../widgets/Sidebar';
 
 function MainLayout() {
   return (

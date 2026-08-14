@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import DashboardPage from '../pages/DashboardPage/DashboardPage';
-import PlayersPage from '../pages/PlayersPage/PlayersPage';
-import TournamentsPage from '../pages/TournamentsPage/TournamentsPage';
+import { Dashboard } from '../pages/Dashboard';
+import { Players } from '../pages/Players';
+import { Tournaments } from '../pages/Tournaments';
 import MainLayout from './layouts/MainLayout';
 
 function App() {
@@ -10,9 +10,9 @@ function App() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/tournaments" element={<TournamentsPage />} />
-        <Route path="/players" element={<PlayersPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/tournaments" element={<Tournaments />} />
+        <Route path="/players" element={<Players />} />
       </Route>
     </Routes>
   );
