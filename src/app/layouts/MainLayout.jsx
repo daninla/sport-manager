@@ -15,6 +15,7 @@ function MainLayout() {
         <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
           <Outlet />
         </Box>
+
       </Box>
     </Box>
   );
