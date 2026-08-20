@@ -1,3 +1,6 @@
+import { AddPlayerBtn } from '@/features/add-player';
+import { Autocomplete, TextField } from '@mui/material';
+
 import { useGetPlayersQuery } from '../../../entities/player';
 
 function PlayersPage() {
@@ -8,9 +11,17 @@ function PlayersPage() {
 
   return (
     <>
-      {players.map((p) => (
-        <div key={p.id}>{p.name}</div>
-      ))}
+      <AddPlayerBtn />
+      <Autocomplete
+        freeSolo
+        options={players.map(({ name }) => name)}
+        sx={{
+          maxWidth: '50%',
+          margin:'1em 2em'
+        }}
+        renderInput={(params) => <TextField {...params} label="Search" />}
+      />
+      {/* <PlayersTable /> */}
     </>
   );
 }
