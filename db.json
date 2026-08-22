@@ -2,174 +2,903 @@
   "players": [
     {
       "id": 0,
-      "fullName": "Danila",
+      "fullName": "Danila Kovalenko",
       "age": 18,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 72,
+      "club": "Dynamo Kyiv",
+      "sponsor": "Nike"
     },
     {
       "id": 1,
-      "fullName": "Vladislav",
-      "age": 18,
+      "fullName": "Vladislav Shevchenko",
+      "age": 21,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 81,
+      "club": "Shakhtar Donetsk",
+      "sponsor": "Puma"
     },
     {
       "id": 2,
-      "fullName": "Oleg",
-      "age": 18,
+      "fullName": "Oleg Boyko",
+      "age": 24,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 68,
+      "club": "Polissya",
+      "sponsor": "Adidas"
     },
     {
       "id": 3,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Nikita Kravchenko",
+      "age": 19,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 65,
+      "club": "Rukh Lviv",
+      "sponsor": "New Balance"
     },
     {
       "id": 4,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Oleksandr Bondarenko",
+      "age": 26,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 85,
+      "club": "Arsenal",
+      "sponsor": "Adidas"
     },
     {
       "id": 5,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Andriy Tkachenko",
+      "age": 22,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 78,
+      "club": "Benfica",
+      "sponsor": "Nike"
     },
     {
       "id": 6,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Artem Kovalchuk",
+      "age": 27,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 84,
+      "club": "Girona",
+      "sponsor": "Puma"
     },
     {
       "id": 7,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Maxim Melnyk",
+      "age": 20,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 70,
+      "club": "Kryvbas",
+      "sponsor": "Nike"
     },
     {
       "id": 8,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Bogdan Polishchuk",
+      "age": 23,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 74,
+      "club": "Vorskla",
+      "sponsor": "Under Armour"
     },
     {
       "id": 9,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Dmytro Moroz",
+      "age": 25,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 77,
+      "club": "Zorya Luhansk",
+      "sponsor": "Adidas"
     },
     {
       "id": 10,
-      "fullName": "Nikita",
+      "fullName": "Ivan Savchenko",
       "age": 18,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 63,
+      "club": "Dynamo Kyiv",
+      "sponsor": "Nike"
     },
     {
       "id": 11,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Pavlo Rudenko",
+      "age": 29,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 79,
+      "club": "Everton",
+      "sponsor": "Hummel"
     },
     {
       "id": 12,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Taras Lysenko",
+      "age": 21,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 69,
+      "club": "Karpaty Lviv",
+      "sponsor": "Joma"
     },
     {
       "id": 13,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Mykhailo Marchenko",
+      "age": 23,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 86,
+      "club": "Chelsea",
+      "sponsor": "Nike"
     },
     {
       "id": 14,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Yaroslav Klymenko",
+      "age": 28,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 75,
+      "club": "Shakhtar Donetsk",
+      "sponsor": "Puma"
     },
     {
       "id": 15,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Roman Pavlenko",
+      "age": 20,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 66,
+      "club": "Metalist 1925",
+      "sponsor": "Adidas"
     },
     {
       "id": 16,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Viktor Sydorenko",
+      "age": 26,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 82,
+      "club": "Real Madrid",
+      "sponsor": "Adidas"
     },
     {
       "id": 17,
-      "fullName": "Nikita",
-      "age": 18,
+      "fullName": "Serhiy Petrenko",
+      "age": 30,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 73,
+      "club": "Chernomorets",
+      "sponsor": "Nike"
     },
     {
       "id": 18,
-      "fullName": "Nikita",
+      "fullName": "Vitaliy Hrytsenko",
+      "age": 22,
+      "country": "Ukraine",
+      "rate": 71,
+      "club": "Kolos Kovalivka",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 19,
+      "fullName": "Denys Vasylenko",
+      "age": 19,
+      "country": "Ukraine",
+      "rate": 64,
+      "club": "Rukh Lviv",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 20,
+      "fullName": "Illya Yakovenko",
+      "age": 21,
+      "country": "Ukraine",
+      "rate": 76,
+      "club": "Bournemouth",
+      "sponsor": "Umbro"
+    },
+    {
+      "id": 21,
+      "fullName": "Rostyslav Panchenko",
+      "age": 25,
+      "country": "Ukraine",
+      "rate": 70,
+      "club": "Olexandriya",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 22,
+      "fullName": "Nazar Popovich",
       "age": 18,
       "country": "Ukraine",
-      "rate": 50,
-      "club": "",
-      "sponsor": ""
+      "rate": 61,
+      "club": "Dynamo Kyiv",
+      "sponsor": "New Balance"
+    },
+    {
+      "id": 23,
+      "fullName": "Stanislav Romanenko",
+      "age": 27,
+      "country": "Ukraine",
+      "rate": 78,
+      "club": "Polissya",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 24,
+      "fullName": "Yuriy Dudnik",
+      "age": 24,
+      "country": "Ukraine",
+      "rate": 67,
+      "club": "Obolon",
+      "sponsor": "Joma"
+    },
+    {
+      "id": 25,
+      "fullName": "Mateusz Kowalski",
+      "age": 22,
+      "country": "Poland",
+      "rate": 73,
+      "club": "Legia Warsaw",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 26,
+      "fullName": "Jakub Nowak",
+      "age": 20,
+      "country": "Poland",
+      "rate": 75,
+      "club": "Lech Poznan",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 27,
+      "fullName": "Piotr Wisniewski",
+      "age": 25,
+      "country": "Poland",
+      "rate": 80,
+      "club": "Juventus",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 28,
+      "fullName": "Kacper Wojcik",
+      "age": 19,
+      "country": "Poland",
+      "rate": 68,
+      "club": "Rakow",
+      "sponsor": "4F"
+    },
+    {
+      "id": 29,
+      "fullName": "Szymon Kamiński",
+      "age": 23,
+      "country": "Poland",
+      "rate": 77,
+      "club": "VfL Wolfsburg",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 30,
+      "fullName": "John Smith",
+      "age": 24,
+      "country": "England",
+      "rate": 83,
+      "club": "Aston Villa",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 31,
+      "fullName": "Harry Walker",
+      "age": 21,
+      "country": "England",
+      "rate": 79,
+      "club": "Newcastle United",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 32,
+      "fullName": "Jack Brown",
+      "age": 26,
+      "country": "England",
+      "rate": 87,
+      "club": "Manchester City",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 33,
+      "fullName": "Oliver Taylor",
+      "age": 20,
+      "country": "England",
+      "rate": 72,
+      "club": "Brighton",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 34,
+      "fullName": "George Wilson",
+      "age": 28,
+      "country": "England",
+      "rate": 81,
+      "club": "West Ham",
+      "sponsor": "Umbro"
+    },
+    {
+      "id": 35,
+      "fullName": "Carlos Garcia",
+      "age": 22,
+      "country": "Spain",
+      "rate": 80,
+      "club": "Valencia",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 36,
+      "fullName": "Alejandro Martinez",
+      "age": 25,
+      "country": "Spain",
+      "rate": 86,
+      "club": "Atletico Madrid",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 37,
+      "fullName": "Pablo Hernandez",
+      "age": 19,
+      "country": "Spain",
+      "rate": 74,
+      "club": "Villarreal",
+      "sponsor": "Joma"
+    },
+    {
+      "id": 38,
+      "fullName": "David Lopez",
+      "age": 27,
+      "country": "Spain",
+      "rate": 83,
+      "club": "Real Betis",
+      "sponsor": "Hummel"
+    },
+    {
+      "id": 39,
+      "fullName": "Adrian Gomez",
+      "age": 21,
+      "country": "Spain",
+      "rate": 76,
+      "club": "Sevilla",
+      "sponsor": "Castore"
+    },
+    {
+      "id": 40,
+      "fullName": "Lucas Silva",
+      "age": 23,
+      "country": "Brazil",
+      "rate": 79,
+      "club": "Flamengo",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 41,
+      "fullName": "Gabriel Santos",
+      "age": 20,
+      "country": "Brazil",
+      "rate": 82,
+      "club": "Palmeiras",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 42,
+      "fullName": "Matheus Oliveira",
+      "age": 22,
+      "country": "Brazil",
+      "rate": 77,
+      "club": "Shakhtar Donetsk",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 43,
+      "fullName": "Rodrigo Costa",
+      "age": 26,
+      "country": "Brazil",
+      "rate": 84,
+      "club": "Porto",
+      "sponsor": "New Balance"
+    },
+    {
+      "id": 44,
+      "fullName": "Enzo Fernandez",
+      "age": 21,
+      "country": "Argentina",
+      "rate": 81,
+      "club": "River Plate",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 45,
+      "fullName": "Julian Alvarez",
+      "age": 24,
+      "country": "Argentina",
+      "rate": 88,
+      "club": "Atletico Madrid",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 46,
+      "fullName": "Marco Rossi",
+      "age": 23,
+      "country": "Italy",
+      "rate": 76,
+      "club": "Fiorentina",
+      "sponsor": "Kappa"
+    },
+    {
+      "id": 47,
+      "fullName": "Luca Ferrari",
+      "age": 25,
+      "country": "Italy",
+      "rate": 82,
+      "club": "Lazio",
+      "sponsor": "Mizuno"
+    },
+    {
+      "id": 48,
+      "fullName": "Matteo Bianchi",
+      "age": 20,
+      "country": "Italy",
+      "rate": 71,
+      "club": "Atalanta",
+      "sponsor": "Joma"
+    },
+    {
+      "id": 49,
+      "fullName": "Lukas Weber",
+      "age": 22,
+      "country": "Germany",
+      "rate": 78,
+      "club": "Bayer Leverkusen",
+      "sponsor": "Castore"
+    },
+    {
+      "id": 50,
+      "fullName": "Florian Schneider",
+      "age": 21,
+      "country": "Germany",
+      "rate": 83,
+      "club": "Borussia Dortmund",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 51,
+      "fullName": "Danila Fedorenko",
+      "age": 19,
+      "country": "Ukraine",
+      "rate": 66,
+      "club": "Dynamo Kyiv",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 52,
+      "fullName": "Vladislav Boiko",
+      "age": 23,
+      "country": "Ukraine",
+      "rate": 75,
+      "club": "Polissya",
+      "sponsor": "New Balance"
+    },
+    {
+      "id": 53,
+      "fullName": "Oleg Tymoshchuk",
+      "age": 27,
+      "country": "Ukraine",
+      "rate": 72,
+      "club": "Kryvbas",
+      "sponsor": "Joma"
+    },
+    {
+      "id": 54,
+      "fullName": "Nikita Semenov",
+      "age": 20,
+      "country": "Ukraine",
+      "rate": 69,
+      "club": "Shakhtar Donetsk",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 55,
+      "fullName": "Oleksandr Nazarenko",
+      "age": 24,
+      "country": "Ukraine",
+      "rate": 77,
+      "club": "Polissya",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 56,
+      "fullName": "Andriy Yarmolenko",
+      "age": 34,
+      "country": "Ukraine",
+      "rate": 76,
+      "club": "Dynamo Kyiv",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 57,
+      "fullName": "Artem Dovbyk",
+      "age": 27,
+      "country": "Ukraine",
+      "rate": 85,
+      "club": "Roma",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 58,
+      "fullName": "Maxim Talovierov",
+      "age": 24,
+      "country": "Ukraine",
+      "rate": 74,
+      "club": "LASK",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 59,
+      "fullName": "Bogdan Mykhaylichenko",
+      "age": 27,
+      "country": "Ukraine",
+      "rate": 73,
+      "club": "Polissya",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 60,
+      "fullName": "Dmytro Riznyk",
+      "age": 25,
+      "country": "Ukraine",
+      "rate": 78,
+      "club": "Shakhtar Donetsk",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 61,
+      "fullName": "Ivan Kalyuzhny",
+      "age": 26,
+      "country": "Ukraine",
+      "rate": 72,
+      "club": "Olexandriya",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 62,
+      "fullName": "Pavlo Isenko",
+      "age": 21,
+      "country": "Ukraine",
+      "rate": 74,
+      "club": "Vorskla",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 63,
+      "fullName": "Taras Stepanenko",
+      "age": 35,
+      "country": "Ukraine",
+      "rate": 75,
+      "club": "Shakhtar Donetsk",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 64,
+      "fullName": "Mykola Shaparenko",
+      "age": 25,
+      "country": "Ukraine",
+      "rate": 80,
+      "club": "Dynamo Kyiv",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 65,
+      "fullName": "Yaroslav Rakitskyi",
+      "age": 35,
+      "country": "Ukraine",
+      "rate": 72,
+      "club": "Free Agent",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 66,
+      "fullName": "Roman Yaremchuk",
+      "age": 28,
+      "country": "Ukraine",
+      "rate": 77,
+      "club": "Olympiacos",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 67,
+      "fullName": "Viktor Tsygankov",
+      "age": 26,
+      "country": "Ukraine",
+      "rate": 84,
+      "club": "Girona",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 68,
+      "fullName": "Serhiy Sydorchuk",
+      "age": 33,
+      "country": "Ukraine",
+      "rate": 73,
+      "club": "Westerlo",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 69,
+      "fullName": "Vitaliy Mykolenko",
+      "age": 25,
+      "country": "Ukraine",
+      "rate": 81,
+      "club": "Everton",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 70,
+      "fullName": "Denys Popov",
+      "age": 25,
+      "country": "Ukraine",
+      "rate": 75,
+      "club": "Dynamo Kyiv",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 71,
+      "fullName": "Illya Zabarnyi",
+      "age": 21,
+      "country": "Ukraine",
+      "rate": 83,
+      "club": "Bournemouth",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 72,
+      "fullName": "Rostyslav Yarchuk",
+      "age": 19,
+      "country": "Ukraine",
+      "rate": 62,
+      "club": "Metalist 1925",
+      "sponsor": "Joma"
+    },
+    {
+      "id": 73,
+      "fullName": "Nazar Voloshyn",
+      "age": 21,
+      "country": "Ukraine",
+      "rate": 75,
+      "club": "Dynamo Kyiv",
+      "sponsor": "New Balance"
+    },
+    {
+      "id": 74,
+      "fullName": "Stanislav Bilenkyi",
+      "age": 26,
+      "country": "Ukraine",
+      "rate": 68,
+      "club": "Maccabi Netanya",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 75,
+      "fullName": "Yuriy Klymchuk",
+      "age": 27,
+      "country": "Ukraine",
+      "rate": 73,
+      "club": "Rukh Lviv",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 76,
+      "fullName": "Jan Novak",
+      "age": 22,
+      "country": "Czech Republic",
+      "rate": 71,
+      "club": "Slavia Prague",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 77,
+      "fullName": "Tomas Svoboda",
+      "age": 24,
+      "country": "Czech Republic",
+      "rate": 74,
+      "club": "Sparta Prague",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 78,
+      "fullName": "David Dvorak",
+      "age": 20,
+      "country": "Czech Republic",
+      "rate": 67,
+      "club": "Viktoria Plzen",
+      "sponsor": "Macron"
+    },
+    {
+      "id": 79,
+      "fullName": "Stefan Popescu",
+      "age": 23,
+      "country": "Romania",
+      "rate": 70,
+      "club": "FCSB",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 80,
+      "fullName": "Andrei Ionescu",
+      "age": 25,
+      "country": "Romania",
+      "rate": 72,
+      "club": "CFR Cluj",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 81,
+      "fullName": "Erik Nagy",
+      "age": 21,
+      "country": "Hungary",
+      "rate": 69,
+      "club": "Ferencvaros",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 82,
+      "fullName": "Zoltan Varga",
+      "age": 26,
+      "country": "Hungary",
+      "rate": 73,
+      "club": "Fehervar",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 83,
+      "fullName": "Luka Horvat",
+      "age": 22,
+      "country": "Croatia",
+      "rate": 76,
+      "club": "Dinamo Zagreb",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 84,
+      "fullName": "Marko Kovacic",
+      "age": 20,
+      "country": "Croatia",
+      "rate": 74,
+      "club": "Hajduk Split",
+      "sponsor": "Macron"
+    },
+    {
+      "id": 85,
+      "fullName": "Nikola Lazic",
+      "age": 24,
+      "country": "Serbia",
+      "rate": 75,
+      "club": "Red Star Belgrade",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 86,
+      "fullName": "Dusan Petrovic",
+      "age": 23,
+      "country": "Serbia",
+      "rate": 77,
+      "club": "Partizan",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 87,
+      "fullName": "Danila Zubkov",
+      "age": 27,
+      "country": "Ukraine",
+      "rate": 81,
+      "club": "Shakhtar Donetsk",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 88,
+      "fullName": "Vladislav Vanat",
+      "age": 22,
+      "country": "Ukraine",
+      "rate": 78,
+      "club": "Dynamo Kyiv",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 89,
+      "fullName": "Oleg Ocheretko",
+      "age": 21,
+      "country": "Ukraine",
+      "rate": 72,
+      "club": "Karpaty Lviv",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 90,
+      "fullName": "Nikita Kravtsov",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 63,
+      "club": "Vorskla",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 91,
+      "fullName": "Oleksandr Karavaev",
+      "age": 32,
+      "country": "Ukraine",
+      "rate": 74,
+      "club": "Dynamo Kyiv",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 92,
+      "fullName": "Andriy Lunin",
+      "age": 25,
+      "country": "Ukraine",
+      "rate": 83,
+      "club": "Real Madrid",
+      "sponsor": "Adidas"
+    },
+    {
+      "id": 93,
+      "fullName": "Artem Bondarenko",
+      "age": 23,
+      "country": "Ukraine",
+      "rate": 77,
+      "club": "Shakhtar Donetsk",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 94,
+      "fullName": "Maxim Braharu",
+      "age": 22,
+      "country": "Ukraine",
+      "rate": 73,
+      "club": "Dynamo Kyiv",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 95,
+      "fullName": "Bogdan Lednev",
+      "age": 26,
+      "country": "Ukraine",
+      "rate": 71,
+      "club": "Polissya",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 96,
+      "fullName": "Dmytro Kryskiv",
+      "age": 23,
+      "country": "Ukraine",
+      "rate": 77,
+      "club": "Shakhtar Donetsk",
+      "sponsor": "Puma"
+    },
+    {
+      "id": 97,
+      "fullName": "Ivan Petryak",
+      "age": 30,
+      "country": "Ukraine",
+      "rate": 70,
+      "club": "Chornomorets",
+      "sponsor": "Nike"
+    },
+    {
+      "id": 98,
+      "fullName": "Pavlo Polehenko",
+      "age": 29,
+      "country": "Ukraine",
+      "rate": 69,
+      "club": "Karpaty Lviv",
+      "sponsor": "Joma"
+    },
+    {
+      "id": 99,
+      "fullName": "Taras Mikavskyi",
+      "age": 19,
+      "country": "Ukraine",
+      "rate": 64,
+      "club": "Rukh Lviv",
+      "sponsor": "Puma"
     }
   ]
 }
