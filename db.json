@@ -1,7 +1,175 @@
 {
   "players": [
-    { "id": 0, "name": "Danila" },
-    { "id": 1, "name": "Vladislav" },
-    { "id": 2, "name": "Oleg" }
+    {
+      "id": 0,
+      "fullName": "Danila",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 1,
+      "fullName": "Vladislav",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 2,
+      "fullName": "Oleg",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 3,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 4,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 5,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 6,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 7,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 8,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 9,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 10,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 11,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 12,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 13,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 14,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 15,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 16,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 17,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    },
+    {
+      "id": 18,
+      "fullName": "Nikita",
+      "age": 18,
+      "country": "Ukraine",
+      "rate": 50,
+      "club": "",
+      "sponsor": ""
+    }
   ]
 }

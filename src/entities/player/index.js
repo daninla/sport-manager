@@ -1,8 +1,1 @@
-export {
-  playerApi,
-  useGetPlayersQuery,
-  useGetPlayerByIdQuery,
-  useCreatePlayerMutation,
-  useUpdatePlayerMutation,
-  useDeletePlayerMutation,
-} from './api/playerApi';
+export * from './api/playerApi';
