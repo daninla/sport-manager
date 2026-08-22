@@ -63,7 +63,7 @@ function Header() {
                 color: 'white',
                 fontSize: 20,
                 textDecoration: 'none',
-                '&:hover': { color: '#c27f2e' },
+                '&:hover': { color: 'secondary.contrastText' },
               }}
             >
               Sport Manager

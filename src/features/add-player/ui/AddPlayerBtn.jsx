@@ -11,7 +11,7 @@ function AddPlayerBtn() {
         sx={{
           textTransform: 'none',
           fontSize: '1.2em',
-          '&:hover': { color: '#c27f2e' },
+          '&:hover': { color: 'secondary.contrastText' },
         }}
       >
         Add player

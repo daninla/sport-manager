@@ -37,8 +37,8 @@ function Sidebar() {
               borderBottom: '1px solid #be6767',
               textDecoration: 'none',
               color: 'inherit',
-              '&:hover': { color: '#c27f2e' },
-              '&.active': { color: '#c27f2e' },
+              '&:hover': { color: 'secondary.contrastText' },
+              '&.active': { color: 'secondary.contrastText' },
             }}
           >
             {item.label}
