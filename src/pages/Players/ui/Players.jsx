@@ -16,7 +16,7 @@ function Players() {
   if (isError) return <div>Ошибка загрузки</div>;
 
   return (
-    <Box sx={{ padding: '0 2em' }}>
+    <Box sx={{ padding: '1em 2em' }}>
       <AddPlayerBtn />
       <Autocomplete
         freeSolo
