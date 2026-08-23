@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -11,22 +11,29 @@ import TableRow from '@mui/material/TableRow';
 import { useGetPlayersQuery } from '@/entities/player';
 
 const columns = [
-  { id: 'fullName', label: 'Full name', minWidth: 150 },
+  { id: 'fullName', label: 'Full name', minWidth: 200 },
   {
     id: 'age',
     label: 'Age',
-    minWidth: 150,
+    minWidth: 100,
     format: (value) => value.toLocaleString('en-US'),
   },
-  { id: 'country', label: 'Country', minWidth: 150 },
+  { id: 'city', label: 'City', minWidth: 200 },
+  { id: 'status', label: 'Status', minWidth: 200 },
   {
-    id: 'rate',
-    label: 'Rate',
+    id: 'ukrRate',
+    label: 'Ukrainian rate',
     minWidth: 150,
     format: (value) => value.toLocaleString('en-US'),
   },
-  { id: 'club', label: 'Club', minWidth: 150 },
-  { id: 'sponsor', label: 'Sponsor', minWidth: 150 },
+  {
+    id: 'worldRate',
+    label: 'World rate',
+    minWidth: 150,
+    format: (value) => value.toLocaleString('en-US'),
+  },
+  { id: 'club', label: 'Club', minWidth: 200 },
+  { id: 'notes', label: 'Notes', minWidth: 200 },
 ];
 
 function PlayersTable({ value }) {
@@ -34,6 +41,14 @@ function PlayersTable({ value }) {
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
   const { data: players, isLoading, isError } = useGetPlayersQuery();
+
+  useEffect(() => {
+    setPage(0); // eslint-disable-line react-hooks/set-state-in-effect
+  }, [value.trim()]);
+
+  const filteredPlayers = players.filter((row) =>
+    row.fullName.toLowerCase().includes(value.toLowerCase()),
+  );
 
   if (isLoading) return 'Loading...';
   if (isError) return <div>Ошибка загрузки</div>;
@@ -65,12 +80,18 @@ function PlayersTable({ value }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {players
+            {filteredPlayers
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 if (row.fullName.toLowerCase().includes(value.toLowerCase()))
                   return (
-                    <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
+                    <TableRow
+                      hover
+                      role="checkbox"
+                      tabIndex={-1}
+                      key={row.id}
+                      sx={{ cursor: 'pointer' }}
+                    >
                       {columns.map((column) => {
                         const value = row[column.id];
                         return (
@@ -90,7 +111,7 @@ function PlayersTable({ value }) {
       <TablePagination
         rowsPerPageOptions={[10, 25, 100]}
         component="div"
-        count={players.length}
+        count={filteredPlayers.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
