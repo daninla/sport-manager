@@ -1,4 +1,6 @@
 import { useParams } from 'react-router';
+import { EditPlayerBtn } from '@/features/edit-player';
+import { Box } from '@mui/material';
 
 import { useGetPlayerByIdQuery } from '@/entities/player';
 
@@ -9,7 +11,12 @@ function Player() {
   if (isLoading) return 'Loading...';
   if (isError) return 'Fetch error';
 
-  return <>Player {id}</>;
+  return (
+    <Box sx={{ margin: '1em' }}>
+      <EditPlayerBtn id={id} />
+      <p>Player {id}</p>
+    </Box>
+  );
 }
 
 export default Player;

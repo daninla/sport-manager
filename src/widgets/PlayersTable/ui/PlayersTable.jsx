@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -9,7 +10,6 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 
 import { useGetPlayersQuery } from '@/entities/player';
-import { NavLink } from 'react-router';
 
 const columns = [
   { id: 'fullName', label: 'Full name', minWidth: 200 },
@@ -40,6 +40,8 @@ const columns = [
 function PlayersTable({ value }) {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
+
+  const navigate = useNavigate();
 
   const { data: players, isLoading, isError } = useGetPlayersQuery();
 
@@ -90,8 +92,7 @@ function PlayersTable({ value }) {
                   tabIndex={-1}
                   key={row.id}
                   sx={{ cursor: 'pointer', textDecoration: 'none' }}
-                  component={NavLink}
-                  to={row.id}
+                  onClick={() => navigate(row.id)}
                 >
                   {columns.map((column) => {
                     const value = row[column.id];
