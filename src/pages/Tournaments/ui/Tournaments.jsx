@@ -6,8 +6,10 @@ import AddIcon from '@mui/icons-material/Add';
 import PeopleIcon from '@mui/icons-material/People';
 import Button from '@mui/material/Button';
 import tennisIcon from "../../../widgets/Header/iconAssets/icons/ping-pong.png"
+import { useNavigate } from 'react-router';
 
 function TournamentsPage() {
+  const navigate = useNavigate();
   return (
     <>
       <Typography variant='h3' sx={{
@@ -21,7 +23,7 @@ function TournamentsPage() {
         display: "flex",
         justifyContent: "center",
       }}>
-        <Button variant="outlined" startIcon={<AddIcon />} >Add new Tournament</Button>
+        <Button variant="outlined" startIcon={<AddIcon />} onClick={() => navigate('/tournaments/add')} >Add new Tournament</Button>
       </Box>
 
       <Box sx={{
