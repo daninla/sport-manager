@@ -1,8 +1,8 @@
 export const globalMenu = [
-  { label: 'Турниры', path: '/tournaments' },
-  { label: 'Команды', path: '/teams' },
-  { label: 'Игроки', path: '/players' },
-  { label: 'Матчи', path: '/matches' },
+  { label: 'Турніри', path: '/tournaments' },
+  { label: 'Команди', path: '/teams' },
+  { label: 'Гравці', path: '/players' },
+  { label: 'Матчі', path: '/matches' },
   { label: 'Статистика', path: '/stats' },
-  { label: 'Настройки', path: '/settings' },
+  { label: 'Налаштування', path: '/settings' },
 ];
