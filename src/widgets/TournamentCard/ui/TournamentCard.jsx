@@ -1,0 +1,265 @@
+import tennisIcon from '../../Header/iconAssets/icons/ping-pong.png';
+import PeopleIcon from '@mui/icons-material/People';
+import { Box, Button, LinearProgress, Typography } from '@mui/material';
+
+import { useGetTournamentByIdQuery } from '@/entities/tournament/api/tournamentApi';
+
+function TournamentCard({ tournament, onOpen }) {
+  const { data } = useGetTournamentByIdQuery(tournament.id);
+  const matches = data?.matches || [];
+
+  return (
+    <Box
+      onClick={() => onOpen(tournament.id)}
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '10px',
+        backgroundColor: 'black',
+        pt: '15px',
+        px: '20px',
+        width: { xs: '300px' },
+        height: { xs: '400px' },
+        cursor: 'pointer',
+        transition: 'transform 0.2s ease',
+        '&:hover': {
+          transform: 'translateY(-2px)',
+        },
+      }}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '60px',
+          height: '25px',
+          backgroundColor: 'red',
+          borderRadius: '5px',
+        }}
+      >
+        <Box
+          sx={{
+            height: '8px',
+            width: '8px',
+            borderRadius: '50%',
+            backgroundColor: 'white',
+          }}
+        ></Box>
+        <Box
+          sx={{
+            pl: '5px',
+            color: 'white',
+          }}
+        >
+          LIVE
+        </Box>
+      </Box>
+
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+        }}
+      >
+        <Box
+          component="img"
+          src={tennisIcon}
+          sx={{
+            width: '20px',
+            height: '20px',
+          }}
+        ></Box>
+        <Box>
+          <Typography
+            type="h5"
+            sx={{
+              color: 'white',
+            }}
+          >
+            "{tournament.name}"
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '5px',
+        }}
+      >
+        <Typography
+          type="h5"
+          sx={{
+            color: 'white',
+          }}
+        >
+          "{tournament.bracketFormat}"
+        </Typography>
+        <Box
+          sx={{
+            height: '4px',
+            width: '4px',
+            borderRadius: '50%',
+            backgroundColor: 'white',
+          }}
+        ></Box>
+        <Typography
+          type="h5"
+          sx={{
+            color: 'white',
+          }}
+        >
+          "{tournament.matchFormat}"
+        </Typography>
+      </Box>
+
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        {matches.slice(-2).map((match, index) => (
+          <Box
+            key={`${tournament.id}-match-${index}`}
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              height: '100px',
+              width: '90%',
+              border: '0.5px solid #4b4e52',
+              borderRadius: index === 0 ? '5px 5px 0px 0px' : '0px 0px 5px 5px',
+            }}
+          >
+            <Box
+              sx={{
+                margin: '5px',
+                alignSelf: 'flex-start',
+              }}
+            >
+              <Typography
+                type="h5"
+                sx={{
+                  color: 'white',
+                }}
+              >
+                Match {index}
+              </Typography>
+            </Box>
+
+            <Box
+              sx={{
+                display: 'flex',
+                width: '70%',
+                height: '30px',
+                justifyContent: 'space-between',
+              }}
+            >
+              <Typography
+                type="body1"
+                sx={{
+                  color: 'white',
+                }}
+              >
+                {match.player1}
+              </Typography>
+              <Typography
+                type="body1"
+                sx={{
+                  color: 'white',
+                }}
+              >
+                vs
+              </Typography>
+              <Typography
+                type="body1"
+                sx={{
+                  color: 'white',
+                }}
+              >
+                {match.player2}
+              </Typography>
+            </Box>
+
+            <Box>
+              <Typography
+                type="body1"
+                sx={{
+                  color: 'white',
+                }}
+              >
+                {match.score}
+              </Typography>
+            </Box>
+          </Box>
+        ))}
+      </Box>
+
+      <Box>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '5px',
+          }}
+        >
+          <PeopleIcon
+            sx={{
+              color: 'white',
+            }}
+          ></PeopleIcon>
+          <Typography
+            type="body1"
+            sx={{
+              color: 'white',
+            }}
+          >
+            {tournament.currentParticipants} / {tournament.maxParticipants}
+          </Typography>
+        </Box>
+
+        <LinearProgress
+          value={
+            (tournament.currentParticipants / tournament.maxParticipants) * 100
+          }
+          variant="determinate"
+          sx={{
+            backgroundColor: '#08214a',
+            '& .MuiLinearProgress-bar': {
+              backgroundColor: '#14b582',
+            },
+          }}
+        ></LinearProgress>
+      </Box>
+
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: 'green',
+            height: '20px',
+          }}
+          onClick={(event) => {
+            event.stopPropagation();
+            onOpen(tournament.id);
+          }}
+        >
+          More Details
+        </Button>
+      </Box>
+    </Box>
+  );
+}
+
+export default TournamentCard;
