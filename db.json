@@ -1650,5 +1650,67 @@
       "club": "Olympic TC",
       "notes": "Right-handed"
     }
+  ],
+  "tournaments": [
+    {
+      "id": "1",
+      "name": "Tournament 1",
+      "bracketFormat": "Single Elimination",
+      "matchFormat": "Best of 3",
+      "maxParticipants": 16,
+      "currentParticipants": 14,
+      "matches": [
+        { "player1": "Player 1", "player2": "Player 2", "score": "3-2" },
+        { "player1": "Player 3", "player2": "Player 4", "score": "1-0" }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Tournament 2",
+      "bracketFormat": "Double Elimination",
+      "matchFormat": "Best of 5",
+      "maxParticipants": 8,
+      "currentParticipants": 5,
+      "matches": [
+        { "player1": "Player 5", "player2": "Player 6", "score": "2-2" },
+        { "player1": "Player 7", "player2": "Player 8", "score": "0-3" }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Tournament 3",
+      "bracketFormat": "Swiss System",
+      "matchFormat": "Best of 7",
+      "maxParticipants": 16,
+      "currentParticipants": 10,
+      "matches": [
+        { "player1": "Player 9", "player2": "Player 10", "score": "3-1" },
+        { "player1": "Player 11", "player2": "Player 12", "score": "2-0" }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Tournament 4",
+      "bracketFormat": "Round Robin",
+      "matchFormat": "Best of 5",
+      "maxParticipants": 8,
+      "currentParticipants": 4,
+      "matches": [
+        { "player1": "Player 13", "player2": "Player 14", "score": "1-3" },
+        { "player1": "Player 15", "player2": "Player 16", "score": "3-0" }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Tournament 5",
+      "bracketFormat": "Mixed System",
+      "matchFormat": "Best of 3",
+      "maxParticipants": 32,
+      "currentParticipants": 15,
+      "matches": [
+        { "player1": "Player 17", "player2": "Player 18", "score": "0-2" },
+        { "player1": "Player 19", "player2": "Player 20", "score": "2-1" }
+      ]
+    }
   ]
 }

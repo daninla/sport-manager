@@ -5,8 +5,9 @@ import { globalMenu } from '../config/globalMenu';
 import { getTournamentMenu } from '../config/tournamentMenu';
 
 function Sidebar() {
-  const isTournamentContext = useMatch('/tournaments/:tournamentId/*');
+  const tournamentMatch = useMatch({ path: '/tournaments/:id/*', end: false });
   const { id } = useParams();
+  const isTournamentContext = Boolean(tournamentMatch && id);
 
   const items = isTournamentContext ? getTournamentMenu(id) : globalMenu;
 
