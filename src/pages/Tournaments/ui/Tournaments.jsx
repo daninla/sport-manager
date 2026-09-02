@@ -74,7 +74,7 @@ function TournamentsPage() {
           flexDirection: {
             xs: 'column',
           },
-          gridTemplateColumns: '300px 300px',
+          gridTemplateColumns: '300px 300px 300px',
           gridTemplateRows: '400px 400px',
           gap: '100px',
           mt: '50px',

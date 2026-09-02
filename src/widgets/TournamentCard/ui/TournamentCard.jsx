@@ -15,7 +15,7 @@ function TournamentCard({ tournament, onOpen }) {
         display: 'flex',
         flexDirection: 'column',
         gap: '10px',
-        backgroundColor: 'black',
+        backgroundColor: '#040b22',
         pt: '15px',
         px: '20px',
         width: { xs: '300px' },

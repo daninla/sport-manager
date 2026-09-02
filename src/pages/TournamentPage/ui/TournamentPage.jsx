@@ -1,21 +1,30 @@
 import { useParams } from 'react-router-dom';
-import {
-  Box,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import { useGetTournamentByIdQuery } from '@/entities/tournament/api/tournamentApi';
+
+import BaseButton from '@/shared/BaseButton/ui/BaseButton';
+import MatchesTable from '@/widgets/TableMatches/ui/TableMatches';
 
 function TournamentPage() {
   const { id } = useParams();
   const { data: tournament, isLoading, error } = useGetTournamentByIdQuery(id);
+  let status = '';
+  const tournamentStart = new Date(
+    `${tournament.date}T${tournament.timeStart}`,
+  );
+
+  const tournamentEnd = new Date(`${tournament.date}T${tournament.timeEnd}`);
+
+  const currentDate = new Date();
+
+  if (currentDate < tournamentStart) {
+    status = 'Upcoming';
+  } else if (currentDate <= tournamentEnd) {
+    status = 'Ongoing';
+  } else {
+    status = 'Completed';
+  }
 
   if (isLoading) {
     return (
@@ -43,51 +52,50 @@ function TournamentPage() {
 
   const matches = tournament.matches || [];
 
+  const playedMatches = matches.filter((match) => match.score !== '-');
+  const upcomingMatches = matches.filter((match) => match.score === '-');
+
   return (
     <Box sx={{ p: 4 }}>
+      <BaseButton text="Back to Tournaments" address="/tournaments" />
       <Typography variant="h4">{tournament.name}</Typography>
 
       <Box sx={{ mt: 3 }}>
         <Typography variant="h6">Details:</Typography>
         <Typography sx={{ mt: 1 }}>
-          Format: {tournament.bracketFormat}
+          <span style={{ fontWeight: 'bold' }}>Format:</span>
+          {tournament.bracketFormat}
         </Typography>
-        <Typography>Match Format: {tournament.matchFormat}</Typography>
         <Typography>
-          Participants: {tournament.currentParticipants}/
-          {tournament.maxParticipants}
+          <span style={{ fontWeight: 'bold' }}>Match Format:</span>
+          {tournament.matchFormat}
+        </Typography>
+        <Typography>
+          <span style={{ fontWeight: 'bold' }}>Participants:</span>
+          {tournament.currentParticipants}/{tournament.maxParticipants}
         </Typography>
       </Box>
 
       <Box sx={{ mt: 4 }}>
         <Typography variant="h6">Matches ({matches.length}):</Typography>
-        {matches.length > 0 ? (
-          <TableContainer component={Paper} sx={{ mt: 2 }}>
-            <Table>
-              <TableHead>
-                <TableRow sx={{ backgroundColor: '#f5f5f5' }}>
-                  <TableCell>#</TableCell>
-                  <TableCell>Player 1</TableCell>
-                  <TableCell align="center">Score</TableCell>
-                  <TableCell>Player 2</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {matches.map((match, index) => (
-                  <TableRow key={index}>
-                    <TableCell>{index + 1}</TableCell>
-                    <TableCell>{match.player1}</TableCell>
-                    <TableCell align="center">{match.score}</TableCell>
-                    <TableCell>{match.player2}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
+        <Typography variant="h6">Status: {status}</Typography>
+
+        {status === 'Ongoing' ? (
+          <>
+            <Typography variant="h6" sx={{ mt: 3 }}>
+              Played and ongoing matches
+            </Typography>
+
+            <MatchesTable matches={playedMatches} />
+
+            <Typography variant="h6" sx={{ mt: 4 }}>
+              Upcoming matches
+            </Typography>
+
+            <MatchesTable matches={upcomingMatches} />
+          </>
         ) : (
-          <Typography sx={{ mt: 2, color: 'text.secondary' }}>
-            No matches yet
-          </Typography>
+          <MatchesTable matches={matches} />
         )}
       </Box>
     </Box>
