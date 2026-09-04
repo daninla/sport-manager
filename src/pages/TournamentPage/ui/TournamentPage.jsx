@@ -1,31 +1,14 @@
 import { useParams } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
 
-import { useGetTournamentByIdQuery } from '@/entities/tournament/api/tournamentApi';
+import { useGetTournamentByIdQuery } from '@/entities/tournament';
 
-import BaseButton from '@/shared/BaseButton/ui/BaseButton';
-import MatchesTable from '@/widgets/TableMatches/ui/TableMatches';
+import BaseButton from '@/shared/ui/BaseButton/BaseButton.jsx';
+import MatchesTable from '@/widgets/TableMatches';
 
 function TournamentPage() {
   const { id } = useParams();
   const { data: tournament, isLoading, error } = useGetTournamentByIdQuery(id);
-  let status = '';
-  const tournamentStart = new Date(
-    `${tournament.date}T${tournament.timeStart}`,
-  );
-
-  const tournamentEnd = new Date(`${tournament.date}T${tournament.timeEnd}`);
-
-  const currentDate = new Date();
-
-  if (currentDate < tournamentStart) {
-    status = 'Upcoming';
-  } else if (currentDate <= tournamentEnd) {
-    status = 'Ongoing';
-  } else {
-    status = 'Completed';
-  }
-
   if (isLoading) {
     return (
       <Typography variant="h4" sx={{ p: 4 }}>
@@ -49,6 +32,18 @@ function TournamentPage() {
       </Typography>
     );
   }
+
+  const tournamentStart = new Date(
+    `${tournament.date}T${tournament.timeStart}`,
+  );
+  const tournamentEnd = new Date(`${tournament.date}T${tournament.timeEnd}`);
+  const currentDate = new Date();
+  const status =
+    currentDate < tournamentStart
+      ? 'Upcoming'
+      : currentDate <= tournamentEnd
+        ? 'Ongoing'
+        : 'Completed';
 
   const matches = tournament.matches || [];
 

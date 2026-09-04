@@ -1,12 +1,15 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { TournamentFilters } from '@/features/filter-tournaments';
 import AddIcon from '@mui/icons-material/Add';
 import { Box, Button, Typography } from '@mui/material';
 
-import { useGetTournamentsQuery } from '@/entities/tournament/api/tournamentApi';
+import { useGetTournamentsQuery } from '@/entities/tournament';
 
 import { TournamentCard } from '../../../widgets/TournamentCard';
 
 function TournamentsPage() {
+  const [filter, setFilter] = useState([]);
   const navigate = useNavigate();
   const {
     data: tournamentsList = [],
@@ -17,6 +20,30 @@ function TournamentsPage() {
   const handleOpenTournament = (tournamentId) => {
     navigate(`/tournaments/${tournamentId}`);
   };
+
+  const handleFilter = (f) => {
+    setFilter(f);
+  };
+
+  const filteredTournaments = tournamentsList.filter((tournament) => {
+    if (filter.length === 0) {
+      return true;
+    }
+    return filter.some((f) => {
+      switch (f) {
+        case 'single-elimination':
+          return tournament.bracketFormat === 'single-elimination';
+        case 'Swiss System':
+          return tournament.bracketFormat === 'Swiss System';
+        case 'Round Robin':
+          return tournament.bracketFormat === 'Round Robin';
+        case 'Mixed System':
+          return tournament.bracketFormat === 'Mixed System';
+        default:
+          return false;
+      }
+    });
+  });
 
   if (isLoading) {
     return (
@@ -38,9 +65,9 @@ function TournamentsPage() {
   }
 
   return (
-    <>
+    <div style={{ position: 'relative' }}>
       <Typography
-        variant="h3"
+        variant="h4"
         sx={{
           mt: '10px',
           ml: '10px',
@@ -48,7 +75,7 @@ function TournamentsPage() {
       >
         There are {tournamentsList.length} tournaments going on now
       </Typography>
-
+      <TournamentFilters handleFilterChange={handleFilter} />
       <Box
         sx={{
           mt: '30px',
@@ -82,7 +109,7 @@ function TournamentsPage() {
           alignItems: 'center',
         }}
       >
-        {tournamentsList.map((tournament) => (
+        {filteredTournaments.map((tournament) => (
           <TournamentCard
             key={tournament.id}
             tournament={tournament}
@@ -90,7 +117,7 @@ function TournamentsPage() {
           />
         ))}
       </Box>
-    </>
+    </div>
   );
 }
 

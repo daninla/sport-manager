@@ -5,7 +5,7 @@ import { PlayerForm } from '@/pages/PlayerForm';
 import { Dashboard } from '../pages/Dashboard';
 import { Players } from '../pages/Players';
 import { TournamentForm } from '../pages/TournamentForm';
-import TournamentPage from '../pages/TournamentPage/ui/TournamentPage';
+import TournamentPage from '../pages/TournamentPage';
 import { Tournaments } from '../pages/Tournaments';
 import MainLayout from './layouts/MainLayout';
 

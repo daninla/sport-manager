@@ -1653,7 +1653,7 @@
   ],
   "tournaments": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Kyiv Open Championship",
       "date": "2026-09-10",
       "timeStart": "14:00",
@@ -1693,7 +1693,7 @@
     },
 
     {
-      "id": "2",
+      "id": 2,
       "name": "Lviv Masters",
       "date": "2026-09-02",
       "timeStart": "16:00",
@@ -1739,7 +1739,7 @@
     },
 
     {
-      "id": "3",
+      "id": 3,
       "name": "Odesa Summer Cup",
       "date": "2026-06-30",
       "timeStart": "14:00",
@@ -1773,7 +1773,7 @@
     },
 
     {
-      "id": "4",
+      "id": 4,
       "name": "Kharkiv Club League",
       "date": "2026-07-15",
       "timeStart": "12:00",
@@ -1813,7 +1813,7 @@
     },
 
     {
-      "id": "5",
+      "id": 5,
       "name": "Dnipro Grand Prix",
       "date": "2026-08-01",
       "timeStart": "15:00",
@@ -1824,6 +1824,7 @@
       "currentParticipants": 24,
       "players": [39, 40, 41, 42, 43, 44, 45, 46],
       "tables": 8,
+      "type": "",
       "matches": [
         {
           "player1": "Player 39",
@@ -1846,7 +1847,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Zaporizhzhia Championship",
       "date": "2026-09-02",
       "timeStart": "15:00",

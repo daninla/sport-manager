@@ -43,7 +43,7 @@ function PlayersTable({ value }) {
 
   const navigate = useNavigate();
 
-  const { data: players, isLoading, isError } = useGetPlayersQuery();
+  const { data: players = [], isLoading, isError } = useGetPlayersQuery();
 
   useEffect(() => {
     setPage(0); // eslint-disable-line react-hooks/set-state-in-effect

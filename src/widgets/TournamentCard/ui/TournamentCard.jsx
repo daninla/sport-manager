@@ -2,7 +2,7 @@ import tennisIcon from '../../Header/iconAssets/icons/ping-pong.png';
 import PeopleIcon from '@mui/icons-material/People';
 import { Box, Button, LinearProgress, Typography } from '@mui/material';
 
-import { useGetTournamentByIdQuery } from '@/entities/tournament/api/tournamentApi';
+import { useGetTournamentByIdQuery } from '@/entities/tournament';
 
 function TournamentCard({ tournament, onOpen }) {
   const { data } = useGetTournamentByIdQuery(tournament.id);

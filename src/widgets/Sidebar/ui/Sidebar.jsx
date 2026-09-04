@@ -15,7 +15,7 @@ function Sidebar() {
     <Box
       sx={{
         color: 'white',
-        backgroundColor: 'primary.main',
+        backgroundColor: 'secondary.main',
         height: '100%',
         width: '100%',
       }}

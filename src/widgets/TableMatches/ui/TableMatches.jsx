@@ -10,7 +10,7 @@ import {
 
 function MatchesTable({ matches }) {
   return (
-    <TableContainer component={Paper} sx={{ mt: 2, width: '70%' }}>
+    <TableContainer component={Paper} sx={{ mt: 2, width: '50%' }}>
       <Table>
         <TableHead>
           <TableRow sx={{ backgroundColor: '#fda65f' }}>
