@@ -1,26 +1,23 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router';
-import sportIcon from '../iconAssets/icons/ping-pong.png';
 import {
   AccountCircle,
   Mail as MailIcon,
   MoreVert as MoreIcon,
   Notifications as NotificationsIcon,
-  Search as SearchIcon,
 } from '@mui/icons-material';
+import SportsTennisIcon from '@mui/icons-material/SportsTennis';
 import {
   AppBar,
   Badge,
   Box,
   Container,
   IconButton,
-  InputBase,
   Menu,
   MenuItem,
   Toolbar,
   Typography,
 } from '@mui/material';
-import { alpha } from '@mui/material/styles';
 
 function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -68,38 +65,9 @@ function Header() {
             >
               Sport Manager
             </Typography>
-            <Box
-              component="img"
-              src={sportIcon}
-              alt="Sport Manager"
-              sx={{ width: 28, height: 28 }}
-            />
+            <SportsTennisIcon sx={{ color: '#00e676', fontSize: 24 }} />
           </Box>
           {/* Search */}
-          <Box
-            sx={{
-              display: { xs: 'none', sm: 'flex' },
-              alignItems: 'center',
-              width: { sm: 200, md: 300 },
-              px: 1.5,
-              borderRadius: 1,
-              bgcolor: (theme) => alpha(theme.palette.common.white, 0.15),
-              '&:hover': {
-                bgcolor: (theme) => alpha(theme.palette.common.white, 0.25),
-              },
-            }}
-          >
-            <SearchIcon />
-
-            <InputBase
-              placeholder="Search…"
-              sx={{
-                ml: 1,
-                flex: 1,
-                color: 'inherit',
-              }}
-            />
-          </Box>
 
           <Box sx={{ flexGrow: 1 }} />
 

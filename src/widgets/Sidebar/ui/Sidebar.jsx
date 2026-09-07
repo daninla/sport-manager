@@ -35,7 +35,7 @@ function Sidebar() {
               pb: 1,
               fontWeight: 'bold',
               fontSize: 18,
-              borderBottom: '1px solid #be6767',
+              borderBottom: '1px solid #1b5c2c',
               textDecoration: 'none',
               color: 'inherit',
               '&:hover': { color: 'secondary.contrastText' },

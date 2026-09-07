@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Box } from '@mui/material';
 
+import Footer from '../../widgets/Footer/Footer';
 import { Header } from '../../widgets/Header';
 import { Sidebar } from '../../widgets/Sidebar';
 
@@ -14,8 +15,8 @@ function MainLayout() {
         </Box>
         <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
           <Outlet />
+          <Footer />
         </Box>
-
       </Box>
     </Box>
   );

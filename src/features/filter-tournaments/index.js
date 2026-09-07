@@ -1,1 +1,2 @@
-export { default as TournamentFilters } from './ui/TournamentFilters';
+export { TournamentFilters } from './ui/TournamentFilters';
+export { useTournamentFilters } from './model/useTournamentFilters';

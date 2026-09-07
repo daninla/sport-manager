@@ -1,107 +1,60 @@
-import { useState } from 'react';
+import { Box, Checkbox, FormControlLabel, Typography } from '@mui/material';
 
-import Accordion from '@/shared/ui/Accordion/Accordion';
+const STATUSES = ['Upcoming', 'Ongoing', 'Completed'];
+const FORMATS = [
+  'Single Elimination',
+  'Double Elimination',
+  'Swiss System',
+  'Round Robin',
+  'Mixed System',
+];
 
-function TournamentFilters({ handleFilterChange }) {
-  const [activeFilters, setActiveFilters] = useState([]);
+export const TournamentFilters = ({ selectedFilters = [], onChange }) => {
+  const handleToggle = (value) => {
+    const nextFilters = selectedFilters.includes(value)
+      ? selectedFilters.filter((item) => item !== value)
+      : [...selectedFilters, value];
 
-  const handleFilterClick = (filterValue) => {
-    const newFilters = activeFilters.includes(filterValue)
-      ? activeFilters.filter((f) => f !== filterValue)
-      : [...activeFilters, filterValue];
-
-    setActiveFilters(newFilters);
-    handleFilterChange(newFilters);
+    if (onChange) {
+      onChange(nextFilters);
+    }
   };
 
   return (
-    <div
-      style={{
-        marginTop: '20px',
-        marginLeft: '10px',
-        border: '1px solid #ccc',
-        padding: '10px',
-        borderRadius: '5px',
-        width: '250px',
-        position: 'absolute',
-        zIndex: 99,
-      }}
+    <Box
+      sx={{ p: 2, border: '1px solid #ccc', borderRadius: 2, maxWidth: 250 }}
     >
-      <Accordion title="Tournament Status">
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '5px',
-          }}
-        >
-          <label>
-            <input
-              type="checkbox"
-              value="upcoming"
-              onChange={() => handleFilterClick('upcoming')}
+      <Typography variant="subtitle1" fontWeight="bold">
+        Tournament Status
+      </Typography>
+      {STATUSES.map((status) => (
+        <FormControlLabel
+          key={status}
+          control={
+            <Checkbox
+              checked={selectedFilters.includes(status)}
+              onChange={() => handleToggle(status)}
             />
-            Upcoming
-          </label>
+          }
+          label={status}
+        />
+      ))}
 
-          <label>
-            <input
-              type="checkbox"
-              value="ongoing"
-              onChange={() => handleFilterClick('ongoing')}
+      <Typography variant="subtitle1" fontWeight="bold" sx={{ mt: 2 }}>
+        Bracket Format
+      </Typography>
+      {FORMATS.map((format) => (
+        <FormControlLabel
+          key={format}
+          control={
+            <Checkbox
+              checked={selectedFilters.includes(format)}
+              onChange={() => handleToggle(format)}
             />
-            Ongoing
-          </label>
-
-          <label>
-            <input
-              type="checkbox"
-              value="completed"
-              onChange={() => handleFilterClick('completed')}
-            />
-            Completed
-          </label>
-        </div>
-      </Accordion>
-
-      <Accordion title="BracketFormat">
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '5px',
-          }}
-        >
-          <label>
-            <input
-              type="checkbox"
-              value="Round Robin"
-              onChange={() => handleFilterClick('Round Robin')}
-            />
-            Round Robin
-          </label>
-
-          <label>
-            <input
-              type="checkbox"
-              value="Swiss System"
-              onChange={() => handleFilterClick('Swiss System')}
-            />
-            Swiss System
-          </label>
-
-          <label>
-            <input
-              type="checkbox"
-              value="Mixed System"
-              onChange={() => handleFilterClick('Mixed System')}
-            />
-            Mixed System
-          </label>
-        </div>
-      </Accordion>
-    </div>
+          }
+          label={format}
+        />
+      ))}
+    </Box>
   );
-}
-
-export default TournamentFilters;
+};
