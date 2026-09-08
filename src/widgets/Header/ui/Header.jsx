@@ -63,7 +63,7 @@ function Header() {
                 '&:hover': { color: 'secondary.contrastText' },
               }}
             >
-              Sport Manager
+              SPORT MANAGER
             </Typography>
             <SportsTennisIcon sx={{ color: '#00e676', fontSize: 24 }} />
           </Box>

@@ -21,6 +21,8 @@ export const Footer = () => {
         color: '#8892b0',
         mt: 10,
         borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+        pt: 4,
+        pb: 4,
       }}
     >
       <Container maxWidth="lg">
