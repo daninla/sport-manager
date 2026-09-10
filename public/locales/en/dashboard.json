@@ -1,0 +1,46 @@
+{
+  "hello": "Welcome to Sport Manager",
+  "welcome": "Welcome to Sport Manager",
+  "platform": "Sport Manager Platform",
+  "description": "A professional ecosystem for hosting table tennis and lawn tennis tournaments. We simplify competition management—from creating player brackets to automatic rating calculation.",
+  "explore": "Explore All Tournaments",
+  "newsTitle": "Tennis News & Events",
+  "stats": {
+    "activeTournaments": "Active Tournaments",
+    "totalPlayers": "Total Players",
+    "matchesPlayed": "Matches Played",
+    "prizePool": "Prize Pool"
+  },
+  "features": {
+    "automaticBrackets": "Automatic tournament bracket generation",
+    "liveScores": "Live match and score management",
+    "playerStats": "Player statistics and rating tracking",
+    "filterSystem": "Flexible filtering and format management system"
+  },
+  "news": {
+    "1": {
+      "title": "World Table Tennis Cup 2026: Championship Highlights",
+      "date": "Sep 07, 2026",
+      "category": "Grand Tournament",
+      "description": "The world top-ranked table tennis players showed incredible speed and spin in the final match. Check out the bracket results and replay stats."
+    },
+    "2": {
+      "title": "Autumn Regional Open: Registration Record Broken",
+      "date": "Sep 04, 2026",
+      "category": "Local League",
+      "description": "Over 120 players signed up for the upcoming singles and doubles tournament. Tables are set and brackets will be generated tomorrow."
+    },
+    "3": {
+      "title": "Mastering the Pendulum Serve: Pro Tips & Tactics",
+      "date": "Aug 30, 2026",
+      "category": "Guides & Training",
+      "description": "Learn how to mask heavy sidespin serves and control match pace from top-level coaches and certified tournament referees."
+    },
+    "4": {
+      "title": "Mastering the Pendulum Serve: Pro Tips & Tactics",
+      "date": "Aug 30, 2026",
+      "category": "Guides & Training",
+      "description": "Learn how to mask heavy sidespin serves and control match pace from top-level coaches and certified tournament referees."
+    }
+  }
+}

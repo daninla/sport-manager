@@ -1,0 +1,14 @@
+{
+  "loading": "Loading tournament...",
+  "error": "Error loading tournament",
+  "notFound": "Tournament not found",
+  "back": "Back to Tournaments",
+  "details": "Details:",
+  "format": "Format:",
+  "matchFormat": "Match Format:",
+  "participants": "Participants:",
+  "matches": "Matches ({{count}}):",
+  "status": "Status:",
+  "playedMatches": "Played and ongoing matches",
+  "upcomingMatches": "Upcoming matches"
+}

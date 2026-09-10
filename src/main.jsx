@@ -8,6 +8,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { store } from './app/reduxStore.js';
 import { theme } from './shared/config/theme.js';
 
+import './i18n.js';
+
 import App from './app/App.jsx';
 
 import './index.css';

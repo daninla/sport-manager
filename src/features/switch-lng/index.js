@@ -1,0 +1,1 @@
+export { default as SwitchLng } from './ui/SwitchLng';

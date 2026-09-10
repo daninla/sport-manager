@@ -1,23 +1,39 @@
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { Typography, Box, Button } from '@mui/material';
+import {
+  TournamentFilters,
+  useTournamentFilters,
+} from '@/features/filter-tournaments';
 import AddIcon from '@mui/icons-material/Add';
+import { Box, Button, Typography } from '@mui/material';
 
 import { useGetTournamentsQuery } from '@/entities/tournament';
-import { TournamentFilters, useTournamentFilters } from '@/features/filter-tournaments';
+
 import { TournamentCard } from '@/widgets/TournamentCard';
 
 function TournamentsPage() {
   const navigate = useNavigate();
-  const { data: tournamentsList = [], isLoading, error } = useGetTournamentsQuery();
-  const { selectedFilters, setSelectedFilters, filteredTournaments } = useTournamentFilters(tournamentsList);
+  const { t } = useTranslation('tournaments');
+  const {
+    data: tournamentsList = [],
+    isLoading,
+    error,
+  } = useGetTournamentsQuery();
+  const { selectedFilters, setSelectedFilters, filteredTournaments } =
+    useTournamentFilters(tournamentsList);
 
-  if (isLoading) return <Typography variant="h3">Loading tournaments...</Typography>;
-  if (error) return <Typography variant="h3" color="error.main">Error loading tournaments</Typography>;
+  if (isLoading) return <Typography variant="h3">{t('loading')}</Typography>;
+  if (error)
+    return (
+      <Typography variant="h3" color="error.main">
+        {t('error')}
+      </Typography>
+    );
 
   return (
     <Box sx={{ position: 'relative', p: 2 }}>
       <Typography variant="h4" sx={{ mb: 2 }}>
-        There are {filteredTournaments.length} tournaments matching your filter
+        {t('matchCount', { count: filteredTournaments.length })}
       </Typography>
 
       <Box sx={{ display: 'flex', gap: 4, alignItems: 'flex-start' }}>
@@ -33,7 +49,7 @@ function TournamentsPage() {
               startIcon={<AddIcon />}
               onClick={() => navigate('/tournaments/add')}
             >
-              Add new Tournament
+              {t('addTournament')}
             </Button>
           </Box>
 

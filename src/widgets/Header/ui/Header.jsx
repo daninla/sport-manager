@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router';
 import {
   AccountCircle,
@@ -19,7 +20,10 @@ import {
   Typography,
 } from '@mui/material';
 
+import SwitchLng from '../../../features/switch-lng/ui/SwitchLng';
+
 function Header() {
+  const { t } = useTranslation('header');
   const [anchorEl, setAnchorEl] = useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
@@ -102,19 +106,20 @@ function Header() {
           <Menu anchorEl={anchorEl} open={isMenuOpen} onClose={handleMenuClose}>
             <MenuItem onClick={handleMenuClose}>
               <MailIcon sx={{ mr: 1 }} />
-              Messages
+              {t('messages')}
             </MenuItem>
 
             <MenuItem onClick={handleMenuClose}>
               <NotificationsIcon sx={{ mr: 1 }} />
-              Notifications
+              {t('notifications')}
             </MenuItem>
 
             <MenuItem onClick={handleMenuClose}>
               <AccountCircle sx={{ mr: 1 }} />
-              Profile
+              {t('profile')}
             </MenuItem>
           </Menu>
+          <SwitchLng />
         </Toolbar>
       </Container>
     </AppBar>

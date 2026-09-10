@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
 
@@ -7,12 +8,13 @@ import BaseButton from '@/shared/ui/BaseButton/BaseButton.jsx';
 import MatchesTable from '@/widgets/TableMatches';
 
 function TournamentPage() {
+  const { t } = useTranslation('tournamentPage');
   const { id } = useParams();
   const { data: tournament, isLoading, error } = useGetTournamentByIdQuery(id);
   if (isLoading) {
     return (
       <Typography variant="h4" sx={{ p: 4 }}>
-        Loading tournament...
+        {t('loading')}
       </Typography>
     );
   }
@@ -20,7 +22,7 @@ function TournamentPage() {
   if (error) {
     return (
       <Typography variant="h4" sx={{ p: 4, color: 'error.main' }}>
-        Error loading tournament
+        {t('error')}
       </Typography>
     );
   }
@@ -28,7 +30,7 @@ function TournamentPage() {
   if (!tournament) {
     return (
       <Typography variant="h4" sx={{ p: 4 }}>
-        Tournament not found
+        {t('notFound')}
       </Typography>
     );
   }
@@ -39,39 +41,43 @@ function TournamentPage() {
 
   return (
     <Box sx={{ p: 4 }}>
-      <BaseButton text="Back to Tournaments" address="/tournaments" />
+      <BaseButton text={t('back')} address="/tournaments" />
       <Typography variant="h4">{tournament.name}</Typography>
 
       <Box sx={{ mt: 3 }}>
-        <Typography variant="h6">Details:</Typography>
+        <Typography variant="h6">{t('details')}</Typography>
         <Typography sx={{ mt: 1 }}>
-          <span style={{ fontWeight: 'bold' }}>Format:</span>
+          <span style={{ fontWeight: 'bold' }}>{t('format')}</span>
           {tournament.bracketFormat}
         </Typography>
         <Typography>
-          <span style={{ fontWeight: 'bold' }}>Match Format:</span>
+          <span style={{ fontWeight: 'bold' }}>{t('matchFormat')}</span>
           {tournament.matchFormat}
         </Typography>
         <Typography>
-          <span style={{ fontWeight: 'bold' }}>Participants:</span>
+          <span style={{ fontWeight: 'bold' }}>{t('participants')}</span>
           {tournament.currentParticipants}/{tournament.maxParticipants}
         </Typography>
       </Box>
 
       <Box sx={{ mt: 4 }}>
-        <Typography variant="h6">Matches ({matches.length}):</Typography>
-        <Typography variant="h6">Status: {status}</Typography>
+        <Typography variant="h6">
+          {t('matches', { count: matches.length })}
+        </Typography>
+        <Typography variant="h6">
+          {t('status')} {status}
+        </Typography>
 
         {status === 'Ongoing' ? (
           <>
             <Typography variant="h6" sx={{ mt: 3 }}>
-              Played and ongoing matches
+              {t('playedMatches')}
             </Typography>
 
             <MatchesTable matches={playedMatches} />
 
             <Typography variant="h6" sx={{ mt: 4 }}>
-              Upcoming matches
+              {t('upcomingMatches')}
             </Typography>
 
             <MatchesTable matches={upcomingMatches} />

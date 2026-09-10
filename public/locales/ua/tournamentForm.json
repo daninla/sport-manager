@@ -1,0 +1,46 @@
+{
+  "heading": "Додати новий турнір",
+  "title": "Назва",
+  "ageCategory": "Вікова категорія",
+  "date": "Дата",
+  "time": "Час",
+  "location": "Місце",
+  "competitionType": "Тип змагання",
+  "format": "Формат",
+  "playersLimit": "Ліміт гравців",
+  "gamesToWin": "Кількість партій",
+  "pointsPerGame": "Очки за гру",
+  "typeTournament": "Тип турніру",
+  "regular": "Звичайний",
+  "rating": "Рейтинг",
+  "ratingCoefficient": "Коефіцієнт рейтингу",
+  "return": "Повернутися",
+  "reset": "Скинути",
+  "save": "Зберегти",
+  "ageCategories": [
+    { "value": "U12", "label": "До 12 років" },
+    { "value": "U14", "label": "До 14 років" },
+    { "value": "U16", "label": "До 16 років" },
+    { "value": "U18", "label": "До 18 років" },
+    { "value": "U21", "label": "До 21 року" },
+    { "value": "adult", "label": "Дорослі" },
+    { "value": "open", "label": "Відкрита категорія" }
+  ],
+  "competitionTypes": [
+    { "value": "single", "label": "Одиночний" },
+    { "value": "double", "label": "Парний" },
+    { "value": "team", "label": "Командний" }
+  ],
+  "tournamentFormats": [
+    { "value": "single_elimination", "label": "Олімпійська система" },
+    { "value": "double_elimination", "label": "Подвійне вибування" },
+    { "value": "swiss_system", "label": "Швейцарська система" },
+    { "value": "round_robin", "label": "Кожен з кожним" },
+    { "value": "mixed_system", "label": "Змішана система" }
+  ],
+  "gamesFormats": [
+    { "value": 3, "label": "До 3 партій" },
+    { "value": 5, "label": "До 5 партій" },
+    { "value": 7, "label": "До 7 партій" }
+  ]
+}

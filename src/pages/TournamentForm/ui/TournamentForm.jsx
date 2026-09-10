@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CancelIcon from '@mui/icons-material/Cancel';
@@ -24,48 +25,29 @@ const initialValues = {
   status: 'draft',
 };
 
-const ageCategories = [
-  { value: 'U12', label: 'Up to 12 years old' },
-  { value: 'U14', label: 'Up to 14 years old' },
-  { value: 'U16', label: 'Up to 16 years old' },
-  { value: 'U18', label: 'Up to 18 years old' },
-  { value: 'U21', label: 'Up to 21 years old' },
-  { value: 'adult', label: 'Adults' },
-  { value: 'open', label: 'Open category' },
-];
-
-const competitionTypes = [
-  { value: 'single', label: 'Single' },
-  { value: 'double', label: 'Double' },
-  { value: 'team', label: 'Team' },
-];
-
-const tournamentFormats = [
-  { value: 'single_elimination', label: 'Single Elimination' },
-  { value: 'double_elimination', label: 'Double Elimination' },
-  { value: 'swiss_system', label: 'Swiss System' },
-  { value: 'round_robin', label: 'Round Robin' },
-  { value: 'mixed_system', label: 'Mixed System' },
-];
-
-const gamesFormats = [
-  { value: 3, label: 'Up to 3 parties' },
-  { value: 5, label: 'Up to 5 parties' },
-  { value: 7, label: 'Up to 7 parties' },
-];
-
 function TournamentForm() {
   const navigate = useNavigate();
+  const { t } = useTranslation('tournamentForm');
+  const ageCategories = t('ageCategories', { returnObjects: true });
+  const competitionTypes = t('competitionTypes', { returnObjects: true });
+  const tournamentFormats = t('tournamentFormats', { returnObjects: true });
+  const gamesFormats = t('gamesFormats', { returnObjects: true });
+
   const renderForm = ({ values }) => {
     return (
       <Form>
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
-            <label htmlFor="title">Title</label>
-            <Field type="text" name="title" id="title" placeholder="Title" />
+            <label htmlFor="title">{t('title')}</label>
+            <Field
+              type="text"
+              name="title"
+              id="title"
+              placeholder={t('title')}
+            />
           </Box>
           <Box className={styles['field-container']}>
-            <label htmlFor="ageCategory">Age category</label>
+            <label htmlFor="ageCategory">{t('ageCategory')}</label>
             <Field name="ageCategory" id="ageCategory" as="select">
               {ageCategories.map((age) => (
                 <option key={age.value} value={age.value}>
@@ -77,26 +59,26 @@ function TournamentForm() {
         </Box>
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
-            <label htmlFor="date">Date</label>
+            <label htmlFor="date">{t('date')}</label>
             <Field type="date" name="date" id="date" />
           </Box>
           <Box className={styles['field-container']}>
-            <label htmlFor="time">Time</label>
+            <label htmlFor="time">{t('time')}</label>
             <Field type="time" name="time" id="time" />
           </Box>
         </Box>
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
-            <label htmlFor="location">Location</label>
+            <label htmlFor="location">{t('location')}</label>
             <Field
               type="text"
               name="location"
               id="location"
-              placeholder="Location"
+              placeholder={t('location')}
             />
           </Box>
           <Box className={styles['field-container']}>
-            <label htmlFor="type">Type of competition</label>
+            <label htmlFor="type">{t('competitionType')}</label>
             <Field name="tournamentType" id="type" as="select">
               {competitionTypes.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -108,7 +90,7 @@ function TournamentForm() {
         </Box>
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
-            <label htmlFor="format">Format</label>
+            <label htmlFor="format">{t('format')}</label>
             <Field name="format" id="format" as="select">
               {tournamentFormats.map((format) => (
                 <option key={format.value} value={format.value}>
@@ -118,13 +100,13 @@ function TournamentForm() {
             </Field>
           </Box>
           <Box className={styles['field-container']}>
-            <label htmlFor="playersLimit">Limit of players</label>
+            <label htmlFor="playersLimit">{t('playersLimit')}</label>
             <Field type="number" name="playersLimit" id="playersLimit" />
           </Box>
         </Box>
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
-            <label htmlFor="gamesToWin">Number of parties</label>
+            <label htmlFor="gamesToWin">{t('gamesToWin')}</label>
             <Field name="gamesToWin" id="gamesToWin" as="select">
               {gamesFormats.map((format) => (
                 <option key={format.value} value={format.value}>
@@ -134,27 +116,29 @@ function TournamentForm() {
             </Field>
           </Box>
           <Box className={styles['field-container']}>
-            <label htmlFor="pointsPerGame">Points for the game</label>
+            <label htmlFor="pointsPerGame">{t('pointsPerGame')}</label>
             <Field type="number" name="pointsPerGame" id="pointsPerGame" />
           </Box>
         </Box>
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
-            <label>Type tournament</label>
+            <label>{t('typeTournament')}</label>
             <Box role="group" className={styles.radios}>
               <label>
                 <Field type="radio" name="isRated" value="false" />
-                Regular
+                {t('regular')}
               </label>
               <label>
                 <Field type="radio" name="isRated" value="true" />
-                Rating
+                {t('rating')}
               </label>
             </Box>
           </Box>
           {values.isRated === 'true' && (
             <Box className={styles['field-container']}>
-              <label htmlFor="ratingCoefficient">Rating coefficient</label>
+              <label htmlFor="ratingCoefficient">
+                {t('ratingCoefficient')}
+              </label>
               <Field
                 type="number"
                 name="ratingCoefficient"
@@ -173,7 +157,7 @@ function TournamentForm() {
             startIcon={<ArrowBackIcon />}
             onClick={() => navigate(-1)}
           >
-            Return
+            {t('return')}
           </Button>
           <Button
             type="reset"
@@ -182,7 +166,7 @@ function TournamentForm() {
             size="large"
             startIcon={<CancelIcon />}
           >
-            Reset
+            {t('reset')}
           </Button>
           <Button
             type="submit"
@@ -191,7 +175,7 @@ function TournamentForm() {
             size="large"
             startIcon={<SaveIcon />}
           >
-            Save
+            {t('save')}
           </Button>
         </Stack>
       </Form>
@@ -218,7 +202,7 @@ function TournamentForm() {
         }}
       >
         <Typography variant="h4" align="center" sx={{ mb: '30px' }}>
-          Add New Tournament
+          {t('heading')}
         </Typography>
         <Formik initialValues={initialValues} enableReinitialize>
           {renderForm}

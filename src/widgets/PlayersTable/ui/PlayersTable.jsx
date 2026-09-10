@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -11,33 +12,33 @@ import TableRow from '@mui/material/TableRow';
 
 import { useGetPlayersQuery } from '@/entities/player';
 
-const columns = [
-  { id: 'fullName', label: 'Full name', minWidth: 200 },
-  {
-    id: 'age',
-    label: 'Age',
-    minWidth: 100,
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  { id: 'city', label: 'City', minWidth: 200 },
-  { id: 'status', label: 'Status', minWidth: 200 },
-  {
-    id: 'ukrRate',
-    label: 'Ukrainian rate',
-    minWidth: 150,
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'worldRate',
-    label: 'World rate',
-    minWidth: 150,
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  { id: 'club', label: 'Club', minWidth: 200 },
-  { id: 'notes', label: 'Notes', minWidth: 200 },
-];
-
 function PlayersTable({ value }) {
+  const { t } = useTranslation('players');
+  const columns = [
+    { id: 'fullName', label: t('columns.fullName'), minWidth: 200 },
+    {
+      id: 'age',
+      label: t('columns.age'),
+      minWidth: 100,
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    { id: 'city', label: t('columns.city'), minWidth: 200 },
+    { id: 'status', label: t('columns.status'), minWidth: 200 },
+    {
+      id: 'ukrRate',
+      label: t('columns.ukrRate'),
+      minWidth: 150,
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'worldRate',
+      label: t('columns.worldRate'),
+      minWidth: 150,
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    { id: 'club', label: t('columns.club'), minWidth: 200 },
+    { id: 'notes', label: t('columns.notes'), minWidth: 200 },
+  ];
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
@@ -53,8 +54,8 @@ function PlayersTable({ value }) {
     row.fullName.toLowerCase().includes(value.toLowerCase()),
   );
 
-  if (isLoading) return 'Loading...';
-  if (isError) return <div>Ошибка загрузки</div>;
+  if (isLoading) return t('loading');
+  if (isError) return <div>{t('error')}</div>;
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);

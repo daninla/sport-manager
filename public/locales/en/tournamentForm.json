@@ -1,0 +1,46 @@
+{
+  "heading": "Add New Tournament",
+  "title": "Title",
+  "ageCategory": "Age category",
+  "date": "Date",
+  "time": "Time",
+  "location": "Location",
+  "competitionType": "Type of competition",
+  "format": "Format",
+  "playersLimit": "Limit of players",
+  "gamesToWin": "Number of parties",
+  "pointsPerGame": "Points for the game",
+  "typeTournament": "Type tournament",
+  "regular": "Regular",
+  "rating": "Rating",
+  "ratingCoefficient": "Rating coefficient",
+  "return": "Return",
+  "reset": "Reset",
+  "save": "Save",
+  "ageCategories": [
+    { "value": "U12", "label": "Up to 12 years old" },
+    { "value": "U14", "label": "Up to 14 years old" },
+    { "value": "U16", "label": "Up to 16 years old" },
+    { "value": "U18", "label": "Up to 18 years old" },
+    { "value": "U21", "label": "Up to 21 years old" },
+    { "value": "adult", "label": "Adults" },
+    { "value": "open", "label": "Open category" }
+  ],
+  "competitionTypes": [
+    { "value": "single", "label": "Single" },
+    { "value": "double", "label": "Double" },
+    { "value": "team", "label": "Team" }
+  ],
+  "tournamentFormats": [
+    { "value": "single_elimination", "label": "Single Elimination" },
+    { "value": "double_elimination", "label": "Double Elimination" },
+    { "value": "swiss_system", "label": "Swiss System" },
+    { "value": "round_robin", "label": "Round Robin" },
+    { "value": "mixed_system", "label": "Mixed System" }
+  ],
+  "gamesFormats": [
+    { "value": 3, "label": "Up to 3 parties" },
+    { "value": 5, "label": "Up to 5 parties" },
+    { "value": 7, "label": "Up to 7 parties" }
+  ]
+}

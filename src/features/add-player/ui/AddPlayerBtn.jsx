@@ -1,7 +1,11 @@
+import { useTranslation } from 'react-i18next';
+
 import BaseButton from '@/shared/ui/BaseButton/BaseButton.jsx';
 
 function AddPlayerBtn() {
-  return <BaseButton text="Add player" address="/players/add" />;
+  const { t } = useTranslation('players');
+
+  return <BaseButton text={t('addPlayer')} address="/players/add" />;
 }
 
 export default AddPlayerBtn;
