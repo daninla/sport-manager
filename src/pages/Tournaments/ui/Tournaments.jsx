@@ -1,48 +1,18 @@
 import { useNavigate } from 'react-router-dom';
-import {
-  TournamentFilters,
-  useTournamentFilters,
-} from '@/features/filter-tournaments';
+import { Typography, Box, Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-import { Box, Button, Typography } from '@mui/material';
 
 import { useGetTournamentsQuery } from '@/entities/tournament';
-
+import { TournamentFilters, useTournamentFilters } from '@/features/filter-tournaments';
 import { TournamentCard } from '@/widgets/TournamentCard';
 
 function TournamentsPage() {
   const navigate = useNavigate();
-  const {
-    data: tournamentsList = [],
-    isLoading,
-    error,
-  } = useGetTournamentsQuery();
+  const { data: tournamentsList = [], isLoading, error } = useGetTournamentsQuery();
+  const { selectedFilters, setSelectedFilters, filteredTournaments } = useTournamentFilters(tournamentsList);
 
-  const { selectedFilters, setSelectedFilters, filteredTournaments } =
-    useTournamentFilters(tournamentsList);
-
-  const handleOpenTournament = (tournamentId) => {
-    navigate(`/tournaments/${tournamentId}`);
-  };
-
-  if (isLoading) {
-    return (
-      <Typography variant="h3" sx={{ mt: '10px', ml: '10px' }}>
-        Loading tournaments...
-      </Typography>
-    );
-  }
-
-  if (error) {
-    return (
-      <Typography
-        variant="h3"
-        sx={{ mt: '10px', ml: '10px', color: 'error.main' }}
-      >
-        Error loading tournaments
-      </Typography>
-    );
-  }
+  if (isLoading) return <Typography variant="h3">Loading tournaments...</Typography>;
+  if (error) return <Typography variant="h3" color="error.main">Error loading tournaments</Typography>;
 
   return (
     <Box sx={{ position: 'relative', p: 2 }}>
@@ -67,19 +37,13 @@ function TournamentsPage() {
             </Button>
           </Box>
 
-          <Box
-            sx={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '30px',
-              justifyContent: 'flex-start',
-            }}
-          >
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '30px' }}>
             {filteredTournaments.map((tournament) => (
               <TournamentCard
                 key={tournament.id}
                 tournament={tournament}
-                onOpen={handleOpenTournament}
+                onOpen={(id) => navigate(`/tournaments/${id}`)}
+                onEdit={(id) => navigate(`/tournaments/${id}/edit`)}
               />
             ))}
           </Box>

@@ -39,7 +39,6 @@ export const Footer = () => {
               spacing={1}
               sx={{ mb: 0.5 }}
             >
-              <SportsTennisIcon sx={{ color: '#00e676', fontSize: 24 }} />
               <Typography
                 variant="h6"
                 sx={{
@@ -51,6 +50,7 @@ export const Footer = () => {
               >
                 SPORT MANAGER
               </Typography>
+              <SportsTennisIcon sx={{ color: '#00e676', fontSize: 24 }} />
             </Stack>
             <Typography
               variant="body2"

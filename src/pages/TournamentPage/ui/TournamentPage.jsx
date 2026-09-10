@@ -32,23 +32,10 @@ function TournamentPage() {
       </Typography>
     );
   }
-
-  const tournamentStart = new Date(
-    `${tournament.date}T${tournament.timeStart}`,
-  );
-  const tournamentEnd = new Date(`${tournament.date}T${tournament.timeEnd}`);
-  const currentDate = new Date();
-  const status =
-    currentDate < tournamentStart
-      ? 'Upcoming'
-      : currentDate <= tournamentEnd
-        ? 'Ongoing'
-        : 'Completed';
-
   const matches = tournament.matches || [];
-
   const playedMatches = matches.filter((match) => match.score !== '-');
   const upcomingMatches = matches.filter((match) => match.score === '-');
+  const status = tournament.status;
 
   return (
     <Box sx={{ p: 4 }}>
