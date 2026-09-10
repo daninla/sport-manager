@@ -7,6 +7,7 @@ import { Players } from '../pages/Players';
 import { TournamentForm } from '../pages/TournamentForm';
 import TournamentPage from '../pages/TournamentPage';
 import { Tournaments } from '../pages/Tournaments';
+import { TournamentParticipants } from '../pages/TournamentParticipants'
 import MainLayout from './layouts/MainLayout';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/tournaments" element={<Tournaments />} />
         <Route path="/tournaments/add" element={<TournamentForm />} />
         <Route path="/tournaments/:id/*" element={<TournamentPage />} />
+        <Route path="/tournaments/:id/participants" element={<TournamentParticipants />} />
         <Route path="/players" element={<Players />} />
         <Route path="/players/add" element={<PlayerForm />} />
         <Route path="/players/:id" element={<Player />} />
