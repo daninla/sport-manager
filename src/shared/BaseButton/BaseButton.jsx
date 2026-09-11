@@ -1,6 +1,7 @@
-import { Button } from '@mui/material';
-import styles from '../styles/baseButton.module.css';
 import { NavLink } from 'react-router';
+import { Button } from '@mui/material';
+
+import styles from './baseButton.module.css';
 
 function BaseButton({ text, address }) {
   return (

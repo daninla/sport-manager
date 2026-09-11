@@ -13,7 +13,7 @@ function Players() {
   const { data: players, isLoading, isError } = useGetPlayersQuery();
 
   if (isLoading) return 'Loading...';
-  if (isError) return <div>Ошибка загрузки</div>;
+  if (isError) return 'Loading error!';
 
   return (
     <Box sx={{ padding: '1em 2em' }}>
@@ -40,7 +40,7 @@ function Players() {
         }}
         renderInput={(params) => <TextField {...params} label="Search" />}
       />
-      <PlayersTable value={inputValue} />
+      <PlayersTable value={inputValue} players={players}/>
     </Box>
   );
 }

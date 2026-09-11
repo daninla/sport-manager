@@ -9,7 +9,6 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 
-import { useGetPlayersQuery } from '@/entities/player';
 
 const columns = [
   { id: 'fullName', label: 'Full name', minWidth: 200 },
@@ -37,13 +36,11 @@ const columns = [
   { id: 'notes', label: 'Notes', minWidth: 200 },
 ];
 
-function PlayersTable({ value }) {
+function PlayersTable({ value, players }) {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
   const navigate = useNavigate();
-
-  const { data: players, isLoading, isError } = useGetPlayersQuery();
 
   useEffect(() => {
     setPage(0); // eslint-disable-line react-hooks/set-state-in-effect
@@ -52,9 +49,6 @@ function PlayersTable({ value }) {
   const filteredPlayers = players.filter((row) =>
     row.fullName.toLowerCase().includes(value.toLowerCase()),
   );
-
-  if (isLoading) return 'Loading...';
-  if (isError) return <div>Ошибка загрузки</div>;
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);

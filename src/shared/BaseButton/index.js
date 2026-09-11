@@ -1,1 +1,1 @@
-export { default as BaseButton } from './ui/BaseButton';
+export { default as BaseButton } from './BaseButton';

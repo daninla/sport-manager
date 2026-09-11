@@ -9,7 +9,7 @@
       "ukrRate": 64.2,
       "worldRate": 3100,
       "club": "Kyiv Tennis Academy",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Aggressive baseline", "Active footwork"]
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "ukrRate": 78.5,
       "worldRate": 1850,
       "club": "Lviv Lawn TC",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Counter-attacker", "Good stamina"]
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "ukrRate": 91.0,
       "worldRate": 950,
       "club": "Odesa Smash Club",
-      "notes": "Short pips forehand"
+      "notes": ["Short pips", "Forehand oriented", "Fast attacks"]
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "ukrRate": 42.0,
       "worldRate": 5400,
       "club": "Kharkiv Ace Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Baseline player", "Consistent rallies"]
     },
     {
       "id": 5,
@@ -53,7 +53,7 @@
       "ukrRate": 55.8,
       "worldRate": 0,
       "club": "Dnipro Net Masters",
-      "notes": "Long pips backhand"
+      "notes": ["Long pips", "Backhand defense", "Spin reversal"]
     },
     {
       "id": 6,
@@ -64,7 +64,7 @@
       "ukrRate": 68.3,
       "worldRate": 2400,
       "club": "Marina Tennis Club",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Tactical player", "Good placement"]
     },
     {
       "id": 7,
@@ -75,7 +75,7 @@
       "ukrRate": 52.1,
       "worldRate": 4100,
       "club": "VicCourt",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Quick wrist action", "Close-to-table"]
     },
     {
       "id": 8,
@@ -86,7 +86,7 @@
       "ukrRate": 31.4,
       "worldRate": 6200,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Aggressive style", "Fast learner"]
     },
     {
       "id": 9,
@@ -97,7 +97,7 @@
       "ukrRate": 18.5,
       "worldRate": 0,
       "club": "Campione TC",
-      "notes": "Anti-spin rubber"
+      "notes": ["Anti-spin rubber", "Spin manipulation", "Control player"]
     },
     {
       "id": 10,
@@ -108,7 +108,7 @@
       "ukrRate": 88.7,
       "worldRate": 1120,
       "club": "Warsaw Sports Center",
-      "notes": "Left-handed, Defender"
+      "notes": ["Left-handed", "Defender style", "Chopping specialist"]
     },
     {
       "id": 11,
@@ -119,7 +119,7 @@
       "ukrRate": 51.0,
       "worldRate": 4800,
       "club": "Odesa Smash Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Offensive style", "Powerful drives"]
     },
     {
       "id": 12,
@@ -130,7 +130,7 @@
       "ukrRate": 63.9,
       "worldRate": 3300,
       "club": "Kharkiv Ace Club",
-      "notes": "Short pips backhand"
+      "notes": ["Short pips", "Backhand speed", "Counter-hitting"]
     },
     {
       "id": 13,
@@ -141,7 +141,7 @@
       "ukrRate": 97.4,
       "worldRate": 780,
       "club": "Olympic TC",
-      "notes": "Aggressive looper"
+      "notes": ["Aggressive looper", "Topspin heavy", "Offensive style"]
     },
     {
       "id": 14,
@@ -152,7 +152,7 @@
       "ukrRate": 44.5,
       "worldRate": 0,
       "club": "Dnipro Net Masters",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Balanced play", "Reliable blocks"]
     },
     {
       "id": 15,
@@ -163,7 +163,7 @@
       "ukrRate": 62.1,
       "worldRate": 3900,
       "club": "Lviv Lawn TC",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Dynamic play", "Good service"]
     },
     {
       "id": 16,
@@ -174,7 +174,7 @@
       "ukrRate": 25.8,
       "worldRate": 7100,
       "club": "Kyiv Tennis Academy",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Developing player", "Steady strokes"]
     },
     {
       "id": 17,
@@ -185,7 +185,7 @@
       "ukrRate": 79.2,
       "worldRate": 2050,
       "club": "Prague Tennis Park",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Asian style", "Wrist flexibility"]
     },
     {
       "id": 18,
@@ -196,7 +196,7 @@
       "ukrRate": 15.0,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "None"
+      "notes": ["Standard setup", "No modifications", "General play"]
     },
     {
       "id": 19,
@@ -207,7 +207,7 @@
       "ukrRate": 48.6,
       "worldRate": 5100,
       "club": "VicCourt",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive play", "Deceptive spin"]
     },
     {
       "id": 20,
@@ -218,7 +218,7 @@
       "ukrRate": 84.3,
       "worldRate": 1450,
       "club": "Marina Tennis Club",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Offensive player", "Strong forehand"]
     },
     {
       "id": 21,
@@ -229,7 +229,7 @@
       "ukrRate": 59.4,
       "worldRate": 4200,
       "club": "Kharkiv Ace Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "All-round style", "Good mobility"]
     },
     {
       "id": 22,
@@ -240,7 +240,7 @@
       "ukrRate": 67.0,
       "worldRate": 2900,
       "club": "Lviv Lawn TC",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Fast blocking", "Flat hits"]
     },
     {
       "id": 23,
@@ -251,7 +251,7 @@
       "ukrRate": 73.8,
       "worldRate": 2300,
       "club": "Dnipro Net Masters",
-      "notes": "Defensive chopper"
+      "notes": ["Defensive chopper", "Heavy backspin", "Patient play"]
     },
     {
       "id": 24,
@@ -262,7 +262,7 @@
       "ukrRate": 92.5,
       "worldRate": 990,
       "club": "Rot-Weiss Berlin",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Tactical play", "Smart placement"]
     },
     {
       "id": 25,
@@ -273,7 +273,7 @@
       "ukrRate": 65.5,
       "worldRate": 3050,
       "club": "Campione TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Offensive drive", "Solid technique"]
     },
     {
       "id": 26,
@@ -284,7 +284,7 @@
       "ukrRate": 50.2,
       "worldRate": 0,
       "club": "Odesa Smash Club",
-      "notes": "Anti-spin"
+      "notes": ["Anti-spin", "Control game", "Patience tactic"]
     },
     {
       "id": 27,
@@ -295,7 +295,7 @@
       "ukrRate": 29.8,
       "worldRate": 6800,
       "club": "VicCourt",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Energetic play", "Fast footwork"]
     },
     {
       "id": 28,
@@ -306,7 +306,7 @@
       "ukrRate": 74.9,
       "worldRate": 2150,
       "club": "Kyiv Tennis Academy",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Smart tactics", "Versatile game"]
     },
     {
       "id": 29,
@@ -317,7 +317,7 @@
       "ukrRate": 89.1,
       "worldRate": 1280,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Power hitter", "Aggressive drives"]
     },
     {
       "id": 30,
@@ -328,7 +328,7 @@
       "ukrRate": 21.3,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "None"
+      "notes": ["Standard setup", "No modifications", "Recreational style"]
     },
     {
       "id": 31,
@@ -339,7 +339,7 @@
       "ukrRate": 62.0,
       "worldRate": 3750,
       "club": "Dnipro Net Masters",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Spin disruption", "Backhand specialist"]
     },
     {
       "id": 32,
@@ -350,7 +350,7 @@
       "ukrRate": 68.0,
       "worldRate": 2700,
       "club": "Marina Tennis Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Consistent rallies", "Solid defense"]
     },
     {
       "id": 33,
@@ -361,7 +361,7 @@
       "ukrRate": 47.3,
       "worldRate": 0,
       "club": "Odesa Smash Club",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Unconventional angles", "Active play"]
     },
     {
       "id": 34,
@@ -372,7 +372,7 @@
       "ukrRate": 94.6,
       "worldRate": 820,
       "club": "TC Paris",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "High precision", "Top-tier control"]
     },
     {
       "id": 35,
@@ -383,7 +383,7 @@
       "ukrRate": 53.4,
       "worldRate": 4900,
       "club": "Kharkiv Ace Club",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Quick response", "Close table"]
     },
     {
       "id": 36,
@@ -394,7 +394,7 @@
       "ukrRate": 38.9,
       "worldRate": 5900,
       "club": "VicCourt",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Agile movement", "Steady game"]
     },
     {
       "id": 37,
@@ -405,7 +405,7 @@
       "ukrRate": 64.8,
       "worldRate": 3150,
       "club": "Lviv Lawn TC",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Traditional style", "Fast attacks"]
     },
     {
       "id": 38,
@@ -416,7 +416,7 @@
       "ukrRate": 80.1,
       "worldRate": 1650,
       "club": "Olympic TC",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Creative shots", "Strong offense"]
     },
     {
       "id": 39,
@@ -427,7 +427,7 @@
       "ukrRate": 12.0,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive style", "Experienced player"]
     },
     {
       "id": 40,
@@ -438,7 +438,7 @@
       "ukrRate": 70.2,
       "worldRate": 2350,
       "club": "Warsaw Sports Center",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Balanced style", "Good stamina"]
     },
     {
       "id": 41,
@@ -449,7 +449,7 @@
       "ukrRate": 55.0,
       "worldRate": 4500,
       "club": "Odesa Smash Club",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Dynamic play", "Strong serves"]
     },
     {
       "id": 42,
@@ -460,7 +460,7 @@
       "ukrRate": 66.4,
       "worldRate": 2950,
       "club": "Kyiv Tennis Academy",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Aggressive blocks", "Fast tempo"]
     },
     {
       "id": 43,
@@ -471,7 +471,7 @@
       "ukrRate": 17.8,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Standard play", "Casual style"]
     },
     {
       "id": 44,
@@ -482,7 +482,7 @@
       "ukrRate": 45.1,
       "worldRate": 5050,
       "club": "Kharkiv Ace Club",
-      "notes": "Anti-spin"
+      "notes": ["Anti-spin", "Deceptive play", "Slow tempo"]
     },
     {
       "id": 45,
@@ -493,7 +493,7 @@
       "ukrRate": 61.2,
       "worldRate": 3850,
       "club": "VicCourt",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Solid basics", "Consistent attack"]
     },
     {
       "id": 46,
@@ -504,7 +504,7 @@
       "ukrRate": 86.0,
       "worldRate": 1380,
       "club": "Dnipro Net Masters",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Strategic player", "Precise placement"]
     },
     {
       "id": 47,
@@ -515,7 +515,7 @@
       "ukrRate": 51.8,
       "worldRate": 5200,
       "club": "Campione TC",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Wrist snap", "Fast counter"]
     },
     {
       "id": 48,
@@ -526,7 +526,7 @@
       "ukrRate": 62.5,
       "worldRate": 3600,
       "club": "Odesa Smash Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Reliable strokes", "Good focus"]
     },
     {
       "id": 49,
@@ -537,7 +537,7 @@
       "ukrRate": 49.0,
       "worldRate": 0,
       "club": "Prague Tennis Park",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive tactics", "Spin confusion"]
     },
     {
       "id": 50,
@@ -548,7 +548,7 @@
       "ukrRate": 76.3,
       "worldRate": 1950,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Aggressive style", "Fast footwork"]
     },
     {
       "id": 51,
@@ -559,7 +559,7 @@
       "ukrRate": 64.0,
       "worldRate": 3250,
       "club": "Kharkiv Ace Club",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Powerful drives", "Active movement"]
     },
     {
       "id": 52,
@@ -570,7 +570,7 @@
       "ukrRate": 28.2,
       "worldRate": 6500,
       "club": "Marina Tennis Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Junior player", "Steady progress"]
     },
     {
       "id": 53,
@@ -581,7 +581,7 @@
       "ukrRate": 67.5,
       "worldRate": 2800,
       "club": "Dnipro Net Masters",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Fast tempo", "Close table"]
     },
     {
       "id": 54,
@@ -592,7 +592,7 @@
       "ukrRate": 53.9,
       "worldRate": 4600,
       "club": "VicCourt",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Balanced game", "Good concentration"]
     },
     {
       "id": 55,
@@ -603,7 +603,7 @@
       "ukrRate": 16.2,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Unorthodox style", "Experienced"]
     },
     {
       "id": 56,
@@ -614,7 +614,7 @@
       "ukrRate": 79.8,
       "worldRate": 1720,
       "club": "Lviv Lawn TC",
-      "notes": "Defensive chopper"
+      "notes": ["Defensive chopper", "Heavy spin", "Resilient defense"]
     },
     {
       "id": 57,
@@ -625,7 +625,7 @@
       "ukrRate": 98.9,
       "worldRate": 650,
       "club": "Olympic TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Elite technique", "Powerful attack"]
     },
     {
       "id": 58,
@@ -636,7 +636,7 @@
       "ukrRate": 45.8,
       "worldRate": 0,
       "club": "Rot-Weiss Berlin",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Experienced defender", "Spin disruption"]
     },
     {
       "id": 59,
@@ -647,7 +647,7 @@
       "ukrRate": 49.5,
       "worldRate": 5450,
       "club": "Kharkiv Ace Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Standard technique", "Steady rallies"]
     },
     {
       "id": 60,
@@ -658,7 +658,7 @@
       "ukrRate": 65.9,
       "worldRate": 3000,
       "club": "Dnipro Net Masters",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Tactical control", "Smooth strokes"]
     },
     {
       "id": 61,
@@ -669,7 +669,7 @@
       "ukrRate": 60.5,
       "worldRate": 3950,
       "club": "Kyiv Tennis Academy",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Offensive player", "Strong drives"]
     },
     {
       "id": 62,
@@ -680,7 +680,7 @@
       "ukrRate": 39.8,
       "worldRate": 5800,
       "club": "Odesa Smash Club",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Agile wrist", "Quick attacks"]
     },
     {
       "id": 63,
@@ -691,7 +691,7 @@
       "ukrRate": 52.6,
       "worldRate": 5000,
       "club": "VicCourt",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Fast blocks", "Flat hits"]
     },
     {
       "id": 64,
@@ -702,7 +702,7 @@
       "ukrRate": 19.8,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Recreational player", "Steady style"]
     },
     {
       "id": 65,
@@ -713,7 +713,7 @@
       "ukrRate": 72.4,
       "worldRate": 2250,
       "club": "Warsaw Sports Center",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Aggressive style", "Good court coverage"]
     },
     {
       "id": 66,
@@ -724,7 +724,7 @@
       "ukrRate": 90.5,
       "worldRate": 1180,
       "club": "Wimbledon Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Top-tier skill", "Strategic player"]
     },
     {
       "id": 67,
@@ -735,7 +735,7 @@
       "ukrRate": 63.5,
       "worldRate": 3350,
       "club": "Campione TC",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive player", "Spin variation"]
     },
     {
       "id": 68,
@@ -746,7 +746,7 @@
       "ukrRate": 30.5,
       "worldRate": 6400,
       "club": "Kharkiv Ace Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Junior player", "Fast learner"]
     },
     {
       "id": 69,
@@ -757,7 +757,7 @@
       "ukrRate": 48.0,
       "worldRate": 0,
       "club": "Dnipro Net Masters",
-      "notes": "Anti-spin"
+      "notes": ["Anti-spin", "Control game", "Patient defense"]
     },
     {
       "id": 70,
@@ -768,7 +768,7 @@
       "ukrRate": 73.5,
       "worldRate": 2200,
       "club": "Odesa Smash Club",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Tactical play", "Strong control"]
     },
     {
       "id": 71,
@@ -779,7 +779,7 @@
       "ukrRate": 56.2,
       "worldRate": 4300,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Consistent play", "Good footwork"]
     },
     {
       "id": 72,
@@ -790,7 +790,7 @@
       "ukrRate": 82.0,
       "worldRate": 1520,
       "club": "TC Paris",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Fast attacks", "Close table"]
     },
     {
       "id": 73,
@@ -801,7 +801,7 @@
       "ukrRate": 96.1,
       "worldRate": 880,
       "club": "Olympic TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Elite player", "Powerful loops"]
     },
     {
       "id": 74,
@@ -812,7 +812,7 @@
       "ukrRate": 16.9,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "None"
+      "notes": ["Standard setup", "No modifications", "Recreational"]
     },
     {
       "id": 75,
@@ -823,7 +823,7 @@
       "ukrRate": 53.8,
       "worldRate": 4700,
       "club": "Kharkiv Ace Club",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Dynamic play", "Good angles"]
     },
     {
       "id": 76,
@@ -834,7 +834,7 @@
       "ukrRate": 68.9,
       "worldRate": 2600,
       "club": "Dnipro Net Masters",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Quick wrist action", "Active play"]
     },
     {
       "id": 77,
@@ -845,7 +845,7 @@
       "ukrRate": 61.5,
       "worldRate": 3800,
       "club": "Odesa Smash Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Solid basics", "Reliable strokes"]
     },
     {
       "id": 78,
@@ -856,7 +856,7 @@
       "ukrRate": 42.8,
       "worldRate": 0,
       "club": "Prague Tennis Park",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive play", "Spin reversal"]
     },
     {
       "id": 79,
@@ -867,7 +867,7 @@
       "ukrRate": 38.0,
       "worldRate": 6000,
       "club": "Kyiv Tennis Academy",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Energetic play", "Fast pace"]
     },
     {
       "id": 80,
@@ -878,7 +878,7 @@
       "ukrRate": 77.0,
       "worldRate": 1800,
       "club": "Lviv Lawn TC",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Strategic play", "Strong defense"]
     },
     {
       "id": 81,
@@ -889,7 +889,7 @@
       "ukrRate": 48.5,
       "worldRate": 5600,
       "club": "VicCourt",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Balanced game", "Steady rallies"]
     },
     {
       "id": 82,
@@ -900,7 +900,7 @@
       "ukrRate": 65.0,
       "worldRate": 3100,
       "club": "Kharkiv Ace Club",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Fast tempo", "Aggressive blocks"]
     },
     {
       "id": 83,
@@ -911,7 +911,7 @@
       "ukrRate": 91.8,
       "worldRate": 1050,
       "club": "Rot-Weiss Berlin",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Master level", "Strong topspin"]
     },
     {
       "id": 84,
@@ -922,7 +922,7 @@
       "ukrRate": 68.5,
       "worldRate": 2650,
       "club": "Marina Tennis Club",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Tactical player", "Good placement"]
     },
     {
       "id": 85,
@@ -933,7 +933,7 @@
       "ukrRate": 51.2,
       "worldRate": 5300,
       "club": "Dnipro Net Masters",
-      "notes": "Anti-spin"
+      "notes": ["Anti-spin", "Deceptive play", "Slow game"]
     },
     {
       "id": 86,
@@ -944,7 +944,7 @@
       "ukrRate": 75.2,
       "worldRate": 2100,
       "club": "Odesa Smash Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Controlled attack", "Solid technique"]
     },
     {
       "id": 87,
@@ -955,7 +955,7 @@
       "ukrRate": 29.5,
       "worldRate": 6600,
       "club": "Lviv Lawn TC",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive style", "Junior player"]
     },
     {
       "id": 88,
@@ -966,7 +966,7 @@
       "ukrRate": 87.3,
       "worldRate": 1250,
       "club": "Warsaw Sports Center",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Top-tier skill", "Aggressive offense"]
     },
     {
       "id": 89,
@@ -977,7 +977,7 @@
       "ukrRate": 52.0,
       "worldRate": 0,
       "club": "Campione TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Experienced player", "Steady style"]
     },
     {
       "id": 90,
@@ -988,7 +988,7 @@
       "ukrRate": 58.0,
       "worldRate": 4050,
       "club": "VicCourt",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Flexible wrist", "Close table"]
     },
     {
       "id": 91,
@@ -999,7 +999,7 @@
       "ukrRate": 62.4,
       "worldRate": 3500,
       "club": "Kharkiv Ace Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Solid attack", "Good mobility"]
     },
     {
       "id": 92,
@@ -1010,7 +1010,7 @@
       "ukrRate": 20.5,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "None"
+      "notes": ["Standard setup", "No modifications", "Casual style"]
     },
     {
       "id": 93,
@@ -1021,7 +1021,7 @@
       "ukrRate": 70.0,
       "worldRate": 2450,
       "club": "Dnipro Net Masters",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Fast blocks", "Aggressive tempo"]
     },
     {
       "id": 94,
@@ -1032,7 +1032,7 @@
       "ukrRate": 40.8,
       "worldRate": 5500,
       "club": "Kyiv Tennis Academy",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Junior player", "Active movement"]
     },
     {
       "id": 95,
@@ -1043,7 +1043,7 @@
       "ukrRate": 93.1,
       "worldRate": 920,
       "club": "Prague Tennis Park",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Master level", "High precision"]
     },
     {
       "id": 96,
@@ -1054,7 +1054,7 @@
       "ukrRate": 74.0,
       "worldRate": 2250,
       "club": "Lviv Lawn TC",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive play", "Spin specialist"]
     },
     {
       "id": 97,
@@ -1065,7 +1065,7 @@
       "ukrRate": 46.9,
       "worldRate": 0,
       "club": "Kharkiv Ace Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Experienced player", "Solid defense"]
     },
     {
       "id": 98,
@@ -1076,7 +1076,7 @@
       "ukrRate": 83.5,
       "worldRate": 1500,
       "club": "TC Paris",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Offensive player", "Strong loops"]
     },
     {
       "id": 99,
@@ -1087,7 +1087,7 @@
       "ukrRate": 52.8,
       "worldRate": 5150,
       "club": "VicCourt",
-      "notes": "Anti-spin"
+      "notes": ["Anti-spin", "Control style", "Patient tactics"]
     },
     {
       "id": 100,
@@ -1098,7 +1098,7 @@
       "ukrRate": 78.8,
       "worldRate": 1750,
       "club": "Olympic TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Controlled play", "Reliable strokes"]
     },
     {
       "id": 101,
@@ -1109,7 +1109,7 @@
       "ukrRate": 65.2,
       "worldRate": 2980,
       "club": "Odesa Smash Club",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Traditional style", "Quick reflexes"]
     },
     {
       "id": 102,
@@ -1120,7 +1120,7 @@
       "ukrRate": 30.1,
       "worldRate": 6300,
       "club": "Dnipro Net Masters",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Junior player", "Consistent rallies"]
     },
     {
       "id": 103,
@@ -1131,7 +1131,7 @@
       "ukrRate": 17.0,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Flat hitting", "Active play"]
     },
     {
       "id": 104,
@@ -1142,7 +1142,7 @@
       "ukrRate": 69.5,
       "worldRate": 2500,
       "club": "Warsaw Sports Center",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Tactical play", "Good placement"]
     },
     {
       "id": 105,
@@ -1153,7 +1153,7 @@
       "ukrRate": 55.7,
       "worldRate": 4400,
       "club": "Marina Tennis Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Active play", "Solid basics"]
     },
     {
       "id": 106,
@@ -1164,7 +1164,7 @@
       "ukrRate": 75.8,
       "worldRate": 2000,
       "club": "Kharkiv Ace Club",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive style", "Spin manipulation"]
     },
     {
       "id": 107,
@@ -1175,7 +1175,7 @@
       "ukrRate": 48.9,
       "worldRate": 5500,
       "club": "VicCourt",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Balanced game", "Steady progress"]
     },
     {
       "id": 108,
@@ -1186,7 +1186,7 @@
       "ukrRate": 47.0,
       "worldRate": 0,
       "club": "Rot-Weiss Berlin",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Experienced player", "Tactical control"]
     },
     {
       "id": 109,
@@ -1197,7 +1197,7 @@
       "ukrRate": 97.0,
       "worldRate": 800,
       "club": "Odesa Smash Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Elite player", "Powerful attacks"]
     },
     {
       "id": 110,
@@ -1208,7 +1208,7 @@
       "ukrRate": 79.5,
       "worldRate": 1680,
       "club": "Kyiv Tennis Academy",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Fast tempo", "Aggressive blocks"]
     },
     {
       "id": 111,
@@ -1219,7 +1219,7 @@
       "ukrRate": 27.6,
       "worldRate": 6900,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Junior player", "Fast footwork"]
     },
     {
       "id": 112,
@@ -1230,7 +1230,7 @@
       "ukrRate": 63.8,
       "worldRate": 3300,
       "club": "Dnipro Net Masters",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Flexible wrist", "Active play"]
     },
     {
       "id": 113,
@@ -1241,7 +1241,7 @@
       "ukrRate": 54.1,
       "worldRate": 4550,
       "club": "Kharkiv Ace Club",
-      "notes": "Anti-spin"
+      "notes": ["Anti-spin", "Control game", "Deceptive spin"]
     },
     {
       "id": 114,
@@ -1252,7 +1252,7 @@
       "ukrRate": 73.0,
       "worldRate": 2180,
       "club": "Prague Tennis Park",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Tactical control", "Smooth strokes"]
     },
     {
       "id": 115,
@@ -1263,7 +1263,7 @@
       "ukrRate": 14.5,
       "worldRate": 0,
       "club": "Free Agent",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Recreational", "Steady style"]
     },
     {
       "id": 116,
@@ -1274,7 +1274,7 @@
       "ukrRate": 67.2,
       "worldRate": 2850,
       "club": "Campione TC",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive play", "Spin reversal"]
     },
     {
       "id": 117,
@@ -1285,7 +1285,7 @@
       "ukrRate": 61.9,
       "worldRate": 3700,
       "club": "Odesa Smash Club",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Solid attack", "Good stamina"]
     },
     {
       "id": 118,
@@ -1296,7 +1296,7 @@
       "ukrRate": 26.0,
       "worldRate": 7300,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Junior player", "Developing skills"]
     },
     {
       "id": 119,
@@ -1307,7 +1307,7 @@
       "ukrRate": 91.2,
       "worldRate": 1080,
       "club": "Dnipro Net Masters",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Master level", "Strategic offense"]
     },
     {
       "id": 120,
@@ -1318,7 +1318,7 @@
       "ukrRate": 76.8,
       "worldRate": 1900,
       "club": "Warsaw Sports Center",
-      "notes": "Short pips"
+      "notes": ["Short pips", "Fast blocks", "Close table"]
     },
     {
       "id": 121,
@@ -1329,7 +1329,7 @@
       "ukrRate": 55.2,
       "worldRate": 4450,
       "club": "Olympic TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Solid basics", "Consistent rallies"]
     },
     {
       "id": 122,
@@ -1340,7 +1340,7 @@
       "ukrRate": 66.8,
       "worldRate": 2900,
       "club": "Kharkiv Ace Club",
-      "notes": "Left-handed"
+      "notes": ["Left-handed", "Tactical control", "Active movement"]
     },
     {
       "id": 123,
@@ -1351,7 +1351,7 @@
       "ukrRate": 48.2,
       "worldRate": 0,
       "club": "VicCourt",
-      "notes": "Penhold grip"
+      "notes": ["Penhold grip", "Experienced player", "Quick wrist"]
     },
     {
       "id": 124,
@@ -1362,7 +1362,7 @@
       "ukrRate": 69.1,
       "worldRate": 2550,
       "club": "Odesa Smash Club",
-      "notes": "Long pips"
+      "notes": ["Long pips", "Defensive style", "Spin specialist"]
     },
     {
       "id": 125,
@@ -1373,7 +1373,7 @@
       "ukrRate": 98.2,
       "worldRate": 700,
       "club": "TC Paris",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Elite player", "High precision"]
     },
     {
       "id": 126,
@@ -1381,274 +1381,10 @@
       "age": 19,
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
-      "ukrRate": 32.0,
-      "worldRate": 6100,
-      "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
-    },
-    {
-      "id": 127,
-      "fullName": "Andriy Vlasenko",
-      "age": 24,
-      "city": "Dnipro, Ukraine",
-      "status": "2nd Category",
-      "ukrRate": 52.9,
-      "worldRate": 4950,
-      "club": "Dnipro Net Masters",
-      "notes": "Left-handed"
-    },
-    {
-      "id": 128,
-      "fullName": "Olena Danyliuk",
-      "age": 31,
-      "city": "Kyiv, Ukraine",
-      "status": "Unranked",
-      "ukrRate": 19.1,
-      "worldRate": 0,
-      "club": "Free Agent",
-      "notes": "Anti-spin"
-    },
-    {
-      "id": 129,
-      "fullName": "Denys Kudriavtsev",
-      "age": 22,
-      "city": "Kharkiv, Ukraine",
-      "status": "1st Category",
-      "ukrRate": 63.6,
-      "worldRate": 3400,
-      "club": "Kharkiv Ace Club",
-      "notes": "Short pips"
-    },
-    {
-      "id": 130,
-      "fullName": "Anastasiia Demchenko",
-      "age": 25,
-      "city": "Zaporizhzhia, Ukraine",
-      "status": "CMS",
-      "ukrRate": 73.9,
-      "worldRate": 2220,
-      "club": "VicCourt",
-      "notes": "Right-handed"
-    },
-    {
-      "id": 131,
-      "fullName": "Hlib Zakharov",
-      "age": 28,
-      "city": "Berlin, Germany",
-      "status": "1st Category",
-      "ukrRate": 67.8,
-      "worldRate": 2780,
-      "club": "Rot-Weiss Berlin",
-      "notes": "Left-handed"
-    },
-    {
-      "id": 132,
-      "fullName": "Tetiana Klymenko",
-      "age": 20,
-      "city": "Odesa, Ukraine",
-      "status": "1st Category",
-      "ukrRate": 61.4,
-      "worldRate": 3850,
-      "club": "Odesa Smash Club",
-      "notes": "Right-handed"
-    },
-    {
-      "id": 133,
-      "fullName": "Yevhen Pozyvailo",
-      "age": 29,
-      "city": "Kyiv, Ukraine",
-      "status": "2nd Category",
-      "ukrRate": 57.5,
-      "worldRate": 4120,
-      "club": "Kyiv Tennis Academy",
-      "notes": "Long pips"
-    },
-    {
-      "id": 134,
-      "fullName": "Margarita Filipova",
-      "age": 23,
-      "city": "Lviv, Ukraine",
-      "status": "CMS",
-      "ukrRate": 80.5,
-      "worldRate": 1580,
-      "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
-    },
-    {
-      "id": 135,
-      "fullName": "Stanislav Dudka",
-      "age": 33,
-      "city": "Dnipro, Ukraine",
-      "status": "2nd Category",
-      "ukrRate": 45.0,
-      "worldRate": 0,
-      "club": "Dnipro Net Masters",
-      "notes": "Penhold grip"
-    },
-    {
-      "id": 136,
-      "fullName": "Daryna Romanova",
-      "age": 18,
-      "city": "Warsaw, Poland",
-      "status": "2nd Category",
-      "ukrRate": 39.2,
-      "worldRate": 5700,
-      "club": "Warsaw Sports Center",
-      "notes": "Left-handed"
-    },
-    {
-      "id": 137,
-      "fullName": "Roman Vlasov",
-      "age": 26,
-      "city": "Kharkiv, Ukraine",
-      "status": "1st Category",
-      "ukrRate": 65.1,
-      "worldRate": 3150,
-      "club": "Kharkiv Ace Club",
-      "notes": "Right-handed"
-    },
-    {
-      "id": 138,
-      "fullName": "Alisa Kravchenko",
-      "age": 27,
-      "city": "Prague, Czech Republic",
-      "status": "MS",
-      "ukrRate": 89.8,
-      "worldRate": 1150,
-      "club": "Prague Tennis Park",
-      "notes": "Short pips"
-    },
-    {
-      "id": 139,
-      "fullName": "Vladislav Semenchenko",
-      "age": 21,
-      "city": "Kyiv, Ukraine",
-      "status": "2nd Category",
-      "ukrRate": 54.0,
-      "worldRate": 4750,
-      "club": "Marina Tennis Club",
-      "notes": "Right-handed"
-    },
-    {
-      "id": 140,
-      "fullName": "Kateryna Yurieva",
-      "age": 30,
-      "city": "Zaporizhzhia, Ukraine",
-      "status": "Unranked",
-      "ukrRate": 16.0,
-      "worldRate": 0,
-      "club": "Free Agent",
-      "notes": "None"
-    },
-    {
-      "id": 141,
-      "fullName": "Mark Dovzhenko",
-      "age": 25,
-      "city": "Odesa, Ukraine",
-      "status": "1st Category",
-      "ukrRate": 68.7,
-      "worldRate": 2680,
-      "club": "Odesa Smash Club",
-      "notes": "Left-handed"
-    },
-    {
-      "id": 142,
-      "fullName": "Svitlana Boiko",
-      "age": 22,
-      "city": "Dnipro, Ukraine",
-      "status": "CMS",
-      "ukrRate": 72.8,
-      "worldRate": 2300,
-      "club": "Dnipro Net Masters",
-      "notes": "Long pips"
-    },
-    {
-      "id": 143,
-      "fullName": "Yaroslav Lysytsia",
-      "age": 19,
-      "city": "Lviv, Ukraine",
-      "status": "3rd Category",
-      "ukrRate": 28.9,
+      "ukrRate": 28.5,
       "worldRate": 6700,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
-    },
-    {
-      "id": 144,
-      "fullName": "Inna Marchuk",
-      "age": 24,
-      "city": "Paris, France",
-      "status": "CMS",
-      "ukrRate": 77.5,
-      "worldRate": 1820,
-      "club": "TC Paris",
-      "notes": "Right-handed"
-    },
-    {
-      "id": 145,
-      "fullName": "Kyrylo Kostiuchenko",
-      "age": 31,
-      "city": "Kyiv, Ukraine",
-      "status": "MSIC",
-      "ukrRate": 95.2,
-      "worldRate": 850,
-      "club": "Campione TC",
-      "notes": "Penhold grip"
-    },
-    {
-      "id": 146,
-      "fullName": "Viktoriia Hromova",
-      "age": 28,
-      "city": "Kharkiv, Ukraine",
-      "status": "1st Category",
-      "ukrRate": 64.2,
-      "worldRate": 3280,
-      "club": "Kharkiv Ace Club",
-      "notes": "Left-handed"
-    },
-    {
-      "id": 147,
-      "fullName": "Pavlo Sokolov",
-      "age": 37,
-      "city": "Zaporizhzhia, Ukraine",
-      "status": "Unranked",
-      "ukrRate": 11.2,
-      "worldRate": 0,
-      "club": "Free Agent",
-      "notes": "Anti-spin"
-    },
-    {
-      "id": 148,
-      "fullName": "Yelyzaveta Panchuk",
-      "age": 20,
-      "city": "Odesa, Ukraine",
-      "status": "1st Category",
-      "ukrRate": 70.4,
-      "worldRate": 2420,
-      "club": "Odesa Smash Club",
-      "notes": "Right-handed"
-    },
-    {
-      "id": 149,
-      "fullName": "Anton Lukianenko",
-      "age": 23,
-      "city": "Dnipro, Ukraine",
-      "status": "2nd Category",
-      "ukrRate": 56.0,
-      "worldRate": 4350,
-      "club": "Dnipro Net Masters",
-      "notes": "Short pips"
-    },
-    {
-      "id": 150,
-      "fullName": "Sofiia Rud",
-      "age": 26,
-      "city": "Kyiv, Ukraine",
-      "status": "MS",
-      "ukrRate": 85.0,
-      "worldRate": 1400,
-      "club": "Olympic TC",
-      "notes": "Right-handed"
+      "notes": ["Right-handed", "Junior player", "Consistent rallies"]
     }
   ]
 }
