@@ -1,9 +1,10 @@
 {
   "heading": "Додати новий турнір",
-  "title": "Назва",
+  "name": "Назва",
   "ageCategory": "Вікова категорія",
   "date": "Дата",
-  "time": "Час",
+  "timeStart": "Час початку",
+  "timeEnd": "Час завершення",
   "location": "Місце",
   "competitionType": "Тип змагання",
   "format": "Формат",

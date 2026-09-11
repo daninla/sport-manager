@@ -1,9 +1,10 @@
 {
   "heading": "Add New Tournament",
-  "title": "Title",
+  "name": "Name",
   "ageCategory": "Age category",
   "date": "Date",
-  "time": "Time",
+  "timeStart": "Start time",
+  "timeEnd": "End time",
   "location": "Location",
   "competitionType": "Type of competition",
   "format": "Format",

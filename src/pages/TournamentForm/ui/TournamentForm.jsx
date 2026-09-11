@@ -9,19 +9,20 @@ import { Field, Form, Formik } from 'formik';
 import styles from './TournamentForm.module.css';
 
 const initialValues = {
-  title: '',
+  name: '',
   players: [],
   playersLimit: 16,
   ageCategory: '',
   date: '',
-  time: '',
+  timeStart: '',
+  timeEnd: '',
   location: '',
   tournamentType: 'single',
   format: 'single_elimination',
   gamesToWin: 3,
   pointsPerGame: 11,
   isRated: 'false',
-  ratingCoefficient: 1,
+  ratingCoefficient: 0,
   status: 'draft',
 };
 
@@ -38,12 +39,12 @@ function TournamentForm() {
       <Form>
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
-            <label htmlFor="title">{t('title')}</label>
+            <label htmlFor="title">{t('name')}</label>
             <Field
               type="text"
-              name="title"
+              name="name"
               id="title"
-              placeholder={t('title')}
+              placeholder={t('name')}
             />
           </Box>
           <Box className={styles['field-container']}>
@@ -63,12 +64,6 @@ function TournamentForm() {
             <Field type="date" name="date" id="date" />
           </Box>
           <Box className={styles['field-container']}>
-            <label htmlFor="time">{t('time')}</label>
-            <Field type="time" name="time" id="time" />
-          </Box>
-        </Box>
-        <Box className={styles['group-container']}>
-          <Box className={styles['field-container']}>
             <label htmlFor="location">{t('location')}</label>
             <Field
               type="text"
@@ -77,6 +72,18 @@ function TournamentForm() {
               placeholder={t('location')}
             />
           </Box>
+        </Box>
+        <Box className={styles['group-container']}>
+          <Box className={styles['field-container']}>
+            <label htmlFor="timeStart">{t('timeStart')}</label>
+            <Field type="time" name="timeStart" id="timeStart" />
+          </Box>
+          <Box className={styles['field-container']}>
+            <label htmlFor="timeEnd">{t('timeEnd')}</label>
+            <Field type="time" name="timeEnd" id="timeEnd" />
+          </Box>
+        </Box>
+        <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="type">{t('competitionType')}</label>
             <Field name="tournamentType" id="type" as="select">
@@ -87,8 +94,6 @@ function TournamentForm() {
               ))}
             </Field>
           </Box>
-        </Box>
-        <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="format">{t('format')}</label>
             <Field name="format" id="format" as="select">
@@ -99,12 +104,12 @@ function TournamentForm() {
               ))}
             </Field>
           </Box>
+        </Box>
+        <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="playersLimit">{t('playersLimit')}</label>
             <Field type="number" name="playersLimit" id="playersLimit" />
           </Box>
-        </Box>
-        <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="gamesToWin">{t('gamesToWin')}</label>
             <Field name="gamesToWin" id="gamesToWin" as="select">
@@ -115,6 +120,8 @@ function TournamentForm() {
               ))}
             </Field>
           </Box>
+        </Box>
+        <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="pointsPerGame">{t('pointsPerGame')}</label>
             <Field type="number" name="pointsPerGame" id="pointsPerGame" />
