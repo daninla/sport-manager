@@ -18,11 +18,12 @@ function TournamentPage() {
   const { data: tournament, isLoading, error } = useGetTournamentByIdQuery(id);
   const { matches, playedMatches, upcomingMatches } =
     useTournamentMatches(tournament);
-  const status = tournament.status;
 
   if (isLoading) return <TournamentStatusFallback type="loading" t={t} />;
   if (error) return <TournamentStatusFallback type="error" t={t} />;
   if (!tournament) return <TournamentStatusFallback type="notFound" t={t} />;
+
+  const status = tournament.status;
 
   return (
     <Box sx={{ p: 4 }}>

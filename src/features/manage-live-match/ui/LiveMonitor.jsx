@@ -10,20 +10,11 @@ import {
   Typography,
 } from '@mui/material';
 
-const parseInitialScore = (scoreStr) => {
-  if (!scoreStr || scoreStr === '-') return { p1: 0, p2: 0 };
-  const parts = scoreStr.split('-');
-  return {
-    p1: parseInt(parts[0], 10) || 0,
-    p2: parseInt(parts[1], 10) || 0,
-  };
-};
-
 function LiveMonitor({ match, onClose }) {
-  const initialScore = parseInitialScore(match?.score);
+  const initialScore = match?.score || { player1: 0, player2: 0 };
 
-  const [scoreP1, setScoreP1] = useState(initialScore.p1);
-  const [scoreP2, setScoreP2] = useState(initialScore.p2);
+  const [scoreP1, setScoreP1] = useState(initialScore['player1']);
+  const [scoreP2, setScoreP2] = useState(initialScore['player2']);
   const [isActive, setIsActive] = useState(Boolean(match?.active));
 
   if (!match) return null;
@@ -82,7 +73,7 @@ function LiveMonitor({ match, onClose }) {
           {/* Игрок 1 */}
           <Box sx={{ flex: 1 }}>
             <Typography variant="body1" sx={{ fontWeight: 'bold', mb: 1 }}>
-              {match.player1}
+              {match.player1.name}
             </Typography>
             <Stack direction="row" spacing={1} justifyContent="center">
               <Button
@@ -113,7 +104,7 @@ function LiveMonitor({ match, onClose }) {
           {/* Игрок 2 */}
           <Box sx={{ flex: 1 }}>
             <Typography variant="body1" sx={{ fontWeight: 'bold', mb: 1 }}>
-              {match.player2}
+              {match.player2.name}
             </Typography>
             <Stack direction="row" spacing={1} justifyContent="center">
               <Button

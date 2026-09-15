@@ -1783,24 +1783,30 @@
       "status": "Ongoing",
       "matches": [
         {
-          "player1": "Player 39",
-          "player2": "Player 40",
-          "score": "2-0",
-          "active": false,
+          "id": 0,
+          "player1": { "id": 39, "name": "Yurii Fedorenko" },
+          "player2": { "id": 40, "name": "Veronika Prykhodko" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 2, "player2": 0 },
           "status": "Ongoing"
         },
         {
-          "player1": "Player 41",
-          "player2": "Player 42",
-          "score": "1-2",
-          "active": false,
+          "id": 1,
+          "player1": { "id": 41, "name": "Hlib Tymoshenko" },
+          "player2": { "id": 42, "name": "Ivanna Soroka" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 1, "player2": 2 },
           "status": "Ongoing"
         },
         {
-          "player1": "Player 43",
-          "player2": "Player 44",
-          "score": "-",
-          "active": true,
+          "id": 2,
+          "player1": { "id": 43, "name": "Stepan Koval" },
+          "player2": { "id": 44, "name": "Marta Dmytriieva" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Ongoing"
         }
       ]
@@ -1824,31 +1830,39 @@
       "status": "Upcoming",
       "matches": [
         {
-          "player1": "Player 47",
-          "player2": "Player 48",
-          "score": "-",
-          "active": false,
+          "id": 0,
+          "player1": { "id": 47, "name": "Nazar Bilous" },
+          "player2": { "id": 48, "name": "Yana Havryliuk" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         },
         {
-          "player1": "Player 49",
-          "player2": "Player 50",
-          "score": "-",
-          "active": false,
+          "id": 1,
+          "player1": { "id": 49, "name": "Artur Sobchuk" },
+          "player2": { "id": 50, "name": "Polina Kravts" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         },
         {
-          "player1": "Player 51",
-          "player2": "Player 52",
-          "score": "-",
-          "active": false,
+          "id": 2,
+          "player1": { "id": 51, "name": "Vladislav Kornienko" },
+          "player2": { "id": 52, "name": "Yeva Andriyenko" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         },
         {
-          "player1": "Player 53",
-          "player2": "Player 54",
-          "score": "-",
-          "active": false,
+          "id": 3,
+          "player1": { "id": 53, "name": "Kyrylo Martynov" },
+          "player2": { "id": 54, "name": "Myroslava Pakhomova" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         }
       ]
@@ -1872,31 +1886,39 @@
       "status": "Upcoming",
       "matches": [
         {
-          "player1": "Player 47",
-          "player2": "Player 48",
-          "score": "-",
-          "active": false,
+          "id": 0,
+          "player1": { "id": 47, "name": "Nazar Bilous" },
+          "player2": { "id": 48, "name": "Yana Havryliuk" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         },
         {
-          "player1": "Player 49",
-          "player2": "Player 50",
-          "score": "-",
-          "active": false,
+          "id": 1,
+          "player1": { "id": 49, "name": "Artur Sobchuk" },
+          "player2": { "id": 50, "name": "Polina Kravts" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         },
         {
-          "player1": "Player 51",
-          "player2": "Player 52",
-          "score": "-",
-          "active": false,
+          "id": 2,
+          "player1": { "id": 51, "name": "Vladislav Kornienko" },
+          "player2": { "id": 52, "name": "Yeva Andriyenko" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         },
         {
-          "player1": "Player 53",
-          "player2": "Player 54",
-          "score": "-",
-          "active": false,
+          "id": 3,
+          "player1": { "id": 53, "name": "Kyrylo Martynov" },
+          "player2": { "id": 54, "name": "Myroslava Pakhomova" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         }
       ]

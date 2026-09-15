@@ -52,11 +52,11 @@ function MatchesTable({ matches }) {
                     {<MatchStatusBage status={match.status} />}
                   </Box>
                 </TableCell>
-                <TableCell>{match.player1}</TableCell>
+                <TableCell>{match.player1.name}</TableCell>
                 <TableCell sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
-                  {match.score}
+                  {match.score.player1} - {match.score.player2}
                 </TableCell>
-                <TableCell>{match.player2}</TableCell>
+                <TableCell>{match.player2.name}</TableCell>
               </TableRow>
             ))}
           </TableBody>

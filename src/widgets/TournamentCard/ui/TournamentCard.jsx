@@ -184,14 +184,51 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
             <Box
               sx={{
                 display: 'flex',
+                alignItems: 'center',
                 justifyContent: 'space-between',
+                gap: '6px',
                 color: 'white',
-                fontSize: '0.85rem',
+                fontSize: '0.8rem',
               }}
             >
-              <span>{match.player1}</span>
-              <span style={{ color: '#64748b' }}>vs</span>
-              <span>{match.player2}</span>
+              <Typography
+                noWrap
+                sx={{
+                  flex: '1 1 0',
+                  minWidth: 0,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  fontSize: '0.8rem',
+                  textAlign: 'left',
+                }}
+              >
+                {match.player1.name}
+              </Typography>
+
+              <Typography
+                sx={{
+                  color: '#8699b4',
+                  flex: '0 0 auto',
+                  px: '4px',
+                  fontSize: '0.8rem',
+                }}
+              >
+                vs
+              </Typography>
+
+              <Typography
+                noWrap
+                sx={{
+                  flex: '1 1 0',
+                  minWidth: 0,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  fontSize: '0.8rem',
+                  textAlign: 'right',
+                }}
+              >
+                {match.player2.name}
+              </Typography>
             </Box>
             <Typography
               align="center"
@@ -202,7 +239,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                 mt: 0.5,
               }}
             >
-              {match.score}
+              {match.score.player1} - {match.score.player2}
             </Typography>
           </Box>
         ))}
