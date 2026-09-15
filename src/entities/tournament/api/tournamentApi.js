@@ -18,10 +18,10 @@ export const tournamentApi = baseApi.injectEndpoints({
       invalidatesTags: ['Tournament'],
     }),
     updateTournament: builder.mutation({
-      query: ({ id, ...tournamentData }) => ({
-        url: `/tournaments/${id}`,
-        method: 'PUT',
-        body: tournamentData,
+      query: ({ id, ...patch }) => ({
+        url: `tournaments/${id}`,
+        method: 'PATCH',
+        body: patch,
       }),
       invalidatesTags: ['Tournament'],
     }),

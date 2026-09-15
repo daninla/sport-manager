@@ -1,2 +1,3 @@
-export * from './api/tournamentApi';
-export * from './lib/sortTournaments';
+export { useGetTournamentByIdQuery } from './api/tournamentApi';
+export { useTournamentMatches } from './lib/useTournamentMatches';
+export { default as TournamentStatusFallback } from './ui/TournamentStatusFallback';

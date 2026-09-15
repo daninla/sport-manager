@@ -18,6 +18,8 @@ import {
 
 import { useGetTournamentByIdQuery } from '@/entities/tournament';
 
+import MatchStatusBage from '../../../shared/ui/MatchStatusBage/MatchStatusBage';
+
 export function TournamentCard({ tournament, onOpen, onEdit }) {
   const tournamentId = String(tournament?.id || '');
 
@@ -48,19 +50,6 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
     if (onEdit) onEdit(tournamentId);
   };
 
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'Ongoing':
-        return '#ef4444';
-      case 'Upcoming':
-        return '#3b82f6';
-      case 'Completed':
-        return '#10b981';
-      default:
-        return '#6b7280';
-    }
-  };
-
   return (
     <Box
       onClick={() => onOpen && onOpen(tournamentId)}
@@ -84,36 +73,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
           alignItems: 'center',
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            px: '10px',
-            py: '2px',
-            backgroundColor: getStatusColor(tournament.status),
-            borderRadius: '6px',
-          }}
-        >
-          {tournament.status === 'Ongoing' && (
-            <Box
-              sx={{
-                height: '6px',
-                width: '6px',
-                borderRadius: '50%',
-                backgroundColor: 'white',
-              }}
-            />
-          )}
-          <Typography
-            sx={{ color: 'white', fontSize: '12px', fontWeight: 'bold' }}
-          >
-            {tournament.status === 'Ongoing'
-              ? 'LIVE'
-              : tournament.status?.toUpperCase()}
-          </Typography>
-        </Box>
-
+        <MatchStatusBage status={tournament.status} />
         <IconButton
           onClick={handleOpenMenu}
           size="small"
