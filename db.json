@@ -1666,51 +1666,44 @@
       "pointsPerGame": 11,
       "maxParticipants": 16,
       "currentParticipants": 14,
-      "players": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
+      "players": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
       "tables": 6,
       "status": "Upcoming",
       "matches": [
         {
-          "player1": "Player 1",
-          "player2": "Player 2",
-          "score": "-",
-          "active": false,
+          "id": 0,
+          "player1": { "id": 1, "name": "Oleksandr Boiko" },
+          "player2": { "id": 2, "name": "Olena Kovalchuk" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         },
         {
-          "player1": "Player 3",
-          "player2": "Player 4",
-          "score": "-",
-          "active": false,
+          "id": 1,
+          "player1": { "id": 3, "name": "Maksym Shevchenko" },
+          "player2": { "id": 4, "name": "Daryna Bondarenko" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         },
         {
-          "player1": "Player 5",
-          "player2": "Player 6",
-          "score": "-",
-          "active": false,
+          "id": 2,
+          "player1": { "id": 5, "name": "Ihor Tkachenko" },
+          "player2": { "id": 6, "name": "Anna Kravchenko" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         },
         {
-          "player1": "Player 7",
-          "player2": "Player 8",
-          "score": "-",
-          "active": false,
+          "id": 3,
+          "player1": { "id": 7, "name": "Dmytro Moroz" },
+          "player2": { "id": 8, "name": "Sofiia Oliynyk" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 0 },
           "status": "Upcoming"
         }
       ]
@@ -1729,45 +1722,44 @@
       "pointsPerGame": 16,
       "maxParticipants": 8,
       "currentParticipants": 8,
-      "players": [
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38
-      ],
+      "players": [31, 32, 33, 34, 35, 36, 37, 38],
       "tables": 4,
       "status": "Completed",
       "matches": [
         {
-          "player1": "Player 31",
-          "player2": "Player 32",
-          "score": "3-0",
-          "active": false,
+          "id": 0,
+          "player1": { "id": 31, "name": "Vadym Hryshchenko" },
+          "player2": { "id": 32, "name": "Anastasiia Kovtun" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 3, "player2": 0 },
           "status": "Completed"
         },
         {
-          "player1": "Player 33",
-          "player2": "Player 34",
-          "score": "3-2",
-          "active": false,
+          "id": 1,
+          "player1": { "id": 33, "name": "Taras Honchar" },
+          "player2": { "id": 34, "name": "Khrystyna Levchenko" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 3, "player2": 2 },
           "status": "Completed"
         },
         {
-          "player1": "Player 35",
-          "player2": "Player 36",
-          "score": "1-3",
-          "active": false,
+          "id": 2,
+          "player1": { "id": 35, "name": "Vitalii Nazarenko" },
+          "player2": { "id": 36, "name": "Yelyzaveta Kolomiiets" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 1, "player2": 3 },
           "status": "Completed"
         },
         {
-          "player1": "Player 37",
-          "player2": "Player 38",
-          "score": "0-3",
-          "active": false,
+          "id": 3,
+          "player1": { "id": 37, "name": "Oleh Mazur" },
+          "player2": { "id": 38, "name": "Diana Serhiienko" },
+          "currentSet": { "player1": 0, "player2": 0 },
+          "historySets": [],
+          "score": { "player1": 0, "player2": 3 },
           "status": "Completed"
         }
       ]
@@ -1786,16 +1778,7 @@
       "pointsPerGame": 10,
       "maxParticipants": 32,
       "currentParticipants": 24,
-      "players": [
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46
-      ],
+      "players": [39, 40, 41, 42, 43, 44, 45, 46],
       "tables": 8,
       "status": "Ongoing",
       "matches": [
@@ -1836,16 +1819,7 @@
       "pointsPerGame": 30,
       "maxParticipants": 64,
       "currentParticipants": 48,
-      "players": [
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
-      ],
+      "players": [47, 48, 49, 50, 51, 52, 53, 54],
       "tables": 12,
       "status": "Upcoming",
       "matches": [
@@ -1893,16 +1867,7 @@
       "pointsPerGame": 35,
       "maxParticipants": 64,
       "currentParticipants": 48,
-      "players": [
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
-      ],
+      "players": [47, 48, 49, 50, 51, 52, 53, 54],
       "tables": 12,
       "status": "Upcoming",
       "matches": [

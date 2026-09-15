@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Box, Checkbox, FormControlLabel, Typography } from '@mui/material';
 
 const STATUSES = ['Upcoming', 'Ongoing', 'Completed'];
@@ -10,6 +11,8 @@ const FORMATS = [
 ];
 
 export const TournamentFilters = ({ selectedFilters = [], onChange }) => {
+  const { t } = useTranslation('tournamentFilters');
+
   const handleToggle = (value) => {
     const nextFilters = selectedFilters.includes(value)
       ? selectedFilters.filter((item) => item !== value)
@@ -25,7 +28,7 @@ export const TournamentFilters = ({ selectedFilters = [], onChange }) => {
       sx={{ p: 2, border: '1px solid #ccc', borderRadius: 2, maxWidth: 250 }}
     >
       <Typography variant="subtitle1" fontWeight="bold">
-        Tournament Status
+        {t('status')}
       </Typography>
       {STATUSES.map((status) => (
         <FormControlLabel
@@ -36,12 +39,12 @@ export const TournamentFilters = ({ selectedFilters = [], onChange }) => {
               onChange={() => handleToggle(status)}
             />
           }
-          label={status}
+          label={t(`statuses.${status}`)}
         />
       ))}
 
       <Typography variant="subtitle1" fontWeight="bold" sx={{ mt: 2 }}>
-        Bracket Format
+        {t('format')}
       </Typography>
       {FORMATS.map((format) => (
         <FormControlLabel
@@ -52,7 +55,7 @@ export const TournamentFilters = ({ selectedFilters = [], onChange }) => {
               onChange={() => handleToggle(format)}
             />
           }
-          label={format}
+          label={t(`formats.${format}`)}
         />
       ))}
     </Box>

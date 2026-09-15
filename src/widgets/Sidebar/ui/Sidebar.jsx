@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { NavLink, useMatch, useParams } from 'react-router-dom';
 import { Box } from '@mui/material';
 
@@ -5,6 +6,7 @@ import { globalMenu } from '../config/globalMenu';
 import { getTournamentMenu } from '../config/tournamentMenu';
 
 function Sidebar() {
+  const { t } = useTranslation('sidebar');
   const tournamentMatch = useMatch({ path: '/tournaments/:id/*', end: false });
   const { id } = useParams();
   const isTournamentContext = Boolean(tournamentMatch && id);
@@ -42,7 +44,7 @@ function Sidebar() {
               '&.active': { color: 'secondary.contrastText' },
             }}
           >
-            {item.label}
+            {t(item.label)}
           </Box>
         ))}
       </Box>
