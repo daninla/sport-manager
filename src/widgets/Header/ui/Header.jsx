@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useNavigate } from 'react-router';
 import {
@@ -7,6 +7,7 @@ import {
   MoreVert as MoreIcon,
   Notifications as NotificationsIcon,
 } from '@mui/icons-material';
+import LogoutIcon from '@mui/icons-material/Logout';
 import SportsTennisIcon from '@mui/icons-material/SportsTennis';
 import {
   AppBar,
@@ -27,7 +28,7 @@ function Header() {
   const navigate = useNavigate();
   const { t } = useTranslation('header');
   const [anchorEl, setAnchorEl] = useState(null);
-  const [isAuth, setIsAuth] = useState(false);
+  const [user, setUser] = useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
 
@@ -38,6 +39,23 @@ function Header() {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
+
+  const handleLogOut = () => {
+    localStorage.removeItem('currentUser');
+    setUser(null);
+  };
+
+  useEffect(() => {
+    const loadUser = () => {
+      const currentUser = localStorage.getItem('currentUser');
+      if (currentUser) {
+        setUser(JSON.parse(currentUser));
+      } else {
+        setUser(null);
+      }
+    };
+    loadUser();
+  }, []);
 
   return (
     <AppBar
@@ -78,10 +96,10 @@ function Header() {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          {isAuth ? (
+          {user ? (
             <>
               {/* Desktop actions */}
-              <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+              <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '10px' }}>
                 <IconButton color="inherit">
                   <Badge badgeContent={4} color="error">
                     <MailIcon />
@@ -94,8 +112,29 @@ function Header() {
                   </Badge>
                 </IconButton>
 
-                <IconButton color="inherit">
-                  <AccountCircle />
+                <Button
+                  sx={{
+                    width: '40px',
+                    height: '40px',
+                    minWidth: 0,
+                    padding: 0,
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: '100%',
+                      height: '100%',
+                    }}
+                    src={user.photo}
+                    alt={user.fullName}
+                  />
+                </Button>
+
+                <IconButton color="inherit" onClick={handleLogOut}>
+                  <LogoutIcon />
                 </IconButton>
               </Box>
 
@@ -141,7 +180,7 @@ function Header() {
               }}
               onClick={() => navigate('/login')}
             >
-              Login
+              {t('login')}
             </Button>
           )}
           <SwitchLng />

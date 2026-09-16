@@ -1,6 +1,10 @@
-import { Link } from 'react-router';
+import toast from 'react-hot-toast';
+import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import { Form, Formik } from 'formik';
+
+import { useLazyGetUserByEmailQuery } from '../../../entities/user/api/userApi';
 
 const initialValues = {
   email: '',
@@ -8,13 +12,44 @@ const initialValues = {
 };
 
 function Login() {
+  const { t } = useTranslation('auth');
+  const [getUserByEmail] = useLazyGetUserByEmailQuery();
+  const navigate = useNavigate();
+
+  const handleLogin = async ({ email, password }) => {
+    const loginPromise = getUserByEmail(email)
+      .unwrap()
+      .then((users) => {
+        const user = users[0];
+
+        if (!user) {
+          throw new Error('User with this email was not found');
+        }
+
+        if (user.password !== password) {
+          throw new Error('Invalid password');
+        }
+
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        navigate('/');
+
+        return user;
+      });
+
+    toast.promise(loginPromise, {
+      loading: 'Login...',
+      success: 'Welcome to our website',
+      error: (err) => `Failed to login: ${err.message || 'Unknown error'}`,
+    });
+  };
+
   const renderForm = ({ values, handleChange, handleBlur }) => {
     return (
       <Form>
         <Stack spacing={3}>
           <TextField
             fullWidth
-            label="Email"
+            label={t('email')}
             variant="outlined"
             name="email"
             value={values.email}
@@ -23,7 +58,7 @@ function Login() {
           />
           <TextField
             fullWidth
-            label="Password"
+            label={t('password')}
             variant="outlined"
             name="password"
             type="password"
@@ -37,10 +72,10 @@ function Login() {
             color="secondary"
             sx={{ py: 1.5, fontWeight: 'bold', fontSize: '18px' }}
           >
-            Login
+            {t('loginButton')}
           </Button>
           <Link to="/reg" style={{ color: 'inherit', textAlign: 'center' }}>
-            Forgot your password?
+            {t('forgot')}
           </Link>
         </Stack>
       </Form>
@@ -87,14 +122,18 @@ function Login() {
       >
         <Box
           sx={{
-            maxWidth: '440px',
+            maxWidth: '450px',
             width: '100%',
           }}
         >
           <Typography variant="h4" align="center" sx={{ mb: '30px' }}>
-            Login to your account
+            {t('loginTitle')}
           </Typography>
-          <Formik initialValues={initialValues} enableReinitialize>
+          <Formik
+            initialValues={initialValues}
+            onSubmit={handleLogin}
+            enableReinitialize
+          >
             {renderForm}
           </Formik>
         </Box>

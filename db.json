@@ -1666,22 +1666,7 @@
       "pointsPerGame": 11,
       "maxParticipants": 16,
       "currentParticipants": 14,
-      "players": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
+      "players": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
       "tables": 6,
       "status": "Upcoming",
       "matches": [
@@ -1725,16 +1710,7 @@
       "pointsPerGame": 16,
       "maxParticipants": 8,
       "currentParticipants": 8,
-      "players": [
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38
-      ],
+      "players": [31, 32, 33, 34, 35, 36, 37, 38],
       "tables": 4,
       "status": "Completed",
       "matches": [
@@ -1778,16 +1754,7 @@
       "pointsPerGame": 10,
       "maxParticipants": 32,
       "currentParticipants": 24,
-      "players": [
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46
-      ],
+      "players": [39, 40, 41, 42, 43, 44, 45, 46],
       "tables": 8,
       "status": "Ongoing",
       "matches": [
@@ -1825,16 +1792,7 @@
       "pointsPerGame": 30,
       "maxParticipants": 64,
       "currentParticipants": 48,
-      "players": [
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
-      ],
+      "players": [47, 48, 49, 50, 51, 52, 53, 54],
       "tables": 12,
       "status": "Upcoming",
       "matches": [
@@ -1878,16 +1836,7 @@
       "pointsPerGame": 35,
       "maxParticipants": 64,
       "currentParticipants": 48,
-      "players": [
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
-      ],
+      "players": [47, 48, 49, 50, 51, 52, 53, 54],
       "tables": 12,
       "status": "Upcoming",
       "matches": [
@@ -1916,6 +1865,24 @@
           "active": false
         }
       ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Anonymous",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+      "age": 29,
+      "sex": "male",
+      "email": "anonymous@gmail.com",
+      "password": "12345",
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 16.9,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": "None",
+      "role": "player"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
