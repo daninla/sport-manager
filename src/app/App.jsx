@@ -3,16 +3,20 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { Player } from '@/pages/Player';
 import { PlayerForm } from '@/pages/PlayerForm';
 import { Dashboard } from '../pages/Dashboard';
+import { Login } from '../pages/Login';
 import { Players } from '../pages/Players';
 import { TournamentForm } from '../pages/TournamentForm';
 import TournamentPage from '../pages/TournamentPage';
+import { TournamentParticipants } from '../pages/TournamentParticipants';
 import { Tournaments } from '../pages/Tournaments';
-import { TournamentParticipants } from '../pages/TournamentParticipants'
 import MainLayout from './layouts/MainLayout';
+import { Registration } from '../pages/Registration';
 
 function App() {
   return (
     <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/reg" element={<Registration />} />
       <Route element={<MainLayout />}>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<Dashboard />} />

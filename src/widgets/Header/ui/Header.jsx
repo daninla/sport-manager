@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 import {
   AccountCircle,
   Mail as MailIcon,
@@ -12,6 +12,7 @@ import {
   AppBar,
   Badge,
   Box,
+  Button,
   Container,
   IconButton,
   Menu,
@@ -23,8 +24,10 @@ import {
 import SwitchLng from '../../../features/switch-lng/ui/SwitchLng';
 
 function Header() {
+  const navigate = useNavigate();
   const { t } = useTranslation('header');
   const [anchorEl, setAnchorEl] = useState(null);
+  const [isAuth, setIsAuth] = useState(false);
 
   const isMenuOpen = Boolean(anchorEl);
 
@@ -75,50 +78,72 @@ function Header() {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          {/* Desktop actions */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+          {isAuth ? (
+            <>
+              {/* Desktop actions */}
+              <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                <IconButton color="inherit">
+                  <Badge badgeContent={4} color="error">
+                    <MailIcon />
+                  </Badge>
+                </IconButton>
 
-            <IconButton color="inherit">
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+                <IconButton color="inherit">
+                  <Badge badgeContent={17} color="error">
+                    <NotificationsIcon />
+                  </Badge>
+                </IconButton>
 
-            <IconButton color="inherit">
-              <AccountCircle />
-            </IconButton>
-          </Box>
+                <IconButton color="inherit">
+                  <AccountCircle />
+                </IconButton>
+              </Box>
 
-          {/* Mobile menu */}
-          <IconButton
-            color="inherit"
-            sx={{ display: { xs: 'flex', md: 'none' } }}
-            onClick={handleMenuOpen}
-          >
-            <MoreIcon />
-          </IconButton>
+              {/* Mobile menu */}
+              <IconButton
+                color="inherit"
+                sx={{ display: { xs: 'flex', md: 'none' } }}
+                onClick={handleMenuOpen}
+              >
+                <MoreIcon />
+              </IconButton>
 
-          <Menu anchorEl={anchorEl} open={isMenuOpen} onClose={handleMenuClose}>
-            <MenuItem onClick={handleMenuClose}>
-              <MailIcon sx={{ mr: 1 }} />
-              {t('messages')}
-            </MenuItem>
+              <Menu
+                anchorEl={anchorEl}
+                open={isMenuOpen}
+                onClose={handleMenuClose}
+              >
+                <MenuItem onClick={handleMenuClose}>
+                  <MailIcon sx={{ mr: 1 }} />
+                  {t('messages')}
+                </MenuItem>
 
-            <MenuItem onClick={handleMenuClose}>
-              <NotificationsIcon sx={{ mr: 1 }} />
-              {t('notifications')}
-            </MenuItem>
+                <MenuItem onClick={handleMenuClose}>
+                  <NotificationsIcon sx={{ mr: 1 }} />
+                  {t('notifications')}
+                </MenuItem>
 
-            <MenuItem onClick={handleMenuClose}>
-              <AccountCircle sx={{ mr: 1 }} />
-              {t('profile')}
-            </MenuItem>
-          </Menu>
+                <MenuItem onClick={handleMenuClose}>
+                  <AccountCircle sx={{ mr: 1 }} />
+                  {t('profile')}
+                </MenuItem>
+              </Menu>
+            </>
+          ) : (
+            <Button
+              variant="contained"
+              sx={{
+                bgcolor: '#00e676',
+                color: '#040b22',
+                fontWeight: 'bold',
+                borderRadius: '8px',
+                '&:hover': { bgcolor: '#00c853' },
+              }}
+              onClick={() => navigate('/login')}
+            >
+              Login
+            </Button>
+          )}
           <SwitchLng />
         </Toolbar>
       </Container>
