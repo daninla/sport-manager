@@ -38,15 +38,13 @@ function Login() {
   const handleLogin = async ({ email, password }) => {
     const loginPromise = getUserByEmail(email)
       .unwrap()
-      .then((users) => {
-        const user = users[0];
-
+      .then(([user]) => {
         if (!user) {
-          throw new Error('User with this email was not found');
+          throw new Error(t('notFoundEmail'));
         }
 
         if (user.password !== password) {
-          throw new Error('Invalid password');
+          throw new Error(t('invalidPass'));
         }
 
         localStorage.setItem('currentUser', JSON.stringify(user));
@@ -56,9 +54,9 @@ function Login() {
       });
 
     toast.promise(loginPromise, {
-      loading: 'Login...',
-      success: 'Welcome to our website',
-      error: (err) => `Failed to login: ${err.message || 'Unknown error'}`,
+      loading: t('loginLoading'),
+      success: t('loginSuccess'),
+      error: (err) => `${t('loginError')}: ${err.message || t('unknownError')}`,
     });
   };
 
@@ -68,6 +66,7 @@ function Login() {
 
   const renderForm = ({
     values,
+    isValid,
     handleChange,
     handleBlur,
     errors,
@@ -149,6 +148,7 @@ function Login() {
             variant="contained"
             color="secondary"
             sx={{ py: 1.5, fontWeight: 'bold', fontSize: '18px' }}
+            disabled={!isValid}
           >
             {t('loginButton')}
           </Button>
