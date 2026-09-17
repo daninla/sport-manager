@@ -1,158 +1,85 @@
-import { useState } from 'react';
-import {
-  Box,
-  Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { ScoreControls } from './ScoreControls';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import StopIcon from '@mui/icons-material/Stop';
+import UndoIcon from '@mui/icons-material/Undo';
+import { Button, Container, Paper, Stack, Typography } from '@mui/material';
 
-function LiveMonitor({ match, onClose }) {
-  const initialScore = match?.score || { player1: 0, player2: 0 };
+import { useLiveMatchController } from '../model/useLiveMatchController';
 
-  const [scoreP1, setScoreP1] = useState(initialScore['player1']);
-  const [scoreP2, setScoreP2] = useState(initialScore['player2']);
-  const [isActive, setIsActive] = useState(Boolean(match?.active));
+import { ScoreBoard } from '../../../entities/match/ui/ScoreBoard';
 
-  if (!match) return null;
+function LiveMonitor({ matchId }) {
+  const { matchState, isLoading, addPoint, undo, setStatus } =
+    useLiveMatchController(matchId);
 
-  const handleScoreChange = (player, delta) => {
-    if (player === 1) {
-      setScoreP1((prev) => Math.max(0, prev + delta));
-    } else {
-      setScoreP2((prev) => Math.max(0, prev + delta));
+  if (isLoading) return <div>Загрузка матча...</div>;
+
+  const isActive = matchState.status === 'Ongoing';
+  const isFinished = matchState.status === 'Finished';
+
+  const handleToggleStatus = () => {
+    if (matchState.status === 'Upcoming') {
+      setStatus('Ongoing');
+    } else if (matchState.status === 'Ongoing') {
+      setStatus('Finished');
     }
   };
-
   return (
-    <Box
-      sx={{
-        width: 500,
-        p: 3,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 3,
-        height: '100%',
-        boxSizing: 'border-box',
-      }}
-    >
-      <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
-        Live Monitor
+    <Container sx={{ py: 3, width: '500px' }}>
+      <Typography sx={{ fontSize: '20px', fontWeight: 'bold' }}>
+        Live Monitore
       </Typography>
-
-      <Box
-        sx={{
-          p: 2,
-          border: '1px solid #e0e0e0',
-          borderRadius: 2,
-          backgroundColor: '#fafafa',
-          textAlign: 'center',
-        }}
+      <Paper
+        elevation={0}
+        sx={{ p: 2, borderRadius: 3, bgcolor: 'background.default' }}
       >
-        <Typography
-          variant="caption"
-          color="text.secondary"
-          display="block"
-          sx={{ mb: 2 }}
-        >
-          Status: {isActive ? 'Active Match' : 'Finished / Pending'}
-        </Typography>
+        {/* Табло счёта */}
+        <ScoreBoard
+          sets={matchState.sets}
+          currentSet={matchState.currentSet}
+          completedSets={matchState.historySets || []}
+          status={matchState.status}
+          player1Name={matchState.player1?.fullName}
+          player2Name={matchState.player2?.fullName}
+        />
 
-        {/* Управление счетом */}
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            my: 2,
-          }}
-        >
-          {/* Игрок 1 */}
-          <Box sx={{ flex: 1 }}>
-            <Typography variant="body1" sx={{ fontWeight: 'bold', mb: 1 }}>
-              {match.player1.name}
-            </Typography>
-            <Stack direction="row" spacing={1} justifyContent="center">
-              <Button
-                size="small"
-                variant="outlined"
-                onClick={() => handleScoreChange(1, -1)}
-              >
-                -1
-              </Button>
-              <Button
-                size="small"
-                variant="contained"
-                onClick={() => handleScoreChange(1, 1)}
-              >
-                +1
-              </Button>
-            </Stack>
-          </Box>
+        {/* Кнопки добавления очков (+1) */}
+        <ScoreControls
+          onAddPoint={addPoint}
+          disabled={!isActive}
+          player1Name={matchState.player1?.fullName}
+          player2Name={matchState.player2?.fullName}
+        />
 
-          {/* Табло счета */}
-          <Typography
-            variant="h4"
-            sx={{ mx: 2, color: '#fda65f', fontWeight: 'bold' }}
-          >
-            {scoreP1} - {scoreP2}
-          </Typography>
-
-          {/* Игрок 2 */}
-          <Box sx={{ flex: 1 }}>
-            <Typography variant="body1" sx={{ fontWeight: 'bold', mb: 1 }}>
-              {match.player2.name}
-            </Typography>
-            <Stack direction="row" spacing={1} justifyContent="center">
-              <Button
-                size="small"
-                variant="outlined"
-                onClick={() => handleScoreChange(2, -1)}
-              >
-                -1
-              </Button>
-              <Button
-                size="small"
-                variant="contained"
-                onClick={() => handleScoreChange(2, 1)}
-              >
-                +1
-              </Button>
-            </Stack>
-          </Box>
-        </Box>
-
-        {/* Переключатель активности */}
-        <FormControl fullWidth size="small" sx={{ mt: 3 }}>
-          <InputLabel>Active State</InputLabel>
-          <Select
-            value={isActive}
-            label="Active State"
-            onChange={(e) => setIsActive(e.target.value)}
-          >
-            <MenuItem value={true}>Active (In Progress)</MenuItem>
-            <MenuItem value={false}>Inactive (Pending / Finished)</MenuItem>
-          </Select>
-        </FormControl>
-      </Box>
-
-      {/* Кнопки действий */}
-      <Box sx={{ mt: 'auto', display: 'flex', gap: 2 }}>
-        {onClose && (
+        {/* Панель управления: Undo и Статус */}
+        <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
           <Button
-            variant="outlined"
-            color="primary"
-            onClick={onClose}
             fullWidth
+            variant="outlined"
+            color="secondary"
+            startIcon={<UndoIcon />}
+            onClick={undo}
+            disabled={matchState.actionHistory?.length === 0}
+            sx={{ borderRadius: 2 }}
           >
-            Close
+            Отмена
           </Button>
-        )}
-      </Box>
-    </Box>
+
+          {!isFinished && (
+            <Button
+              fullWidth
+              variant="contained"
+              color={isActive ? 'error' : 'success'}
+              startIcon={isActive ? <StopIcon /> : <PlayArrowIcon />}
+              onClick={handleToggleStatus}
+              sx={{ borderRadius: 2 }}
+            >
+              {matchState.status === 'Upcoming' ? 'Начать' : 'Завершить'}
+            </Button>
+          )}
+        </Stack>
+      </Paper>
+    </Container>
   );
 }
 

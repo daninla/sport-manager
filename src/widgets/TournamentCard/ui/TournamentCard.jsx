@@ -16,18 +16,14 @@ import {
   Typography,
 } from '@mui/material';
 
-import { useGetTournamentByIdQuery } from '@/entities/tournament';
+import { useEnrichedMatches } from '../../../entities/match/model/useEnrichedMatches';
 
 import MatchStatusBage from '../../../shared/ui/MatchStatusBage/MatchStatusBage';
 
 export function TournamentCard({ tournament, onOpen, onEdit }) {
   const tournamentId = String(tournament?.id || '');
 
-  const { data } = useGetTournamentByIdQuery(tournamentId, {
-    skip: !tournamentId,
-  });
-
-  const matches = data?.matches || [];
+  const { matches, isLoading } = useEnrichedMatches(tournamentId);
 
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -164,6 +160,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
         </Typography>
       </Box>
 
+      {/* Блок отображения списков матчей */}
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         {matches.slice(-2).map((match, index) => (
           <Box
@@ -179,7 +176,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
               variant="caption"
               sx={{ color: '#64748b', display: 'block', mb: 0.5 }}
             >
-              Match {index}
+              Match {index + 1}
             </Typography>
             <Box
               sx={{
@@ -191,6 +188,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                 fontSize: '0.8rem',
               }}
             >
+              {/* Игрок 1 */}
               <Typography
                 noWrap
                 sx={{
@@ -202,7 +200,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                   textAlign: 'left',
                 }}
               >
-                {match.player1.name}
+                {match.player1?.fullName || `Игрок ${match.player1Id}`}
               </Typography>
 
               <Typography
@@ -216,6 +214,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                 vs
               </Typography>
 
+              {/* Игрок 2 */}
               <Typography
                 noWrap
                 sx={{
@@ -227,7 +226,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                   textAlign: 'right',
                 }}
               >
-                {match.player2.name}
+                {match.player2?.fullName || `Игрок ${match.player2Id}`}
               </Typography>
             </Box>
             <Typography
@@ -239,7 +238,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                 mt: 0.5,
               }}
             >
-              {match.score.player1} - {match.score.player2}
+              {match.score?.player1 ?? 0} - {match.score?.player2 ?? 0}
             </Typography>
           </Box>
         ))}

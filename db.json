@@ -1653,118 +1653,6 @@
   ],
   "tournaments": [
     {
-      "id": "1",
-      "name": "Kyiv Open Championship",
-      "ageCategory": "Up to 16 years old",
-      "date": "2026-09-10",
-      "location": "Somewhere",
-      "timeStart": "14:00",
-      "timeEnd": "18:00",
-      "competitionType": "Single",
-      "bracketFormat": "Single Elimination",
-      "matchFormat": "Best of 3",
-      "pointsPerGame": 11,
-      "maxParticipants": 16,
-      "currentParticipants": 14,
-      "players": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-      "tables": 6,
-      "status": "Upcoming",
-      "matches": [
-        {
-          "id": 0,
-          "player1": { "id": 1, "name": "Oleksandr Boiko" },
-          "player2": { "id": 2, "name": "Olena Kovalchuk" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        },
-        {
-          "id": 1,
-          "player1": { "id": 3, "name": "Maksym Shevchenko" },
-          "player2": { "id": 4, "name": "Daryna Bondarenko" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        },
-        {
-          "id": 2,
-          "player1": { "id": 5, "name": "Ihor Tkachenko" },
-          "player2": { "id": 6, "name": "Anna Kravchenko" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        },
-        {
-          "id": 3,
-          "player1": { "id": 7, "name": "Dmytro Moroz" },
-          "player2": { "id": 8, "name": "Sofiia Oliynyk" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "name": "Kharkiv Club League",
-      "ageCategory": "Up to 18 years old",
-      "date": "2026-07-15",
-      "location": "Somewhere",
-      "timeStart": "12:00",
-      "timeEnd": "17:00",
-      "competitionType": "Single",
-      "bracketFormat": "Round Robin",
-      "matchFormat": "Best of 5",
-      "pointsPerGame": 16,
-      "maxParticipants": 8,
-      "currentParticipants": 8,
-      "players": [31, 32, 33, 34, 35, 36, 37, 38],
-      "tables": 4,
-      "status": "Completed",
-      "matches": [
-        {
-          "id": 0,
-          "player1": { "id": 31, "name": "Vadym Hryshchenko" },
-          "player2": { "id": 32, "name": "Anastasiia Kovtun" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 3, "player2": 0 },
-          "status": "Completed"
-        },
-        {
-          "id": 1,
-          "player1": { "id": 33, "name": "Taras Honchar" },
-          "player2": { "id": 34, "name": "Khrystyna Levchenko" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 3, "player2": 2 },
-          "status": "Completed"
-        },
-        {
-          "id": 2,
-          "player1": { "id": 35, "name": "Vitalii Nazarenko" },
-          "player2": { "id": 36, "name": "Yelyzaveta Kolomiiets" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 1, "player2": 3 },
-          "status": "Completed"
-        },
-        {
-          "id": 3,
-          "player1": { "id": 37, "name": "Oleh Mazur" },
-          "player2": { "id": 38, "name": "Diana Serhiienko" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 3 },
-          "status": "Completed"
-        }
-      ]
-    },
-    {
       "id": "4",
       "name": "Dnipro Grand Prix",
       "ageCategory": "Open category",
@@ -1778,37 +1666,17 @@
       "pointsPerGame": 10,
       "maxParticipants": 32,
       "currentParticipants": 24,
-      "players": [39, 40, 41, 42, 43, 44, 45, 46],
       "tables": 8,
       "status": "Ongoing",
-      "matches": [
-        {
-          "id": 0,
-          "player1": { "id": 39, "name": "Yurii Fedorenko" },
-          "player2": { "id": 40, "name": "Veronika Prykhodko" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 2, "player2": 0 },
-          "status": "Ongoing"
-        },
-        {
-          "id": 1,
-          "player1": { "id": 41, "name": "Hlib Tymoshenko" },
-          "player2": { "id": 42, "name": "Ivanna Soroka" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 1, "player2": 2 },
-          "status": "Ongoing"
-        },
-        {
-          "id": 2,
-          "player1": { "id": 43, "name": "Stepan Koval" },
-          "player2": { "id": 44, "name": "Marta Dmytriieva" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Ongoing"
-        }
+      "playerIds": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
       ]
     },
     {
@@ -1825,46 +1693,17 @@
       "pointsPerGame": 30,
       "maxParticipants": 64,
       "currentParticipants": 48,
-      "players": [47, 48, 49, 50, 51, 52, 53, 54],
       "tables": 12,
       "status": "Upcoming",
-      "matches": [
-        {
-          "id": 0,
-          "player1": { "id": 47, "name": "Nazar Bilous" },
-          "player2": { "id": 48, "name": "Yana Havryliuk" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        },
-        {
-          "id": 1,
-          "player1": { "id": 49, "name": "Artur Sobchuk" },
-          "player2": { "id": 50, "name": "Polina Kravts" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        },
-        {
-          "id": 2,
-          "player1": { "id": 51, "name": "Vladislav Kornienko" },
-          "player2": { "id": 52, "name": "Yeva Andriyenko" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        },
-        {
-          "id": 3,
-          "player1": { "id": 53, "name": "Kyrylo Martynov" },
-          "player2": { "id": 54, "name": "Myroslava Pakhomova" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        }
+      "playerIds": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
       ]
     },
     {
@@ -1881,48 +1720,271 @@
       "pointsPerGame": 35,
       "maxParticipants": 64,
       "currentParticipants": 48,
-      "players": [47, 48, 49, 50, 51, 52, 53, 54],
       "tables": 12,
       "status": "Upcoming",
-      "matches": [
-        {
-          "id": 0,
-          "player1": { "id": 47, "name": "Nazar Bilous" },
-          "player2": { "id": 48, "name": "Yana Havryliuk" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        },
-        {
-          "id": 1,
-          "player1": { "id": 49, "name": "Artur Sobchuk" },
-          "player2": { "id": 50, "name": "Polina Kravts" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        },
-        {
-          "id": 2,
-          "player1": { "id": 51, "name": "Vladislav Kornienko" },
-          "player2": { "id": 52, "name": "Yeva Andriyenko" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        },
-        {
-          "id": 3,
-          "player1": { "id": 53, "name": "Kyrylo Martynov" },
-          "player2": { "id": 54, "name": "Myroslava Pakhomova" },
-          "currentSet": { "player1": 0, "player2": 0 },
-          "historySets": [],
-          "score": { "player1": 0, "player2": 0 },
-          "status": "Upcoming"
-        }
+      "playerIds": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
       ]
     }
   ],
+  "playersTornament": [
+    {
+      "id": "39",
+      "name": "Yurii Fedorenko"
+    },
+    {
+      "id": "40",
+      "name": "Veronika Prykhodko"
+    },
+    {
+      "id": "41",
+      "name": "Hlib Tymoshenko"
+    },
+    {
+      "id": "42",
+      "name": "Ivanna Soroka"
+    },
+    {
+      "id": "43",
+      "name": "Stepan Koval"
+    },
+    {
+      "id": "44",
+      "name": "Marta Dmytriieva"
+    },
+    {
+      "id": "45",
+      "name": "Player 45"
+    },
+    {
+      "id": "46",
+      "name": "Player 46"
+    },
+    {
+      "id": "47",
+      "name": "Nazar Bilous"
+    },
+    {
+      "id": "48",
+      "name": "Yana Havryliuk"
+    },
+    {
+      "id": "49",
+      "name": "Artur Sobchuk"
+    },
+    {
+      "id": "50",
+      "name": "Polina Kravts"
+    },
+    {
+      "id": "51",
+      "name": "Vladislav Kornienko"
+    },
+    {
+      "id": "52",
+      "name": "Yeva Andriyenko"
+    },
+    {
+      "id": "53",
+      "name": "Kyrylo Martynov"
+    },
+    {
+      "id": "54",
+      "name": "Myroslava Pakhomova"
+    }
+  ],
+  "matches": [
+    {
+      "id": "1",
+      "tournamentId": 4,
+      "player1Id": 39,
+      "player2Id": 40,
+      "status": "Finished",
+      "score": {
+        "player1": 1,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "2",
+      "tournamentId": 4,
+      "player1Id": 41,
+      "player2Id": 42,
+      "status": "Finished",
+      "score": {
+        "player1": 1,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "3",
+      "tournamentId": 4,
+      "player1Id": 43,
+      "player2Id": 44,
+      "status": "Ongoing",
+      "score": {
+        "player1": 0,
+        "player2": 1
+      },
+      "currentSet": {
+        "player1": 3,
+        "player2": 4
+      },
+      "historySets": [
+        {
+          "player1": 10,
+          "player2": 12
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "tournamentId": 5,
+      "player1Id": 47,
+      "player2Id": 48,
+      "status": "Finished",
+      "score": {
+        "player1": 1,
+        "player2": 1
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": [
+        {
+          "player1": 11,
+          "player2": 13
+        },
+        {
+          "player1": 12,
+          "player2": 10
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "tournamentId": 5,
+      "player1Id": 49,
+      "player2Id": 50,
+      "status": "Finished",
+      "score": {
+        "player1": 3,
+        "player2": 2
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "6",
+      "tournamentId": 5,
+      "player1Id": 51,
+      "player2Id": 52,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "7",
+      "tournamentId": 5,
+      "player1Id": 53,
+      "player2Id": 54,
+      "status": "Finished",
+      "score": {
+        "player1": 1,
+        "player2": 2
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 1
+      }
+    },
+    {
+      "id": "8",
+      "tournamentId": 6,
+      "player1Id": 47,
+      "player2Id": 48,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "9",
+      "tournamentId": 6,
+      "player1Id": 49,
+      "player2Id": 50,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "10",
+      "tournamentId": 6,
+      "player1Id": 51,
+      "player2Id": 52,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "11",
+      "tournamentId": 6,
+      "player1Id": 53,
+      "player2Id": 54,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    }
+  ],
+  "matchSets": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

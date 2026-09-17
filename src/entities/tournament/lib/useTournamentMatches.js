@@ -1,8 +1,7 @@
-export function useTournamentMatches(tournament) {
-  const matches = tournament?.matches || [];
-  const playedMatches = matches.filter((match) => match.status === 'Completed');
+export function useTournamentMatches(matches = []) {
+  const playedMatches = matches.filter((match) => match.status !== 'Upcoming');
   const upcomingMatches = matches.filter(
-    (match) => match.status !== 'Completed',
+    (match) => match.status === 'Upcoming',
   );
 
   return { matches, playedMatches, upcomingMatches };
