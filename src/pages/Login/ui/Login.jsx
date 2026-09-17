@@ -1,8 +1,21 @@
+import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router';
-import { Box, Button, Stack, TextField, Typography } from '@mui/material';
-import { Form, Formik } from 'formik';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import {
+  Box,
+  Button,
+  FormHelperText,
+  IconButton,
+  InputAdornment,
+  Stack,
+  TextField,
+  Typography,
+} from '@mui/material';
+import { ErrorMessage, Form, Formik } from 'formik';
+import * as yup from 'yup';
 
 import { useLazyGetUserByEmailQuery } from '../../../entities/user/api/userApi';
 
@@ -11,9 +24,15 @@ const initialValues = {
   password: '',
 };
 
+const loginSchema = yup.object({
+  email: yup.string().email('invalidEmail').required('requiredEmail'),
+  password: yup.string().required('requiredPassword'),
+});
+
 function Login() {
   const { t } = useTranslation('auth');
   const [getUserByEmail] = useLazyGetUserByEmailQuery();
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async ({ email, password }) => {
@@ -43,29 +62,88 @@ function Login() {
     });
   };
 
-  const renderForm = ({ values, handleChange, handleBlur }) => {
+  const handleClickShowPassword = () => {
+    setShowPassword((visible) => !visible);
+  };
+
+  const renderForm = ({
+    values,
+    handleChange,
+    handleBlur,
+    errors,
+    touched,
+  }) => {
     return (
       <Form>
         <Stack spacing={3}>
-          <TextField
-            fullWidth
-            label={t('email')}
-            variant="outlined"
-            name="email"
-            value={values.email}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          <TextField
-            fullWidth
-            label={t('password')}
-            variant="outlined"
-            name="password"
-            type="password"
-            value={values.password}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
+          <Box>
+            <TextField
+              fullWidth
+              label={t('email')}
+              variant="outlined"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={Boolean(touched.email && errors.email)}
+            />
+            <ErrorMessage
+              name="email"
+              render={(message) => (
+                <FormHelperText
+                  error
+                  sx={{ mt: 0.75, mx: 1, fontSize: '0.8rem', fontWeight: 500 }}
+                >
+                  {t(message)}
+                </FormHelperText>
+              )}
+            />
+          </Box>
+          <Box>
+            <TextField
+              fullWidth
+              label={t('password')}
+              variant="outlined"
+              name="password"
+              type={showPassword ? 'text' : 'password'}
+              value={values.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={Boolean(touched.password && errors.password)}
+              slotProps={{
+                input: {
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        type="button"
+                        aria-label={
+                          showPassword ? 'Hide password' : 'Show password'
+                        }
+                        onClick={handleClickShowPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                },
+              }}
+            />
+            <ErrorMessage
+              name="password"
+              render={(message) => (
+                <FormHelperText
+                  error
+                  sx={{ mt: 0.75, mx: 1, fontSize: '0.8rem', fontWeight: 500 }}
+                >
+                  {t(message)}
+                </FormHelperText>
+              )}
+            />
+          </Box>
+          <Link to="#" style={{ color: 'inherit' }}>
+            {t('forgot')}
+          </Link>
           <Button
             type="submit"
             variant="contained"
@@ -74,70 +152,34 @@ function Login() {
           >
             {t('loginButton')}
           </Button>
-          <Link to="/reg" style={{ color: 'inherit', textAlign: 'center' }}>
-            {t('forgot')}
-          </Link>
+          <Typography variant="p" align="center">
+            {t('notAcc')}
+            <Link to="/reg" style={{ color: 'inherit', textAlign: 'center' }}>
+              {t('signUp')}
+            </Link>
+          </Typography>
         </Stack>
       </Form>
     );
   };
   return (
     <Box
-      component="main"
       sx={{
-        display: 'flex',
+        maxWidth: '450px',
         width: '100%',
-        height: '100vh',
-        bgcolor: 'background.default',
       }}
     >
-      <Box
-        sx={{
-          display: { xs: 'none', md: 'block' },
-          flex: '1 1 52%',
-          height: '100%',
-          position: 'relative',
-          overflow: 'hidden',
-          bgcolor: 'primary.main',
-        }}
+      <Typography variant="h4" align="center" sx={{ mb: '30px' }}>
+        {t('loginTitle')}
+      </Typography>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleLogin}
+        validationSchema={loginSchema}
+        enableReinitialize
       >
-        <img
-          src="https://images.unsplash.com/photo-1676827613262-5fba25cee5fd?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGFibGUlMjB0ZW5uaXN8ZW58MHx8MHx8fDA%3D"
-          width="100%"
-          height="100%"
-          alt="Tennis table"
-          style={{ objectFit: 'cover', opacity: 0.82 }}
-        />
-      </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flex: '1 1 48%',
-          height: '100%',
-          p: { xs: 3, sm: 5, md: 7 },
-        }}
-      >
-        <Box
-          sx={{
-            maxWidth: '450px',
-            width: '100%',
-          }}
-        >
-          <Typography variant="h4" align="center" sx={{ mb: '30px' }}>
-            {t('loginTitle')}
-          </Typography>
-          <Formik
-            initialValues={initialValues}
-            onSubmit={handleLogin}
-            enableReinitialize
-          >
-            {renderForm}
-          </Formik>
-        </Box>
-      </Box>
+        {renderForm}
+      </Formik>
     </Box>
   );
 }

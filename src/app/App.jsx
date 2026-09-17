@@ -5,18 +5,21 @@ import { PlayerForm } from '@/pages/PlayerForm';
 import { Dashboard } from '../pages/Dashboard';
 import { Login } from '../pages/Login';
 import { Players } from '../pages/Players';
+import { Registration } from '../pages/Registration';
 import { TournamentForm } from '../pages/TournamentForm';
 import TournamentPage from '../pages/TournamentPage';
 import { TournamentParticipants } from '../pages/TournamentParticipants';
 import { Tournaments } from '../pages/Tournaments';
 import MainLayout from './layouts/MainLayout';
-import { Registration } from '../pages/Registration';
+import AuthLayout from './layouts/AuthLayout';
 
 function App() {
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/reg" element={<Registration />} />
+      <Route element={<AuthLayout />}>
+        <Route path="/login" element={<Login />} />
+        <Route path="/reg" element={<Registration />} />
+      </Route>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<Dashboard />} />

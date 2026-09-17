@@ -1870,12 +1870,12 @@
   "users": [
     {
       "id": 1,
-      "fullName": "Anonymous",
+      "fullName": "Testovych",
       "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "age": 29,
       "sex": "male",
-      "email": "anonymous@gmail.com",
-      "password": "12345",
+      "email": "test@gmail.com",
+      "password": "test",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "ukrRate": 16.9,
