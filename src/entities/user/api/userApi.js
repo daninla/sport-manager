@@ -11,4 +11,4 @@ export const userApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useLazyGetUserByEmailQuery, useCreateUser } = userApi;
+export const { useLazyGetUserByEmailQuery, useCreateUserMutation } = userApi;

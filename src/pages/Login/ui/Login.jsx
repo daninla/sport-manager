@@ -35,28 +35,29 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = async ({ email, password }) => {
-    const loginPromise = getUserByEmail(email)
-      .unwrap()
-      .then(([user]) => {
-        if (!user) {
-          throw new Error(t('notFoundEmail'));
-        }
+  const handleSignIn = ({ email, password }) => {
+    const signInPromise = (async () => {
+      const users = await getUserByEmail(email).unwrap();
+      const [user] = users;
+      if (!user) {
+        throw new Error(t('notFoundEmail'));
+      }
 
-        if (user.password !== password) {
-          throw new Error(t('invalidPass'));
-        }
+      if (user.password !== password) {
+        throw new Error(t('invalidPass'));
+      }
 
-        localStorage.setItem('currentUser', JSON.stringify(user));
-        navigate('/');
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      navigate('/');
 
-        return user;
-      });
+      return user;
+    })();
 
-    toast.promise(loginPromise, {
-      loading: t('loginLoading'),
-      success: t('loginSuccess'),
-      error: (err) => `${t('loginError')}: ${err.message || t('unknownError')}`,
+    return toast.promise(signInPromise, {
+      loading: t('loading'),
+      success: t('success'),
+      error: (err) =>
+        `${t('signInError')}: ${err.message || t('unknownError')}`,
     });
   };
 
@@ -150,11 +151,14 @@ function Login() {
             sx={{ py: 1.5, fontWeight: 'bold', fontSize: '18px' }}
             disabled={!isValid}
           >
-            {t('loginButton')}
+            {t('signInButton')}
           </Button>
           <Typography variant="p" align="center">
             {t('notAcc')}
-            <Link to="/reg" style={{ color: 'inherit', textAlign: 'center' }}>
+            <Link
+              to="/signup"
+              style={{ color: 'inherit', textAlign: 'center' }}
+            >
               {t('signUp')}
             </Link>
           </Typography>
@@ -170,11 +174,11 @@ function Login() {
       }}
     >
       <Typography variant="h4" align="center" sx={{ mb: '30px' }}>
-        {t('loginTitle')}
+        {t('signInTitle')}
       </Typography>
       <Formik
         initialValues={initialValues}
-        onSubmit={handleLogin}
+        onSubmit={handleSignIn}
         validationSchema={loginSchema}
         enableReinitialize
       >

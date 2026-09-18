@@ -178,9 +178,9 @@ function Header() {
                 borderRadius: '8px',
                 '&:hover': { bgcolor: '#00c853' },
               }}
-              onClick={() => navigate('/login')}
+              onClick={() => navigate('/signin')}
             >
-              {t('login')}
+              {t('signIn')}
             </Button>
           )}
           <SwitchLng />

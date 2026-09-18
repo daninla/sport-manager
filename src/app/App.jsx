@@ -17,8 +17,8 @@ function App() {
   return (
     <Routes>
       <Route element={<AuthLayout />}>
-        <Route path="/login" element={<Login />} />
-        <Route path="/reg" element={<Registration />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<Registration />} />
       </Route>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
