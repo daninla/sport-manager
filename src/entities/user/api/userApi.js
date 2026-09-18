@@ -8,7 +8,18 @@ export const userApi = baseApi.injectEndpoints({
     createUser: builder.mutation({
       query: (data) => ({ url: '/users', method: 'POST', body: data }),
     }),
+    updateUser: builder.mutation({
+      query: ({ id, ...userData }) => ({
+        url: `/users/${id}`,
+        method: 'PUT',
+        body: userData,
+      }),
+    }),
   }),
 });
 
-export const { useLazyGetUserByEmailQuery, useCreateUserMutation } = userApi;
+export const {
+  useLazyGetUserByEmailQuery,
+  useCreateUserMutation,
+  useUpdateUserMutation,
+} = userApi;

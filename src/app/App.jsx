@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { Player } from '@/pages/Player';
 import { PlayerForm } from '@/pages/PlayerForm';
+import { Account } from '../pages/Account';
 import { Dashboard } from '../pages/Dashboard';
 import { Login } from '../pages/Login';
 import { Players } from '../pages/Players';
@@ -10,8 +11,8 @@ import { TournamentForm } from '../pages/TournamentForm';
 import TournamentPage from '../pages/TournamentPage';
 import { TournamentParticipants } from '../pages/TournamentParticipants';
 import { Tournaments } from '../pages/Tournaments';
-import MainLayout from './layouts/MainLayout';
 import AuthLayout from './layouts/AuthLayout';
+import MainLayout from './layouts/MainLayout';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </Route>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="/account" element={<Account />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/tournaments" element={<Tournaments />} />
         <Route path="/tournaments/add" element={<TournamentForm />} />

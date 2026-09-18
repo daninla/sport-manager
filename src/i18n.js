@@ -5,14 +5,16 @@ import enPlayers from '../public/locales/en/players.json';
 import enTournamentForm from '../public/locales/en/tournamentForm.json';
 import enTournamentPage from '../public/locales/en/tournamentPage.json';
 import enTournaments from '../public/locales/en/tournaments.json';
-import enAuth from "../public/locales/en/auth.json";
+import enAuth from '../public/locales/en/auth.json';
+import enAccount from '../public/locales/en/account.json';
 import uaDashboard from '../public/locales/ua/dashboard.json';
 import uaHeader from '../public/locales/ua/header.json';
 import uaPlayers from '../public/locales/ua/players.json';
 import uaTournamentForm from '../public/locales/ua/tournamentForm.json';
 import uaTournamentPage from '../public/locales/ua/tournamentPage.json';
 import uaTournaments from '../public/locales/ua/tournaments.json';
-import uaAuth from "../public/locales/ua/auth.json";
+import uaAuth from '../public/locales/ua/auth.json';
+import uaAccount from '../public/locales/ua/account.json';
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
@@ -29,6 +31,7 @@ i18n
         tournamentForm: enTournamentForm,
         tournamentPage: enTournamentPage,
         auth: enAuth,
+        account: enAccount,
       },
       ua: {
         dashboard: uaDashboard,
@@ -38,6 +41,7 @@ i18n
         tournamentForm: uaTournamentForm,
         tournamentPage: uaTournamentPage,
         auth: uaAuth,
+        account: uaAccount,
       },
     },
     ns: [
@@ -48,6 +52,7 @@ i18n
       'tournamentForm',
       'tournamentPage',
       'auth',
+      'account'
     ],
     defaultNS: 'dashboard',
     fallbackLng: 'ua',

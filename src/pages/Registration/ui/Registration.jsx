@@ -69,7 +69,7 @@ function Registration() {
       }).unwrap();
 
       localStorage.setItem('currentUser', JSON.stringify(newUser));
-      navigate('/');
+      navigate('/account');
 
       return newUser;
     })();
