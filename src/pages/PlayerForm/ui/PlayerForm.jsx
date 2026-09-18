@@ -1,6 +1,6 @@
 import { useParams } from 'react-router';
 import PersonIcon from '@mui/icons-material/Person';
-import { Box, TextField, Typography } from '@mui/material';
+import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import { skipToken } from '@reduxjs/toolkit/query';
 import { FieldArray, Form, Formik } from 'formik';
 
@@ -37,6 +37,14 @@ function PlayerForm() {
   const initialValues = {
     ...player,
     notes: player.notes.length > 0 ? [...player.notes, ''] : [''],
+  };
+
+  const onSubmitForm = async (values) => {
+    const player = {
+      ...values,
+      notes: values.notes.filter((value) => value),
+    };
+    await updatePlayer(player).unwrap();
   };
 
   const renderForm = ({ values, handleChange }) => (
@@ -157,6 +165,26 @@ function PlayerForm() {
             )}
           </FieldArray>
         </Box>
+        <Stack
+          direction="row"
+          gap={10}
+          sx={{ margin: '1em 0', justifyContent: 'center' }}
+        >
+          <Button
+            variant="contained"
+            type="submit"
+            sx={{ fontSize: '1.1em', borderRadius: '0.5em' }}
+          >
+            Save
+          </Button>
+          <Button
+            variant="contained"
+            type="reset"
+            sx={{ fontSize: '1.1em', borderRadius: '0.5em' }}
+          >
+            Reset
+          </Button>
+        </Stack>
       </Box>
     </Form>
   );
@@ -165,9 +193,7 @@ function PlayerForm() {
     return (
       <Formik
         initialValues={initialValues}
-        onSubmit={async (values) => {
-          await updatePlayer(values).unwrap();
-        }}
+        onSubmit={onSubmitForm}
         validationSchema={playerFormSchema}
         enableReinitialize
       >
