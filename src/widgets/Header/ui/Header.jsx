@@ -43,6 +43,7 @@ function Header() {
   const handleLogOut = () => {
     localStorage.removeItem('currentUser');
     setUser(null);
+    navigate('/');
   };
 
   useEffect(() => {
@@ -121,6 +122,7 @@ function Header() {
                     borderRadius: '50%',
                     overflow: 'hidden',
                   }}
+                  onClick={() => navigate("/account")}
                 >
                   <Box
                     component="img"

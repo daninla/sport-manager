@@ -1,4 +1,5 @@
 import { initReactI18next } from 'react-i18next';
+import enAccount from '../public/locales/en/account.json';
 import enAuth from '../public/locales/en/auth.json';
 import enDashboard from '../public/locales/en/dashboard.json';
 import enHeader from '../public/locales/en/header.json';
@@ -8,6 +9,7 @@ import enTournamentFilters from '../public/locales/en/tournamentFilters.json';
 import enTournamentForm from '../public/locales/en/tournamentForm.json';
 import enTournamentPage from '../public/locales/en/tournamentPage.json';
 import enTournaments from '../public/locales/en/tournaments.json';
+import uaAccount from '../public/locales/ua/account.json';
 import uaAuth from '../public/locales/ua/auth.json';
 import uaDashboard from '../public/locales/ua/dashboard.json';
 import uaHeader from '../public/locales/ua/header.json';
@@ -35,6 +37,7 @@ i18n
         sidebar: enSidebar,
         tournamentFilters: enTournamentFilters,
         auth: enAuth,
+        account: enAccount,
       },
       ua: {
         dashboard: uaDashboard,
@@ -47,6 +50,7 @@ i18n
         tournamentFilters: uaTournamentFilters,
 
         auth: uaAuth,
+        account: uaAccount,
       },
     },
     ns: [
@@ -60,6 +64,7 @@ i18n
       'tournamentFilters',
 
       'auth',
+      'account',
     ],
     defaultNS: 'dashboard',
     fallbackLng: 'ua',
