@@ -1,15 +1,30 @@
 import { NavLink, useMatch, useParams } from 'react-router-dom';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
+import { useGetTournamentByIdQuery } from '@/entities/tournament';
 import { globalMenu } from '../config/globalMenu';
 import { getTournamentMenu } from '../config/tournamentMenu';
 
 function Sidebar() {
   const tournamentMatch = useMatch({ path: '/tournaments/:id/*', end: false });
   const { id } = useParams();
+  const {
+    data: tournament,
+    isLoading,
+    error,
+  } = useGetTournamentByIdQuery(id, { skip: !tournamentMatch });
+
+  if (isLoading) return 'Loading...';
+  if (error) return <Typography variant="h6">Ошибка загрузки</Typography>;
   const isTournamentContext = Boolean(tournamentMatch && id);
 
-  const items = isTournamentContext ? getTournamentMenu(id) : globalMenu;
+  let items = isTournamentContext ? getTournamentMenu(id) : globalMenu;
+  const noPlayoffFormat = ['Swiss System', 'Round Robin'];
+
+  if (tournament) {
+    if (noPlayoffFormat.includes(tournament.bracketFormat))
+      items = items.filter(({ label }) => label !== 'Playoff');
+  }
 
   return (
     <Box

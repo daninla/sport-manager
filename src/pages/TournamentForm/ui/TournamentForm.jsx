@@ -1,10 +1,25 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CancelIcon from '@mui/icons-material/Cancel';
 import SaveIcon from '@mui/icons-material/Save';
-import { Box, Button, Stack, Typography } from '@mui/material';
+import {
+  Autocomplete,
+  Box,
+  Button,
+  Chip,
+  Stack,
+  TextField,
+  Typography,
+} from '@mui/material';
 import { Field, Form, Formik } from 'formik';
+
+import { useGetPlayersQuery } from '@/entities/player';
+import {
+  buildPlayoffBracket,
+  useCreateTournamentMutation,
+} from '@/entities/tournament';
 
 import styles from './TournamentForm.module.css';
 
@@ -29,10 +44,101 @@ const initialValues = {
 function TournamentForm() {
   const navigate = useNavigate();
   const { t } = useTranslation('tournamentForm');
+  const { data: players = [], isLoading: isPlayersLoading } = useGetPlayersQuery();
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
+  const [createTournament, { isLoading }] = useCreateTournamentMutation();
+
   const ageCategories = t('ageCategories', { returnObjects: true });
   const competitionTypes = t('competitionTypes', { returnObjects: true });
   const tournamentFormats = t('tournamentFormats', { returnObjects: true });
   const gamesFormats = t('gamesFormats', { returnObjects: true });
+
+  const handleAddPlayer = (value) => {
+    if (!value) return;
+
+    const playerName =
+      typeof value === 'string' ? value.trim() : value.fullName?.trim();
+
+    if (!playerName) return;
+
+    const matchedPlayer = players.find(
+      (player) =>
+        player.fullName.toLowerCase() === playerName.toLowerCase()
+    );
+
+    if (!matchedPlayer) return;
+
+    const alreadyAdded = selectedPlayers.some(
+      (player) => player.id === matchedPlayer.id
+    );
+
+    if (!alreadyAdded) {
+      setSelectedPlayers((prev) => [...prev, matchedPlayer]);
+    }
+
+    setSearchValue('');
+  };
+
+  const handleRemovePlayer = (id) => {
+    setSelectedPlayers((prev) => prev.filter((player) => player.id !== id));
+  };
+
+  const mapCompetitionType = (type) => {
+    switch (type) {
+      case 'team':
+        return 'Team';
+      case 'double':
+        return 'Double';
+      case 'single':
+      default:
+        return 'Single';
+    }
+  };
+
+  const mapBracketFormat = (format) => {
+    switch (format) {
+      case 'round_robin':
+        return 'Round Robin';
+      case 'swiss':
+        return 'Swiss System';
+      case 'single_elimination':
+      default:
+        return 'Single Elimination';
+    }
+  };
+
+  const mapMatchFormat = (gamesToWin) => {
+    const games = Number(gamesToWin) || 3;
+    return `Best of ${games}`;
+  };
+
+  const handleSubmit = async (values) => {
+    if (selectedPlayers.length === 0) {
+      return;
+    }
+
+    const playerIds = selectedPlayers.map((player) => Number(player.id));
+
+    const payload = {
+      ...values,
+      players: playerIds,
+      competitionType: mapCompetitionType(values.tournamentType),
+      bracketFormat: mapBracketFormat(values.format),
+      matchFormat: mapMatchFormat(values.gamesToWin),
+      maxParticipants: Number(values.playersLimit) || playerIds.length,
+      currentParticipants: playerIds.length,
+      status: 'Upcoming',
+      playoff:
+        values.format === 'single_elimination'
+          ? buildPlayoffBracket(playerIds)
+          : [],
+      matches: [],
+    };
+
+    await createTournament(payload).unwrap();
+    navigate('/tournaments');
+  };
 
   const renderForm = ({ values }) => {
     return (
@@ -47,6 +153,7 @@ function TournamentForm() {
               placeholder={t('name')}
             />
           </Box>
+
           <Box className={styles['field-container']}>
             <label htmlFor="ageCategory">{t('ageCategory')}</label>
             <Field name="ageCategory" id="ageCategory" as="select">
@@ -58,11 +165,13 @@ function TournamentForm() {
             </Field>
           </Box>
         </Box>
+
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="date">{t('date')}</label>
             <Field type="date" name="date" id="date" />
           </Box>
+
           <Box className={styles['field-container']}>
             <label htmlFor="location">{t('location')}</label>
             <Field
@@ -73,16 +182,19 @@ function TournamentForm() {
             />
           </Box>
         </Box>
+
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="timeStart">{t('timeStart')}</label>
             <Field type="time" name="timeStart" id="timeStart" />
           </Box>
+
           <Box className={styles['field-container']}>
             <label htmlFor="timeEnd">{t('timeEnd')}</label>
             <Field type="time" name="timeEnd" id="timeEnd" />
           </Box>
         </Box>
+
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="type">{t('competitionType')}</label>
@@ -94,6 +206,7 @@ function TournamentForm() {
               ))}
             </Field>
           </Box>
+
           <Box className={styles['field-container']}>
             <label htmlFor="format">{t('format')}</label>
             <Field name="format" id="format" as="select">
@@ -105,11 +218,13 @@ function TournamentForm() {
             </Field>
           </Box>
         </Box>
+
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="playersLimit">{t('playersLimit')}</label>
             <Field type="number" name="playersLimit" id="playersLimit" />
           </Box>
+
           <Box className={styles['field-container']}>
             <label htmlFor="gamesToWin">{t('gamesToWin')}</label>
             <Field name="gamesToWin" id="gamesToWin" as="select">
@@ -121,12 +236,14 @@ function TournamentForm() {
             </Field>
           </Box>
         </Box>
+
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="pointsPerGame">{t('pointsPerGame')}</label>
             <Field type="number" name="pointsPerGame" id="pointsPerGame" />
           </Box>
         </Box>
+
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label>{t('typeTournament')}</label>
@@ -141,6 +258,7 @@ function TournamentForm() {
               </label>
             </Box>
           </Box>
+
           {values.isRated === 'true' && (
             <Box className={styles['field-container']}>
               <label htmlFor="ratingCoefficient">
@@ -155,6 +273,46 @@ function TournamentForm() {
             </Box>
           )}
         </Box>
+
+        <Box className={styles['group-container']}>
+          <Box className={styles['field-container']}>
+            <label>{t('players')}</label>
+
+            <Autocomplete
+              freeSolo
+              options={players}
+              getOptionLabel={(option) =>
+                typeof option === 'string' ? option : option.fullName
+              }
+              inputValue={searchValue}
+              onInputChange={(event, newInputValue) => {
+                setSearchValue(newInputValue);
+              }}
+              onChange={(event, newValue) => {
+                handleAddPlayer(newValue);
+              }}
+              loading={isPlayersLoading}
+              sx={{ width: '100%', marginBottom: '1rem' }}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  placeholder={t('playerSearch')}
+                />
+              )}
+            />
+
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+              {selectedPlayers.map((player) => (
+                <Chip
+                  key={player.id}
+                  label={player.fullName}
+                  onDelete={() => handleRemovePlayer(player.id)}
+                />
+              ))}
+            </Box>
+          </Box>
+        </Box>
+
         <Stack direction={{ xs: 'column', md: 'row' }} spacing={6}>
           <Button
             type="button"
@@ -166,6 +324,7 @@ function TournamentForm() {
           >
             {t('return')}
           </Button>
+
           <Button
             type="reset"
             color="error"
@@ -175,12 +334,14 @@ function TournamentForm() {
           >
             {t('reset')}
           </Button>
+
           <Button
             type="submit"
             color="secondary"
             variant="contained"
             size="large"
             startIcon={<SaveIcon />}
+            disabled={isLoading || selectedPlayers.length === 0}
           >
             {t('save')}
           </Button>
@@ -188,6 +349,7 @@ function TournamentForm() {
       </Form>
     );
   };
+
   return (
     <Box
       sx={{
@@ -211,7 +373,12 @@ function TournamentForm() {
         <Typography variant="h4" align="center" sx={{ mb: '30px' }}>
           {t('heading')}
         </Typography>
-        <Formik initialValues={initialValues} enableReinitialize>
+
+        <Formik
+          initialValues={initialValues}
+          onSubmit={handleSubmit}
+          enableReinitialize
+        >
           {renderForm}
         </Formik>
       </Box>

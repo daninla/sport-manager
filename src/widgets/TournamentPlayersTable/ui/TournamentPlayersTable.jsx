@@ -35,8 +35,6 @@ const columns = [
   { id: 'notes', label: 'Notes', minWidth: 200 },
 ];
 
-
-
 function TournamentPlayersTable() {
   const navigate = useNavigate();
   const usersPath = "/players";

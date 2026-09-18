@@ -25,6 +25,14 @@ export const tournamentApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ['Tournament'],
     }),
+    createTournament: builder.mutation({
+      query: (tournamentData) => ({
+        url:'/tournaments',
+        method:'POST',
+        body: tournamentData
+      }),
+      invalidatesTags: ['Tournament'],
+    })
   }),
 });
 
