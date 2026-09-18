@@ -121,8 +121,6 @@ function PlayerForm() {
             {({ push, remove }) => (
               <ul className={styles['notes-list']}>
                 {values.notes.map((note, index) => {
-                  const isLastField = index === values.notes.length - 1;
-
                   return (
                     <li key={index}>
                       <TextField
@@ -130,13 +128,19 @@ function PlayerForm() {
                         value={note}
                         variant="standard"
                         onChange={(e) => {
-                          const value = e.target.value;
                           handleChange(e);
-                          if (isLastField && value.trim().length > 0) {
+
+                          const nextNotes = [...values.notes];
+                          nextNotes[index] = e.target.value;
+
+                          if (!nextNotes.includes('')) {
                             push('');
-                          }
-                          if (!isLastField && value.trim().length === 0) {
-                            remove(values.notes.length - 1);
+                          } else {
+                            nextNotes.forEach((note, index) => {
+                              if (!note && index !== nextNotes.length - 1) {
+                                remove(index);
+                              }
+                            });
                           }
                         }}
                         sx={{
@@ -178,16 +182,23 @@ function PlayerForm() {
           border: '1px solid',
           borderColor: 'secondary.main',
           borderRadius: '3em',
-          width: 'fit-content',
+          width: '20em',
+          height: '30em',
+          overflow: 'hidden',
+          display: 'flex',
         }}
       >
-        <PersonIcon
-          sx={{
-            width: '5em',
-            height: '5em',
-            margin: '7.5em 5em',
-          }}
-        />
+        {player.photo ? (
+          <img src="#" alt="player photo" className={styles['player-photo']} />
+        ) : (
+          <PersonIcon
+            sx={{
+              width: '5em',
+              height: '5em',
+              margin: 'auto',
+            }}
+          />
+        )}
       </Box>
       <Typography variant={textVariant}>
         Full name: {player.fullName}
