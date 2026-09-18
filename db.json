@@ -1731,8 +1731,31 @@
         52,
         53,
         54
-    ]}],
- "matches": [
+      ]
+    },
+    {
+      "name": "ytfghkijm",
+      "ageCategory": "",
+      "date": "",
+      "timeStart": "",
+      "timeEnd": "",
+      "location": "yhgjm",
+      "players": [
+        7,
+        5
+      ],
+      "competitionType": "Single",
+      "bracketFormat": "Single Elimination",
+      "matchFormat": "Best of 3",
+      "pointsPerGame": 11,
+      "maxParticipants": 16,
+      "currentParticipants": 2,
+      "status": "Upcoming",
+      "matches": [],
+      "id": "gfZ7dgwyznY"
+    }
+  ],
+  "matches": [
     {
       "id": "1",
       "tournamentId": 4,
@@ -1917,7 +1940,7 @@
       }
     }
   ],
-    "playoffMatches": [
+  "playoffMatches": [
     {
       "id": "pf-1",
       "tournamentId": 5,
@@ -2351,6 +2374,29 @@
         "player2": 0
       },
       "historySets": []
+    },
+    {
+      "id": "x_PWauCLLNA",
+      "tournamentId": null,
+      "round": "Final",
+      "matchIndex": 1,
+      "player1": "Dmytro Moroz",
+      "player2": "Ihor Tkachenko",
+      "player1Id": 7,
+      "player2Id": 5,
+      "winner": null,
+      "winnerId": null,
+      "status": "pending",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

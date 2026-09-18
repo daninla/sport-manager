@@ -8,7 +8,6 @@ import {
   useGetTournamentByIdQuery,
   useTournamentMatches,
 } from '@/entities/tournament';
-// NOTE: adjust this import path to your actual matchApi barrel.
 import { useGetMatchesByTournamentQuery } from '@/entities/match';
 
 import BaseButton from '@/shared/ui/BaseButton/BaseButton.jsx';
@@ -20,9 +19,6 @@ function TournamentPage() {
 
   const { data: tournament, isLoading, error } = useGetTournamentByIdQuery(id);
 
-  // Matches used to come off `tournament.matches`. They're now a
-  // separate flat collection, so fetch them by tournamentId and pass
-  // the array into useTournamentMatches instead of the tournament object.
   const { data: rawMatches = [] } = useGetMatchesByTournamentQuery(id, {
     skip: !id,
   });
