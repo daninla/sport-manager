@@ -1792,7 +1792,7 @@
       "tournamentId": 4,
       "player1Id": 43,
       "player2Id": 44,
-      "status": "Ongoing",
+      "status": "Finished",
       "score": {
         "player1": 0,
         "player2": 1
@@ -2414,6 +2414,22 @@
       "club": "Free Agent",
       "notes": "None",
       "role": "player"
+    },
+    {
+      "fullName": "danila",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+      "age": 0,
+      "sex": "",
+      "email": "idanila331@gmail.com",
+      "password": "12345678",
+      "city": "",
+      "status": "",
+      "ukrRate": 0,
+      "worldRate": 0,
+      "club": "",
+      "notes": "",
+      "role": "player",
+      "id": "akv422aA0wc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
