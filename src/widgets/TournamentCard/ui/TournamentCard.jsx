@@ -16,19 +16,14 @@ import {
   Typography,
 } from '@mui/material';
 
-import { useGetMatchesByTournamentIdQuery } from '@/entities/tournament';
+import { useEnrichedMatches } from '../../../entities/match/model/useEnrichedMatches';
+
+import MatchStatusBage from '../../../shared/ui/MatchStatusBage/MatchStatusBage';
 
 export function TournamentCard({ tournament, onOpen, onEdit }) {
   const tournamentId = String(tournament?.id || '');
 
-  const { data: matches = [] } = useGetMatchesByTournamentIdQuery(tournamentId, {
-    skip: !tournamentId,
-  });
-
-  const recentMatches = (matches || []).slice(-2);
-  const participantCount = Array.isArray(tournament?.players)
-    ? tournament.players.length
-    : Number(tournament?.currentParticipants || 0);
+  const { matches, isLoading } = useEnrichedMatches(tournamentId);
 
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -49,19 +44,6 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
     event.stopPropagation();
     handleCloseMenu();
     if (onEdit) onEdit(tournamentId);
-  };
-
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'Ongoing':
-        return '#ef4444';
-      case 'Upcoming':
-        return '#3b82f6';
-      case 'Completed':
-        return '#10b981';
-      default:
-        return '#6b7280';
-    }
   };
 
   return (
@@ -87,36 +69,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
           alignItems: 'center',
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            px: '10px',
-            py: '2px',
-            backgroundColor: getStatusColor(tournament.status),
-            borderRadius: '6px',
-          }}
-        >
-          {tournament.status === 'Ongoing' && (
-            <Box
-              sx={{
-                height: '6px',
-                width: '6px',
-                borderRadius: '50%',
-                backgroundColor: 'white',
-              }}
-            />
-          )}
-          <Typography
-            sx={{ color: 'white', fontSize: '12px', fontWeight: 'bold' }}
-          >
-            {tournament.status === 'Ongoing'
-              ? 'LIVE'
-              : tournament.status?.toUpperCase()}
-          </Typography>
-        </Box>
-
+        <MatchStatusBage status={tournament.status} />
         <IconButton
           onClick={handleOpenMenu}
           size="small"
@@ -207,69 +160,101 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
         </Typography>
       </Box>
 
+      {/* Блок отображения списков матчей */}
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        {recentMatches.map((match, index) => {
-          const scoreValue =
-            match.score && typeof match.score === 'object'
-              ? `${match.score.player1 ?? 0}:${match.score.player2 ?? 0}`
-              : match.score ?? '0:0';
-
-          return (
+        {matches.slice(-2).map((match, index) => (
+          <Box
+            key={match.id || `${tournamentId}-match-${index}`}
+            sx={{
+              p: 1,
+              bgcolor: 'rgba(255, 255, 255, 0.02)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: index === 0 ? '6px 6px 0 0' : '0 0 6px 6px',
+            }}
+          >
+            <Typography
+              variant="caption"
+              sx={{ color: '#64748b', display: 'block', mb: 0.5 }}
+            >
+              Match {index + 1}
+            </Typography>
             <Box
-              key={match.id || `${tournamentId}-match-${index}`}
               sx={{
-                p: 1,
-                bgcolor: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderRadius: index === 0 ? '6px 6px 0 0' : '0 0 6px 6px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '6px',
+                color: 'white',
+                fontSize: '0.8rem',
               }}
             >
+              {/* Игрок 1 */}
               <Typography
-                variant="caption"
-                sx={{ color: '#64748b', display: 'block', mb: 0.5 }}
+                noWrap
+                sx={{
+                  flex: '1 1 0',
+                  minWidth: 0,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  fontSize: '0.8rem',
+                  textAlign: 'left',
+                }}
               >
-                Match {index + 1}
+                {match.player1?.fullName || `Игрок ${match.player1Id}`}
               </Typography>
-              <Box
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  color: 'white',
-                  fontSize: '0.85rem',
-                  gap: 1,
-                }}
-              >
-                <span>{match.player1 || 'TBD'}</span>
-                <span style={{ color: '#64748b' }}>vs</span>
-                <span>{match.player2 || 'TBD'}</span>
-              </Box>
+
               <Typography
-                align="center"
                 sx={{
-                  color: '#00e676',
-                  fontWeight: 'bold',
-                  fontSize: '0.85rem',
-                  mt: 0.5,
+                  color: '#8699b4',
+                  flex: '0 0 auto',
+                  px: '4px',
+                  fontSize: '0.8rem',
                 }}
               >
-                {scoreValue}
+                vs
+              </Typography>
+
+              {/* Игрок 2 */}
+              <Typography
+                noWrap
+                sx={{
+                  flex: '1 1 0',
+                  minWidth: 0,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  fontSize: '0.8rem',
+                  textAlign: 'right',
+                }}
+              >
+                {match.player2?.fullName || `Игрок ${match.player2Id}`}
               </Typography>
             </Box>
-          );
-        })}
+            <Typography
+              align="center"
+              sx={{
+                color: '#00e676',
+                fontWeight: 'bold',
+                fontSize: '0.85rem',
+                mt: 0.5,
+              }}
+            >
+              {match.score?.player1 ?? 0} - {match.score?.player2 ?? 0}
+            </Typography>
+          </Box>
+        ))}
       </Box>
 
       <Box sx={{ mt: 'auto' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: '6px', mb: 1 }}>
           <PeopleIcon sx={{ color: '#8892b0', fontSize: 18 }} />
           <Typography sx={{ color: '#8892b0', fontSize: '0.85rem' }}>
-            {participantCount} / {tournament.maxParticipants}
+            {tournament.currentParticipants} / {tournament.maxParticipants}
           </Typography>
         </Box>
 
         <LinearProgress
           value={
-            (participantCount / Math.max(Number(tournament.maxParticipants) || 1, 1)) * 100
+            (tournament.currentParticipants / tournament.maxParticipants) * 100
           }
           variant="determinate"
           sx={{

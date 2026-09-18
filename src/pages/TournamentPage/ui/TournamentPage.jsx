@@ -1,8 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import TournamentInfo from './TournamentInfo';
 import { Box, Typography } from '@mui/material';
 
-import { useGetMatchesByTournamentIdQuery, useGetTournamentByIdQuery } from '@/entities/tournament';
+import {
+  TournamentStatusFallback,
+  useGetTournamentByIdQuery,
+  useTournamentMatches,
+} from '@/entities/tournament';
+// NOTE: adjust this import path to your actual matchApi barrel.
+import { useGetMatchesByTournamentQuery } from '@/entities/match';
 
 import BaseButton from '@/shared/ui/BaseButton/BaseButton.jsx';
 import MatchesTable from '@/widgets/TableMatches';
@@ -10,39 +17,23 @@ import MatchesTable from '@/widgets/TableMatches';
 function TournamentPage() {
   const { t } = useTranslation('tournamentPage');
   const { id } = useParams();
+
   const { data: tournament, isLoading, error } = useGetTournamentByIdQuery(id);
-  const { data: matches = [] } = useGetMatchesByTournamentIdQuery(id, {
+
+  // Matches used to come off `tournament.matches`. They're now a
+  // separate flat collection, so fetch them by tournamentId and pass
+  // the array into useTournamentMatches instead of the tournament object.
+  const { data: rawMatches = [] } = useGetMatchesByTournamentQuery(id, {
     skip: !id,
   });
 
-  if (isLoading) {
-    return (
-      <Typography variant="h4" sx={{ p: 4 }}>
-        {t('loading')}
-      </Typography>
-    );
-  }
+  const { matches, playedMatches, upcomingMatches } =
+    useTournamentMatches(rawMatches);
 
-  if (error) {
-    return (
-      <Typography variant="h4" sx={{ p: 4, color: 'error.main' }}>
-        {t('error')}
-      </Typography>
-    );
-  }
+  if (isLoading) return <TournamentStatusFallback type="loading" t={t} />;
+  if (error) return <TournamentStatusFallback type="error" t={t} />;
+  if (!tournament) return <TournamentStatusFallback type="notFound" t={t} />;
 
-  if (!tournament) {
-    return (
-      <Typography variant="h4" sx={{ p: 4 }}>
-        {t('notFound')}
-      </Typography>
-    );
-  }
-  const participantCount = Array.isArray(tournament.players)
-    ? tournament.players.length
-    : Number(tournament.currentParticipants || 0);
-  const playedMatches = matches.filter((match) => match.score !== '-');
-  const upcomingMatches = matches.filter((match) => match.score === '-');
   const status = tournament.status;
 
   return (
@@ -50,37 +41,7 @@ function TournamentPage() {
       <BaseButton text={t('back')} address="/tournaments" />
       <Typography variant="h4">{tournament.name}</Typography>
 
-      <Box sx={{ mt: 3 }}>
-        <Typography variant="h6">{t('details')}</Typography>
-        <Typography sx={{ mt: 1 }}>
-          <span style={{ fontWeight: 'bold' }}>{t('location')}</span>
-          {tournament.location}
-        </Typography>
-        <Typography>
-          <span style={{ fontWeight: 'bold' }}>{t('ageCategory')}</span>
-          {tournament.ageCategory}
-        </Typography>
-        <Typography>
-          <span style={{ fontWeight: 'bold' }}>{t('competitionType')}</span>
-          {tournament.competitionType}
-        </Typography>
-        <Typography>
-          <span style={{ fontWeight: 'bold' }}>{t('format')}</span>
-          {tournament.bracketFormat}
-        </Typography>
-        <Typography>
-          <span style={{ fontWeight: 'bold' }}>{t('matchFormat')}</span>
-          {tournament.matchFormat}
-        </Typography>
-        <Typography>
-          <span style={{ fontWeight: 'bold' }}>{t('pointsPerGame')}</span>
-          {tournament.pointsPerGame}
-        </Typography>
-        <Typography>
-          <span style={{ fontWeight: 'bold' }}>{t('participants')}</span>
-          {participantCount}/{tournament.maxParticipants}
-        </Typography>
-      </Box>
+      <TournamentInfo tournament={tournament} t={t} />
 
       <Box sx={{ mt: 4 }}>
         <Typography variant="h6">
@@ -95,13 +56,11 @@ function TournamentPage() {
             <Typography variant="h6" sx={{ mt: 3 }}>
               {t('playedMatches')}
             </Typography>
-
             <MatchesTable matches={playedMatches} />
 
             <Typography variant="h6" sx={{ mt: 4 }}>
               {t('upcomingMatches')}
             </Typography>
-
             <MatchesTable matches={upcomingMatches} />
           </>
         ) : (

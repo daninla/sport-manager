@@ -1668,7 +1668,7 @@
       "currentParticipants": 24,
       "tables": 8,
       "status": "Ongoing",
-      "players": [
+      "playerIds": [
         39,
         40,
         41,
@@ -1695,7 +1695,7 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "players": [
+      "playerIds": [
         47,
         48,
         49,
@@ -1722,7 +1722,7 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "players": [
+      "playerIds": [
         47,
         48,
         49,
@@ -1731,103 +1731,8 @@
         52,
         53,
         54
-      ]
-    },
-    {
-      "name": "Kharkiv Super Cup",
-      "ageCategory": "U18",
-      "date": "2026-09-24",
-      "timeStart": "20:51",
-      "timeEnd": "16:56",
-      "location": "Kharkiv",
-      "players": [
-        15,
-        12,
-        7,
-        6,
-        32,
-        45,
-        4,
-        34
-      ],
-      "competitionType": "Single",
-      "bracketFormat": "Single Elimination",
-      "matchFormat": "Best of 3",
-      "pointsPerGame": 11,
-      "maxParticipants": 16,
-      "currentParticipants": 8,
-      "status": "Upcoming",
-      "matches": [],
-      "id": "otl60lMjWMY"
-    }
-  ],
-  "playersTornament": [
-    {
-      "id": "39",
-      "name": "Yurii Fedorenko"
-    },
-    {
-      "id": "40",
-      "name": "Veronika Prykhodko"
-    },
-    {
-      "id": "41",
-      "name": "Hlib Tymoshenko"
-    },
-    {
-      "id": "42",
-      "name": "Ivanna Soroka"
-    },
-    {
-      "id": "43",
-      "name": "Stepan Koval"
-    },
-    {
-      "id": "44",
-      "name": "Marta Dmytriieva"
-    },
-    {
-      "id": "45",
-      "name": "Player 45"
-    },
-    {
-      "id": "46",
-      "name": "Player 46"
-    },
-    {
-      "id": "47",
-      "name": "Nazar Bilous"
-    },
-    {
-      "id": "48",
-      "name": "Yana Havryliuk"
-    },
-    {
-      "id": "49",
-      "name": "Artur Sobchuk"
-    },
-    {
-      "id": "50",
-      "name": "Polina Kravts"
-    },
-    {
-      "id": "51",
-      "name": "Vladislav Kornienko"
-    },
-    {
-      "id": "52",
-      "name": "Yeva Andriyenko"
-    },
-    {
-      "id": "53",
-      "name": "Kyrylo Martynov"
-    },
-    {
-      "id": "54",
-      "name": "Myroslava Pakhomova"
-    }
-  ],
-  "matches": [
+    ]}],
+ "matches": [
     {
       "id": "1",
       "tournamentId": 4,
@@ -2012,7 +1917,7 @@
       }
     }
   ],
-  "playoffMatches": [
+    "playoffMatches": [
     {
       "id": "pf-1",
       "tournamentId": 5,
@@ -2447,6 +2352,5 @@
       },
       "historySets": []
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
