@@ -1,17 +1,16 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { Player } from '@/pages/Player';
+import { Dashboard } from '@/pages/Dashboard';
 import { PlayerForm } from '@/pages/PlayerForm';
+import { Players } from '@/pages/Players';
+import { Tournaments } from '@/pages/Tournaments';
 import { Account } from '../pages/Account';
-import { Dashboard } from '../pages/Dashboard';
 import { Login } from '../pages/Login';
-import { Players } from '../pages/Players';
 import { Registration } from '../pages/Registration';
 import { TournamentForm } from '../pages/TournamentForm';
 import TournamentPage from '../pages/TournamentPage';
 import { TournamentParticipants } from '../pages/TournamentParticipants';
 import { TournamentPlayoff } from '../pages/TournamentPlayOff';
-import { Tournaments } from '../pages/Tournaments';
 import AuthLayout from './layouts/AuthLayout';
 import MainLayout from './layouts/MainLayout';
 
@@ -39,8 +38,7 @@ function App() {
         />
         <Route path="/players" element={<Players />} />
         <Route path="/players/add" element={<PlayerForm />} />
-        <Route path="/players/:id" element={<Player />} />
-        <Route path="/players/:id/edit" element={<PlayerForm />} />
+        <Route path="/players/:id" element={<PlayerForm />} />
       </Route>
     </Routes>
   );
