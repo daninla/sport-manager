@@ -1,17 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 import {
   AccountCircle,
   Mail as MailIcon,
   MoreVert as MoreIcon,
   Notifications as NotificationsIcon,
 } from '@mui/icons-material';
+import LogoutIcon from '@mui/icons-material/Logout';
 import SportsTennisIcon from '@mui/icons-material/SportsTennis';
 import {
   AppBar,
   Badge,
   Box,
+  Button,
   Container,
   IconButton,
   Menu,
@@ -23,8 +25,10 @@ import {
 import SwitchLng from '../../../features/switch-lng/ui/SwitchLng';
 
 function Header() {
+  const navigate = useNavigate();
   const { t } = useTranslation('header');
   const [anchorEl, setAnchorEl] = useState(null);
+  const [user, setUser] = useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
 
@@ -35,6 +39,23 @@ function Header() {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
+
+  const handleLogOut = () => {
+    localStorage.removeItem('currentUser');
+    setUser(null);
+  };
+
+  useEffect(() => {
+    const loadUser = () => {
+      const currentUser = localStorage.getItem('currentUser');
+      if (currentUser) {
+        setUser(JSON.parse(currentUser));
+      } else {
+        setUser(null);
+      }
+    };
+    loadUser();
+  }, []);
 
   return (
     <AppBar
@@ -75,50 +96,93 @@ function Header() {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          {/* Desktop actions */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+          {user ? (
+            <>
+              {/* Desktop actions */}
+              <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '10px' }}>
+                <IconButton color="inherit">
+                  <Badge badgeContent={4} color="error">
+                    <MailIcon />
+                  </Badge>
+                </IconButton>
 
-            <IconButton color="inherit">
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+                <IconButton color="inherit">
+                  <Badge badgeContent={17} color="error">
+                    <NotificationsIcon />
+                  </Badge>
+                </IconButton>
 
-            <IconButton color="inherit">
-              <AccountCircle />
-            </IconButton>
-          </Box>
+                <Button
+                  sx={{
+                    width: '40px',
+                    height: '40px',
+                    minWidth: 0,
+                    padding: 0,
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      width: '100%',
+                      height: '100%',
+                    }}
+                    src={user.photo}
+                    alt={user.fullName}
+                  />
+                </Button>
 
-          {/* Mobile menu */}
-          <IconButton
-            color="inherit"
-            sx={{ display: { xs: 'flex', md: 'none' } }}
-            onClick={handleMenuOpen}
-          >
-            <MoreIcon />
-          </IconButton>
+                <IconButton color="inherit" onClick={handleLogOut}>
+                  <LogoutIcon />
+                </IconButton>
+              </Box>
 
-          <Menu anchorEl={anchorEl} open={isMenuOpen} onClose={handleMenuClose}>
-            <MenuItem onClick={handleMenuClose}>
-              <MailIcon sx={{ mr: 1 }} />
-              {t('messages')}
-            </MenuItem>
+              {/* Mobile menu */}
+              <IconButton
+                color="inherit"
+                sx={{ display: { xs: 'flex', md: 'none' } }}
+                onClick={handleMenuOpen}
+              >
+                <MoreIcon />
+              </IconButton>
 
-            <MenuItem onClick={handleMenuClose}>
-              <NotificationsIcon sx={{ mr: 1 }} />
-              {t('notifications')}
-            </MenuItem>
+              <Menu
+                anchorEl={anchorEl}
+                open={isMenuOpen}
+                onClose={handleMenuClose}
+              >
+                <MenuItem onClick={handleMenuClose}>
+                  <MailIcon sx={{ mr: 1 }} />
+                  {t('messages')}
+                </MenuItem>
 
-            <MenuItem onClick={handleMenuClose}>
-              <AccountCircle sx={{ mr: 1 }} />
-              {t('profile')}
-            </MenuItem>
-          </Menu>
+                <MenuItem onClick={handleMenuClose}>
+                  <NotificationsIcon sx={{ mr: 1 }} />
+                  {t('notifications')}
+                </MenuItem>
+
+                <MenuItem onClick={handleMenuClose}>
+                  <AccountCircle sx={{ mr: 1 }} />
+                  {t('profile')}
+                </MenuItem>
+              </Menu>
+            </>
+          ) : (
+            <Button
+              variant="contained"
+              sx={{
+                bgcolor: '#00e676',
+                color: '#040b22',
+                fontWeight: 'bold',
+                borderRadius: '8px',
+                '&:hover': { bgcolor: '#00c853' },
+              }}
+              onClick={() => navigate('/signin')}
+            >
+              {t('signIn')}
+            </Button>
+          )}
           <SwitchLng />
         </Toolbar>
       </Container>
