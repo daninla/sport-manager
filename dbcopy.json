@@ -1668,7 +1668,7 @@
       "currentParticipants": 24,
       "tables": 8,
       "status": "Ongoing",
-      "players": [
+      "playerIds": [
         39,
         40,
         41,
@@ -1695,7 +1695,7 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "players": [
+      "playerIds": [
         47,
         48,
         49,
@@ -1722,7 +1722,7 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "players": [
+      "playerIds": [
         47,
         48,
         49,
@@ -1732,33 +1732,6 @@
         53,
         54
       ]
-    },
-    {
-      "name": "Kharkiv Super Cup",
-      "ageCategory": "U18",
-      "date": "2026-09-24",
-      "timeStart": "20:51",
-      "timeEnd": "16:56",
-      "location": "Kharkiv",
-      "players": [
-        15,
-        12,
-        7,
-        6,
-        32,
-        45,
-        4,
-        34
-      ],
-      "competitionType": "Single",
-      "bracketFormat": "Single Elimination",
-      "matchFormat": "Best of 3",
-      "pointsPerGame": 11,
-      "maxParticipants": 16,
-      "currentParticipants": 8,
-      "status": "Upcoming",
-      "matches": [],
-      "id": "otl60lMjWMY"
     }
   ],
   "playersTornament": [
@@ -1895,8 +1868,7 @@
         "player2": 0
       },
       "historySets": [
-        {
-          "player1": 11,
+        {"player1": 11,
           "player2": 13
         },
         {
@@ -2283,160 +2255,6 @@
       "winnerId": null,
       "winner": null,
       "status": "Upcoming",
-      "score": {
-        "player1": 0,
-        "player2": 0
-      },
-      "currentSet": {
-        "player1": 0,
-        "player2": 0
-      },
-      "historySets": []
-    },
-    {
-      "id": "Gv7Ih_keBcg",
-      "tournamentId": null,
-      "round": "Quarterfinals",
-      "matchIndex": 2,
-      "player1": "Dmytro Moroz",
-      "player2": "Anna Kravchenko",
-      "player1Id": 7,
-      "player2Id": 6,
-      "winner": null,
-      "winnerId": null,
-      "status": "pending",
-      "score": {
-        "player1": 0,
-        "player2": 0
-      },
-      "currentSet": {
-        "player1": 0,
-        "player2": 0
-      },
-      "historySets": []
-    },
-    {
-      "id": "eKdvGG2evWE",
-      "tournamentId": null,
-      "round": "Quarterfinals",
-      "matchIndex": 1,
-      "player1": "Serhiy Melnyk",
-      "player2": "Kateryna Savchenko",
-      "player1Id": 15,
-      "player2Id": 12,
-      "winner": null,
-      "winnerId": null,
-      "status": "pending",
-      "score": {
-        "player1": 0,
-        "player2": 0
-      },
-      "currentSet": {
-        "player1": 0,
-        "player2": 0
-      },
-      "historySets": []
-    },
-    {
-      "id": "eR_FZaHUlms",
-      "tournamentId": null,
-      "round": "Quarterfinals",
-      "matchIndex": 3,
-      "player1": "Anastasiia Kovtun",
-      "player2": "Stanislav Kuzmenko",
-      "player1Id": 32,
-      "player2Id": 45,
-      "winner": null,
-      "winnerId": null,
-      "status": "pending",
-      "score": {
-        "player1": 0,
-        "player2": 0
-      },
-      "currentSet": {
-        "player1": 0,
-        "player2": 0
-      },
-      "historySets": []
-    },
-    {
-      "id": "gtujf77AGnI",
-      "tournamentId": null,
-      "round": "Quarterfinals",
-      "matchIndex": 4,
-      "player1": "Daryna Bondarenko",
-      "player2": "Khrystyna Levchenko",
-      "player1Id": 4,
-      "player2Id": 34,
-      "winner": null,
-      "winnerId": null,
-      "status": "pending",
-      "score": {
-        "player1": 0,
-        "player2": 0
-      },
-      "currentSet": {
-        "player1": 0,
-        "player2": 0
-      },
-      "historySets": []
-    },
-    {
-      "id": "0oPLDTOXlw8",
-      "tournamentId": null,
-      "round": "Semifinals",
-      "matchIndex": 1,
-      "player1": "Winner r1-m1",
-      "player2": "Winner r1-m2",
-      "player1Id": null,
-      "player2Id": null,
-      "winner": null,
-      "winnerId": null,
-      "status": "pending",
-      "score": {
-        "player1": 0,
-        "player2": 0
-      },
-      "currentSet": {
-        "player1": 0,
-        "player2": 0
-      },
-      "historySets": []
-    },
-    {
-      "id": "KCuzI04DsYE",
-      "tournamentId": null,
-      "round": "Semifinals",
-      "matchIndex": 2,
-      "player1": "Winner r1-m3",
-      "player2": "Winner r1-m4",
-      "player1Id": null,
-      "player2Id": null,
-      "winner": null,
-      "winnerId": null,
-      "status": "pending",
-      "score": {
-        "player1": 0,
-        "player2": 0
-      },
-      "currentSet": {
-        "player1": 0,
-        "player2": 0
-      },
-      "historySets": []
-    },
-    {
-      "id": "5UXsX49OGKI",
-      "tournamentId": null,
-      "round": "Final",
-      "matchIndex": 1,
-      "player1": "Winner r2-m1",
-      "player2": "Winner r2-m2",
-      "player1Id": null,
-      "player2Id": null,
-      "winner": null,
-      "winnerId": null,
-      "status": "pending",
       "score": {
         "player1": 0,
         "player2": 0

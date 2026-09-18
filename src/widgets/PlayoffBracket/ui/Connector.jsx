@@ -10,29 +10,30 @@ function Connector({ containerRef, rounds = [], matchRefs = {}, colorForRound = 
       const rect = containerRef.current.getBoundingClientRect();
       const out = [];
 
-      for (let r = 0; r < rounds.length - 1; r++) {
-        const cur = rounds[r];
-        const nxt = rounds[r + 1];
+      for (let r = 0; r < rounds.length - 1; r += 1) {
+        const currentRound = rounds[r];
+        const nextRound = rounds[r + 1];
 
-        cur.matches.forEach((m, i) => {
-          const sEl = matchRefs[m.id];
-          if (!sEl) return;
-          const target = Math.floor(i / 2);
-          const tMatch = nxt.matches[target];
-          const tEl = matchRefs[tMatch?.id];
-          if (!tEl) return;
+        currentRound.matches.forEach((m, i) => {
+          const sourceEl = matchRefs[m.id];
+          if (!sourceEl) return;
 
-          const s = sEl.getBoundingClientRect();
-          const t = tEl.getBoundingClientRect();
+          const targetIndex = Math.floor(i / 2);
+          const targetMatch = nextRound.matches[targetIndex];
+          const targetEl = matchRefs[targetMatch?.id];
+          if (!targetEl) return;
 
-          const startX = s.right - rect.left;
-          const startY = s.top + s.height / 2 - rect.top;
-          const endX = t.left - rect.left;
-          const endY = t.top + t.height / 2 - rect.top;
+          const sourceRect = sourceEl.getBoundingClientRect();
+          const targetRect = targetEl.getBoundingClientRect();
 
-          const cx = startX + (endX - startX) * 0.5;
-          const d = `M ${startX} ${startY} C ${cx} ${startY} ${cx} ${endY} ${endX} ${endY}`;
-          out.push({ d, key: `${m.id}-${tMatch.id}`, round: r });
+          const startX = sourceRect.right - rect.left;
+          const startY = sourceRect.top + sourceRect.height / 2 - rect.top;
+          const endX = targetRect.left - rect.left;
+          const endY = targetRect.top + targetRect.height / 2 - rect.top;
+
+          const elbowX = startX + (endX - startX) * 0.5;
+          const d = `M ${startX} ${startY} L ${elbowX} ${startY} L ${elbowX} ${endY} L ${endX} ${endY}`;
+          out.push({ d, key: `${m.id}-${targetMatch.id}`, round: r });
         });
       }
 
@@ -53,9 +54,22 @@ function Connector({ containerRef, rounds = [], matchRefs = {}, colorForRound = 
   const rect = containerRef.current.getBoundingClientRect();
 
   return (
-    <svg width={rect.width} height={rect.height} style={{ position: 'absolute', left: 0, top: 0, pointerEvents: 'none' }}>
+    <svg
+      width={rect.width}
+      height={rect.height}
+      style={{ position: 'absolute', left: 0, top: 0, pointerEvents: 'none' }}
+    >
       {paths.map((p) => (
-        <path key={p.key} d={p.d} stroke={colorForRound(p.round)} strokeWidth={3.2} fill="none" strokeLinecap="round" opacity={0.98} />
+        <path
+          key={p.key}
+          d={p.d}
+          stroke={colorForRound(p.round)}
+          strokeWidth={4}
+          fill="none"
+          strokeLinecap="square"
+          strokeLinejoin="miter"
+          opacity={0.98}
+        />
       ))}
     </svg>
   );

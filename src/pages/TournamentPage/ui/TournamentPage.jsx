@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
 
-import { useGetTournamentByIdQuery } from '@/entities/tournament';
+import { useGetMatchesByTournamentIdQuery, useGetTournamentByIdQuery } from '@/entities/tournament';
 
 import BaseButton from '@/shared/ui/BaseButton/BaseButton.jsx';
 import MatchesTable from '@/widgets/TableMatches';
@@ -11,6 +11,10 @@ function TournamentPage() {
   const { t } = useTranslation('tournamentPage');
   const { id } = useParams();
   const { data: tournament, isLoading, error } = useGetTournamentByIdQuery(id);
+  const { data: matches = [] } = useGetMatchesByTournamentIdQuery(id, {
+    skip: !id,
+  });
+
   if (isLoading) {
     return (
       <Typography variant="h4" sx={{ p: 4 }}>
@@ -34,7 +38,9 @@ function TournamentPage() {
       </Typography>
     );
   }
-  const matches = tournament.matches || [];
+  const participantCount = Array.isArray(tournament.players)
+    ? tournament.players.length
+    : Number(tournament.currentParticipants || 0);
   const playedMatches = matches.filter((match) => match.score !== '-');
   const upcomingMatches = matches.filter((match) => match.score === '-');
   const status = tournament.status;
@@ -72,7 +78,7 @@ function TournamentPage() {
         </Typography>
         <Typography>
           <span style={{ fontWeight: 'bold' }}>{t('participants')}</span>
-          {tournament.currentParticipants}/{tournament.maxParticipants}
+          {participantCount}/{tournament.maxParticipants}
         </Typography>
       </Box>
 

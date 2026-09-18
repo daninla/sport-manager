@@ -18,6 +18,9 @@ import { Field, Form, Formik } from 'formik';
 import { useGetPlayersQuery } from '@/entities/player';
 import {
   buildPlayoffBracket,
+  flattenPlayoffBracket,
+  getNearestBracketSize,
+  useCreatePlayoffMatchMutation,
   useCreateTournamentMutation,
 } from '@/entities/tournament';
 
@@ -47,7 +50,10 @@ function TournamentForm() {
   const { data: players = [], isLoading: isPlayersLoading } = useGetPlayersQuery();
   const [selectedPlayers, setSelectedPlayers] = useState([]);
   const [searchValue, setSearchValue] = useState('');
-  const [createTournament, { isLoading }] = useCreateTournamentMutation();
+  const [createTournament, { isLoading: isTournamentCreating }] =
+    useCreateTournamentMutation();
+  const [createPlayoffMatch, { isLoading: isPlayoffCreating }] =
+    useCreatePlayoffMatchMutation();
 
   const ageCategories = t('ageCategories', { returnObjects: true });
   const competitionTypes = t('competitionTypes', { returnObjects: true });
@@ -119,24 +125,53 @@ function TournamentForm() {
     }
 
     const playerIds = selectedPlayers.map((player) => Number(player.id));
+    const bracketSize = getNearestBracketSize(playerIds.length);
+    const playoffPlayers = selectedPlayers
+      .slice(0, bracketSize)
+      .map((player) => ({
+        id: Number(player.id),
+        fullName: player.fullName,
+      }));
 
-    const payload = {
-      ...values,
+    if (values.format === 'single_elimination' && bracketSize < 2) {
+      window.alert('Single elimination bracket needs at least 2 players.');
+      return;
+    }
+
+    const tournamentPayload = {
+      name: values.name,
+      ageCategory: values.ageCategory,
+      date: values.date,
+      timeStart: values.timeStart,
+      timeEnd: values.timeEnd,
+      location: values.location,
       players: playerIds,
       competitionType: mapCompetitionType(values.tournamentType),
       bracketFormat: mapBracketFormat(values.format),
       matchFormat: mapMatchFormat(values.gamesToWin),
+      pointsPerGame: Number(values.pointsPerGame) || 11,
       maxParticipants: Number(values.playersLimit) || playerIds.length,
       currentParticipants: playerIds.length,
       status: 'Upcoming',
-      playoff:
-        values.format === 'single_elimination'
-          ? buildPlayoffBracket(playerIds)
-          : [],
       matches: [],
     };
 
-    await createTournament(payload).unwrap();
+    const createdTournament = await createTournament(tournamentPayload).unwrap();
+
+    if (values.format === 'single_elimination') {
+      const playoffBracket = buildPlayoffBracket(playoffPlayers);
+      const playoffMatches = flattenPlayoffBracket(playoffBracket).map((match) => ({
+        ...match,
+        tournamentId: Number(createdTournament.id),
+      }));
+
+      await Promise.all(
+        playoffMatches.map((playoffMatch) =>
+          createPlayoffMatch(playoffMatch).unwrap()
+        )
+      );
+    }
+
     navigate('/tournaments');
   };
 
@@ -341,7 +376,9 @@ function TournamentForm() {
             variant="contained"
             size="large"
             startIcon={<SaveIcon />}
-            disabled={isLoading || selectedPlayers.length === 0}
+            disabled={
+              isTournamentCreating || isPlayoffCreating || selectedPlayers.length === 0
+            }
           >
             {t('save')}
           </Button>

@@ -37,18 +37,23 @@ const columns = [
 
 function TournamentPlayersTable() {
   const navigate = useNavigate();
-  const usersPath = "/players";
-  const { id } = useParams()
+  const usersPath = '/players';
+  const { id } = useParams();
   const { data: players = [], isLoadingPlayers, isError } = useGetPlayersQuery();
   const { data: tournament, isLoadingTournament, error } = useGetTournamentByIdQuery(id);
-  
+
   if (isLoadingTournament || isLoadingPlayers) return 'Loading...';
   if (isError || error) return <div>Ошибка загрузки</div>;
- ;
-  const playerIds = tournament?.players ?? [];
-  const playerIdsSet = new Set(playerIds);
-  const filteredPlayers = players.filter(({id}) => playerIdsSet.has(Number(id)));
- 
+
+  const rawPlayerIds = Array.isArray(tournament?.players)
+    ? tournament.players
+    : Array.isArray(tournament?.playerIds)
+      ? tournament.playerIds
+      : [];
+
+  const playerIdsSet = new Set(rawPlayerIds.map((value) => Number(value)));
+  const filteredPlayers = players.filter(({ id }) => playerIdsSet.has(Number(id)));
+
   return (
     <Paper sx={{ m:'20px',width: '100%', overflow: 'hidden' }}>
       <TableContainer>
