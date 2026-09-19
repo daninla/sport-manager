@@ -1,0 +1,22 @@
+{
+  "loading": "Update in progress...",
+  "success": "Successfully updated",
+  "error": "Error",
+  "yourAccount": "Your account",
+  "fullName": "Full name",
+  "uploadPhoto": "Upload photo",
+  "email": "Email",
+  "age": "Age",
+  "sex": "Sex",
+  "sexNone": "None",
+  "sexMale": "Male",
+  "sexFemale": "Female",
+  "city": "City",
+  "club": "Club",
+  "status": "Status",
+  "ukraineRate": "Ukraine rate",
+  "worldRate": "World rate",
+  "notes": "Notes",
+  "forgotPass": "Forgot your password?",
+  "acceptChange": "Accept the change"
+}

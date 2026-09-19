@@ -1,0 +1,1 @@
+export {default as TournamentParticipants} from "./ui/TournamentParticipants"

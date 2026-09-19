@@ -1,0 +1,19 @@
+.notes-list {
+  list-style: none;
+  padding-left: 2em;
+}
+
+.photo-input-label {
+  display: flex;
+  max-width: fit-content;
+}
+
+.photo-input {
+  display: none;
+}
+
+.player-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

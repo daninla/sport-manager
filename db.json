@@ -1,0 +1,2436 @@
+{
+  "players": [
+    {
+      "id": "1",
+      "fullName": "Oleksandr Boiko",
+      "age": 24,
+      "city": "Kyiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 64.2,
+      "worldRate": 3100,
+      "club": "Kyiv Tennis Academy",
+      "notes": ["Right-handed", "Aggressive baseline", "Active footwork"]
+    },
+    {
+      "id": "2",
+      "fullName": "Olena Kovalchuk",
+      "age": 21,
+      "city": "Lviv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 78.5,
+      "worldRate": 1850,
+      "club": "Lviv Lawn TC",
+      "notes": ["Left-handed", "Counter-attacker", "Good stamina"]
+    },
+    {
+      "id": "3",
+      "fullName": "Maksym Shevchenko",
+      "age": 29,
+      "city": "Odesa, Ukraine",
+      "status": "MS",
+      "ukrRate": 91,
+      "worldRate": 950,
+      "club": "Odesa Smash Club",
+      "notes": ["Short pips", "Forehand oriented", "Fast attacks"]
+    },
+    {
+      "id": "4",
+      "fullName": "Daryna Bondarenko",
+      "age": 19,
+      "city": "Kharkiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 42,
+      "worldRate": 5400,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Right-handed", "Baseline player", "Consistent rallies"]
+    },
+    {
+      "id": "5",
+      "fullName": "Ihor Tkachenko",
+      "age": 35,
+      "city": "Dnipro, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 55.8,
+      "worldRate": 0,
+      "club": "Dnipro Net Masters",
+      "notes": ["Long pips", "Backhand defense", "Spin reversal"]
+    },
+    {
+      "id": "6",
+      "fullName": "Anna Kravchenko",
+      "age": 22,
+      "city": "Kyiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 68.3,
+      "worldRate": 2400,
+      "club": "Marina Tennis Club",
+      "notes": ["Left-handed", "Tactical player", "Good placement"]
+    },
+    {
+      "id": "7",
+      "fullName": "Dmytro Moroz",
+      "age": 27,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 52.1,
+      "worldRate": 4100,
+      "club": "VicCourt",
+      "notes": ["Penhold grip", "Quick wrist action", "Close-to-table"]
+    },
+    {
+      "id": "8",
+      "fullName": "Sofiia Oliynyk",
+      "age": 18,
+      "city": "Lviv, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 31.4,
+      "worldRate": 6200,
+      "club": "Lviv Lawn TC",
+      "notes": ["Right-handed", "Aggressive style", "Fast learner"]
+    },
+    {
+      "id": "9",
+      "fullName": "Artem Rudenko",
+      "age": 31,
+      "city": "Kyiv, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 18.5,
+      "worldRate": 0,
+      "club": "Campione TC",
+      "notes": ["Anti-spin rubber", "Spin manipulation", "Control player"]
+    },
+    {
+      "id": "10",
+      "fullName": "Yuliia Polishchuk",
+      "age": 26,
+      "city": "Warsaw, Poland",
+      "status": "MS",
+      "ukrRate": 88.7,
+      "worldRate": 1120,
+      "club": "Warsaw Sports Center",
+      "notes": ["Left-handed", "Defender style", "Chopping specialist"]
+    },
+    {
+      "id": "11",
+      "fullName": "Pavlo Lysenko",
+      "age": 23,
+      "city": "Odesa, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 51,
+      "worldRate": 4800,
+      "club": "Odesa Smash Club",
+      "notes": ["Right-handed", "Offensive style", "Powerful drives"]
+    },
+    {
+      "id": "12",
+      "fullName": "Kateryna Savchenko",
+      "age": 20,
+      "city": "Kharkiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 63.9,
+      "worldRate": 3300,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Short pips", "Backhand speed", "Counter-hitting"]
+    },
+    {
+      "id": "13",
+      "fullName": "Andriy Petrenko",
+      "age": 28,
+      "city": "Kyiv, Ukraine",
+      "status": "MSIC",
+      "ukrRate": 97.4,
+      "worldRate": 780,
+      "club": "Olympic TC",
+      "notes": ["Aggressive looper", "Topspin heavy", "Offensive style"]
+    },
+    {
+      "id": "14",
+      "fullName": "Nataliia Marchenko",
+      "age": 33,
+      "city": "Dnipro, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 44.5,
+      "worldRate": 0,
+      "club": "Dnipro Net Masters",
+      "notes": ["Right-handed", "Balanced play", "Reliable blocks"]
+    },
+    {
+      "id": "15",
+      "fullName": "Serhiy Melnyk",
+      "age": 25,
+      "city": "Lviv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 62.1,
+      "worldRate": 3900,
+      "club": "Lviv Lawn TC",
+      "notes": ["Left-handed", "Dynamic play", "Good service"]
+    },
+    {
+      "id": "16",
+      "fullName": "Mariya Vasylenko",
+      "age": 17,
+      "city": "Kyiv, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 25.8,
+      "worldRate": 7100,
+      "club": "Kyiv Tennis Academy",
+      "notes": ["Right-handed", "Developing player", "Steady strokes"]
+    },
+    {
+      "id": "17",
+      "fullName": "Vladyslav Klymenko",
+      "age": 30,
+      "city": "Prague, Czech Republic",
+      "status": "CMS",
+      "ukrRate": 79.2,
+      "worldRate": 2050,
+      "club": "Prague Tennis Park",
+      "notes": ["Penhold grip", "Asian style", "Wrist flexibility"]
+    },
+    {
+      "id": "18",
+      "fullName": "Oksana Zakharchenko",
+      "age": 29,
+      "city": "Odesa, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 15,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Standard setup", "No modifications", "General play"]
+    },
+    {
+      "id": "19",
+      "fullName": "Roman Pavlenko",
+      "age": 22,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 48.6,
+      "worldRate": 5100,
+      "club": "VicCourt",
+      "notes": ["Long pips", "Defensive play", "Deceptive spin"]
+    },
+    {
+      "id": "20",
+      "fullName": "Viktoriia Humeniuk",
+      "age": 25,
+      "city": "Kyiv, Ukraine",
+      "status": "MS",
+      "ukrRate": 84.3,
+      "worldRate": 1450,
+      "club": "Marina Tennis Club",
+      "notes": ["Left-handed", "Offensive player", "Strong forehand"]
+    },
+    {
+      "id": "21",
+      "fullName": "Yaroslava Sydorenko",
+      "age": 21,
+      "city": "Kharkiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 59.4,
+      "worldRate": 4200,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Right-handed", "All-round style", "Good mobility"]
+    },
+    {
+      "id": "22",
+      "fullName": "Alina Karpenko",
+      "age": 27,
+      "city": "Lviv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 67,
+      "worldRate": 2900,
+      "club": "Lviv Lawn TC",
+      "notes": ["Short pips", "Fast blocking", "Flat hits"]
+    },
+    {
+      "id": "23",
+      "fullName": "Denys Ponomarenko",
+      "age": 32,
+      "city": "Dnipro, Ukraine",
+      "status": "CMS",
+      "ukrRate": 73.8,
+      "worldRate": 2300,
+      "club": "Dnipro Net Masters",
+      "notes": ["Defensive chopper", "Heavy backspin", "Patient play"]
+    },
+    {
+      "id": "24",
+      "fullName": "Iryna Panchenko",
+      "age": 24,
+      "city": "Berlin, Germany",
+      "status": "MS",
+      "ukrRate": 92.5,
+      "worldRate": 990,
+      "club": "Rot-Weiss Berlin",
+      "notes": ["Left-handed", "Tactical play", "Smart placement"]
+    },
+    {
+      "id": "25",
+      "fullName": "Yevhen Levytskyi",
+      "age": 26,
+      "city": "Kyiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 65.5,
+      "worldRate": 3050,
+      "club": "Campione TC",
+      "notes": ["Right-handed", "Offensive drive", "Solid technique"]
+    },
+    {
+      "id": "26",
+      "fullName": "Valentyna Dyachenko",
+      "age": 36,
+      "city": "Odesa, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 50.2,
+      "worldRate": 0,
+      "club": "Odesa Smash Club",
+      "notes": ["Anti-spin", "Control game", "Patience tactic"]
+    },
+    {
+      "id": "27",
+      "fullName": "Mykola Romaniuk",
+      "age": 19,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 29.8,
+      "worldRate": 6800,
+      "club": "VicCourt",
+      "notes": ["Right-handed", "Energetic play", "Fast footwork"]
+    },
+    {
+      "id": "28",
+      "fullName": "Tetiana Shvets",
+      "age": 23,
+      "city": "Kyiv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 74.9,
+      "worldRate": 2150,
+      "club": "Kyiv Tennis Academy",
+      "notes": ["Left-handed", "Smart tactics", "Versatile game"]
+    },
+    {
+      "id": "29",
+      "fullName": "Bohdan Franko",
+      "age": 28,
+      "city": "Lviv, Ukraine",
+      "status": "MS",
+      "ukrRate": 89.1,
+      "worldRate": 1280,
+      "club": "Lviv Lawn TC",
+      "notes": ["Right-handed", "Power hitter", "Aggressive drives"]
+    },
+    {
+      "id": "30",
+      "fullName": "Olena Vlasenko",
+      "age": 30,
+      "city": "Kharkiv, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 21.3,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Standard setup", "No modifications", "Recreational style"]
+    },
+    {
+      "id": "31",
+      "fullName": "Vadym Hryshchenko",
+      "age": 25,
+      "city": "Dnipro, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 62,
+      "worldRate": 3750,
+      "club": "Dnipro Net Masters",
+      "notes": ["Long pips", "Spin disruption", "Backhand specialist"]
+    },
+    {
+      "id": "32",
+      "fullName": "Anastasiia Kovtun",
+      "age": 20,
+      "city": "Kyiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 68,
+      "worldRate": 2700,
+      "club": "Marina Tennis Club",
+      "notes": ["Right-handed", "Consistent rallies", "Solid defense"]
+    },
+    {
+      "id": "33",
+      "fullName": "Taras Honchar",
+      "age": 34,
+      "city": "Odesa, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 47.3,
+      "worldRate": 0,
+      "club": "Odesa Smash Club",
+      "notes": ["Left-handed", "Unconventional angles", "Active play"]
+    },
+    {
+      "id": "34",
+      "fullName": "Khrystyna Levchenko",
+      "age": 22,
+      "city": "Paris, France",
+      "status": "MSIC",
+      "ukrRate": 94.6,
+      "worldRate": 820,
+      "club": "TC Paris",
+      "notes": ["Right-handed", "High precision", "Top-tier control"]
+    },
+    {
+      "id": "35",
+      "fullName": "Vitalii Nazarenko",
+      "age": 27,
+      "city": "Kharkiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 53.4,
+      "worldRate": 4900,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Short pips", "Quick response", "Close table"]
+    },
+    {
+      "id": "36",
+      "fullName": "Yelyzaveta Kolomiiets",
+      "age": 18,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 38.9,
+      "worldRate": 5900,
+      "club": "VicCourt",
+      "notes": ["Right-handed", "Agile movement", "Steady game"]
+    },
+    {
+      "id": "37",
+      "fullName": "Oleh Mazur",
+      "age": 29,
+      "city": "Lviv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 64.8,
+      "worldRate": 3150,
+      "club": "Lviv Lawn TC",
+      "notes": ["Penhold grip", "Traditional style", "Fast attacks"]
+    },
+    {
+      "id": "38",
+      "fullName": "Diana Serhiienko",
+      "age": 21,
+      "city": "Kyiv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 80.1,
+      "worldRate": 1650,
+      "club": "Olympic TC",
+      "notes": ["Left-handed", "Creative shots", "Strong offense"]
+    },
+    {
+      "id": "39",
+      "fullName": "Yurii Fedorenko",
+      "age": 38,
+      "city": "Dnipro, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 12,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Long pips", "Defensive style", "Experienced player"]
+    },
+    {
+      "id": "40",
+      "fullName": "Veronika Prykhodko",
+      "age": 25,
+      "city": "Warsaw, Poland",
+      "status": "1st Category",
+      "ukrRate": 70.2,
+      "worldRate": 2350,
+      "club": "Warsaw Sports Center",
+      "notes": ["Right-handed", "Balanced style", "Good stamina"]
+    },
+    {
+      "id": "41",
+      "fullName": "Hlib Tymoshenko",
+      "age": 23,
+      "city": "Odesa, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 55,
+      "worldRate": 4500,
+      "club": "Odesa Smash Club",
+      "notes": ["Left-handed", "Dynamic play", "Strong serves"]
+    },
+    {
+      "id": "42",
+      "fullName": "Ivanna Soroka",
+      "age": 26,
+      "city": "Kyiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 66.4,
+      "worldRate": 2950,
+      "club": "Kyiv Tennis Academy",
+      "notes": ["Short pips", "Aggressive blocks", "Fast tempo"]
+    },
+    {
+      "id": "43",
+      "fullName": "Stepan Koval",
+      "age": 31,
+      "city": "Lviv, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 17.8,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Right-handed", "Standard play", "Casual style"]
+    },
+    {
+      "id": "44",
+      "fullName": "Marta Dmytriieva",
+      "age": 19,
+      "city": "Kharkiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 45.1,
+      "worldRate": 5050,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Anti-spin", "Deceptive play", "Slow tempo"]
+    },
+    {
+      "id": "45",
+      "fullName": "Stanislav Kuzmenko",
+      "age": 27,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 61.2,
+      "worldRate": 3850,
+      "club": "VicCourt",
+      "notes": ["Right-handed", "Solid basics", "Consistent attack"]
+    },
+    {
+      "id": "46",
+      "fullName": "Alisa Doroshenko",
+      "age": 24,
+      "city": "Dnipro, Ukraine",
+      "status": "MS",
+      "ukrRate": 86,
+      "worldRate": 1380,
+      "club": "Dnipro Net Masters",
+      "notes": ["Left-handed", "Strategic player", "Precise placement"]
+    },
+    {
+      "id": "47",
+      "fullName": "Nazar Bilous",
+      "age": 22,
+      "city": "Kyiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 51.8,
+      "worldRate": 5200,
+      "club": "Campione TC",
+      "notes": ["Penhold grip", "Wrist snap", "Fast counter"]
+    },
+    {
+      "id": "48",
+      "fullName": "Yana Havryliuk",
+      "age": 28,
+      "city": "Odesa, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 62.5,
+      "worldRate": 3600,
+      "club": "Odesa Smash Club",
+      "notes": ["Right-handed", "Reliable strokes", "Good focus"]
+    },
+    {
+      "id": "49",
+      "fullName": "Artur Sobchuk",
+      "age": 33,
+      "city": "Prague, Czech Republic",
+      "status": "2nd Category",
+      "ukrRate": 49,
+      "worldRate": 0,
+      "club": "Prague Tennis Park",
+      "notes": ["Long pips", "Defensive tactics", "Spin confusion"]
+    },
+    {
+      "id": "50",
+      "fullName": "Polina Kravts",
+      "age": 20,
+      "city": "Lviv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 76.3,
+      "worldRate": 1950,
+      "club": "Lviv Lawn TC",
+      "notes": ["Right-handed", "Aggressive style", "Fast footwork"]
+    },
+    {
+      "id": "51",
+      "fullName": "Vladislav Kornienko",
+      "age": 25,
+      "city": "Kharkiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 64,
+      "worldRate": 3250,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Left-handed", "Powerful drives", "Active movement"]
+    },
+    {
+      "id": "52",
+      "fullName": "Yeva Andriyenko",
+      "age": 17,
+      "city": "Kyiv, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 28.2,
+      "worldRate": 6500,
+      "club": "Marina Tennis Club",
+      "notes": ["Right-handed", "Junior player", "Steady progress"]
+    },
+    {
+      "id": "53",
+      "fullName": "Kyrylo Martynov",
+      "age": 29,
+      "city": "Dnipro, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 67.5,
+      "worldRate": 2800,
+      "club": "Dnipro Net Masters",
+      "notes": ["Short pips", "Fast tempo", "Close table"]
+    },
+    {
+      "id": "54",
+      "fullName": "Myroslava Pakhomova",
+      "age": 23,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 53.9,
+      "worldRate": 4600,
+      "club": "VicCourt",
+      "notes": ["Right-handed", "Balanced game", "Good concentration"]
+    },
+    {
+      "id": "55",
+      "fullName": "Semen Hordiienko",
+      "age": 30,
+      "city": "Odesa, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 16.2,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Left-handed", "Unorthodox style", "Experienced"]
+    },
+    {
+      "id": "56",
+      "fullName": "Uliana Stepanenko",
+      "age": 21,
+      "city": "Lviv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 79.8,
+      "worldRate": 1720,
+      "club": "Lviv Lawn TC",
+      "notes": ["Defensive chopper", "Heavy spin", "Resilient defense"]
+    },
+    {
+      "id": "57",
+      "fullName": "Lev Kosheliov",
+      "age": 26,
+      "city": "Kyiv, Ukraine",
+      "status": "MSIC",
+      "ukrRate": 98.9,
+      "worldRate": 650,
+      "club": "Olympic TC",
+      "notes": ["Right-handed", "Elite technique", "Powerful attack"]
+    },
+    {
+      "id": "58",
+      "fullName": "Svitlana Denysenko",
+      "age": 35,
+      "city": "Berlin, Germany",
+      "status": "2nd Category",
+      "ukrRate": 45.8,
+      "worldRate": 0,
+      "club": "Rot-Weiss Berlin",
+      "notes": ["Long pips", "Experienced defender", "Spin disruption"]
+    },
+    {
+      "id": "59",
+      "fullName": "Borys Nesterenko",
+      "age": 22,
+      "city": "Kharkiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 49.5,
+      "worldRate": 5450,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Right-handed", "Standard technique", "Steady rallies"]
+    },
+    {
+      "id": "60",
+      "fullName": "Karyna Lazareva",
+      "age": 27,
+      "city": "Dnipro, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 65.9,
+      "worldRate": 3000,
+      "club": "Dnipro Net Masters",
+      "notes": ["Left-handed", "Tactical control", "Smooth strokes"]
+    },
+    {
+      "id": "61",
+      "fullName": "Anton Ovsiienko",
+      "age": 24,
+      "city": "Kyiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 60.5,
+      "worldRate": 3950,
+      "club": "Kyiv Tennis Academy",
+      "notes": ["Right-handed", "Offensive player", "Strong drives"]
+    },
+    {
+      "id": "62",
+      "fullName": "Maryna Kolos",
+      "age": 19,
+      "city": "Odesa, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 39.8,
+      "worldRate": 5800,
+      "club": "Odesa Smash Club",
+      "notes": ["Penhold grip", "Agile wrist", "Quick attacks"]
+    },
+    {
+      "id": "63",
+      "fullName": "Rostyslav Yakovenko",
+      "age": 28,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 52.6,
+      "worldRate": 5000,
+      "club": "VicCourt",
+      "notes": ["Short pips", "Fast blocks", "Flat hits"]
+    },
+    {
+      "id": "64",
+      "fullName": "Alla Vlasova",
+      "age": 32,
+      "city": "Lviv, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 19.8,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Right-handed", "Recreational player", "Steady style"]
+    },
+    {
+      "id": "65",
+      "fullName": "Viktor Vereshchak",
+      "age": 21,
+      "city": "Warsaw, Poland",
+      "status": "CMS",
+      "ukrRate": 72.4,
+      "worldRate": 2250,
+      "club": "Warsaw Sports Center",
+      "notes": ["Left-handed", "Aggressive style", "Good court coverage"]
+    },
+    {
+      "id": "66",
+      "fullName": "Inna Zaitseva",
+      "age": 25,
+      "city": "London, UK",
+      "status": "MS",
+      "ukrRate": 90.5,
+      "worldRate": 1180,
+      "club": "Wimbledon Club",
+      "notes": ["Right-handed", "Top-tier skill", "Strategic player"]
+    },
+    {
+      "id": "67",
+      "fullName": "Yehor Shcherbak",
+      "age": 23,
+      "city": "Kyiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 63.5,
+      "worldRate": 3350,
+      "club": "Campione TC",
+      "notes": ["Long pips", "Defensive player", "Spin variation"]
+    },
+    {
+      "id": "68",
+      "fullName": "Sofiia Bezrukova",
+      "age": 18,
+      "city": "Kharkiv, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 30.5,
+      "worldRate": 6400,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Right-handed", "Junior player", "Fast learner"]
+    },
+    {
+      "id": "69",
+      "fullName": "Valerii Lymar",
+      "age": 37,
+      "city": "Dnipro, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 48,
+      "worldRate": 0,
+      "club": "Dnipro Net Masters",
+      "notes": ["Anti-spin", "Control game", "Patient defense"]
+    },
+    {
+      "id": "70",
+      "fullName": "Olena Rybalchenko",
+      "age": 26,
+      "city": "Odesa, Ukraine",
+      "status": "CMS",
+      "ukrRate": 73.5,
+      "worldRate": 2200,
+      "club": "Odesa Smash Club",
+      "notes": ["Left-handed", "Tactical play", "Strong control"]
+    },
+    {
+      "id": "71",
+      "fullName": "Andriy Chumak",
+      "age": 20,
+      "city": "Lviv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 56.2,
+      "worldRate": 4300,
+      "club": "Lviv Lawn TC",
+      "notes": ["Right-handed", "Consistent play", "Good footwork"]
+    },
+    {
+      "id": "72",
+      "fullName": "Mariya Hrytsai",
+      "age": 22,
+      "city": "Paris, France",
+      "status": "CMS",
+      "ukrRate": 82,
+      "worldRate": 1520,
+      "club": "TC Paris",
+      "notes": ["Short pips", "Fast attacks", "Close table"]
+    },
+    {
+      "id": "73",
+      "fullName": "Oleksii Savchuk",
+      "age": 30,
+      "city": "Kyiv, Ukraine",
+      "status": "MSIC",
+      "ukrRate": 96.1,
+      "worldRate": 880,
+      "club": "Olympic TC",
+      "notes": ["Right-handed", "Elite player", "Powerful loops"]
+    },
+    {
+      "id": "74",
+      "fullName": "Tetiana Bohdanova",
+      "age": 29,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 16.9,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Standard setup", "No modifications", "Recreational"]
+    },
+    {
+      "id": "75",
+      "fullName": "Illia Baranov",
+      "age": 24,
+      "city": "Kharkiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 53.8,
+      "worldRate": 4700,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Left-handed", "Dynamic play", "Good angles"]
+    },
+    {
+      "id": "76",
+      "fullName": "Diana Lutsenko",
+      "age": 21,
+      "city": "Dnipro, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 68.9,
+      "worldRate": 2600,
+      "club": "Dnipro Net Masters",
+      "notes": ["Penhold grip", "Quick wrist action", "Active play"]
+    },
+    {
+      "id": "77",
+      "fullName": "Vadym Hnatenko",
+      "age": 27,
+      "city": "Odesa, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 61.5,
+      "worldRate": 3800,
+      "club": "Odesa Smash Club",
+      "notes": ["Right-handed", "Solid basics", "Reliable strokes"]
+    },
+    {
+      "id": "78",
+      "fullName": "Nadiia Yarova",
+      "age": 34,
+      "city": "Prague, Czech Republic",
+      "status": "2nd Category",
+      "ukrRate": 42.8,
+      "worldRate": 0,
+      "club": "Prague Tennis Park",
+      "notes": ["Long pips", "Defensive play", "Spin reversal"]
+    },
+    {
+      "id": "79",
+      "fullName": "Hryhorii Tarasenko",
+      "age": 18,
+      "city": "Kyiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 38,
+      "worldRate": 6000,
+      "club": "Kyiv Tennis Academy",
+      "notes": ["Right-handed", "Energetic play", "Fast pace"]
+    },
+    {
+      "id": "80",
+      "fullName": "Olha Kulish",
+      "age": 23,
+      "city": "Lviv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 77,
+      "worldRate": 1800,
+      "club": "Lviv Lawn TC",
+      "notes": ["Left-handed", "Strategic play", "Strong defense"]
+    },
+    {
+      "id": "81",
+      "fullName": "Dmytro Yurchenko",
+      "age": 25,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 48.5,
+      "worldRate": 5600,
+      "club": "VicCourt",
+      "notes": ["Right-handed", "Balanced game", "Steady rallies"]
+    },
+    {
+      "id": "82",
+      "fullName": "Yaroslava Kozak",
+      "age": 20,
+      "city": "Kharkiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 65,
+      "worldRate": 3100,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Short pips", "Fast tempo", "Aggressive blocks"]
+    },
+    {
+      "id": "83",
+      "fullName": "Pavlo Zinchenko",
+      "age": 31,
+      "city": "Berlin, Germany",
+      "status": "MS",
+      "ukrRate": 91.8,
+      "worldRate": 1050,
+      "club": "Rot-Weiss Berlin",
+      "notes": ["Right-handed", "Master level", "Strong topspin"]
+    },
+    {
+      "id": "84",
+      "fullName": "Oksana Malenko",
+      "age": 28,
+      "city": "Kyiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 68.5,
+      "worldRate": 2650,
+      "club": "Marina Tennis Club",
+      "notes": ["Left-handed", "Tactical player", "Good placement"]
+    },
+    {
+      "id": "85",
+      "fullName": "Roman Hnatiuk",
+      "age": 22,
+      "city": "Dnipro, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 51.2,
+      "worldRate": 5300,
+      "club": "Dnipro Net Masters",
+      "notes": ["Anti-spin", "Deceptive play", "Slow game"]
+    },
+    {
+      "id": "86",
+      "fullName": "Yevheniia Husieva",
+      "age": 26,
+      "city": "Odesa, Ukraine",
+      "status": "CMS",
+      "ukrRate": 75.2,
+      "worldRate": 2100,
+      "club": "Odesa Smash Club",
+      "notes": ["Right-handed", "Controlled attack", "Solid technique"]
+    },
+    {
+      "id": "87",
+      "fullName": "Mykhailo Ostapenko",
+      "age": 19,
+      "city": "Lviv, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 29.5,
+      "worldRate": 6600,
+      "club": "Lviv Lawn TC",
+      "notes": ["Long pips", "Defensive style", "Junior player"]
+    },
+    {
+      "id": "88",
+      "fullName": "Alina Dovhan",
+      "age": 27,
+      "city": "Warsaw, Poland",
+      "status": "MS",
+      "ukrRate": 87.3,
+      "worldRate": 1250,
+      "club": "Warsaw Sports Center",
+      "notes": ["Left-handed", "Top-tier skill", "Aggressive offense"]
+    },
+    {
+      "id": "89",
+      "fullName": "Sviatoslav Chepurnyi",
+      "age": 33,
+      "city": "Kyiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 52,
+      "worldRate": 0,
+      "club": "Campione TC",
+      "notes": ["Right-handed", "Experienced player", "Steady style"]
+    },
+    {
+      "id": "90",
+      "fullName": "Anhelina Semenova",
+      "age": 24,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 58,
+      "worldRate": 4050,
+      "club": "VicCourt",
+      "notes": ["Penhold grip", "Flexible wrist", "Close table"]
+    },
+    {
+      "id": "91",
+      "fullName": "Artem Kachan",
+      "age": 21,
+      "city": "Kharkiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 62.4,
+      "worldRate": 3500,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Right-handed", "Solid attack", "Good mobility"]
+    },
+    {
+      "id": "92",
+      "fullName": "Viktoriia Borysova",
+      "age": 30,
+      "city": "Odesa, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 20.5,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Standard setup", "No modifications", "Casual style"]
+    },
+    {
+      "id": "93",
+      "fullName": "Ihor Chornyi",
+      "age": 26,
+      "city": "Dnipro, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 70,
+      "worldRate": 2450,
+      "club": "Dnipro Net Masters",
+      "notes": ["Short pips", "Fast blocks", "Aggressive tempo"]
+    },
+    {
+      "id": "94",
+      "fullName": "Valeriia Kostrub",
+      "age": 18,
+      "city": "Kyiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 40.8,
+      "worldRate": 5500,
+      "club": "Kyiv Tennis Academy",
+      "notes": ["Left-handed", "Junior player", "Active movement"]
+    },
+    {
+      "id": "95",
+      "fullName": "Kostiantyn Duda",
+      "age": 29,
+      "city": "Prague, Czech Republic",
+      "status": "MS",
+      "ukrRate": 93.1,
+      "worldRate": 920,
+      "club": "Prague Tennis Park",
+      "notes": ["Right-handed", "Master level", "High precision"]
+    },
+    {
+      "id": "96",
+      "fullName": "Liubov Melnychenko",
+      "age": 23,
+      "city": "Lviv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 74,
+      "worldRate": 2250,
+      "club": "Lviv Lawn TC",
+      "notes": ["Long pips", "Defensive play", "Spin specialist"]
+    },
+    {
+      "id": "97",
+      "fullName": "Oleksandr Horobets",
+      "age": 36,
+      "city": "Kharkiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 46.9,
+      "worldRate": 0,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Right-handed", "Experienced player", "Solid defense"]
+    },
+    {
+      "id": "98",
+      "fullName": "Darya Sobolieva",
+      "age": 22,
+      "city": "Paris, France",
+      "status": "MS",
+      "ukrRate": 83.5,
+      "worldRate": 1500,
+      "club": "TC Paris",
+      "notes": ["Left-handed", "Offensive player", "Strong loops"]
+    },
+    {
+      "id": "99",
+      "fullName": "Maksym Havryliuk",
+      "age": 25,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 52.8,
+      "worldRate": 5150,
+      "club": "VicCourt",
+      "notes": ["Anti-spin", "Control style", "Patient tactics"]
+    },
+    {
+      "id": "100",
+      "fullName": "Kateryna Bilyk",
+      "age": 27,
+      "city": "Kyiv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 78.8,
+      "worldRate": 1750,
+      "club": "Olympic TC",
+      "notes": ["Right-handed", "Controlled play", "Reliable strokes"]
+    },
+    {
+      "id": "101",
+      "fullName": "Yurii Kharchenko",
+      "age": 28,
+      "city": "Odesa, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 65.2,
+      "worldRate": 2980,
+      "club": "Odesa Smash Club",
+      "notes": ["Penhold grip", "Traditional style", "Quick reflexes"]
+    },
+    {
+      "id": "102",
+      "fullName": "Anna Lohinova",
+      "age": 19,
+      "city": "Dnipro, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 30.1,
+      "worldRate": 6300,
+      "club": "Dnipro Net Masters",
+      "notes": ["Right-handed", "Junior player", "Consistent rallies"]
+    },
+    {
+      "id": "103",
+      "fullName": "Serhiy Hryn",
+      "age": 31,
+      "city": "Lviv, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 17,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Short pips", "Flat hitting", "Active play"]
+    },
+    {
+      "id": "104",
+      "fullName": "Veronika Shpak",
+      "age": 24,
+      "city": "Warsaw, Poland",
+      "status": "1st Category",
+      "ukrRate": 69.5,
+      "worldRate": 2500,
+      "club": "Warsaw Sports Center",
+      "notes": ["Left-handed", "Tactical play", "Good placement"]
+    },
+    {
+      "id": "105",
+      "fullName": "Tymofii Rybak",
+      "age": 20,
+      "city": "Kyiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 55.7,
+      "worldRate": 4400,
+      "club": "Marina Tennis Club",
+      "notes": ["Right-handed", "Active play", "Solid basics"]
+    },
+    {
+      "id": "106",
+      "fullName": "Yelyzaveta Zubkova",
+      "age": 25,
+      "city": "Kharkiv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 75.8,
+      "worldRate": 2000,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Long pips", "Defensive style", "Spin manipulation"]
+    },
+    {
+      "id": "107",
+      "fullName": "Vladyslav Nedashkivskyi",
+      "age": 23,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 48.9,
+      "worldRate": 5500,
+      "club": "VicCourt",
+      "notes": ["Right-handed", "Balanced game", "Steady progress"]
+    },
+    {
+      "id": "108",
+      "fullName": "Iryna Makarenko",
+      "age": 32,
+      "city": "Berlin, Germany",
+      "status": "2nd Category",
+      "ukrRate": 47,
+      "worldRate": 0,
+      "club": "Rot-Weiss Berlin",
+      "notes": ["Left-handed", "Experienced player", "Tactical control"]
+    },
+    {
+      "id": "109",
+      "fullName": "Bohdan Oliynyk",
+      "age": 27,
+      "city": "Odesa, Ukraine",
+      "status": "MSIC",
+      "ukrRate": 97,
+      "worldRate": 800,
+      "club": "Odesa Smash Club",
+      "notes": ["Right-handed", "Elite player", "Powerful attacks"]
+    },
+    {
+      "id": "110",
+      "fullName": "Sofiia Fedorova",
+      "age": 21,
+      "city": "Kyiv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 79.5,
+      "worldRate": 1680,
+      "club": "Kyiv Tennis Academy",
+      "notes": ["Short pips", "Fast tempo", "Aggressive blocks"]
+    },
+    {
+      "id": "111",
+      "fullName": "Nazar Dyachuk",
+      "age": 18,
+      "city": "Lviv, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 27.6,
+      "worldRate": 6900,
+      "club": "Lviv Lawn TC",
+      "notes": ["Right-handed", "Junior player", "Fast footwork"]
+    },
+    {
+      "id": "112",
+      "fullName": "Oksana Vasylenko",
+      "age": 29,
+      "city": "Dnipro, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 63.8,
+      "worldRate": 3300,
+      "club": "Dnipro Net Masters",
+      "notes": ["Penhold grip", "Flexible wrist", "Active play"]
+    },
+    {
+      "id": "113",
+      "fullName": "Mykola Skrypnyk",
+      "age": 26,
+      "city": "Kharkiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 54.1,
+      "worldRate": 4550,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Anti-spin", "Control game", "Deceptive spin"]
+    },
+    {
+      "id": "114",
+      "fullName": "Yana Hrytsaienko",
+      "age": 22,
+      "city": "Prague, Czech Republic",
+      "status": "CMS",
+      "ukrRate": 73,
+      "worldRate": 2180,
+      "club": "Prague Tennis Park",
+      "notes": ["Left-handed", "Tactical control", "Smooth strokes"]
+    },
+    {
+      "id": "115",
+      "fullName": "Artem Blyzniuk",
+      "age": 34,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 14.5,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": ["Right-handed", "Recreational", "Steady style"]
+    },
+    {
+      "id": "116",
+      "fullName": "Polina Kyseliova",
+      "age": 20,
+      "city": "Kyiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 67.2,
+      "worldRate": 2850,
+      "club": "Campione TC",
+      "notes": ["Long pips", "Defensive play", "Spin reversal"]
+    },
+    {
+      "id": "117",
+      "fullName": "Taras Prykhodko",
+      "age": 25,
+      "city": "Odesa, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 61.9,
+      "worldRate": 3700,
+      "club": "Odesa Smash Club",
+      "notes": ["Right-handed", "Solid attack", "Good stamina"]
+    },
+    {
+      "id": "118",
+      "fullName": "Mariya Shapovalova",
+      "age": 17,
+      "city": "Lviv, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 26,
+      "worldRate": 7300,
+      "club": "Lviv Lawn TC",
+      "notes": ["Right-handed", "Junior player", "Developing skills"]
+    },
+    {
+      "id": "119",
+      "fullName": "Oleh Saienko",
+      "age": 30,
+      "city": "Dnipro, Ukraine",
+      "status": "MS",
+      "ukrRate": 91.2,
+      "worldRate": 1080,
+      "club": "Dnipro Net Masters",
+      "notes": ["Left-handed", "Master level", "Strategic offense"]
+    },
+    {
+      "id": "120",
+      "fullName": "Nataliia Kuznetsova",
+      "age": 28,
+      "city": "Warsaw, Poland",
+      "status": "CMS",
+      "ukrRate": 76.8,
+      "worldRate": 1900,
+      "club": "Warsaw Sports Center",
+      "notes": ["Short pips", "Fast blocks", "Close table"]
+    },
+    {
+      "id": "121",
+      "fullName": "Danylo Laptev",
+      "age": 23,
+      "city": "Kyiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 55.2,
+      "worldRate": 4450,
+      "club": "Olympic TC",
+      "notes": ["Right-handed", "Solid basics", "Consistent rallies"]
+    },
+    {
+      "id": "122",
+      "fullName": "Viktoriia Reva",
+      "age": 26,
+      "city": "Kharkiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 66.8,
+      "worldRate": 2900,
+      "club": "Kharkiv Ace Club",
+      "notes": ["Left-handed", "Tactical control", "Active movement"]
+    },
+    {
+      "id": "123",
+      "fullName": "Ivan Kostiuk",
+      "age": 35,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 48.2,
+      "worldRate": 0,
+      "club": "VicCourt",
+      "notes": ["Penhold grip", "Experienced player", "Quick wrist"]
+    },
+    {
+      "id": "124",
+      "fullName": "Khrystyna Movchan",
+      "age": 21,
+      "city": "Odesa, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 69.1,
+      "worldRate": 2550,
+      "club": "Odesa Smash Club",
+      "notes": ["Long pips", "Defensive style", "Spin specialist"]
+    },
+    {
+      "id": "125",
+      "fullName": "Rostyslav Palii",
+      "age": 27,
+      "city": "Paris, France",
+      "status": "MSIC",
+      "ukrRate": 98.2,
+      "worldRate": 700,
+      "club": "TC Paris",
+      "notes": ["Right-handed", "Elite player", "High precision"]
+    },
+    {
+      "id": "126",
+      "fullName": "Yuliia Babych",
+      "age": 19,
+      "city": "Lviv, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 32,
+      "worldRate": 6100,
+      "club": "Lviv Lawn TC",
+      "notes": "Right-handed"
+    },
+    {
+      "id": "127",
+      "fullName": "Andriy Vlasenko",
+      "age": 24,
+      "city": "Dnipro, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 52.9,
+      "worldRate": 4950,
+      "club": "Dnipro Net Masters",
+      "notes": "Left-handed"
+    },
+    {
+      "id": "128",
+      "fullName": "Olena Danyliuk",
+      "age": 31,
+      "city": "Kyiv, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 19.1,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": "Anti-spin"
+    },
+    {
+      "id": "129",
+      "fullName": "Denys Kudriavtsev",
+      "age": 22,
+      "city": "Kharkiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 63.6,
+      "worldRate": 3400,
+      "club": "Kharkiv Ace Club",
+      "notes": "Short pips"
+    },
+    {
+      "id": "130",
+      "fullName": "Anastasiia Demchenko",
+      "age": 25,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "CMS",
+      "ukrRate": 73.9,
+      "worldRate": 2220,
+      "club": "VicCourt",
+      "notes": "Right-handed"
+    },
+    {
+      "id": "131",
+      "fullName": "Hlib Zakharov",
+      "age": 28,
+      "city": "Berlin, Germany",
+      "status": "1st Category",
+      "ukrRate": 67.8,
+      "worldRate": 2780,
+      "club": "Rot-Weiss Berlin",
+      "notes": "Left-handed"
+    },
+    {
+      "id": "132",
+      "fullName": "Tetiana Klymenko",
+      "age": 20,
+      "city": "Odesa, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 61.4,
+      "worldRate": 3850,
+      "club": "Odesa Smash Club",
+      "notes": "Right-handed"
+    },
+    {
+      "id": "133",
+      "fullName": "Yevhen Pozyvailo",
+      "age": 29,
+      "city": "Kyiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 57.5,
+      "worldRate": 4120,
+      "club": "Kyiv Tennis Academy",
+      "notes": "Long pips"
+    },
+    {
+      "id": "134",
+      "fullName": "Margarita Filipova",
+      "age": 23,
+      "city": "Lviv, Ukraine",
+      "status": "CMS",
+      "ukrRate": 80.5,
+      "worldRate": 1580,
+      "club": "Lviv Lawn TC",
+      "notes": "Right-handed"
+    },
+    {
+      "id": "135",
+      "fullName": "Stanislav Dudka",
+      "age": 33,
+      "city": "Dnipro, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 45,
+      "worldRate": 0,
+      "club": "Dnipro Net Masters",
+      "notes": "Penhold grip"
+    },
+    {
+      "id": "136",
+      "fullName": "Daryna Romanova",
+      "age": 18,
+      "city": "Warsaw, Poland",
+      "status": "2nd Category",
+      "ukrRate": 39.2,
+      "worldRate": 5700,
+      "club": "Warsaw Sports Center",
+      "notes": "Left-handed"
+    },
+    {
+      "id": "137",
+      "fullName": "Roman Vlasov",
+      "age": 26,
+      "city": "Kharkiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 65.1,
+      "worldRate": 3150,
+      "club": "Kharkiv Ace Club",
+      "notes": "Right-handed"
+    },
+    {
+      "id": "138",
+      "fullName": "Alisa Kravchenko",
+      "age": 27,
+      "city": "Prague, Czech Republic",
+      "status": "MS",
+      "ukrRate": 89.8,
+      "worldRate": 1150,
+      "club": "Prague Tennis Park",
+      "notes": "Short pips"
+    },
+    {
+      "id": "139",
+      "fullName": "Vladislav Semenchenko",
+      "age": 21,
+      "city": "Kyiv, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 54,
+      "worldRate": 4750,
+      "club": "Marina Tennis Club",
+      "notes": "Right-handed"
+    },
+    {
+      "id": "140",
+      "fullName": "Kateryna Yurieva",
+      "age": 30,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 16,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": "None"
+    },
+    {
+      "id": "141",
+      "fullName": "Mark Dovzhenko",
+      "age": 25,
+      "city": "Odesa, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 68.7,
+      "worldRate": 2680,
+      "club": "Odesa Smash Club",
+      "notes": "Left-handed"
+    },
+    {
+      "id": "142",
+      "fullName": "Svitlana Boiko",
+      "age": 22,
+      "city": "Dnipro, Ukraine",
+      "status": "CMS",
+      "ukrRate": 72.8,
+      "worldRate": 2300,
+      "club": "Dnipro Net Masters",
+      "notes": "Long pips"
+    },
+    {
+      "id": "143",
+      "fullName": "Yaroslav Lysytsia",
+      "age": 19,
+      "city": "Lviv, Ukraine",
+      "status": "3rd Category",
+      "ukrRate": 28.9,
+      "worldRate": 6700,
+      "club": "Lviv Lawn TC",
+      "notes": "Right-handed"
+    },
+    {
+      "id": "144",
+      "fullName": "Inna Marchuk",
+      "age": 24,
+      "city": "Paris, France",
+      "status": "CMS",
+      "ukrRate": 77.5,
+      "worldRate": 1820,
+      "club": "TC Paris",
+      "notes": "Right-handed"
+    },
+    {
+      "id": "145",
+      "fullName": "Kyrylo Kostiuchenko",
+      "age": 31,
+      "city": "Kyiv, Ukraine",
+      "status": "MSIC",
+      "ukrRate": 95.2,
+      "worldRate": 850,
+      "club": "Campione TC",
+      "notes": "Penhold grip"
+    },
+    {
+      "id": "146",
+      "fullName": "Viktoriia Hromova",
+      "age": 28,
+      "city": "Kharkiv, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 64.2,
+      "worldRate": 3280,
+      "club": "Kharkiv Ace Club",
+      "notes": "Left-handed"
+    },
+    {
+      "id": "147",
+      "fullName": "Pavlo Sokolov",
+      "age": 37,
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 11.2,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": "Anti-spin"
+    },
+    {
+      "id": "148",
+      "fullName": "Yelyzaveta Panchuk",
+      "age": 20,
+      "city": "Odesa, Ukraine",
+      "status": "1st Category",
+      "ukrRate": 70.4,
+      "worldRate": 2420,
+      "club": "Odesa Smash Club",
+      "notes": "Right-handed"
+    },
+    {
+      "id": "149",
+      "fullName": "Anton Lukianenko",
+      "age": 23,
+      "city": "Dnipro, Ukraine",
+      "status": "2nd Category",
+      "ukrRate": 56,
+      "worldRate": 4350,
+      "club": "Dnipro Net Masters",
+      "notes": "Short pips"
+    },
+    {
+      "id": "150",
+      "fullName": "Sofiia Rud",
+      "age": 26,
+      "city": "Kyiv, Ukraine",
+      "status": "MS",
+      "ukrRate": 85,
+      "worldRate": 1400,
+      "club": "Olympic TC",
+      "notes": "Right-handed"
+    }
+  ],
+  "tournaments": [
+    {
+      "id": "4",
+      "name": "Dnipro Grand Prix",
+      "ageCategory": "Open category",
+      "date": "2026-08-01",
+      "location": "Somewhere",
+      "timeStart": "15:00",
+      "timeEnd": "19:00",
+      "competitionType": "Single",
+      "bracketFormat": "Mixed System",
+      "matchFormat": "Best of 3",
+      "pointsPerGame": 10,
+      "maxParticipants": 32,
+      "currentParticipants": 24,
+      "tables": 8,
+      "status": "Ongoing",
+      "playerIds": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Zaporizhzhia Championship",
+      "ageCategory": "Adults",
+      "date": "2026-10-02",
+      "location": "Somewhere",
+      "timeStart": "15:00",
+      "timeEnd": "19:00",
+      "competitionType": "Single",
+      "bracketFormat": "Single Elimination",
+      "matchFormat": "Best of 5",
+      "pointsPerGame": 30,
+      "maxParticipants": 64,
+      "currentParticipants": 48,
+      "tables": 12,
+      "status": "Upcoming",
+      "playerIds": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Zaporizhzhia Championship",
+      "ageCategory": "Up to 21 years old",
+      "date": "2026-10-02",
+      "location": "Somewhere",
+      "timeStart": "15:00",
+      "timeEnd": "19:00",
+      "competitionType": "Single",
+      "bracketFormat": "Single Elimination",
+      "matchFormat": "Best of 5",
+      "pointsPerGame": 35,
+      "maxParticipants": 64,
+      "currentParticipants": 48,
+      "tables": 12,
+      "status": "Upcoming",
+      "playerIds": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ]
+    },
+    {
+      "name": "ytfghkijm",
+      "ageCategory": "",
+      "date": "",
+      "timeStart": "",
+      "timeEnd": "",
+      "location": "yhgjm",
+      "players": [
+        7,
+        5
+      ],
+      "competitionType": "Single",
+      "bracketFormat": "Single Elimination",
+      "matchFormat": "Best of 3",
+      "pointsPerGame": 11,
+      "maxParticipants": 16,
+      "currentParticipants": 2,
+      "status": "Upcoming",
+      "matches": [],
+      "id": "gfZ7dgwyznY"
+    }
+  ],
+  "matches": [
+    {
+      "id": "1",
+      "tournamentId": 4,
+      "player1Id": 39,
+      "player2Id": 40,
+      "status": "Finished",
+      "score": {
+        "player1": 1,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "2",
+      "tournamentId": 4,
+      "player1Id": 41,
+      "player2Id": 42,
+      "status": "Finished",
+      "score": {
+        "player1": 1,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "3",
+      "tournamentId": 4,
+      "player1Id": 43,
+      "player2Id": 44,
+      "status": "Finished",
+      "score": {
+        "player1": 0,
+        "player2": 1
+      },
+      "currentSet": {
+        "player1": 3,
+        "player2": 4
+      },
+      "historySets": [
+        {
+          "player1": 10,
+          "player2": 12
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "tournamentId": 5,
+      "player1Id": 47,
+      "player2Id": 48,
+      "status": "Finished",
+      "score": {
+        "player1": 1,
+        "player2": 1
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": [
+        {
+          "player1": 11,
+          "player2": 13
+        },
+        {
+          "player1": 12,
+          "player2": 10
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "tournamentId": 5,
+      "player1Id": 49,
+      "player2Id": 50,
+      "status": "Finished",
+      "score": {
+        "player1": 3,
+        "player2": 2
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "6",
+      "tournamentId": 5,
+      "player1Id": 51,
+      "player2Id": 52,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "7",
+      "tournamentId": 5,
+      "player1Id": 53,
+      "player2Id": 54,
+      "status": "Finished",
+      "score": {
+        "player1": 1,
+        "player2": 2
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 1
+      }
+    },
+    {
+      "id": "8",
+      "tournamentId": 6,
+      "player1Id": 47,
+      "player2Id": 48,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "9",
+      "tournamentId": 6,
+      "player1Id": 49,
+      "player2Id": 50,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "10",
+      "tournamentId": 6,
+      "player1Id": 51,
+      "player2Id": 52,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    },
+    {
+      "id": "11",
+      "tournamentId": 6,
+      "player1Id": 53,
+      "player2Id": 54,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      }
+    }
+  ],
+  "playoffMatches": [
+    {
+      "id": "pf-1",
+      "tournamentId": 5,
+      "round": "Quarterfinals",
+      "matchIndex": 1,
+      "player1Id": 47,
+      "player2Id": 48,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-2",
+      "tournamentId": 5,
+      "round": "Quarterfinals",
+      "matchIndex": 2,
+      "player1Id": 49,
+      "player2Id": 50,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-3",
+      "tournamentId": 5,
+      "round": "Quarterfinals",
+      "matchIndex": 3,
+      "player1Id": 51,
+      "player2Id": 52,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-4",
+      "tournamentId": 5,
+      "round": "Quarterfinals",
+      "matchIndex": 4,
+      "player1Id": 53,
+      "player2Id": 54,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-5",
+      "tournamentId": 5,
+      "round": "Semifinals",
+      "matchIndex": 1,
+      "player1Id": 47,
+      "player2Id": 49,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-6",
+      "tournamentId": 5,
+      "round": "Semifinals",
+      "matchIndex": 2,
+      "player1Id": 51,
+      "player2Id": 53,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-7",
+      "tournamentId": 5,
+      "round": "Final",
+      "matchIndex": 1,
+      "player1Id": 47,
+      "player2Id": 51,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-8",
+      "tournamentId": 6,
+      "round": "Quarterfinals",
+      "matchIndex": 1,
+      "player1Id": 47,
+      "player2Id": 48,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-9",
+      "tournamentId": 6,
+      "round": "Quarterfinals",
+      "matchIndex": 2,
+      "player1Id": 49,
+      "player2Id": 50,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-10",
+      "tournamentId": 6,
+      "round": "Quarterfinals",
+      "matchIndex": 3,
+      "player1Id": 51,
+      "player2Id": 52,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-11",
+      "tournamentId": 6,
+      "round": "Quarterfinals",
+      "matchIndex": 4,
+      "player1Id": 53,
+      "player2Id": 54,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-12",
+      "tournamentId": 6,
+      "round": "Semifinals",
+      "matchIndex": 1,
+      "player1Id": 47,
+      "player2Id": 49,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-13",
+      "tournamentId": 6,
+      "round": "Semifinals",
+      "matchIndex": 2,
+      "player1Id": 51,
+      "player2Id": 53,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "pf-14",
+      "tournamentId": 6,
+      "round": "Final",
+      "matchIndex": 1,
+      "player1Id": 47,
+      "player2Id": 51,
+      "winnerId": null,
+      "winner": null,
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "Gv7Ih_keBcg",
+      "tournamentId": null,
+      "round": "Quarterfinals",
+      "matchIndex": 2,
+      "player1": "Dmytro Moroz",
+      "player2": "Anna Kravchenko",
+      "player1Id": 7,
+      "player2Id": 6,
+      "winner": null,
+      "winnerId": null,
+      "status": "pending",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "eKdvGG2evWE",
+      "tournamentId": null,
+      "round": "Quarterfinals",
+      "matchIndex": 1,
+      "player1": "Serhiy Melnyk",
+      "player2": "Kateryna Savchenko",
+      "player1Id": 15,
+      "player2Id": 12,
+      "winner": null,
+      "winnerId": null,
+      "status": "pending",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "eR_FZaHUlms",
+      "tournamentId": null,
+      "round": "Quarterfinals",
+      "matchIndex": 3,
+      "player1": "Anastasiia Kovtun",
+      "player2": "Stanislav Kuzmenko",
+      "player1Id": 32,
+      "player2Id": 45,
+      "winner": null,
+      "winnerId": null,
+      "status": "pending",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "gtujf77AGnI",
+      "tournamentId": null,
+      "round": "Quarterfinals",
+      "matchIndex": 4,
+      "player1": "Daryna Bondarenko",
+      "player2": "Khrystyna Levchenko",
+      "player1Id": 4,
+      "player2Id": 34,
+      "winner": null,
+      "winnerId": null,
+      "status": "pending",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "0oPLDTOXlw8",
+      "tournamentId": null,
+      "round": "Semifinals",
+      "matchIndex": 1,
+      "player1": "Winner r1-m1",
+      "player2": "Winner r1-m2",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "status": "pending",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "KCuzI04DsYE",
+      "tournamentId": null,
+      "round": "Semifinals",
+      "matchIndex": 2,
+      "player1": "Winner r1-m3",
+      "player2": "Winner r1-m4",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "status": "pending",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "5UXsX49OGKI",
+      "tournamentId": null,
+      "round": "Final",
+      "matchIndex": 1,
+      "player1": "Winner r2-m1",
+      "player2": "Winner r2-m2",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "status": "pending",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    },
+    {
+      "id": "x_PWauCLLNA",
+      "tournamentId": null,
+      "round": "Final",
+      "matchIndex": 1,
+      "player1": "Dmytro Moroz",
+      "player2": "Ihor Tkachenko",
+      "player1Id": 7,
+      "player2Id": 5,
+      "winner": null,
+      "winnerId": null,
+      "status": "pending",
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": []
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "fullName": "Test Testovych",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+      "age": 30,
+      "sex": "none",
+      "email": "test@gmail.com",
+      "city": "Zaporizhzhia, Ukraine",
+      "status": "Unranked",
+      "ukrRate": 16.9,
+      "worldRate": 0,
+      "club": "Free Agent",
+      "notes": "None",
+      "password": "test",
+      "role": "player"
+    },
+    {
+      "fullName": "danila",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+      "age": 0,
+      "sex": "",
+      "email": "idanila331@gmail.com",
+      "password": "12345678",
+      "city": "",
+      "status": "",
+      "ukrRate": 0,
+      "worldRate": 0,
+      "club": "",
+      "notes": "",
+      "role": "player",
+      "id": "akv422aA0wc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

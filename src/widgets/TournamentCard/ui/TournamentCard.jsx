@@ -1,0 +1,294 @@
+import { useState } from 'react';
+import tennisIcon from '../../Header/iconAssets/icons/ping-pong.png';
+import { DeleteTournamentButton } from '@/features/delete-tournament';
+import EditIcon from '@mui/icons-material/Edit';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import PeopleIcon from '@mui/icons-material/People';
+import {
+  Box,
+  Button,
+  IconButton,
+  LinearProgress,
+  ListItemIcon,
+  ListItemText,
+  Menu,
+  MenuItem,
+  Typography,
+} from '@mui/material';
+
+import { useEnrichedMatches } from '../../../entities/match/model/useEnrichedMatches';
+
+import MatchStatusBage from '../../../shared/ui/MatchStatusBage/MatchStatusBage';
+
+export function TournamentCard({ tournament, onOpen, onEdit }) {
+  const tournamentId = String(tournament?.id || '');
+
+  const { matches, isLoading } = useEnrichedMatches(tournamentId);
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const isMenuOpen = Boolean(anchorEl);
+
+  const handleOpenMenu = (event) => {
+    event.stopPropagation();
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseMenu = (event) => {
+    if (event && event.stopPropagation) {
+      event.stopPropagation();
+    }
+    setAnchorEl(null);
+  };
+
+  const handleEditClick = (event) => {
+    event.stopPropagation();
+    handleCloseMenu();
+    if (onEdit) onEdit(tournamentId);
+  };
+
+  return (
+    <Box
+      onClick={() => onOpen && onOpen(tournamentId)}
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '12px',
+        backgroundColor: '#040b22',
+        borderRadius: '12px',
+        p: '20px',
+        width: '300px',
+        border: '1px solid rgba(255, 255, 255, 0.08)',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
+        cursor: 'pointer',
+      }}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <MatchStatusBage status={tournament.status} />
+        <IconButton
+          onClick={handleOpenMenu}
+          size="small"
+          sx={{
+            color: '#8892b0',
+            '&:hover': {
+              color: 'white',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            },
+          }}
+        >
+          <MoreVertIcon fontSize="small" />
+        </IconButton>
+
+        <Menu
+          anchorEl={anchorEl}
+          open={isMenuOpen}
+          onClose={handleCloseMenu}
+          onClick={(e) => e.stopPropagation()}
+          PaperProps={{
+            elevation: 8,
+            sx: {
+              bgcolor: '#0a192f',
+              color: '#fff',
+              borderRadius: '8px',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              minWidth: '140px',
+              '& .MuiMenuItem-root': {
+                fontSize: '14px',
+                py: '8px',
+                px: '12px',
+                borderRadius: '4px',
+                mx: '4px',
+                my: '2px',
+                '&:hover': {
+                  bgcolor: 'rgba(255, 255, 255, 0.08)',
+                },
+              },
+            },
+          }}
+          transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+          anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+        >
+          <MenuItem onClick={handleEditClick}>
+            <ListItemIcon
+              sx={{ color: '#60a5fa', minWidth: '28px !important' }}
+            >
+              <EditIcon fontSize="small" />
+            </ListItemIcon>
+            <ListItemText primary="Edit" />
+          </MenuItem>
+
+          <DeleteTournamentButton
+            tournamentId={tournamentId}
+            onSuccess={handleCloseMenu}
+          />
+        </Menu>
+      </Box>
+
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <Box
+          component="img"
+          src={tennisIcon}
+          sx={{ width: '20px', height: '20px' }}
+        />
+        <Typography
+          variant="h6"
+          sx={{ color: 'white', fontWeight: 600, fontSize: '1rem' }}
+        >
+          "{tournament.name}"
+        </Typography>
+      </Box>
+
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <Typography sx={{ color: '#8892b0', fontSize: '0.85rem' }}>
+          {tournament.bracketFormat}
+        </Typography>
+        <Box
+          sx={{
+            height: '4px',
+            width: '4px',
+            borderRadius: '50%',
+            backgroundColor: '#8892b0',
+          }}
+        />
+        <Typography sx={{ color: '#8892b0', fontSize: '0.85rem' }}>
+          {tournament.matchFormat}
+        </Typography>
+      </Box>
+
+      {/* Блок отображения списков матчей */}
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        {matches.slice(-2).map((match, index) => (
+          <Box
+            key={match.id || `${tournamentId}-match-${index}`}
+            sx={{
+              p: 1,
+              bgcolor: 'rgba(255, 255, 255, 0.02)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: index === 0 ? '6px 6px 0 0' : '0 0 6px 6px',
+            }}
+          >
+            <Typography
+              variant="caption"
+              sx={{ color: '#64748b', display: 'block', mb: 0.5 }}
+            >
+              Match {index + 1}
+            </Typography>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '6px',
+                color: 'white',
+                fontSize: '0.8rem',
+              }}
+            >
+              {/* Игрок 1 */}
+              <Typography
+                noWrap
+                sx={{
+                  flex: '1 1 0',
+                  minWidth: 0,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  fontSize: '0.8rem',
+                  textAlign: 'left',
+                }}
+              >
+                {match.player1?.fullName || `Игрок ${match.player1Id}`}
+              </Typography>
+
+              <Typography
+                sx={{
+                  color: '#8699b4',
+                  flex: '0 0 auto',
+                  px: '4px',
+                  fontSize: '0.8rem',
+                }}
+              >
+                vs
+              </Typography>
+
+              {/* Игрок 2 */}
+              <Typography
+                noWrap
+                sx={{
+                  flex: '1 1 0',
+                  minWidth: 0,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  fontSize: '0.8rem',
+                  textAlign: 'right',
+                }}
+              >
+                {match.player2?.fullName || `Игрок ${match.player2Id}`}
+              </Typography>
+            </Box>
+            <Typography
+              align="center"
+              sx={{
+                color: '#00e676',
+                fontWeight: 'bold',
+                fontSize: '0.85rem',
+                mt: 0.5,
+              }}
+            >
+              {match.score?.player1 ?? 0} - {match.score?.player2 ?? 0}
+            </Typography>
+          </Box>
+        ))}
+      </Box>
+
+      <Box sx={{ mt: 'auto' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: '6px', mb: 1 }}>
+          <PeopleIcon sx={{ color: '#8892b0', fontSize: 18 }} />
+          <Typography sx={{ color: '#8892b0', fontSize: '0.85rem' }}>
+            {tournament.currentParticipants} / {tournament.maxParticipants}
+          </Typography>
+        </Box>
+
+        <LinearProgress
+          value={
+            (tournament.currentParticipants / tournament.maxParticipants) * 100
+          }
+          variant="determinate"
+          sx={{
+            height: 6,
+            borderRadius: 3,
+            backgroundColor: 'rgba(255, 255, 255, 0.08)',
+            '& .MuiLinearProgress-bar': {
+              borderRadius: 3,
+              backgroundColor: '#00e676',
+            },
+          }}
+        />
+      </Box>
+
+      <Button
+        variant="contained"
+        fullWidth
+        sx={{
+          mt: 1,
+          bgcolor: '#00e676',
+          color: '#040b22',
+          fontWeight: 'bold',
+          textTransform: 'none',
+          '&:hover': { bgcolor: '#00c853' },
+        }}
+        onClick={(event) => {
+          event.stopPropagation();
+          onOpen && onOpen(tournamentId);
+        }}
+      >
+        More Details
+      </Button>
+    </Box>
+  );
+}
+
+export default TournamentCard;
