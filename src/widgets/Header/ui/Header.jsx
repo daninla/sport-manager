@@ -130,7 +130,7 @@ function Header() {
                       width: '100%',
                       height: '100%',
                     }}
-                    src={user.photo}
+                    src={`/images/${user.photo}`}
                     alt={user.fullName}
                   />
                 </Button>

@@ -33,7 +33,10 @@ const loginSchema = yup.object({
   fullName: yup.string().required('reqiredFullName'),
   email: yup.string().email('invalidEmail').required('requiredEmail'),
   password: yup.string().required('requiredPassword'),
-  confirmPassword: yup.string().required('requiredConfirmPassword').oneOf([yup.ref('password')], 'matchPass'),
+  confirmPassword: yup
+    .string()
+    .required('requiredConfirmPassword')
+    .oneOf([yup.ref('password')], 'matchPass'),
 });
 
 function Registration() {
@@ -53,8 +56,7 @@ function Registration() {
 
       const newUser = await createUser({
         fullName,
-        photo:
-          'https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80',
+        photo: 'Unknown.png',
         age: 0,
         sex: '',
         email,
@@ -207,12 +209,18 @@ function Registration() {
                       <IconButton
                         type="button"
                         aria-label={
-                          showConfirmPassword ? 'Hide password' : 'Show password'
+                          showConfirmPassword
+                            ? 'Hide password'
+                            : 'Show password'
                         }
                         onClick={handleClickShowConfirmPassword}
                         edge="end"
                       >
-                        {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+                        {showConfirmPassword ? (
+                          <VisibilityOff />
+                        ) : (
+                          <Visibility />
+                        )}
                       </IconButton>
                     </InputAdornment>
                   ),
