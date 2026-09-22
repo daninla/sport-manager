@@ -1,15 +1,7 @@
 import { useMemo, useState } from 'react';
+import { FORMATS, STATUSES } from './constants';
 
 import { sortTournamentsByDate } from '@/entities/tournament';
-
-const STATUS_OPTIONS = ['Upcoming', 'Ongoing', 'Completed'];
-const FORMAT_OPTIONS = [
-  'Single Elimination',
-  'Double Elimination',
-  'Swiss System',
-  'Round Robin',
-  'Mixed System',
-];
 
 export const useTournamentFilters = (tournamentsList = []) => {
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -22,11 +14,9 @@ export const useTournamentFilters = (tournamentsList = []) => {
     }
 
     const selectedStatuses = selectedFilters.filter((f) =>
-      STATUS_OPTIONS.includes(f),
+      STATUSES.includes(f),
     );
-    const selectedFormats = selectedFilters.filter((f) =>
-      FORMAT_OPTIONS.includes(f),
-    );
+    const selectedFormats = selectedFilters.filter((f) => FORMATS.includes(f));
 
     return sorted.filter((tournament) => {
       const matchesStatus =

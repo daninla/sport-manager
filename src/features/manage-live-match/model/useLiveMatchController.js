@@ -59,6 +59,18 @@ export function useLiveMatchController(matchId) {
     syncWithServer();
   }, [matchState, matchId, updateMatch]);
 
+  const handleFinish = () => {
+    const startMs = new Date(matchState.timeStart).getTime();
+    const nowMs = Date.now();
+    const totalSeconds = Math.max(0, Math.floor((nowMs - startMs) / 1000));
+
+    updateMatch({
+      id: matchId,
+      status: 'Finished',
+      duration: totalSeconds,
+    });
+  };
+
   const handleAddPoint = (player) => {
     dispatch(addPoint({ player, delta: 1 }));
   };
@@ -69,6 +81,9 @@ export function useLiveMatchController(matchId) {
 
   const handleSetStatus = (newStatus) => {
     dispatch(setStatus(newStatus));
+    if (newStatus === 'Finished') {
+      handleFinish();
+    }
   };
 
   return {

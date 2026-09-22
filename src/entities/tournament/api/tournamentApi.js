@@ -47,18 +47,6 @@ export const tournamentApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: [{ type: 'Tournament', id: 'LIST' }],
     }),
-    createTournament: builder.mutation({
-      query: (tournamentData) => ({
-        url:'/tournaments',
-        method:'POST',
-        body: tournamentData
-      }),
-      invalidatesTags: ['Tournament'],
-    }),
-    getMatchesByTournamentId: builder.query({
-      query: (tournamentId) => `/matches?tournamentId=${tournamentId}`,
-      providesTags: (result, error, tournamentId) => [{ type: 'Tournament', id: tournamentId }],
-    }),
     createMatch: builder.mutation({
       query: (matchData) => ({
         url: '/matches',
@@ -73,7 +61,9 @@ export const tournamentApi = baseApi.injectEndpoints({
     }),
     getPlayoffMatchesByTournamentId: builder.query({
       query: (tournamentId) => `/playoffMatches?tournamentId=${tournamentId}`,
-      providesTags: (result, error, tournamentId) => [{ type: 'Tournament', id: tournamentId }],
+      providesTags: (result, error, tournamentId) => [
+        { type: 'Tournament', id: tournamentId },
+      ],
     }),
     createPlayoffMatch: builder.mutation({
       query: (playoffMatchData) => ({

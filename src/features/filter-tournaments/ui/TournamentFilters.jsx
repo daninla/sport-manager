@@ -1,14 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Box, Checkbox, FormControlLabel, Typography } from '@mui/material';
 
-const STATUSES = ['Upcoming', 'Ongoing', 'Completed'];
-const FORMATS = [
-  'Single Elimination',
-  'Double Elimination',
-  'Swiss System',
-  'Round Robin',
-  'Mixed System',
-];
+import { FORMATS, STATUSES } from '../model/constants';
 
 export const TournamentFilters = ({ selectedFilters = [], onChange }) => {
   const { t } = useTranslation('tournamentFilters');
@@ -18,9 +11,7 @@ export const TournamentFilters = ({ selectedFilters = [], onChange }) => {
       ? selectedFilters.filter((item) => item !== value)
       : [...selectedFilters, value];
 
-    if (onChange) {
-      onChange(nextFilters);
-    }
+    onChange(nextFilters);
   };
 
   return (
