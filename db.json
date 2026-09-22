@@ -2264,15 +2264,24 @@
       "status": "Finished",
       "timeStart": "2026-09-21T15:00:00Z",
       "score": {
-        "player1": 1,
-        "player2": 0
+        "player1": 2,
+        "player2": 1
       },
       "currentSet": {
         "player1": 0,
         "player2": 0
       },
-      "historySets": [],
-      "duration": 72474
+      "historySets": [
+        {
+          "player1": 10,
+          "player2": 12
+        },
+        {
+          "player1": 11,
+          "player2": 9
+        }
+      ],
+      "duration": 75249
     },
     {
       "id": "2",

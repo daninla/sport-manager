@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { FINISHED_STATUS } from './constans';
 import { addPoint, resetMatch, setStatus, undo } from './matchSlice';
 
 import {
@@ -66,7 +67,7 @@ export function useLiveMatchController(matchId) {
 
     updateMatch({
       id: matchId,
-      status: 'Finished',
+      status: FINISHED_STATUS,
       duration: totalSeconds,
     });
   };
@@ -81,7 +82,7 @@ export function useLiveMatchController(matchId) {
 
   const handleSetStatus = (newStatus) => {
     dispatch(setStatus(newStatus));
-    if (newStatus === 'Finished') {
+    if (newStatus === FINISHED_STATUS) {
       handleFinish();
     }
   };
