@@ -78,7 +78,7 @@ function useAccountForm() {
   //   fileReader.readAsDataURL(file);
   // };
 
-  return { initialValues, photoPreview, handleSubmit, handlePhotoChange };
+  return { t, initialValues, photoPreview, handleSubmit, handlePhotoChange };
 }
 
 export default useAccountForm;

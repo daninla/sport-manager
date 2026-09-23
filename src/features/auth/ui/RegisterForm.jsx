@@ -1,9 +1,5 @@
-import { useState } from 'react';
-import toast from 'react-hot-toast';
-import { useTranslation } from 'react-i18next';
-import { Link, useNavigate } from 'react-router';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { Link } from 'react-router';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import {
   Box,
   Button,
@@ -15,82 +11,20 @@ import {
   Typography,
 } from '@mui/material';
 import { ErrorMessage, Form, Formik } from 'formik';
-import * as yup from 'yup';
 
-import {
-  useCreateUserMutation,
-  useLazyGetUserByEmailQuery,
-} from '../../../entities/user/api/userApi';
+import { defaultValuesRegister } from '../model/defaultValues';
+import useRegisterForm from '../model/useRegisterForm';
+import { registerSchema } from '../model/validationSchemas';
 
-const initialValues = {
-  fullName: '',
-  email: '',
-  password: '',
-  confirmPassword: '',
-};
-
-const loginSchema = yup.object({
-  fullName: yup.string().required('reqiredFullName'),
-  email: yup.string().email('invalidEmail').required('requiredEmail'),
-  password: yup.string().required('requiredPassword'),
-  confirmPassword: yup
-    .string()
-    .required('requiredConfirmPassword')
-    .oneOf([yup.ref('password')], 'matchPass'),
-});
-
-function Registration() {
-  const { t } = useTranslation('auth');
-  const [createUser] = useCreateUserMutation();
-  const [getUserByEmail] = useLazyGetUserByEmailQuery();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const navigate = useNavigate();
-
-  const handleSignUp = ({ fullName, email, password }) => {
-    const signUpPromise = (async () => {
-      const users = await getUserByEmail(email).unwrap();
-      if (users.length > 0) {
-        throw new Error(t('busyEmail'));
-      }
-
-      const newUser = await createUser({
-        fullName,
-        photo: 'Unknown.png',
-        age: 0,
-        sex: '',
-        email,
-        password,
-        city: '',
-        status: '',
-        ukrRate: 0,
-        worldRate: 0,
-        club: '',
-        notes: '',
-        role: 'player',
-      }).unwrap();
-
-      localStorage.setItem('currentUser', JSON.stringify(newUser));
-      navigate('/account');
-
-      return newUser;
-    })();
-
-    return toast.promise(signUpPromise, {
-      loading: t('loading'),
-      success: t('success'),
-      error: (err) =>
-        `${t('signUpError')}: ${err.message || t('unknownError')}`,
-    });
-  };
-
-  const handleClickShowPassword = () => {
-    setShowPassword((visible) => !visible);
-  };
-
-  const handleClickShowConfirmPassword = () => {
-    setShowConfirmPassword((visible) => !visible);
-  };
+function RegisterForm() {
+  const {
+    t,
+    showPassword,
+    handleClickShowPassword,
+    showConfirmPassword,
+    handleClickShowConfirmPassword,
+    handleSignUp,
+  } = useRegisterForm();
 
   const renderForm = ({
     values,
@@ -262,25 +196,15 @@ function Registration() {
     );
   };
   return (
-    <Box
-      sx={{
-        maxWidth: '450px',
-        width: '100%',
-      }}
+    <Formik
+      initialValues={defaultValuesRegister}
+      onSubmit={handleSignUp}
+      validationSchema={registerSchema}
+      enableReinitialize
     >
-      <Typography variant="h4" align="center" sx={{ mb: '30px' }}>
-        {t('signUpTitle')}
-      </Typography>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={handleSignUp}
-        validationSchema={loginSchema}
-        enableReinitialize
-      >
-        {renderForm}
-      </Formik>
-    </Box>
+      {renderForm}
+    </Formik>
   );
 }
 
-export default Registration;
+export default RegisterForm;

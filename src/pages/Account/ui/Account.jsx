@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { AccountForm } from '../../../features/edit-account';
+import { AccountForm } from '@/features/edit-account';
 import { Box, Typography } from '@mui/material';
 
 function Account() {

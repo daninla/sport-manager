@@ -1,8 +1,18 @@
 import { useRef } from 'react';
-import { useTranslation } from 'react-i18next';
+import {
+  Box,
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Stack,
+  TextField,
+  Typography,
+} from '@mui/material';
+import { Form, Formik } from 'formik';
+
 import useAccountForm from '../model/useAccountForm';
-import { Formik, Form } from 'formik';
-import { Box, Button, FormControl, InputLabel, MenuItem, Select, Stack, TextField, Typography } from '@mui/material';
 
 const disabledStyleInput = () => {
   return {
@@ -24,9 +34,9 @@ const disabledStyleInput = () => {
 };
 
 function AccountForm() {
-  const { t } = useTranslation('account');
   const fileInputRef = useRef(null);
-  const { initialValues, photoPreview, handleSubmit, handlePhotoChange } = useAccountForm();
+  const { t, initialValues, photoPreview, handleSubmit, handlePhotoChange } =
+    useAccountForm();
 
   const renderForm = ({
     values,
