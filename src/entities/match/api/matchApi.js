@@ -23,7 +23,6 @@ export const matchApi = baseApi.injectEndpoints({
             ]
           : [{ type: 'Match', id: 'LIST' }],
     }),
-
     getMatchById: builder.query({
       query: (id) => `/matches/${id}`,
       providesTags: (result, error, id) => [{ type: 'Match', id }],

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { FINISHED_STATUS } from './constans';
 import { addPoint, resetMatch, setStatus, undo } from './matchSlice';
 
 import {
@@ -59,6 +60,18 @@ export function useLiveMatchController(matchId) {
     syncWithServer();
   }, [matchState, matchId, updateMatch]);
 
+  const handleFinish = () => {
+    const startMs = new Date(matchState.timeStart).getTime();
+    const nowMs = Date.now();
+    const totalSeconds = Math.max(0, Math.floor((nowMs - startMs) / 1000));
+
+    updateMatch({
+      id: matchId,
+      status: FINISHED_STATUS,
+      duration: totalSeconds,
+    });
+  };
+
   const handleAddPoint = (player) => {
     dispatch(addPoint({ player, delta: 1 }));
   };
@@ -69,6 +82,9 @@ export function useLiveMatchController(matchId) {
 
   const handleSetStatus = (newStatus) => {
     dispatch(setStatus(newStatus));
+    if (newStatus === FINISHED_STATUS) {
+      handleFinish();
+    }
   };
 
   return {

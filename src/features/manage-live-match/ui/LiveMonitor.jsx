@@ -2,33 +2,66 @@ import { ScoreControls } from './ScoreControls';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import StopIcon from '@mui/icons-material/Stop';
 import UndoIcon from '@mui/icons-material/Undo';
-import { Button, Container, Paper, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  Paper,
+  Stack,
+  Typography,
+} from '@mui/material';
 
+import {
+  FINISHED_STATUS,
+  ONGOING_STATUS,
+  UPCOMING_STATUS,
+} from '../model/constans';
 import { useLiveMatchController } from '../model/useLiveMatchController';
+import { useMatchTimer } from '../model/useMatchTimer';
 
 import { ScoreBoard } from '../../../entities/match/ui/ScoreBoard';
 
 function LiveMonitor({ matchId }) {
-  const { matchState, isLoading, addPoint, undo, setStatus } =
+  const { matchState, addPoint, undo, setStatus } =
     useLiveMatchController(matchId);
 
-  if (isLoading) return <div>Загрузка матча...</div>;
+  const isActive = matchState?.status === ONGOING_STATUS;
+  const isFinished = matchState?.status === FINISHED_STATUS;
 
-  const isActive = matchState.status === 'Ongoing';
-  const isFinished = matchState.status === 'Finished';
+  const timerString = useMatchTimer(
+    matchState?.timeStart,
+    matchState.status,
+    matchState.duration,
+  );
 
   const handleToggleStatus = () => {
-    if (matchState.status === 'Upcoming') {
-      setStatus('Ongoing');
-    } else if (matchState.status === 'Ongoing') {
-      setStatus('Finished');
+    if (matchState.status === UPCOMING_STATUS) {
+      setStatus(ONGOING_STATUS);
+    } else if (matchState.status === ONGOING_STATUS) {
+      setStatus(FINISHED_STATUS);
     }
   };
+
   return (
     <Container sx={{ py: 3, width: '500px' }}>
-      <Typography sx={{ fontSize: '20px', fontWeight: 'bold' }}>
-        Live Monitore
-      </Typography>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          mb: 1,
+        }}
+      >
+        <Typography sx={{ fontSize: '20px', fontWeight: 'bold' }}>
+          Live Monitor
+        </Typography>
+        {
+          <Typography sx={{ fontWeight: 'bold', color: 'error.main' }}>
+            ⏱ {timerString}
+          </Typography>
+        }
+      </Box>
+
       <Paper
         elevation={0}
         sx={{ p: 2, borderRadius: 3, bgcolor: 'background.default' }}
@@ -74,7 +107,7 @@ function LiveMonitor({ matchId }) {
               onClick={handleToggleStatus}
               sx={{ borderRadius: 2 }}
             >
-              {matchState.status === 'Upcoming' ? 'Начать' : 'Завершить'}
+              {matchState.status === UPCOMING_STATUS ? 'Начать' : 'Завершить'}
             </Button>
           )}
         </Stack>

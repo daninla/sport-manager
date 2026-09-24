@@ -47,6 +47,7 @@ export const tournamentApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: [{ type: 'Tournament', id: 'LIST' }],
     }),
+
     getMatchesByTournamentId: builder.query({
       query: (tournamentId) => `/matches?tournamentId=${tournamentId}`,
       providesTags: (result, error, tournamentId) => [

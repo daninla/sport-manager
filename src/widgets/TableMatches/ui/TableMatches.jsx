@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
+import PlayerName from './PlayerName';
 import {
   Box,
   Drawer,
@@ -13,22 +14,9 @@ import {
 
 import LiveMonitor from '../../../features/manage-live-match/ui/LiveMonitor';
 import MatchStatusBage from '../../../shared/ui/MatchStatusBage/MatchStatusBage';
-import { useGetPlayersQuery } from '../../../entities/match/api/matchApi';
 
 function MatchesTable({ matches }) {
   const [selectedMatch, setSelectedMatch] = useState(null);
-
-  // Matches now only carry player1Id/player2Id, so we fetch the
-  // players collection once and resolve names by id.
-  const { data: players } = useGetPlayersQuery();
-
-  const playersById = useMemo(() => {
-    if (!players) return {};
-    return Object.fromEntries(players.map((player) => [player.id, player]));
-  }, [players]);
-
-  const getPlayerName = (playerId) =>
-    playersById[playerId]?.name ?? `Player ${playerId}`;
 
   const handleRowClick = (match) => {
     setSelectedMatch(match);
@@ -65,18 +53,26 @@ function MatchesTable({ matches }) {
                     <MatchStatusBage status={match.status} />
                   </Box>
                 </TableCell>
-                <TableCell>{getPlayerName(match.player1Id)}</TableCell>
+                <TableCell>
+                  {<PlayerName playerId={match.player1Id} />}
+                </TableCell>
                 <TableCell sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
                   {match.score.player1} - {match.score.player2}
                 </TableCell>
-                <TableCell>{getPlayerName(match.player2Id)}</TableCell>
+                <TableCell>
+                  {<PlayerName playerId={match.player2Id} />}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
 
-      <Drawer anchor="right" open={Boolean(selectedMatch)} onClose={handleClose}>
+      <Drawer
+        anchor="right"
+        open={Boolean(selectedMatch)}
+        onClose={handleClose}
+      >
         {selectedMatch && (
           <LiveMonitor matchId={selectedMatch.id} onClose={handleClose} />
         )}

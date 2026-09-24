@@ -17,7 +17,6 @@ import { Field, Form, Formik } from 'formik';
 
 import { useGetPlayersQuery } from '@/entities/player';
 import {
-  getNearestBracketSize,
   useCreateTournamentMutation,
 } from '@/entities/tournament';
 
@@ -120,12 +119,6 @@ function TournamentForm() {
     }
 
     const playerIds = selectedPlayers.map((player) => Number(player.id));
-    const bracketSize = getNearestBracketSize(playerIds.length);
-
-    if (values.format === 'single_elimination' && bracketSize < 2) {
-      window.alert('Single elimination bracket needs at least 2 players.');
-      return;
-    }
 
     const tournamentPayload = {
       name: values.name,
