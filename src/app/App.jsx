@@ -5,6 +5,7 @@ import { PlayerForm } from '@/pages/PlayerForm';
 import { Players } from '@/pages/Players';
 import { Tournaments } from '@/pages/Tournaments';
 import { Account } from '../pages/Account';
+import { Clubs } from '../pages/Club';
 import { Login } from '../pages/Login';
 import { Registration } from '../pages/Registration';
 import { TournamentForm } from '../pages/TournamentForm';
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/account" element={<Account />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/clubs" element={<Clubs />} />
         <Route path="/tournaments" element={<Tournaments />} />
         <Route path="/tournaments/add" element={<TournamentForm />} />
         <Route path="/tournaments/:id/*" element={<TournamentPage />} />

@@ -9,6 +9,7 @@ import enTournamentFilters from '../public/locales/en/tournamentFilters.json';
 import enTournamentForm from '../public/locales/en/tournamentForm.json';
 import enTournamentPage from '../public/locales/en/tournamentPage.json';
 import enTournaments from '../public/locales/en/tournaments.json';
+import enClub from "../public/locales/en/clubs.json";
 import uaAccount from '../public/locales/ua/account.json';
 import uaAuth from '../public/locales/ua/auth.json';
 import uaDashboard from '../public/locales/ua/dashboard.json';
@@ -19,6 +20,7 @@ import uaTournamentFilters from '../public/locales/ua/tournamentFilters.json';
 import uaTournamentForm from '../public/locales/ua/tournamentForm.json';
 import uaTournamentPage from '../public/locales/ua/tournamentPage.json';
 import uaTournaments from '../public/locales/ua/tournaments.json';
+import uaClub from "../public/locales/ua/clubs.json";
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
@@ -30,6 +32,7 @@ i18n
       en: {
         dashboard: enDashboard,
         header: enHeader,
+        club: enClub,
         players: enPlayers,
         tournaments: enTournaments,
         tournamentForm: enTournamentForm,
@@ -42,13 +45,13 @@ i18n
       ua: {
         dashboard: uaDashboard,
         header: uaHeader,
+        club: uaClub,
         players: uaPlayers,
         tournaments: uaTournaments,
         tournamentForm: uaTournamentForm,
         tournamentPage: uaTournamentPage,
         sidebar: uaSidebar,
         tournamentFilters: uaTournamentFilters,
-
         auth: uaAuth,
         account: uaAccount,
       },
@@ -56,13 +59,13 @@ i18n
     ns: [
       'dashboard',
       'header',
+      'club',
       'players',
       'tournaments',
       'tournamentForm',
       'tournamentPage',
       'sidebar',
       'tournamentFilters',
-
       'auth',
       'account',
     ],

@@ -1668,16 +1668,7 @@
       "currentParticipants": 24,
       "tables": 8,
       "status": "Ongoing",
-      "playerIds": [
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46
-      ]
+      "playerIds": [39, 40, 41, 42, 43, 44, 45, 46]
     },
     {
       "id": "5",
@@ -1695,16 +1686,7 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "playerIds": [
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
-      ]
+      "playerIds": [47, 48, 49, 50, 51, 52, 53, 54]
     },
     {
       "id": "6",
@@ -1722,16 +1704,7 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "playerIds": [
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
-      ]
+      "playerIds": [47, 48, 49, 50, 51, 52, 53, 54]
     },
     {
       "name": "ytfghkijm",
@@ -1740,10 +1713,7 @@
       "timeStart": "",
       "timeEnd": "",
       "location": "yhgjm",
-      "players": [
-        7,
-        5
-      ],
+      "players": [7, 5],
       "competitionType": "Single",
       "bracketFormat": "Single Elimination",
       "matchFormat": "Best of 3",
@@ -2430,6 +2400,348 @@
       "notes": "",
       "role": "player",
       "id": "akv422aA0wc"
+    }
+  ],
+  "clubs": [
+    {
+      "id": 1,
+      "title": "Kyiv Tennis Club",
+      "logo": "/images/club/Example-1.png",
+      "address": "Kyiv, 15 Sportivna Street",
+      "description": "None",
+      "members": [
+        {
+          "id": "1",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "2",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "3",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        }
+      ],
+      "phone": "+38044-123-45-67",
+      "email": "info@kyivtennisclub.ua",
+      "workingHours": {
+        "monday": "09:00-22:00",
+        "tuesday": "09:00-22:00",
+        "wednesday": "09:00-22:00",
+        "thurday": "09:00-22:00",
+        "friday": "09:00-22:00",
+        "saturday": "09:00-21:00",
+        "sunday": "10:00-19:00"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Dynamo Arena",
+      "logo": "/images/club/Example-2.png",
+      "address": "Lviv, 8 Victory Avenue",
+      "description": "None",
+      "members": [
+        {
+          "id": "1",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "2",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "3",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        }
+      ],
+      "phone": "+38032-456-78-90",
+      "email": "club@dynamoarena.ua",
+      "workingHours": {
+        "monday": "08:00-21:00",
+        "tuesday": "08:00-21:00",
+        "wednesday": "08:00-21:00",
+        "thurday": "08:00-21:00",
+        "friday": "08:00-21:00",
+        "saturday": "09:00-20:00",
+        "sunday": "09:00-18:00"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Olympic Sports Center",
+      "logo": "/images/club/Example-3.png",
+      "address": "Odesa, 24 Seaside Blvd",
+      "description": "None",
+      "members": [
+        {
+          "id": "1",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "2",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "3",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        }
+      ],
+      "phone": "+38048-987-65-43",
+      "email": "hello@olympicsports.center",
+      "workingHours": {
+        "monday": "07:00-23:00",
+        "tuesday": "07:00-23:00",
+        "wednesday": "07:00-23:00",
+        "thurday": "07:00-23:00",
+        "friday": "07:00-23:00",
+        "saturday": "08:00-22:00",
+        "sunday": "08:00-20:00"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Viktoria Club",
+      "logo": "/images/club/Example-4.png",
+      "address": "Zaporizhzhia, 11 Central Square",
+      "description": "None",
+      "members": [
+        {
+          "id": "1",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "2",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "3",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        }
+      ],
+      "phone": "+38061-765-43-21",
+      "email": "support@viktoriafit.ua",
+      "workingHours": {
+        "monday": "06:00-22:00",
+        "tuesday": "06:00-22:00",
+        "wednesday": "06:00-22:00",
+        "thurday": "06:00-22:00",
+        "friday": "06:00-22:00",
+        "saturday": "08:00-20:00",
+        "sunday": "08:00-18:00"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Fast Club",
+      "logo": "/images/club/Example-5.png",
+      "address": "Poltava, 10 Central Square",
+      "description": "None",
+      "members": [
+        {
+          "id": "1",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "2",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        },
+        {
+          "id": "3",
+          "fullName": "Test Testovych",
+          "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+          "age": 30,
+          "sex": "none",
+          "email": "test@gmail.com",
+          "city": "Zaporizhzhia, Ukraine",
+          "status": "Unranked",
+          "ukrRate": 16.9,
+          "worldRate": 0,
+          "club": "Free Agent",
+          "notes": "None",
+          "password": "test",
+          "role": "player"
+        }
+      ],
+      "phone": "+38061-765-43-21",
+      "email": "support@viktoriafit.ua",
+      "workingHours": {
+        "monday": "06:00-22:00",
+        "tuesday": "06:00-22:00",
+        "wednesday": "06:00-22:00",
+        "thurday": "06:00-22:00",
+        "friday": "06:00-22:00",
+        "saturday": "08:00-20:00",
+        "sunday": "08:00-18:00"
+      }
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
