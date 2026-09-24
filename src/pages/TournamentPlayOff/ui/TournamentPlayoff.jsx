@@ -1,169 +1,130 @@
-import { Box, Typography } from '@mui/material';
-import { useParams } from 'react-router-dom';
-
-import { useGetPlayersQuery } from '@/entities/player';
+import { useState, useMemo } from 'react';
+import {useParams} from 'react-router-dom';
 import {
-  buildPlayoffBracket,
-  flattenPlayoffBracket,
-  getNearestBracketSize,
+  Box,
+  Typography,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  CircularProgress,
+  Alert,
+  Paper,
+  Stack
+} from '@mui/material';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+
+import {
+  useGetTournamentsQuery,
   useGetPlayoffMatchesByTournamentIdQuery,
-  useGetTournamentByIdQuery,
-} from '@/entities/tournament';
-import { PlayoffBracket } from '@/widgets/PlayoffBracket';
+  useUpdatePlayoffMatchMutation
+} from '../../../entities/tournament/index.js';
 
-const roundOrder = {
-  'Round of 64': 0,
-  'Round of 32': 1,
-  'Round of 16': 2,
-  Quarterfinals: 3,
-  Semifinals: 4,
-  Final: 5,
-};
+import { createPlayerLookup } from '../../../entities/player/playerUtils.js';
+import { resolveMatchAndAdvance } from '../../../entities/tournament/playoff/advanceWinner.js';
+import { PlayoffBracket } from '../../../widgets/PlayoffBracket/ui/PlayoffWidget.jsx';
+import { MatchScoreDialog } from '../../../widgets/PlayoffBracket/ui/MatchScoreDialog.jsx';
 
-const normalizePlayoffData = (matches = [], players = []) => {
-  const playersById = new Map(
-    players.map((player) => [Number(player.id), player.fullName || player.name])
-  );
+export function PlayoffPage({ players = [] }) {
+  const {id} = useParams();
+  const selectedTournamentId = Number(id) || null;
+  const [activeMatchForScore, setActiveMatchForScore] = useState(null);
 
-  const grouped = matches.reduce((acc, match) => {
-    const round = match.round || 'Final';
-    if (!acc[round]) acc[round] = [];
-
-    acc[round].push({
-      ...match,
-      id: match.id || `${round}-${acc[round].length + 1}`,
-      player1:
-        match.player1 ||
-        playersById.get(Number(match.player1Id)) ||
-        (match.player1Id ? `Player ${match.player1Id}` : 'TBD'),
-      player2:
-        match.player2 ||
-        playersById.get(Number(match.player2Id)) ||
-        (match.player2Id ? `Player ${match.player2Id}` : 'TBD'),
-      score:
-        match.score && typeof match.score === 'object'
-          ? `${match.score.player1 ?? 0}:${match.score.player2 ?? 0}`
-          : match.score ?? '-',
-      status: match.status || 'pending',
-      active: Boolean(match.active),
-    });
-
-    return acc;
-  }, {});
-
-  return Object.entries(grouped)
-    .map(([round, roundMatches]) => ({
-      round,
-      matches: roundMatches.sort(
-        (a, b) => Number(a.matchIndex || 0) - Number(b.matchIndex || 0)
-      ),
-    }))
-    .sort(
-      (a, b) => (roundOrder[a.round] ?? 99) - (roundOrder[b.round] ?? 99)
-    );
-};
-
-const buildFallbackPlayoff = (tournament, players = []) => {
-  if (!tournament || tournament.bracketFormat !== 'Single Elimination') {
-    return [];
-  }
-
-  const participantIds = Array.isArray(tournament.players)
-    ? tournament.players
-    : [];
-
-  if (participantIds.length < 2) {
-    return [];
-  }
-
-  const bracketSize = getNearestBracketSize(participantIds.length);
-  const selectedPlayers = participantIds
-    .slice(0, bracketSize)
-    .map((id) => {
-      const player = players.find((item) => Number(item.id) === Number(id));
-
-      return player
-        ? { id: Number(player.id), fullName: player.fullName || player.name }
-        : { id: Number(id), fullName: `Player ${id}` };
-    })
-    .filter(Boolean);
-
-  const paddedPlayers = [...selectedPlayers];
-  while (paddedPlayers.length < bracketSize) {
-    paddedPlayers.push({ id: null, fullName: 'TBD' });
-  }
-
-  if (!paddedPlayers.length) {
-    return [];
-  }
-
-  const bracket = buildPlayoffBracket(paddedPlayers);
-  return normalizePlayoffData(flattenPlayoffBracket(bracket), players);
-};
-
-function TournamentPlayoffPage() {
-  const { id } = useParams();
-  const { data: tournament, isLoading, error } = useGetTournamentByIdQuery(id);
-  const { data: players = [] } = useGetPlayersQuery();
-  const { data: playoffMatches = [] } = useGetPlayoffMatchesByTournamentIdQuery(id, {
-    skip: !id,
+  // RTK Query hooks
+  const { data: tournaments = [], isLoading: isLoadingTournaments } = useGetTournamentsQuery();
+  const {
+    data: matches = [],
+    isLoading: isLoadingMatches,
+    isError: isMatchesError
+  } = useGetPlayoffMatchesByTournamentIdQuery(selectedTournamentId, {
+    skip: !selectedTournamentId
   });
 
-  if (isLoading) {
-    return <Typography sx={{ p: 4 }}>Loading playoff...</Typography>;
-  }
+  const [updatePlayoffMatch] = useUpdatePlayoffMatchMutation();
 
-  if (error || !tournament) {
-    return (
-      <Typography sx={{ p: 4, color: 'error.main' }}>
-        Tournament not found
-      </Typography>
-    );
-  }
+  // Pre-indexed player lookup map
+  const playerLookup = useMemo(() => createPlayerLookup(players), [players]);
 
-  const participantIds = Array.isArray(tournament.players) ? tournament.players : [];
-  const playoffFromParticipants = buildFallbackPlayoff(tournament, players);
-  const playoffFromDb = normalizePlayoffData(playoffMatches, players);
-  const playoff = participantIds.length >= 2
-    ? playoffFromParticipants
-    : playoffFromDb;
-  const isSingleElimination = tournament.bracketFormat === 'Single Elimination';
+  // Handle score submission and automatic progression
+  const handleSaveScore = async (matchId, score) => {
+    try {
+      // 1. Calculate updated state using tournament logic
+      const updatedMatches = resolveMatchAndAdvance(
+        matches,
+        matchId,
+        score,
+        playerLookup
+      );
 
-  if (!isSingleElimination || playoff.length === 0) {
-    return (
-      <Box sx={{ p: 4 }}>
-        <Typography variant="h4" sx={{ mb: 2 }}>
-          Playoff bracket
-        </Typography>
-        <Typography sx={{ color: '#cbd5e1' }}>
-          This tournament format does not have a playoff bracket yet.
-        </Typography>
-      </Box>
-    );
-  }
+      // 2. Identify the modified current match
+      const updatedCurrentMatch = updatedMatches.find((m) => String(m.id) === String(matchId));
+      if (updatedCurrentMatch) {
+        await updatePlayoffMatch(updatedCurrentMatch).unwrap();
+      }
+
+      // 3. Identify and persist the advanced successor match in the next round
+      const successorMatch = updatedMatches.find((m) => {
+        const original = matches.find((orig) => String(orig.id) === String(m.id));
+        //It picks another match that just received a new player.
+        return (
+          String(m.id) !== String(matchId) &&
+          (m.player1Id !== original?.player1Id || m.player2Id !== original?.player2Id)
+        );
+      });
+
+      if (successorMatch) {
+        await updatePlayoffMatch(successorMatch).unwrap();
+      }
+    } catch (err) {
+      console.error('Failed to update playoff match score:', err);
+    }
+  };
 
   return (
-    <Box
-      sx={{
-        p: { xs: 2, md: 4 },
-        minHeight: '100vh',
-        background:
-          'radial-gradient(circle at top, #172554 0%, #0f172a 42%, #020817 100%)',
-        color: '#f8fafc',
-      }}
-    >
-      <Box sx={{ mb: 4 }}>
-        <Typography variant="h4" sx={{ fontWeight: 800, letterSpacing: 0.5 }}>
-          {tournament.name}
-        </Typography>
-        <Typography sx={{ mt: 1, color: '#cbd5e1' }}>
-          Playoff bracket · {tournament.bracketFormat}
-        </Typography>
-      </Box>
+    <Box sx={{ p: 4, bgcolor: '#f1f5f9', minHeight: '100vh' }}>
+      {/* Page Header */}
+      <Paper elevation={0} sx={{ p: 3, mb: 4, borderRadius: 3, border: '1px solid #e2e8f0' }}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between" alignItems="center" spacing={2}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+            <EmojiEventsIcon color="primary" sx={{ fontSize: 36 }} />
+            <Box>
+              <Typography variant="h5" fontWeight={700}>
+                Tournament Playoff Bracket
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Track matches, record scores, and advance winners automatically
+              </Typography>
+            </Box>
+          </Box>
+        </Stack>
+      </Paper>
 
-      <PlayoffBracket playoff={playoff} />
+      {/* Content Area */}
+      {isLoadingMatches ? (
+        <Box sx={{ display: 'flex', justifyContent: 'center', p: 8 }}>
+          <CircularProgress />
+        </Box>
+      ) : isMatchesError ? (
+        <Alert severity="error">Failed to load playoff matches for the selected tournament.</Alert>
+      ) : (
+        <PlayoffBracket
+          matches={matches}
+          players={players}
+          tournamentId={selectedTournamentId}
+          onEditMatch={(match) => setActiveMatchForScore(match)}
+        />
+      )}
+
+      {/* Score Dialog */}
+      <MatchScoreDialog
+        open={Boolean(activeMatchForScore)}
+        match={activeMatchForScore}
+        playerLookup={playerLookup}
+        onClose={() => setActiveMatchForScore(null)}
+        onSave={handleSaveScore}
+      />
     </Box>
   );
 }
 
-export default TournamentPlayoffPage;
+export default PlayoffPage;

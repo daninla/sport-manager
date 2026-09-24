@@ -1734,14 +1734,15 @@
       ]
     },
     {
-      "name": "ytfghkijm",
+      "name": "Kharkiv Super Cup",
       "ageCategory": "",
-      "date": "",
-      "timeStart": "",
-      "timeEnd": "",
-      "location": "yhgjm",
+      "date": "2026-09-24",
+      "timeStart": "18:19",
+      "timeEnd": "17:19",
+      "location": "Kharkiv",
       "players": [
-        7,
+        15,
+        10,
         5
       ],
       "competitionType": "Single",
@@ -1749,10 +1750,9 @@
       "matchFormat": "Best of 3",
       "pointsPerGame": 11,
       "maxParticipants": 16,
-      "currentParticipants": 2,
+      "currentParticipants": 3,
       "status": "Upcoming",
-      "matches": [],
-      "id": "gfZ7dgwyznY"
+      "id": "BO1nAzTdAcc"
     }
   ],
   "matches": [
@@ -1948,11 +1948,11 @@
       "matchIndex": 1,
       "player1Id": 47,
       "player2Id": 48,
-      "winnerId": null,
-      "winner": null,
-      "status": "Upcoming",
+      "winnerId": 47,
+      "winner": "Player #47",
+      "status": "Finished",
       "score": {
-        "player1": 0,
+        "player1": 2,
         "player2": 0
       },
       "currentSet": {
@@ -1968,11 +1968,11 @@
       "matchIndex": 2,
       "player1Id": 49,
       "player2Id": 50,
-      "winnerId": null,
-      "winner": null,
-      "status": "Upcoming",
+      "winnerId": 49,
+      "winner": "Player #49",
+      "status": "Finished",
       "score": {
-        "player1": 0,
+        "player1": 1,
         "player2": 0
       },
       "currentSet": {
@@ -1988,11 +1988,11 @@
       "matchIndex": 3,
       "player1Id": 51,
       "player2Id": 52,
-      "winnerId": null,
-      "winner": null,
-      "status": "Upcoming",
+      "winnerId": 51,
+      "winner": "Player #51",
+      "status": "Finished",
       "score": {
-        "player1": 0,
+        "player1": 2,
         "player2": 0
       },
       "currentSet": {
@@ -2008,12 +2008,12 @@
       "matchIndex": 4,
       "player1Id": 53,
       "player2Id": 54,
-      "winnerId": null,
-      "winner": null,
-      "status": "Upcoming",
+      "winnerId": 54,
+      "winner": "Player #54",
+      "status": "Finished",
       "score": {
         "player1": 0,
-        "player2": 0
+        "player2": 2
       },
       "currentSet": {
         "player1": 0,
@@ -2028,11 +2028,11 @@
       "matchIndex": 1,
       "player1Id": 47,
       "player2Id": 49,
-      "winnerId": null,
-      "winner": null,
-      "status": "Upcoming",
+      "winnerId": 47,
+      "winner": "Player #47",
+      "status": "Finished",
       "score": {
-        "player1": 0,
+        "player1": 1,
         "player2": 0
       },
       "currentSet": {
@@ -2047,6 +2047,27 @@
       "round": "Semifinals",
       "matchIndex": 2,
       "player1Id": 51,
+      "player2Id": 54,
+      "winnerId": 53,
+      "winner": "Player #53",
+      "status": "Upcoming",
+      "score": {
+        "player1": 0,
+        "player2": 1
+      },
+      "currentSet": {
+        "player1": 0,
+        "player2": 0
+      },
+      "historySets": [],
+      "player2": "Player #54"
+    },
+    {
+      "id": "pf-7",
+      "tournamentId": 5,
+      "round": "Final",
+      "matchIndex": 1,
+      "player1Id": 47,
       "player2Id": 53,
       "winnerId": null,
       "winner": null,
@@ -2059,27 +2080,8 @@
         "player1": 0,
         "player2": 0
       },
-      "historySets": []
-    },
-    {
-      "id": "pf-7",
-      "tournamentId": 5,
-      "round": "Final",
-      "matchIndex": 1,
-      "player1Id": 47,
-      "player2Id": 51,
-      "winnerId": null,
-      "winner": null,
-      "status": "Upcoming",
-      "score": {
-        "player1": 0,
-        "player2": 0
-      },
-      "currentSet": {
-        "player1": 0,
-        "player2": 0
-      },
-      "historySets": []
+      "historySets": [],
+      "player2": "Player #53"
     },
     {
       "id": "pf-8",
@@ -2396,6 +2398,261 @@
         "player2": 0
       },
       "historySets": []
+    },
+    {
+      "id": "rl0uZ6U_X4I",
+      "round": "Round of 16",
+      "matchIndex": 1,
+      "player1": "Serhiy Melnyk",
+      "player2": "Yuliia Polishchuk",
+      "player1Id": 15,
+      "player2Id": 10,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "JbuRQ9PmOrQ",
+      "round": "Quarterfinals",
+      "matchIndex": 1,
+      "player1": "TBD",
+      "player2": "TBD",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "JR9C1yYTJmI",
+      "round": "Round of 16",
+      "matchIndex": 2,
+      "player1": "Daryna Bondarenko",
+      "player2": "Anastasiia Kovtun",
+      "player1Id": 4,
+      "player2Id": 32,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "5pMn88uhVQc",
+      "round": "Quarterfinals",
+      "matchIndex": 2,
+      "player1": "TBD",
+      "player2": "TBD",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "5Qw9KNLpH9I",
+      "round": "Quarterfinals",
+      "matchIndex": 3,
+      "player1": "TBD",
+      "player2": "TBD",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "-m1S3OM_fA4",
+      "round": "Quarterfinals",
+      "matchIndex": 4,
+      "player1": "TBD",
+      "player2": "TBD",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "zlAZU6zs8h4",
+      "round": "Semifinals",
+      "matchIndex": 1,
+      "player1": "TBD",
+      "player2": "TBD",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "Nkx_5cI0Kfc",
+      "round": "Semifinals",
+      "matchIndex": 2,
+      "player1": "TBD",
+      "player2": "TBD",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "8xxxY-V6hFc",
+      "round": "Final",
+      "matchIndex": 1,
+      "player1": "TBD",
+      "player2": "TBD",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "ky-uG6tCWBs",
+      "round": "Round of 16",
+      "matchIndex": 3,
+      "player1": "Ivanna Soroka",
+      "player2": "Kyrylo Martynov",
+      "player1Id": 42,
+      "player2Id": 53,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "zTcNQdSh_bk",
+      "round": "Round of 16",
+      "matchIndex": 4,
+      "player1": "Diana Serhiienko",
+      "player2": "Valerii Lymar",
+      "player1Id": 38,
+      "player2Id": 69,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "QHePcueG9dM",
+      "round": "Round of 16",
+      "matchIndex": 5,
+      "player1": "Sviatoslav Chepurnyi",
+      "player2": "Bohdan Oliynyk",
+      "player1Id": 89,
+      "player2Id": 109,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "d47vjOKe09c",
+      "round": "Round of 16",
+      "matchIndex": 6,
+      "player1": "Inna Marchuk",
+      "player2": "Yelyzaveta Panchuk",
+      "player1Id": 144,
+      "player2Id": 148,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "1TDFhRfIW-4",
+      "round": "Round of 16",
+      "matchIndex": 7,
+      "player1": "Polina Kyseliova",
+      "player2": "Viktor Vereshchak",
+      "player1Id": 116,
+      "player2Id": 65,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
+    },
+    {
+      "id": "vER-xl3DlLs",
+      "round": "Round of 16",
+      "matchIndex": 8,
+      "player1": "TBD",
+      "player2": "TBD",
+      "player1Id": null,
+      "player2Id": null,
+      "winner": null,
+      "winnerId": null,
+      "score": {
+        "player1": 0,
+        "player2": 0
+      },
+      "status": "Upcoming",
+      "tournamentId": null
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

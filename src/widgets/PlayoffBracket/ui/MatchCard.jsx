@@ -1,120 +1,153 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
-import { theme } from '../../../shared/config/theme';
+import {
+  Card,
+  CardContent,
+  Typography,
+  Box,
+  Divider,
+  Chip,
+  Button,
+} from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import LockIcon from '@mui/icons-material/Lock';
+import { getPlayerDisplayName } from '../../../entities/player/playerUtils.js';
 
-function formatScore(score) {
-  if (typeof score === 'string') return score;
-  if (score && typeof score === 'object') {
-    const player1 = score.player1 ?? 0;
-    const player2 = score.player2 ?? 0;
-    return `${player1}:${player2}`;
+function getStatusChipColor(status) {
+  switch (status?.toLowerCase()) {
+    case 'finished':
+      return 'success';
+    case 'live':
+      return 'error';
+    case 'upcoming':
+      return 'primary';
+    default:
+      return 'default';
   }
-  return '-';
 }
 
-function MatchCard({ match, setRef, accent = theme.bracket.light.accentPrimary, variant = 'light' }) {
-  const isDark = variant === 'dark';
-  const cardBg = isDark ? 'rgba(15, 23, 42, 0.92)' : '#ffffff';
-  const textColor = isDark ? '#e2e8f0' : '#0f172a';
-  const mutedColor = isDark ? '#cbd5e1' : '#475569';
-  const scoreColor = isDark ? '#f8fafc' : '#0f172a';
-  const status = (match.status || 'pending').toUpperCase();
+export function PlayoffMatchCard({ match, playerLookup, onEditMatch, isLocked = false }) {
+  if (!match) return null;
 
-  const renderRow = ({ playerName, index, scoreValue, isTop }) => (
-    <Box
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 1.25,
-        px: 1.25,
-        py: 0.8,
-        borderRadius: 2,
-        background: isTop ? 'rgba(255,255,255,0.08)' : 'rgba(148,163,184,0.08)',
-        border: '1px solid rgba(148,163,184,0.16)',
-      }}
-    >
-      <Box
-        sx={{
-          width: 22,
-          height: 22,
-          borderRadius: '50%',
-          background: isTop ? accent : 'rgba(148,163,184,0.25)',
-          color: '#fff',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: '0.68rem',
-          fontWeight: 800,
-          flexShrink: 0,
-        }}
-      >
-        {index}
-      </Box>
+  const player1Name = getPlayerDisplayName(match.player1Id, match.player1, playerLookup);
+  const player2Name = getPlayerDisplayName(match.player2Id, match.player2, playerLookup);
 
-      <Typography
-        sx={{
-          fontSize: '0.8rem',
-          fontWeight: 700,
-          color: textColor,
-          flex: 1,
-          minWidth: 0,
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        {playerName || 'TBD'}
-      </Typography>
+  const isPlayer1Winner =
+    match.winnerId !== null &&
+    match.winnerId !== undefined &&
+    String(match.winnerId) === String(match.player1Id);
 
-      <Box
-        sx={{
-          minWidth: isTop ? 38 : 52,
-          px: 0.6,
-          py: 0.2,
-          borderRadius: 1,
-          background: isTop ? 'rgba(15, 23, 42, 0.14)' : 'rgba(15, 23, 42, 0.12)',
-          color: isTop ? scoreColor : '#e2e8f0',
-          fontSize: isTop ? '0.7rem' : '0.58rem',
-          fontWeight: 800,
-          textAlign: 'center',
-          letterSpacing: isTop ? '0' : '0.08em',
-          textTransform: isTop ? 'none' : 'uppercase',
-        }}
-      >
-        {scoreValue}
-      </Box>
-    </Box>
-  );
+  const isPlayer2Winner =
+    match.winnerId !== null &&
+    match.winnerId !== undefined &&
+    String(match.winnerId) === String(match.player2Id);
+  const hasBothPlayers = Boolean(match.player1Id || match.player1) && Boolean(match.player2Id || match.player2);
+
+  const canEdit =hasBothPlayers && !isLocked;
 
   return (
-    <Box
-      ref={(el) => setRef && setRef(el)}
+    <Card
+      variant="outlined"
       sx={{
-        width: '100%',
-        background: cardBg,
-        borderRadius: 3,
-        border: `1px solid ${isDark ? 'rgba(148,163,184,0.18)' : 'rgba(15,23,42,0.08)'}`,
-        boxShadow: isDark ? '0 20px 45px rgba(15,23,42,0.35)' : '0 14px 28px rgba(15,23,42,0.08)',
-        overflow: 'hidden',
+        width: 240,
+        height: 140, // Fixed height for exact line alignment
+        borderRadius: 2,
+        boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+        borderColor: match.status === 'Finished' ? 'grey.300' : 'primary.light',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        flexShrink: 0,
+        bgcolor: '#ffffff',
+        zIndex: 2,
+        '&:hover': {
+          boxShadow: '0 4px 12px rgba(0,0,0,0.12)'
+        }
       }}
     >
-      <Box
-        sx={{
-          background: accent,
-          px: 1.1,
-          py: 0.7,
-          borderBottom: isDark ? '1px solid rgba(15,23,42,0.35)' : '1px solid rgba(255,255,255,0.2)',
-        }}
-      >
-        {renderRow({ playerName: match.player1 || 'TBD', index: 1, scoreValue: formatScore(match.score), isTop: true })}
-      </Box>
+      <CardContent sx={{ p: 1.25, '&:last-child': { pb: 1 } }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.75 }}>
+          <Typography variant="caption" fontWeight="bold" color="text.secondary">
+            MATCH #{match.matchIndex}
+          </Typography>
+          <Chip
+            size="small"
+            label={match.status || 'Pending'}
+            color={getStatusChipColor(match.status)}
+            sx={{ height: 18, fontSize: '0.65rem', textTransform: 'capitalize' }}
+          />
+        </Box>
 
-      <Box sx={{ px: 1.1, py: 0.8, background: isDark ? 'rgba(15,23,42,0.88)' : '#ffffff' }}>
-        {renderRow({ playerName: match.player2 || 'TBD', index: 2, scoreValue: status, isTop: false })}
-      </Box>
-    </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            py: 0.25,
+            fontWeight: isPlayer1Winner ? 700 : 400
+          }}
+        >
+          <Typography
+            variant="body2"
+            noWrap
+            sx={{
+              maxWidth: 160,
+              fontSize: '0.8rem',
+              color: isPlayer1Winner ? 'primary.main' : 'text.primary'
+            }}
+          >
+            {player1Name}
+          </Typography>
+          <Typography variant="body2" sx={{ fontWeight: 'inherit', fontSize: '0.8rem' }}>
+            {match.score?.player1 ?? 0}
+          </Typography>
+        </Box>
+
+        <Divider sx={{ my: 0.25 }} />
+
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            py: 0.25,
+            fontWeight: isPlayer2Winner ? 700 : 400
+          }}
+        >
+          <Typography
+            variant="body2"
+            noWrap
+            sx={{
+              maxWidth: 160,
+              fontSize: '0.8rem',
+              color: isPlayer2Winner ? 'primary.main' : 'text.primary'
+            }}
+          >
+            {player2Name}
+          </Typography>
+          <Typography variant="body2" sx={{ fontWeight: 'inherit', fontSize: '0.8rem' }}>
+            {match.score?.player2 ?? 0}
+          </Typography>
+        </Box>
+
+        {onEditMatch && (
+          <Box sx={{ mt: 0.5 }}>
+            <Button
+              fullWidth
+              size="small"
+              variant="text"
+              startIcon={<EditIcon sx={{ fontSize: 14 }} />}
+              disabled={!canEdit}
+              startIcon={isLocked ? <LockIcon sx={{ fontSize: 13 }} /> : <EditIcon sx={{ fontSize: 14 }} />}
+              onClick={() => onEditMatch(match)}
+              sx={{ fontSize: '0.7rem', py: 0 }}
+            >
+              {isLocked ? 'Locked' : match.status === 'Finished' ? 'Edit Score' : 'Enter Score'}
+            </Button>
+          </Box>
+        )}
+      </CardContent>
+    </Card>
   );
 }
 
-export default MatchCard;
-
+export default PlayoffMatchCard;

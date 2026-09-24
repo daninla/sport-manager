@@ -17,10 +17,7 @@ import { Field, Form, Formik } from 'formik';
 
 import { useGetPlayersQuery } from '@/entities/player';
 import {
-  buildPlayoffBracket,
-  flattenPlayoffBracket,
   getNearestBracketSize,
-  useCreatePlayoffMatchMutation,
   useCreateTournamentMutation,
 } from '@/entities/tournament';
 
@@ -52,8 +49,6 @@ function TournamentForm() {
   const [searchValue, setSearchValue] = useState('');
   const [createTournament, { isLoading: isTournamentCreating }] =
     useCreateTournamentMutation();
-  const [createPlayoffMatch, { isLoading: isPlayoffCreating }] =
-    useCreatePlayoffMatchMutation();
 
   const ageCategories = t('ageCategories', { returnObjects: true });
   const competitionTypes = t('competitionTypes', { returnObjects: true });
@@ -126,12 +121,6 @@ function TournamentForm() {
 
     const playerIds = selectedPlayers.map((player) => Number(player.id));
     const bracketSize = getNearestBracketSize(playerIds.length);
-    const playoffPlayers = selectedPlayers
-      .slice(0, bracketSize)
-      .map((player) => ({
-        id: Number(player.id),
-        fullName: player.fullName,
-      }));
 
     if (values.format === 'single_elimination' && bracketSize < 2) {
       window.alert('Single elimination bracket needs at least 2 players.');
@@ -153,24 +142,9 @@ function TournamentForm() {
       maxParticipants: Number(values.playersLimit) || playerIds.length,
       currentParticipants: playerIds.length,
       status: 'Upcoming',
-      matches: [],
     };
 
-    const createdTournament = await createTournament(tournamentPayload).unwrap();
-
-    if (values.format === 'single_elimination') {
-      const playoffBracket = buildPlayoffBracket(playoffPlayers);
-      const playoffMatches = flattenPlayoffBracket(playoffBracket).map((match) => ({
-        ...match,
-        tournamentId: Number(createdTournament.id),
-      }));
-
-      await Promise.all(
-        playoffMatches.map((playoffMatch) =>
-          createPlayoffMatch(playoffMatch).unwrap()
-        )
-      );
-    }
+    await createTournament(tournamentPayload).unwrap();
 
     navigate('/tournaments');
   };
@@ -376,9 +350,7 @@ function TournamentForm() {
             variant="contained"
             size="large"
             startIcon={<SaveIcon />}
-            disabled={
-              isTournamentCreating || isPlayoffCreating || selectedPlayers.length === 0
-            }
+            disabled={isTournamentCreating || selectedPlayers.length === 0}
           >
             {t('save')}
           </Button>
