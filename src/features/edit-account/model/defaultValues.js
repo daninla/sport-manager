@@ -7,7 +7,6 @@ export const defaultValues = {
   city: '',
   status: '',
   ukrRate: 0,
-  worldRate: 0,
   club: '',
   notes: '',
 };

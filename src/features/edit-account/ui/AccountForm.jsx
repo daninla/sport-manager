@@ -162,6 +162,9 @@ function AccountForm() {
                   }}
                   sx={disabledStyleInput}
                 />
+              </Stack>
+
+              <Stack direction="row" spacing={2}>
                 <TextField
                   fullWidth
                   label={t('status')}
@@ -173,9 +176,6 @@ function AccountForm() {
                   }}
                   sx={disabledStyleInput}
                 />
-              </Stack>
-
-              <Stack direction="row" spacing={2}>
                 <TextField
                   fullWidth
                   label={t('ukraineRate')}
@@ -183,18 +183,6 @@ function AccountForm() {
                   type="number"
                   name="ukrRate"
                   value={values.ukrRate}
-                  slotProps={{
-                    htmlInput: { readOnly: true },
-                  }}
-                  sx={disabledStyleInput}
-                />
-                <TextField
-                  fullWidth
-                  label="World rate"
-                  variant="outlined"
-                  type="number"
-                  name="worldRate"
-                  value={values.worldRate}
                   slotProps={{
                     htmlInput: { readOnly: true },
                   }}

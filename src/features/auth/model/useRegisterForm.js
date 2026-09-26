@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 import {
   useCreateUserMutation,
   useLazyGetUserByEmailQuery,
-} from '../../../entities/user/api/userApi';
+} from '@/entities/user/api/userApi';
 
 function useRegisterForm() {
   const { t } = useTranslation('auth');
@@ -33,7 +33,6 @@ function useRegisterForm() {
         city: '',
         status: '',
         ukrRate: 0,
-        worldRate: 0,
         club: '',
         notes: '',
         role: 'player',
