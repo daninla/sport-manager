@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router';
 import GroupIcon from '@mui/icons-material/Group';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -18,6 +19,7 @@ function ClubCard({
   description,
   members: { length: memebrsLength },
 }) {
+  const { t } = useTranslation('clubs');
   return (
     <NavLink
       to={`/club/${id}`}
@@ -105,7 +107,7 @@ function ClubCard({
               variant="caption"
               sx={{ color: '#667085', fontWeight: 600 }}
             >
-              Participants
+              {t('members')}
             </Typography>
             <Stack
               direction="row"

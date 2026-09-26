@@ -16,7 +16,7 @@ import { Spinner } from '@/shared/ui/Spinner/Spinner';
 import { ClubCard } from '@/widgets/ClubCard';
 
 function ClubsPage() {
-  const { t } = useTranslation('club');
+  const { t } = useTranslation('clubs');
   const { data, isLoading, error } = useGetClubsQuery();
   const [inputValue, setInputValue] = useState('');
   const [open, setOpen] = useState(false);
@@ -86,7 +86,7 @@ function ClubsPage() {
             margin: '1em 0',
           }}
           renderInput={(params) => (
-            <TextField {...params} label={t('search')} />
+            <TextField {...params} label={t('searchClub')} />
           )}
         />
         <NavLink to="/club/add" style={{ textDecoration: 'none' }}>
@@ -110,9 +110,9 @@ function ClubsPage() {
           display: 'grid',
           gridTemplateColumns: {
             sm: 'repeat(1, minmax(0, 1fr))',
-            md: 'repeat(2, minmax(200px, 450px))',
-            lg: 'repeat(3, minmax(200px, 450px))',
-            xl: 'repeat(4, minmax(200px, 450px))',
+            md: 'repeat(2, minmax(200px, 1fr))',
+            lg: 'repeat(3, minmax(200px, 1fr))',
+            xl: 'repeat(4, minmax(200px, 1fr))',
           },
           gap: { xs: 2, sm: 3, md: 4, xl: 5 },
         }}
@@ -121,26 +121,28 @@ function ClubsPage() {
           return <ClubCard key={club.id} {...club} />;
         })}
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: '40px' }}>
-        <Pagination
-          size="large"
-          count={pageCount}
-          page={page}
-          onChange={handlePageChange}
-          sx={{
-            '& .MuiPaginationItem-root': {
-              color: '#35ad55',
-            },
-            '& .MuiPaginationItem-root.Mui-selected': {
-              backgroundColor: '#133958',
-              color: '#35ad55',
-            },
-            '& .MuiPaginationItem-root.Mui-selected:hover': {
-              backgroundColor: '#133958',
-            },
-          }}
-        />
-      </Box>
+      {pageCount > 1 && (
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: '40px' }}>
+          <Pagination
+            size="large"
+            count={pageCount}
+            page={page}
+            onChange={handlePageChange}
+            sx={{
+              '& .MuiPaginationItem-root': {
+                color: '#35ad55',
+              },
+              '& .MuiPaginationItem-root.Mui-selected': {
+                backgroundColor: '#133958',
+                color: '#35ad55',
+              },
+              '& .MuiPaginationItem-root.Mui-selected:hover': {
+                backgroundColor: '#133958',
+              },
+            }}
+          />
+        </Box>
+      )}
     </Box>
   );
 }

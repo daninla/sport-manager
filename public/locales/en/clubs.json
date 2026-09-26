@@ -1,4 +1,25 @@
 {
   "addClub": "Add club",
-  "search": "Search club"
+  "searchClub": "Search club",
+  "members": "Members",
+  "toClubs": "To club lists",
+  "founded": "Founded in",
+  "address": "Address:",
+  "email": "Email:",
+  "phone": "Phone number:",
+  "aboutUs": "About us",
+  "clubMembers": "Club members",
+  "searchMember": "Search member",
+  "columns": {
+    "fullName": "Full name",
+    "age": "Age",
+    "city": "City",
+    "status": "Status",
+    "ukrRate": "Ukrainian rate",
+    "worldRate": "World rate",
+    "club": "Club",
+    "notes": "Notes"
+  },
+  "rowsPerPage": "Rows per page",
+  "of": "of"
 }
