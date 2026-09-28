@@ -3,15 +3,15 @@ import { useParams } from 'react-router-dom';
 import TournamentInfo from './TournamentInfo';
 import { Box, Typography } from '@mui/material';
 
+import { useGetMatchesByTournamentQuery } from '@/entities/match';
 import {
   TournamentStatusFallback,
   useGetTournamentByIdQuery,
   useTournamentMatches,
 } from '@/entities/tournament';
-import { useGetMatchesByTournamentQuery } from '@/entities/match';
 
 import BaseButton from '@/shared/ui/BaseButton/BaseButton.jsx';
-import MatchesTable from '@/widgets/TableMatches';
+import MatchesTable from './TableMatches/TableMatches';
 
 function TournamentPage() {
   const { t } = useTranslation('tournamentPage');
@@ -23,8 +23,7 @@ function TournamentPage() {
     skip: !id,
   });
 
-  const { matches, playedMatches, upcomingMatches } =
-    useTournamentMatches(rawMatches);
+  const { matches } = useTournamentMatches(rawMatches);
 
   if (isLoading) return <TournamentStatusFallback type="loading" t={t} />;
   if (error) return <TournamentStatusFallback type="error" t={t} />;
@@ -43,25 +42,9 @@ function TournamentPage() {
         <Typography variant="h6">
           {t('matches', { count: matches.length })}
         </Typography>
-        <Typography variant="h6">
-          {t('status')} {status}
-        </Typography>
+        <Typography variant="h6"> {status}</Typography>
 
-        {status === 'Ongoing' ? (
-          <>
-            <Typography variant="h6" sx={{ mt: 3 }}>
-              {t('playedMatches')}
-            </Typography>
-            <MatchesTable matches={playedMatches} />
-
-            <Typography variant="h6" sx={{ mt: 4 }}>
-              {t('upcomingMatches')}
-            </Typography>
-            <MatchesTable matches={upcomingMatches} />
-          </>
-        ) : (
-          <MatchesTable matches={matches} />
-        )}
+        <MatchesTable matches={matches} />
       </Box>
     </Box>
   );

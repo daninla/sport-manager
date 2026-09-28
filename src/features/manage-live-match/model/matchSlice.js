@@ -71,6 +71,10 @@ export const matchSlice = createSlice({
       state.status = newStatus;
     },
 
+    setTimeStart: (state, action) => {
+      state.timeStart = action.payload;
+    },
+
     resetMatch: (state, action) => {
       if (action.payload) {
         return {
@@ -90,5 +94,6 @@ export const matchSlice = createSlice({
   },
 });
 
-export const { addPoint, undo, setStatus, resetMatch } = matchSlice.actions;
+export const { addPoint, undo, setStatus, setTimeStart, resetMatch } =
+  matchSlice.actions;
 export default matchSlice.reducer;

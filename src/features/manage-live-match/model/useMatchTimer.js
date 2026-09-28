@@ -13,7 +13,6 @@ export const useMatchTimer = (startedAt, status, duration) => {
       return;
     }
 
-    //  Если матч ИДЕТ — считаем секунды от startedAt
     if (isActive && startedAt) {
       const calculateElapsed = () => {
         const startMs = new Date(startedAt).getTime();
@@ -31,20 +30,17 @@ export const useMatchTimer = (startedAt, status, duration) => {
       return () => clearInterval(interval);
     }
 
-    //  Если матч еще не начался
     setElapsedSeconds(0);
   }, [startedAt, status, duration, isActive, isFinished]);
 
-  // Форматирование ММ:СС / ЧЧ:ММ:СС
-  const safeSeconds = isNaN(elapsedSeconds) ? 0 : elapsedSeconds;
+  const safeSeconds = Number.isNaN(elapsedSeconds) ? 0 : elapsedSeconds;
   const hours = Math.floor(safeSeconds / 3600);
   const minutes = Math.floor((safeSeconds % 3600) / 60);
   const seconds = safeSeconds % 60;
 
   const pad = (num) => String(num).padStart(2, '0');
 
-  if (hours > 0) {
-    return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-  }
-  return `${pad(minutes)}:${pad(seconds)}`;
+  return hours > 0
+    ? `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+    : `${pad(minutes)}:${pad(seconds)}`;
 };

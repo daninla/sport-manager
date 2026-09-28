@@ -1,6 +1,6 @@
 import { Skeleton } from '@mui/material';
 
-import { useGetPlayerByIdQuery } from '../../../entities/player/api/playerApi';
+import { useGetPlayerByIdQuery } from '../../../../entities/player/api/playerApi';
 
 function PlayerName({ playerId }) {
   const {

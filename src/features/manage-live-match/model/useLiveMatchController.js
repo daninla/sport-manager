@@ -1,7 +1,12 @@
-import { useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { FINISHED_STATUS } from './constans';
-import { addPoint, resetMatch, setStatus, undo } from './matchSlice';
+import { useEffect, useReducer, useRef } from 'react';
+import { FINISHED_STATUS, ONGOING_STATUS } from './constans';
+import matchReducer, {
+  addPoint,
+  resetMatch,
+  setStatus,
+  setTimeStart,
+  undo,
+} from './matchSlice';
 
 import {
   useGetMatchByIdQuery,
@@ -10,14 +15,16 @@ import {
 } from '../../../entities/match/api/matchApi';
 
 export function useLiveMatchController(matchId) {
-  const dispatch = useDispatch();
-  const matchState = useSelector((state) => state.liveMatch);
+  // Each hook instance owns its match state, so table rows stay independent.
+  const [matchState, dispatch] = useReducer(matchReducer, undefined, () =>
+    matchReducer(undefined, { type: '@@match/init' }),
+  );
 
   const {
     data: matchData,
     isLoading: isMatchLoading,
     isError,
-  } = useGetMatchByIdQuery(matchId);
+  } = useGetMatchByIdQuery(matchId, { skip: !matchId });
   const { data: players, isLoading: isPlayersLoading } = useGetPlayersQuery();
   const [updateMatch] = useUpdateMatchMutation();
   const isLoading = isMatchLoading || isPlayersLoading;
@@ -38,6 +45,8 @@ export function useLiveMatchController(matchId) {
   }, [matchData, players, dispatch]);
 
   useEffect(() => {
+    if (!matchData || !players) return;
+
     if (skipNextSyncRef.current) {
       skipNextSyncRef.current = false;
       return;
@@ -82,10 +91,21 @@ export function useLiveMatchController(matchId) {
 
   const handleSetStatus = (newStatus) => {
     dispatch(setStatus(newStatus));
+    if (newStatus === ONGOING_STATUS) {
+      const timeStart = new Date().toISOString();
+      dispatch(setTimeStart(timeStart));
+      updateMatch({
+        id: matchId,
+        status: ONGOING_STATUS,
+        timeStart,
+        duration: 0,
+      });
+    }
     if (newStatus === FINISHED_STATUS) {
       handleFinish();
     }
   };
+
 
   return {
     matchState,

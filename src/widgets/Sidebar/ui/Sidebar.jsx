@@ -62,6 +62,27 @@ function Sidebar() {
             {t(item.label)}
           </Box>
         ))}
+        <Box
+          component="a"
+          href="https://www.twitch.tv/"
+          target="_blank"
+          rel="noreferrer"
+          sx={{
+            mb: 2,
+            ml: 10,
+            pt: 1,
+            pb: 1,
+            fontWeight: 'bold',
+            fontSize: 18,
+            borderBottom: '1px solid #1b5c2c',
+            textDecoration: 'none',
+            color: 'inherit',
+            '&:hover': { color: 'secondary.contrastText' },
+            '&.active': { color: 'secondary.contrastText' },
+          }}
+        >
+          Stream
+        </Box>
       </Box>
     </Box>
   );

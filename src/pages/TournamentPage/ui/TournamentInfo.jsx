@@ -31,7 +31,7 @@ function TournamentInfo({ tournament, t }) {
         </Typography>
         <Typography>
           <span style={{ fontWeight: 'bold' }}>{t('participants')}</span>
-          {tournament.currentParticipants}/{tournament.maxParticipants}
+          {tournament.currentParticipants}
         </Typography>
       </Box>
     </div>
