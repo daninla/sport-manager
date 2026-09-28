@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {
   Box,
-  Button,
   Paper,
   Stack,
   Table,
@@ -20,6 +18,7 @@ import {
 
 import { useGetClubByIdQuery } from '@/entities/club/api/clubApi';
 import { usePagination } from '@/shared/lib/usePagination';
+import { getColums } from '../model/columns';
 
 import { Spinner } from '@/shared/ui/Spinner/Spinner';
 
@@ -29,25 +28,7 @@ function ClubPage() {
   const { id } = useParams();
   const { data: club, isLoading, error } = useGetClubByIdQuery(id);
 
-  const columns = [
-    { id: 'fullName', label: t('columns.fullName'), minWidth: 200 },
-    {
-      id: 'age',
-      label: t('columns.age'),
-      minWidth: 100,
-      format: (value) => value.toLocaleString('en-US'),
-    },
-    { id: 'city', label: t('columns.city'), minWidth: 200 },
-    { id: 'status', label: t('columns.status'), minWidth: 200 },
-    {
-      id: 'ukrRate',
-      label: t('columns.ukrRate'),
-      minWidth: 150,
-      format: (value) => value.toLocaleString('en-US'),
-    },
-    { id: 'club', label: t('columns.club'), minWidth: 200 },
-    { id: 'notes', label: t('columns.notes'), minWidth: 200 },
-  ];
+  const columns = getColums(t);
 
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -55,7 +36,7 @@ function ClubPage() {
 
   const normalizedSearchTerm = searchTerm.trim().toLowerCase();
 
-  const filteredPlayers = members.filter((player) =>
+  const filteredMembers = members.filter((player) =>
     player.fullName?.toLowerCase().includes(normalizedSearchTerm),
   );
 
@@ -65,7 +46,7 @@ function ClubPage() {
     currentData: players,
     page,
     handlePageChange,
-  } = usePagination(filteredPlayers, rowsPerPage);
+  } = usePagination(filteredMembers, rowsPerPage);
 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(+event.target.value);
@@ -78,29 +59,25 @@ function ClubPage() {
   }
 
   return (
-    <Box sx={{ p: '1em 2em' }}>
-      <Button
-        variant="contained"
-        sx={{
-          textTransform: 'none',
-          fontSize: '1.2em',
-          mb: '30px',
-          '&:hover': { color: 'secondary.contrastText' },
-        }}
-        startIcon={<ArrowBackIcon />}
-        onClick={() => navigate('/clubs')}
-      >
-        {t('toClubs')}
-      </Button>
+    <>
       <Stack spacing={5}>
         <Box>
-          <Typography variant="h4" sx={{ mb: '10px' }}>
+          <Typography
+            variant="h4"
+            sx={{ mb: '10px', textAlign: { sm: 'center', xl: 'start' } }}
+          >
             {club.title}
           </Typography>
-          <Stack direction="row" spacing={10}>
+          <Stack
+            direction={{ lg: 'column', xl: 'row' }}
+            alignItems="center"
+            justifyContent="center"
+            spacing={{ lg: 2, xl: 10 }}
+            sx={{ textAlign: { sm: 'center', xl: 'start' } }}
+          >
             <Box
               component="img"
-              src={club.logo}
+              src={`/images/club/${club.logo}`}
               alt={club.title}
               sx={{
                 width: '300px',
@@ -109,10 +86,10 @@ function ClubPage() {
               }}
             />
             <Stack spacing={2} sx={{ fontSize: '1.2rem' }}>
-              <Typography variant="p">{`${t('founded')} ${club.foundedYear}`}</Typography>
-              <Typography variant="p">{`${t('address')} ${club.address}`}</Typography>
-              <Typography variant="p">{`${t('email')} ${club.email}`}</Typography>
-              <Typography variant="p">{`${t('phone')} ${club.phone}`}</Typography>
+              <Typography variant="p">{`${t('foundedIn')} ${club.foundedYear}`}</Typography>
+              <Typography variant="p">{`${t('address')}: ${club.address}`}</Typography>
+              <Typography variant="p">{`${t('email')}: ${club.email}`}</Typography>
+              <Typography variant="p">{`${t('phone')}: ${club.phone}`}</Typography>
               <Typography
                 variant="p"
                 sx={{ borderBlockEnd: '1px solid black', pb: '10px' }}
@@ -195,7 +172,7 @@ function ClubPage() {
               }
               rowsPerPageOptions={[10, 25, 100]}
               component="div"
-              count={filteredPlayers.length}
+              count={filteredMembers.length}
               rowsPerPage={rowsPerPage}
               page={page - 1}
               onPageChange={(_, nextPage) =>
@@ -206,7 +183,7 @@ function ClubPage() {
           </Paper>
         </Stack>
       </Stack>
-    </Box>
+    </>
   );
 }
 

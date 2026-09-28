@@ -1,25 +1,64 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import EditIcon from '@mui/icons-material/Edit';
 import GroupIcon from '@mui/icons-material/Group';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {
   Box,
   Card,
   CardContent,
   CardMedia,
+  IconButton,
+  ListItemIcon,
+  ListItemText,
+  Menu,
+  MenuItem,
   Stack,
   Typography,
 } from '@mui/material';
 
-function ClubCard({
-  id,
-  logo,
-  title,
-  address,
-  description,
-  members: { length: memebrsLength },
-}) {
+import { useDeleteClubMutation } from '@/entities/club';
+
+function ClubCard({ id, logo, title, address, description, amountMembers }) {
   const { t } = useTranslation('clubs');
+  const navigate = useNavigate();
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [deleteClub, { isLoading: isDeleting }] = useDeleteClubMutation();
+  const isMenuOpen = Boolean(anchorEl);
+
+  const handleOpenMenu = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseMenu = (event) => {
+    if (event && event.stopPropagation) {
+      event.stopPropagation();
+    }
+    setAnchorEl(null);
+  };
+
+  const handleEditClick = (event) => {
+    event.stopPropagation();
+    handleCloseMenu();
+    navigate(`/club/edit/${id}`);
+  };
+
+  const handleDeleteClick = async (event) => {
+    event.stopPropagation();
+    handleCloseMenu();
+
+    try {
+      await deleteClub(id).unwrap();
+    } catch (error) {
+      throw new Error('Failed to delete club: ' + error.message);
+    }
+  };
+
   return (
     <NavLink
       to={`/club/${id}`}
@@ -27,6 +66,7 @@ function ClubCard({
     >
       <Card
         sx={{
+          position: 'relative',
           height: '100%',
           width: '100%',
           borderRadius: 4,
@@ -40,9 +80,80 @@ function ClubCard({
           },
         }}
       >
+        <IconButton
+          onClick={handleOpenMenu}
+          size="small"
+          sx={{
+            position: 'absolute',
+            top: 8,
+            right: 8,
+            zIndex: 2,
+            color: '#fff',
+            backgroundColor: 'rgba(15, 23, 42, 0.42)',
+            backdropFilter: 'blur(8px)',
+            '&:hover': {
+              backgroundColor: 'rgba(15, 23, 42, 0.6)',
+            },
+          }}
+        >
+          <MoreVertIcon fontSize="small" />
+        </IconButton>
+
+        <Menu
+          anchorEl={anchorEl}
+          open={isMenuOpen}
+          onClose={handleCloseMenu}
+          onClick={(event) => event.stopPropagation()}
+          PaperProps={{
+            elevation: 8,
+            sx: {
+              bgcolor: '#0a192f',
+              color: '#fff',
+              borderRadius: '8px',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              minWidth: '150px',
+              '& .MuiMenuItem-root': {
+                fontSize: '14px',
+                py: '8px',
+                px: '12px',
+                borderRadius: '4px',
+                mx: '4px',
+                my: '2px',
+                '&:hover': {
+                  bgcolor: 'rgba(255, 255, 255, 0.08)',
+                },
+              },
+            },
+          }}
+          transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+          anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+        >
+          <MenuItem onClick={handleEditClick}>
+            <ListItemIcon
+              sx={{ color: '#60a5fa', minWidth: '28px !important' }}
+            >
+              <EditIcon fontSize="small" />
+            </ListItemIcon>
+            <ListItemText primary="Edit" />
+          </MenuItem>
+
+          <MenuItem
+            onClick={handleDeleteClick}
+            disabled={isDeleting}
+            sx={{ color: '#f87171' }}
+          >
+            <ListItemIcon
+              sx={{ color: '#f87171', minWidth: '28px !important' }}
+            >
+              <DeleteOutlineIcon fontSize="small" />
+            </ListItemIcon>
+            <ListItemText primary={isDeleting ? 'Deleting...' : 'Delete'} />
+          </MenuItem>
+        </Menu>
+
         <CardMedia
           component="img"
-          image={logo}
+          image={`/images/club/${logo}`}
           alt={title}
           sx={{
             aspectRatio: '1 / 1',
@@ -119,7 +230,7 @@ function ClubCard({
                 variant="body2"
                 sx={{ fontWeight: 700, color: '#1d4ed8' }}
               >
-                {memebrsLength}
+                {amountMembers}
               </Typography>
             </Stack>
           </Box>
