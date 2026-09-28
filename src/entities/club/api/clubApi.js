@@ -16,7 +16,7 @@ export const clubApi = baseApi.injectEndpoints({
         method: 'PUT',
         body: clubData,
       }),
-      invalidatesTags: ['Club', 'User'],
+      invalidatesTags: ['Club'],
     }),
     deleteClub: builder.mutation({
       query: (id) => ({

@@ -2978,13 +2978,13 @@
   "clubs": [
     {
       "title": "Kyiv Tennis Club",
-      "foundedYear": 2010,
-      "logo": "Example-4.png",
+      "foundedYear": 2011,
+      "logo": "Example-1.png",
       "address": "Kyiv, 15 Sportivna Street",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, recusandae! Deleniti labore architecto, porro voluptate sunt magni, tempore ipsum illo nemo alias, quis odit molestiae corporis! Tempora possimus doloribus distinctio?",
+      "amountMembers": 1,
       "phone": "+38044-123-45-67",
       "email": "info@kyivtennisclub.ua",
-      "amountMembers": 1,
       "id": "1"
     },
     {

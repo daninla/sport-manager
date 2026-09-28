@@ -6,7 +6,7 @@ import { Players } from '@/pages/Players';
 import { Tournaments } from '@/pages/Tournaments';
 import { Account } from '../pages/Account';
 import { Club } from '../pages/Club';
-import ClubForm from '../pages/ClubForm/ui/ClubForm';
+import { ClubEdit } from '../pages/ClubEdit';
 import { Clubs } from '../pages/Clubs';
 import { Login } from '../pages/Login';
 import { Registration } from '../pages/Registration';
@@ -32,7 +32,7 @@ function App() {
         <Route path="/clubs" element={<Clubs />} />
         <Route path="/club" element={<ClubLayout />}>
           <Route path=":id" element={<Club />} />
-          <Route path="edit/:id" element={<ClubForm />} />
+          <Route path="edit/:id" element={<ClubEdit />} />
         </Route>
         <Route path="/tournaments" element={<Tournaments />} />
         <Route path="/tournaments/add" element={<TournamentForm />} />

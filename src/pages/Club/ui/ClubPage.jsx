@@ -18,6 +18,7 @@ import {
 
 import { useGetClubByIdQuery } from '@/entities/club/api/clubApi';
 import { usePagination } from '@/shared/lib/usePagination';
+import { useGetUsersByClubQuery } from '../../../entities/user/api/userApi';
 import { getColums } from '../model/columns';
 
 import { Spinner } from '@/shared/ui/Spinner/Spinner';
@@ -32,7 +33,11 @@ function ClubPage() {
 
   const [searchTerm, setSearchTerm] = useState('');
 
-  const members = club?.members ?? [];
+  const {
+    data: members = [],
+    isLoading: isLoadingMember,
+    error: errorMember,
+  } = useGetUsersByClubQuery(club?.title, { skip: !club?.title });
 
   const normalizedSearchTerm = searchTerm.trim().toLowerCase();
 
@@ -133,6 +138,20 @@ function ClubPage() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
+                  {isLoadingMember && (
+                    <TableRow>
+                      <TableCell colSpan={columns.length} align="center">
+                        Loading...
+                      </TableCell>
+                    </TableRow>
+                  )}
+                  {errorMember && (
+                    <TableRow>
+                      <TableCell colSpan={columns.length} align="center">
+                        {errorMember}
+                      </TableCell>
+                    </TableRow>
+                  )}
                   {players.length > 0 ? (
                     players.map((row) => (
                       <TableRow
@@ -158,7 +177,7 @@ function ClubPage() {
                   ) : (
                     <TableRow>
                       <TableCell colSpan={columns.length} align="center">
-                        No players found
+                        No members found
                       </TableCell>
                     </TableRow>
                   )}

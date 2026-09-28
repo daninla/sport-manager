@@ -4,6 +4,7 @@ export const defaultValues = {
   logo: '',
   address: '',
   description: '',
+  amountMembers: 0,
   phone: '',
   email: '',
 };

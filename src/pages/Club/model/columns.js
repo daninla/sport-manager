@@ -9,8 +9,8 @@ export const getColums = (t) => [
   { id: 'city', label: t('columns.city'), minWidth: 200 },
   { id: 'status', label: t('columns.status'), minWidth: 200 },
   {
-    id: 'ukrRate',
-    label: t('columns.ukrRate'),
+    id: 'rate',
+    label: t('columns.rate'),
     minWidth: 150,
     format: (value) => value.toLocaleString('en-US'),
   },
