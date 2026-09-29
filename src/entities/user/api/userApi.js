@@ -33,6 +33,7 @@ export const {
   useLazyGetUserByEmailQuery,
   useGetUserWithoutClubQuery,
   useGetUsersByClubQuery,
+  useLazyGetUsersByClubQuery,
   useCreateUserMutation,
   useUpdateUserMutation,
 } = userApi;

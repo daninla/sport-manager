@@ -1,9 +1,7 @@
 import SelectableUsersTable from './SelectableUsersTable';
-import {
-  Button,
-  Stack,
-  Typography,
-} from '@mui/material';
+import CancelIcon from '@mui/icons-material/Cancel';
+import SaveIcon from '@mui/icons-material/Save';
+import { Button, Stack, Typography } from '@mui/material';
 import { Form, Formik } from 'formik';
 
 import { ClubFields } from '@/entities/club';
@@ -112,12 +110,19 @@ function ClubFormEdit({ id, t, club }) {
           spacing={2}
           sx={{ mt: '30px' }}
         >
-          <Button type="reset" variant="contained">
+          <Button
+            type="reset"
+            color="error"
+            variant="contained"
+            startIcon={<CancelIcon />}
+          >
             {t('btnReset')}
           </Button>
           <Button
             type="submit"
+            color="secondary"
             variant="contained"
+            endIcon={<SaveIcon />}
             disabled={
               !dirty &&
               selectedPlayerIds.length === 0 &&

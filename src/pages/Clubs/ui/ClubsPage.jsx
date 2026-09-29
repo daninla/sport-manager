@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import {
   Autocomplete,
   Box,
@@ -46,7 +47,7 @@ function ClubsPage() {
   }
 
   return (
-    <Box sx={{ p: '40px' }}>
+    <Box sx={{ p: '1em 2em' }}>
       <Box
         sx={{
           display: 'flex',
@@ -91,10 +92,12 @@ function ClubsPage() {
         />
         <NavLink to="/club/add" style={{ textDecoration: 'none' }}>
           <Button
+            color="secondary"
             variant="contained"
+            endIcon={<AddCircleIcon />}
             sx={{
               textTransform: 'none',
-              fontSize: '1rem',
+              fontSize: '1.1em',
               px: 3,
               py: 1.2,
               borderRadius: 2,

@@ -5,7 +5,7 @@ import { Box, Typography } from '@mui/material';
 
 import { useGetClubByIdQuery } from '@/entities/club/api/clubApi';
 
-function ClubForm() {
+function ClubEditPage() {
   const { id } = useParams();
   const { t } = useTranslation('clubs');
   const { data, isLoadingClub, errorClub } = useGetClubByIdQuery(id);
@@ -28,4 +28,4 @@ function ClubForm() {
   );
 }
 
-export default ClubForm;
+export default ClubEditPage;

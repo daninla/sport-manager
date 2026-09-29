@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useNavigate } from 'react-router';
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import EditIcon from '@mui/icons-material/Edit';
 import GroupIcon from '@mui/icons-material/Group';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -20,13 +19,12 @@ import {
   Typography,
 } from '@mui/material';
 
-import { useDeleteClubMutation } from '@/entities/club';
+import DeleteClubBtn from '@/features/delete-club/ui/DeleteClubBtn';
 
 function ClubCard({ id, logo, title, address, description, amountMembers }) {
   const { t } = useTranslation('clubs');
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
-  const [deleteClub, { isLoading: isDeleting }] = useDeleteClubMutation();
   const isMenuOpen = Boolean(anchorEl);
 
   const handleOpenMenu = (event) => {
@@ -46,17 +44,6 @@ function ClubCard({ id, logo, title, address, description, amountMembers }) {
     event.stopPropagation();
     handleCloseMenu();
     navigate(`/club/edit/${id}`);
-  };
-
-  const handleDeleteClick = async (event) => {
-    event.stopPropagation();
-    handleCloseMenu();
-
-    try {
-      await deleteClub(id).unwrap();
-    } catch (error) {
-      throw new Error('Failed to delete club: ' + error.message);
-    }
   };
 
   return (
@@ -134,21 +121,15 @@ function ClubCard({ id, logo, title, address, description, amountMembers }) {
             >
               <EditIcon fontSize="small" />
             </ListItemIcon>
-            <ListItemText primary="Edit" />
+            <ListItemText primary={t('editItem')} />
           </MenuItem>
 
-          <MenuItem
-            onClick={handleDeleteClick}
-            disabled={isDeleting}
-            sx={{ color: '#f87171' }}
-          >
-            <ListItemIcon
-              sx={{ color: '#f87171', minWidth: '28px !important' }}
-            >
-              <DeleteOutlineIcon fontSize="small" />
-            </ListItemIcon>
-            <ListItemText primary={isDeleting ? 'Deleting...' : 'Delete'} />
-          </MenuItem>
+          <DeleteClubBtn
+            t={t}
+            id={id}
+            title={title}
+            handleCloseMenu={handleCloseMenu}
+          />
         </Menu>
 
         <CardMedia

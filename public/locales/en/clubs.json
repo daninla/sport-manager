@@ -1,13 +1,18 @@
 {
   "addClub": "Add club",
+  "addLoading": "Adding club...",
+  "addSuccess": "Club added",
   "editClub": "Edit club",
   "editLoading": "Updating club...",
   "editSuccess": "Club updated",
-  "editError": "Error",
+  "deleteLoading": "Deleting club...",
+  "deleteSuccess": "Club deleted",
+  "error": "Error",
   "searchClub": "Search club",
   "members": "Members",
   "toClubs": "To club lists",
   "title": "Title",
+  "uploadLogo": "Upload logo",
   "foundedIn": "Founded in",
   "foundedYear": "Founded",
   "address": "Address",
@@ -33,5 +38,8 @@
   "rowsPerPage": "Rows per page",
   "of": "of",
   "btnReset": "Reset",
-  "btnSubmit": "Accept the change"
+  "btnSubmit": "Accept the change",
+  "btnSubmitAdd": "Add a new club",
+  "editItem": "Edit",
+  "deleteItem": "Delete"
 }

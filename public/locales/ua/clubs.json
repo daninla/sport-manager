@@ -1,13 +1,18 @@
 {
   "addClub": "Додати клуб",
+  "addLoading": "Додавання клубу...",
+  "addSuccess": "Клуб додано",
   "editClub": "Редагувати клуб",
   "editLoading": "Оновлення клубу...",
   "editSuccess": "Клуб оновлено",
-  "editError": "Помилка",
+  "deleteLoading": "Видалення клубу...",
+  "deleteSuccess": "Клуб видалено",
+  "error": "Помилка",
   "searchClub": "Пошук клубу",
   "members": "Учасники",
   "toClubs": "До списків клубів",
   "title": "Назва",
+  "uploadLogo": "Завантажити логотип",
   "foundedIn": "Засновано у",
   "foundedYear": "Засновано",
   "address": "Адреса",
@@ -33,5 +38,8 @@
   "rowsPerPage": "Рядків на сторінку",
   "of": "з",
   "btnReset": "Скинути",
-  "btnSubmit": "Прийняти зміни"
+  "btnSubmit": "Прийняти зміни",
+  "btnSubmitAdd": "Додати новий клуб",
+  "editItem": "Редагувати",
+  "deleteItem": "Видалити"
 }

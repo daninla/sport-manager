@@ -76,7 +76,7 @@ function ClubPage() {
           <Stack
             direction={{ lg: 'column', xl: 'row' }}
             alignItems="center"
-            justifyContent="center"
+            justifyContent={{ lg: 'center', xl: 'start' }}
             spacing={{ lg: 2, xl: 10 }}
             sx={{ textAlign: { sm: 'center', xl: 'start' } }}
           >

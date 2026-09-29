@@ -127,7 +127,7 @@ function useFormEdit({ id, t, club }) {
       loading: t('editLoading'),
       success: t('editSuccess'),
       error: (err) =>
-        `${t('editError')}: ${err?.data?.message || err?.message}`,
+        `${t('error')}: ${err?.data?.message || err?.message}`,
     });
   };
 

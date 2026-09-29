@@ -53,7 +53,7 @@ function ClubFields({
             />
           ) : (
             <Typography variant="caption" sx={{ textAlign: 'center' }}>
-              {t('uploadPhoto')}
+              {t('uploadLogo')}
             </Typography>
           )}
         </Box>

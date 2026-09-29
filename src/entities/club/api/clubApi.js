@@ -10,6 +10,14 @@ export const clubApi = baseApi.injectEndpoints({
       query: (id) => `/clubs/${id}`,
       providesTags: (result, error, id) => [{ type: 'Club', id }],
     }),
+    createClub: builder.mutation({
+      query: (clubData) => ({
+        url: `/clubs`,
+        method: 'POST',
+        body: clubData,
+      }),
+      invalidatesTags: ['Club'],
+    }),
     updateClub: builder.mutation({
       query: ({ id, ...clubData }) => ({
         url: `/clubs/${id}`,
@@ -31,6 +39,7 @@ export const clubApi = baseApi.injectEndpoints({
 export const {
   useGetClubsQuery,
   useGetClubByIdQuery,
+  useCreateClubMutation,
   useUpdateClubMutation,
   useDeleteClubMutation,
 } = clubApi;

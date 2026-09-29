@@ -1,1 +1,1 @@
-export { default as ClubEdit } from './ui/ClubEdit';
+export { default as ClubEditPage } from './ui/ClubEditPage';
