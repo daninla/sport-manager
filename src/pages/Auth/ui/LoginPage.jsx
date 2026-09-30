@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 import { LoginForm } from '@/features/auth';
 
 function Login() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('auth');
   return (
     <Box
       sx={{

@@ -3,7 +3,7 @@ import { baseApi } from '@/shared/api/baseApi';
 export const userApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getUserByEmail: builder.query({
-      query: (email) => `/users?email=${encodeURIComponent(email)}`,
+      query: (email) => `/users?email=${email}`,
       providesTags: ['User'],
     }),
     getUserWithoutClub: builder.query({

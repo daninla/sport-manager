@@ -2907,7 +2907,6 @@
       "email": "test@gmail.com",
       "city": "Kiev, Ukraine",
       "status": "Unranked",
-<<<<<<< HEAD
       "rate": 10,
       "club": "Kyiv Tennis Club",
       "notes": "None",
@@ -2917,10 +2916,10 @@
     },
     {
       "fullName": "Mark Testovych",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+      "photo": "Unknown.png",
       "age": 30,
       "sex": "none",
-      "email": "test@gmail.com",
+      "email": "mark@gmail.com",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "rate": 5,
@@ -2932,10 +2931,10 @@
     },
     {
       "fullName": "Anna Testovych",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+      "photo": "Unknown.png",
       "age": 30,
       "sex": "none",
-      "email": "test@gmail.com",
+      "email": "anna@gmail.com",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "rate": 20,
@@ -2946,19 +2945,19 @@
       "id": "3"
     },
     {
-      "id": "4",
       "fullName": "John Testovych",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+      "photo": "Unknown.png",
       "age": 30,
       "sex": "none",
-      "email": "test@gmail.com",
+      "email": "john@gmail.com",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "rate": 16.9,
       "club": "None",
       "notes": "None",
       "password": "test",
-      "role": "player"
+      "role": "player",
+      "id": "4"
     },
     {
       "fullName": "danila",
