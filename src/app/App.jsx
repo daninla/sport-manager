@@ -9,8 +9,7 @@ import { Club } from '../pages/Club';
 import { ClubAddPage } from '../pages/ClubAdd';
 import { ClubEditPage } from '../pages/ClubEdit';
 import { Clubs } from '../pages/Clubs';
-import { Login } from '../pages/Login';
-import { Registration } from '../pages/Registration';
+import { Login, Register } from '../pages/Auth';
 import { TournamentForm } from '../pages/TournamentForm';
 import TournamentPage from '../pages/TournamentPage';
 import { TournamentParticipants } from '../pages/TournamentParticipants';
@@ -24,7 +23,7 @@ function App() {
     <Routes>
       <Route element={<AuthLayout />}>
         <Route path="/signin" element={<Login />} />
-        <Route path="/signup" element={<Registration />} />
+        <Route path="/signup" element={<Register />} />
       </Route>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />

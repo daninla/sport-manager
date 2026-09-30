@@ -2901,12 +2901,13 @@
   "users": [
     {
       "fullName": "Test Testovych",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+      "photo": "Example.png",
       "age": 30,
-      "sex": "none",
+      "sex": "male",
       "email": "test@gmail.com",
-      "city": "Zaporizhzhia, Ukraine",
+      "city": "Kiev, Ukraine",
       "status": "Unranked",
+<<<<<<< HEAD
       "rate": 10,
       "club": "Kyiv Tennis Club",
       "notes": "None",
@@ -2961,16 +2962,16 @@
     },
     {
       "fullName": "danila",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
+      "photo": "Unknown.png",
       "age": 0,
-      "sex": "",
+      "sex": "none",
       "email": "idanila331@gmail.com",
-      "password": "12345678",
       "city": "",
       "status": "",
       "rate": 0,
       "club": "None",
       "notes": "",
+      "password": "12345678",
       "role": "player",
       "id": "akv422aA0wc"
     }
