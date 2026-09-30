@@ -17,6 +17,35 @@ export const tournamentApi = baseApi.injectEndpoints({
       providesTags: (result, error, id) => [{ type: 'Tournament', id }],
     }),
 
+    getTournamentPlayers: builder.query({
+      async queryFn(tournamentId, _, __, fetchWithBQ) {
+        const tournamentResponse = await fetchWithBQ(
+          `/tournaments/${tournamentId}`,
+        );
+        if (tournamentResponse.error)
+          return { error: tournamentResponse.error };
+
+        const playerIds = tournamentResponse.data?.playerIds || [];
+
+        if (playerIds.length === 0) {
+          return { data: [] };
+        }
+
+        const playersResponse = await fetchWithBQ('/players');
+        if (playersResponse.error) return { error: playersResponse.error };
+
+        const tournamentPlayers = playersResponse.data.filter((player) =>
+          playerIds.includes(Number(player.id)),
+        );
+
+        return { data: tournamentPlayers };
+      },
+      providesTags: (result, error, tournamentId) => [
+        { type: 'Tournament', id: tournamentId },
+        { type: 'Player', id: `TOURNAMENT_${tournamentId}` },
+      ],
+    }),
+
     deleteTournament: builder.mutation({
       query: (id) => ({
         url: `/tournaments/${id}`,
@@ -53,14 +82,6 @@ export const tournamentApi = baseApi.injectEndpoints({
       providesTags: (result, error, tournamentId) => [
         { type: 'Tournament', id: tournamentId },
       ],
-    }),
-    createMatch: builder.mutation({
-      query: (matchData) => ({
-        url: '/matches',
-        method: 'POST',
-        body: matchData,
-      }),
-      invalidatesTags: ['Tournament'],
     }),
     getPlayoffMatches: builder.query({
       query: () => '/playoffMatches',
@@ -105,4 +126,5 @@ export const {
   useGetPlayoffMatchesByTournamentIdQuery,
   useUpdatePlayoffMatchMutation,
   useCreatePlayoffMatchMutation,
+  useGetTournamentPlayersQuery,
 } = tournamentApi;

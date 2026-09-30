@@ -12,17 +12,25 @@ export const matchApi = baseApi.injectEndpoints({
             ]
           : [{ type: 'Match', id: 'LIST' }],
     }),
-
+    createMatch: builder.mutation({
+      query: (matchData) => ({
+        url: '/matches',
+        method: 'POST',
+        body: matchData,
+      }),
+      invalidatesTags: ['Tournament'],
+    }),
     getMatchesByTournament: builder.query({
       query: (tournamentId) => `/matches?tournamentId=${tournamentId}`,
-      providesTags: (result) =>
+      providesTags: (result, error, tournamentId) =>
         result
           ? [
               ...result.map(({ id }) => ({ type: 'Match', id })),
-              { type: 'Match', id: 'LIST' },
+              { type: 'MatchesByTournament', id: tournamentId },
             ]
-          : [{ type: 'Match', id: 'LIST' }],
+          : [{ type: 'MatchesByTournament', id: tournamentId }],
     }),
+
     getMatchById: builder.query({
       query: (id) => `/matches/${id}`,
       providesTags: (result, error, id) => [{ type: 'Match', id }],
@@ -45,9 +53,12 @@ export const matchApi = baseApi.injectEndpoints({
         method: 'PATCH',
         body: patch,
       }),
-      invalidatesTags: (result, error, { id }) => [
+      invalidatesTags: (result, error, { id, tournamentId }) => [
         { type: 'Match', id },
         { type: 'Match', id: 'LIST' },
+        ...(tournamentId
+          ? [{ type: 'MatchesByTournament', id: tournamentId }]
+          : []),
       ],
     }),
   }),

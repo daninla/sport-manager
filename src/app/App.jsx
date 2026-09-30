@@ -5,6 +5,7 @@ import { PlayerForm } from '@/pages/PlayerForm';
 import { Players } from '@/pages/Players';
 import { Tournaments } from '@/pages/Tournaments';
 import { Account } from '../pages/Account';
+import GroupsPage from '../pages/Groups/GroupsPage';
 import { Login } from '../pages/Login';
 import { Registration } from '../pages/Registration';
 import { TournamentForm } from '../pages/TournamentForm';
@@ -28,6 +29,7 @@ function App() {
         <Route path="/tournaments" element={<Tournaments />} />
         <Route path="/tournaments/add" element={<TournamentForm />} />
         <Route path="/tournaments/:id/*" element={<TournamentPage />} />
+        <Route path="/tournaments/:id/groups" element={<GroupsPage />} />
         <Route
           path="/tournaments/:id/participants"
           element={<TournamentParticipants />}
