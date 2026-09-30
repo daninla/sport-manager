@@ -37,3 +37,18 @@ form {
     align-items: center;
   }
 }
+
+@media (max-width: 480px) {
+  .field-container {
+    width: min(100%, 360px);
+  }
+
+  .field-container label {
+    font-size: 17px;
+  }
+
+  .field-container input,
+  .field-container select {
+    max-width: 100%;
+  }
+}

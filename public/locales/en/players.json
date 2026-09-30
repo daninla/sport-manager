@@ -6,6 +6,12 @@
   "addPlayer": "Add player",
   "editPlayer": "Edit player",
   "playerTitle": "Player {{id}}",
+  "save": "Save",
+  "reset": "Reset",
+  "noData": "No data",
+  "loadingError": "Unable to load player data",
+  "notesTitle": "Notes",
+  "playerFallback": "Player {{id}}",
   "columns": {
     "fullName": "Full name",
     "age": "Age",

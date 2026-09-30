@@ -36,7 +36,14 @@ function TournamentsPage() {
         {t('matchCount', { count: filteredTournaments.length })}
       </Typography>
 
-      <Box sx={{ display: 'flex', gap: 4, alignItems: 'flex-start' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          gap: 4,
+          alignItems: 'flex-start',
+        }}
+      >
         <TournamentFilters
           selectedFilters={selectedFilters}
           onChange={setSelectedFilters}

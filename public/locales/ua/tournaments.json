@@ -4,5 +4,17 @@
   "matchCount": "Є {{count}} турнірів, що відповідають вашому фільтру",
   "addTournament": "Додати новий турнір",
   "delete": "Видалити",
-  "deleting": "Видалення..."
+  "deleting": "Видалення...",
+  "edit": "Редагувати",
+  "match": "Матч {{number}}",
+  "versus": "проти",
+  "live": "НАЖИВО",
+  "formats": {
+    "Single Elimination": "Олімпійська система",
+    "Double Elimination": "Система з подвійним вибуванням",
+    "Swiss System": "Швейцарська система",
+    "Round Robin": "Кругова система",
+    "Mixed System": "Змішана система"
+  },
+  "bestOf": "До {{count}} партій"
 }

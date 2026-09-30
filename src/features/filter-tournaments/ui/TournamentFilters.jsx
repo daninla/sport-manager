@@ -16,7 +16,13 @@ export const TournamentFilters = ({ selectedFilters = [], onChange }) => {
 
   return (
     <Box
-      sx={{ p: 2, border: '1px solid #ccc', borderRadius: 2, maxWidth: 250 }}
+      sx={{
+        p: 2,
+        border: '1px solid #ccc',
+        borderRadius: 2,
+        width: { xs: '100%', md: 250 },
+        maxWidth: '100%',
+      }}
     >
       <Typography variant="subtitle1" fontWeight="bold">
         {t('status')}

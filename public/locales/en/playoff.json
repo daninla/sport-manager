@@ -1,0 +1,32 @@
+{
+  "title": "Tournament Playoff Bracket",
+  "description": "Track matches, record scores, and advance winners automatically.",
+  "loadError": "Failed to load playoff matches for the selected tournament.",
+  "noMatches": "No playoff matches found for this tournament.",
+  "match": "Match {{number}}",
+  "matchResult": "Match #{{number}} Result",
+  "matchCount": "Matches: {{count}}",
+  "matchLabel": "MATCH #{{number}}",
+  "pending": "Pending",
+  "cancel": "Cancel",
+  "confirmAdvance": "Confirm & Advance",
+  "locked": "Locked",
+  "editScore": "Edit Score",
+  "enterScore": "Enter Score",
+  "validation": {
+    "negativeScores": "Scores cannot be negative numbers.",
+    "draw": "Playoff matches cannot end in a draw. Please select a winner."
+  },
+  "rounds": {
+    "Round of 16": "Round of 16",
+    "Quarterfinals": "Quarterfinals",
+    "Semifinals": "Semifinals",
+    "Final": "Final"
+  },
+  "statuses": {
+    "Finished": "Finished",
+    "Live": "Live",
+    "Upcoming": "Upcoming",
+    "Pending": "Pending"
+  }
+}

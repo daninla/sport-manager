@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router';
 import {
   Box,
   Button,
@@ -15,7 +16,6 @@ import {
 import { Form, Formik } from 'formik';
 
 import { useUpdateUserMutation } from '../../../entities/user/api/userApi';
-import { useNavigate } from 'react-router';
 
 const defaultValues = {
   fullName: '',
@@ -116,7 +116,14 @@ function Account() {
 
     return (
       <Form>
-        <Box sx={{ display: 'flex', gap: 3, alignItems: 'flex-start' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            gap: 3,
+            alignItems: { xs: 'center', md: 'flex-start' },
+          }}
+        >
           <Box>
             <input
               type="file"
@@ -162,7 +169,7 @@ function Account() {
 
           <Box sx={{ flex: 1 }}>
             <Stack spacing={2.5}>
-              <Stack direction="row" spacing={2}>
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                 <TextField
                   fullWidth
                   label={t('fullName')}
@@ -183,7 +190,7 @@ function Account() {
                 />
               </Stack>
 
-              <Stack direction="row" spacing={2}>
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                 <TextField
                   fullWidth
                   label={t('age')}
@@ -219,7 +226,7 @@ function Account() {
                 onBlur={handleBlur}
               />
 
-              <Stack direction="row" spacing={2}>
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                 <TextField
                   fullWidth
                   label={t('club')}
@@ -244,7 +251,7 @@ function Account() {
                 />
               </Stack>
 
-              <Stack direction="row" spacing={2}>
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                 <TextField
                   fullWidth
                   label={t('ukraineRate')}
@@ -285,7 +292,11 @@ function Account() {
             </Stack>
           </Box>
         </Box>
-        <Stack direction="row" spacing={3} sx={{ mt: 3, marginInline: 'auto' }}>
+        <Stack
+          direction={{ xs: 'column', sm: 'row' }}
+          spacing={3}
+          sx={{ mt: 3, marginInline: 'auto', maxWidth: '100%' }}
+        >
           <Button variant="outlined" type="button" color="secondary">
             {t('forgotPass')}
           </Button>

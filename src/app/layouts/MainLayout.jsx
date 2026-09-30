@@ -7,13 +7,20 @@ import { Sidebar } from '../../widgets/Sidebar';
 
 function MainLayout() {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <Box
+      className="site-layout"
+      sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}
+    >
       <Header />
-      <Box sx={{ display: 'flex', flexGrow: 1, overflow: 'hidden' }}>
-        <Box sx={{ width: 240, flexShrink: 0 }}>
+      <Box
+        className="site-layout-body"
+        sx={{ display: 'flex', flexGrow: 1, overflow: 'hidden' }}
+      >
+        <Box className="site-sidebar-shell" sx={{ width: 240, flexShrink: 0 }}>
           <Sidebar />
         </Box>
         <Box
+          className="site-content"
           sx={{
             flexGrow: 1,
             overflow: 'auto',

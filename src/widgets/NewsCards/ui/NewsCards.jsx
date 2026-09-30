@@ -11,15 +11,17 @@ function NewsCards({ item }) {
   return (
     <div>
       <Card
+        className="responsive-news-card"
         key={item.id}
         sx={{
           bgcolor: '#040b22',
-          width: '400px',
+          width: { xs: '100%', sm: '400px' },
           overflow: 'hidden',
-          height: '500px',
+          height: { xs: 'auto', sm: '500px' },
+          minHeight: { xs: 0, sm: '500px' },
         }}
       >
-        <Box sx={{ overflow: 'hidden', height: '300px' }}>
+        <Box sx={{ overflow: 'hidden', height: { xs: 220, sm: 300 } }}>
           <CardMedia
             component="img"
             image={item.image}

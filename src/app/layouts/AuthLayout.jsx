@@ -1,9 +1,10 @@
-import { Box } from "@mui/material";
-import { Outlet } from "react-router";
+import { Outlet } from 'react-router';
+import { Box } from '@mui/material';
 
 function AuthLayout() {
   return (
     <Box
+      className="auth-layout"
       component="main"
       sx={{
         display: 'flex',
@@ -47,4 +48,4 @@ function AuthLayout() {
   );
 }
 
-export default AuthLayout
+export default AuthLayout;

@@ -37,12 +37,13 @@ function Players() {
         }}
         options={Array.from(new Set(players.map(({ fullName }) => fullName)))}
         sx={{
-          maxWidth: '50%',
+          maxWidth: { xs: '100%', sm: '50%' },
+          width: '100%',
           margin: '1em 0',
         }}
         renderInput={(params) => <TextField {...params} label={t('search')} />}
       />
-      <PlayersTable value={inputValue} players={players}/>
+      <PlayersTable value={inputValue} players={players} />
     </Box>
   );
 }

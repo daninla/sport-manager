@@ -60,6 +60,7 @@ function Header() {
 
   return (
     <AppBar
+      className="site-header"
       position="static"
       sx={{
         background: (theme) =>
@@ -122,7 +123,7 @@ function Header() {
                     borderRadius: '50%',
                     overflow: 'hidden',
                   }}
-                  onClick={() => navigate("/account")}
+                  onClick={() => navigate('/account')}
                 >
                   <Box
                     component="img"

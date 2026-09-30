@@ -48,6 +48,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
 
   return (
     <Box
+      className="responsive-tournament-card"
       onClick={() => onOpen && onOpen(tournamentId)}
       sx={{
         display: 'flex',
@@ -56,7 +57,8 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
         backgroundColor: '#040b22',
         borderRadius: '12px',
         p: '20px',
-        width: '300px',
+        width: { xs: '100%', sm: '300px' },
+        maxWidth: '100%',
         border: '1px solid rgba(255, 255, 255, 0.08)',
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
         cursor: 'pointer',

@@ -6,6 +6,12 @@
   "addPlayer": "Додати гравця",
   "editPlayer": "Редагувати гравця",
   "playerTitle": "Гравець {{id}}",
+  "save": "Зберегти",
+  "reset": "Скинути",
+  "noData": "Немає даних",
+  "loadingError": "Не вдалося завантажити дані гравця",
+  "notesTitle": "Примітки",
+  "playerFallback": "Гравець {{id}}",
   "columns": {
     "fullName": "Повне ім'я",
     "age": "Вік",
