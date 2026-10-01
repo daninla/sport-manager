@@ -8,12 +8,15 @@
       "email": "oleksandr.boiko@example.com",
       "role": "player",
       "password": "Player001!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 64.2,
       "club": "Kyiv Tennis Academy",
-      "notes": ["right-handed", "aggressive baseline", "active footwork"]
+      "notes": [
+        "right-handed",
+        "aggressive baseline",
+        "active footwork"
+      ]
     },
     {
       "id": "2",
@@ -23,12 +26,15 @@
       "email": "olena.kovalchuk@example.com",
       "role": "player",
       "password": "Player002!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 78.5,
       "club": "Lviv Lawn TC",
-      "notes": ["left-handed", "counter-attacker", "good stamina"]
+      "notes": [
+        "left-handed",
+        "counter-attacker",
+        "good stamina"
+      ]
     },
     {
       "id": "3",
@@ -38,12 +44,15 @@
       "email": "maksym.shevchenko@example.com",
       "role": "player",
       "password": "Player003!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "MS",
       "ukrRate": 91,
       "club": "Odesa Smash Club",
-      "notes": ["short pips", "forehand oriented", "fast attacks"]
+      "notes": [
+        "short pips",
+        "forehand oriented",
+        "fast attacks"
+      ]
     },
     {
       "id": "4",
@@ -53,12 +62,15 @@
       "email": "daryna.bondarenko@example.com",
       "role": "player",
       "password": "Player004!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 42,
       "club": "Kharkiv Ace Club",
-      "notes": ["right-handed", "baseline player", "consistent rallies"]
+      "notes": [
+        "right-handed",
+        "baseline player",
+        "consistent rallies"
+      ]
     },
     {
       "id": "5",
@@ -68,12 +80,15 @@
       "email": "ihor.tkachenko@example.com",
       "role": "player",
       "password": "Player005!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 55.8,
       "club": "Dnipro Net Masters",
-      "notes": ["long pips", "backhand defense", "spin reversal"]
+      "notes": [
+        "long pips",
+        "backhand defense",
+        "spin reversal"
+      ]
     },
     {
       "id": "6",
@@ -83,12 +98,15 @@
       "email": "anna.kravchenko@example.com",
       "role": "player",
       "password": "Player006!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 68.3,
       "club": "Marina Tennis Club",
-      "notes": ["left-handed", "tactical player", "good placement"]
+      "notes": [
+        "left-handed",
+        "tactical player",
+        "good placement"
+      ]
     },
     {
       "id": "7",
@@ -98,12 +116,15 @@
       "email": "dmytro.moroz@example.com",
       "role": "player",
       "password": "Player007!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52.1,
       "club": "VicCourt",
-      "notes": ["penhold grip", "quick wrist action", "close-to-table"]
+      "notes": [
+        "penhold grip",
+        "quick wrist action",
+        "close-to-table"
+      ]
     },
     {
       "id": "8",
@@ -113,12 +134,15 @@
       "email": "sofiia.oliynyk@example.com",
       "role": "player",
       "password": "Player008!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 31.4,
       "club": "Lviv Lawn TC",
-      "notes": ["right-handed", "aggressive style", "fast learner"]
+      "notes": [
+        "right-handed",
+        "aggressive style",
+        "fast learner"
+      ]
     },
     {
       "id": "9",
@@ -128,12 +152,15 @@
       "email": "artem.rudenko@example.com",
       "role": "player",
       "password": "Player009!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "Unranked",
       "ukrRate": 18.5,
       "club": "Campione TC",
-      "notes": ["anti-spin rubber", "spin manipulation", "control player"]
+      "notes": [
+        "anti-spin rubber",
+        "spin manipulation",
+        "control player"
+      ]
     },
     {
       "id": "10",
@@ -143,12 +170,15 @@
       "email": "yuliia.polishchuk@example.com",
       "role": "player",
       "password": "Player010!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "MS",
       "ukrRate": 88.7,
       "club": "Warsaw Sports Center",
-      "notes": ["left-handed", "defender style", "chopping specialist"]
+      "notes": [
+        "left-handed",
+        "defender style",
+        "chopping specialist"
+      ]
     },
     {
       "id": "11",
@@ -158,12 +188,15 @@
       "email": "pavlo.lysenko@example.com",
       "role": "player",
       "password": "Player011!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 51,
       "club": "Odesa Smash Club",
-      "notes": ["right-handed", "offensive style", "powerful drives"]
+      "notes": [
+        "right-handed",
+        "offensive style",
+        "powerful drives"
+      ]
     },
     {
       "id": "12",
@@ -173,12 +206,15 @@
       "email": "kateryna.savchenko@example.com",
       "role": "player",
       "password": "Player012!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 63.9,
       "club": "Kharkiv Ace Club",
-      "notes": ["short pips", "backhand speed", "counter-hitting"]
+      "notes": [
+        "short pips",
+        "backhand speed",
+        "counter-hitting"
+      ]
     },
     {
       "id": "13",
@@ -188,12 +224,15 @@
       "email": "andriy.petrenko@example.com",
       "role": "player",
       "password": "Player013!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MSIC",
       "ukrRate": 97.4,
       "club": "Olympic TC",
-      "notes": ["aggressive looper", "topspin heavy", "offensive style"]
+      "notes": [
+        "aggressive looper",
+        "topspin heavy",
+        "offensive style"
+      ]
     },
     {
       "id": "14",
@@ -203,12 +242,15 @@
       "email": "nataliia.marchenko@example.com",
       "role": "player",
       "password": "Player014!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 44.5,
       "club": "Dnipro Net Masters",
-      "notes": ["right-handed", "balanced play", "reliable blocks"]
+      "notes": [
+        "right-handed",
+        "balanced play",
+        "reliable blocks"
+      ]
     },
     {
       "id": "15",
@@ -218,12 +260,15 @@
       "email": "serhiy.melnyk@example.com",
       "role": "player",
       "password": "Player015!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "1st Category",
       "ukrRate": 62.1,
       "club": "Lviv Lawn TC",
-      "notes": ["left-handed", "dynamic play", "good service"]
+      "notes": [
+        "left-handed",
+        "dynamic play",
+        "good service"
+      ]
     },
     {
       "id": "16",
@@ -233,12 +278,15 @@
       "email": "mariya.vasylenko@example.com",
       "role": "player",
       "password": "Player016!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 25.8,
       "club": "Kyiv Tennis Academy",
-      "notes": ["right-handed", "developing player", "steady strokes"]
+      "notes": [
+        "right-handed",
+        "developing player",
+        "steady strokes"
+      ]
     },
     {
       "id": "17",
@@ -248,12 +296,15 @@
       "email": "vladyslav.klymenko@example.com",
       "role": "player",
       "password": "Player017!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "CMS",
       "ukrRate": 79.2,
       "club": "Prague Tennis Park",
-      "notes": ["penhold grip", "asian style", "wrist flexibility"]
+      "notes": [
+        "penhold grip",
+        "asian style",
+        "wrist flexibility"
+      ]
     },
     {
       "id": "18",
@@ -263,12 +314,15 @@
       "email": "oksana.zakharchenko@example.com",
       "role": "player",
       "password": "Player018!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "Unranked",
       "ukrRate": 15,
       "club": "Free Agent",
-      "notes": ["standard setup", "no modifications", "general play"]
+      "notes": [
+        "standard setup",
+        "no modifications",
+        "general play"
+      ]
     },
     {
       "id": "19",
@@ -278,12 +332,15 @@
       "email": "roman.pavlenko@example.com",
       "role": "player",
       "password": "Player019!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48.6,
       "club": "VicCourt",
-      "notes": ["long pips", "defensive play", "deceptive spin"]
+      "notes": [
+        "long pips",
+        "defensive play",
+        "deceptive spin"
+      ]
     },
     {
       "id": "20",
@@ -293,12 +350,15 @@
       "email": "viktoriia.humeniuk@example.com",
       "role": "player",
       "password": "Player020!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MS",
       "ukrRate": 84.3,
       "club": "Marina Tennis Club",
-      "notes": ["left-handed", "offensive player", "strong forehand"]
+      "notes": [
+        "left-handed",
+        "offensive player",
+        "strong forehand"
+      ]
     },
     {
       "id": "21",
@@ -308,12 +368,15 @@
       "email": "yaroslava.sydorenko@example.com",
       "role": "player",
       "password": "Player021!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 59.4,
       "club": "Kharkiv Ace Club",
-      "notes": ["right-handed", "all-round style", "good mobility"]
+      "notes": [
+        "right-handed",
+        "all-round style",
+        "good mobility"
+      ]
     },
     {
       "id": "22",
@@ -323,12 +386,15 @@
       "email": "alina.karpenko@example.com",
       "role": "player",
       "password": "Player022!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "1st Category",
       "ukrRate": 67,
       "club": "Lviv Lawn TC",
-      "notes": ["short pips", "fast blocking", "flat hits"]
+      "notes": [
+        "short pips",
+        "fast blocking",
+        "flat hits"
+      ]
     },
     {
       "id": "23",
@@ -338,12 +404,15 @@
       "email": "denys.ponomarenko@example.com",
       "role": "player",
       "password": "Player023!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "CMS",
       "ukrRate": 73.8,
       "club": "Dnipro Net Masters",
-      "notes": ["defensive chopper", "heavy backspin", "patient play"]
+      "notes": [
+        "defensive chopper",
+        "heavy backspin",
+        "patient play"
+      ]
     },
     {
       "id": "24",
@@ -353,12 +422,15 @@
       "email": "iryna.panchenko@example.com",
       "role": "player",
       "password": "Player024!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "MS",
       "ukrRate": 92.5,
       "club": "Rot-Weiss Berlin",
-      "notes": ["left-handed", "tactical play", "smart placement"]
+      "notes": [
+        "left-handed",
+        "tactical play",
+        "smart placement"
+      ]
     },
     {
       "id": "25",
@@ -368,12 +440,15 @@
       "email": "yevhen.levytskyi@example.com",
       "role": "player",
       "password": "Player025!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 65.5,
       "club": "Campione TC",
-      "notes": ["right-handed", "offensive drive", "solid technique"]
+      "notes": [
+        "right-handed",
+        "offensive drive",
+        "solid technique"
+      ]
     },
     {
       "id": "26",
@@ -383,12 +458,15 @@
       "email": "valentyna.dyachenko@example.com",
       "role": "player",
       "password": "Player026!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 50.2,
       "club": "Odesa Smash Club",
-      "notes": ["anti-spin", "control game", "patience tactic"]
+      "notes": [
+        "anti-spin",
+        "control game",
+        "patience tactic"
+      ]
     },
     {
       "id": "27",
@@ -398,12 +476,15 @@
       "email": "mykola.romaniuk@example.com",
       "role": "player",
       "password": "Player027!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "3rd Category",
       "ukrRate": 29.8,
       "club": "VicCourt",
-      "notes": ["right-handed", "energetic play", "fast footwork"]
+      "notes": [
+        "right-handed",
+        "energetic play",
+        "fast footwork"
+      ]
     },
     {
       "id": "28",
@@ -413,12 +494,15 @@
       "email": "tetiana.shvets@example.com",
       "role": "player",
       "password": "Player028!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "CMS",
       "ukrRate": 74.9,
       "club": "Kyiv Tennis Academy",
-      "notes": ["left-handed", "smart tactics", "versatile game"]
+      "notes": [
+        "left-handed",
+        "smart tactics",
+        "versatile game"
+      ]
     },
     {
       "id": "29",
@@ -428,12 +512,15 @@
       "email": "bohdan.franko@example.com",
       "role": "player",
       "password": "Player029!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "MS",
       "ukrRate": 89.1,
       "club": "Lviv Lawn TC",
-      "notes": ["right-handed", "power hitter", "aggressive drives"]
+      "notes": [
+        "right-handed",
+        "power hitter",
+        "aggressive drives"
+      ]
     },
     {
       "id": "30",
@@ -443,12 +530,15 @@
       "email": "olena.vlasenko@example.com",
       "role": "player",
       "password": "Player030!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "Unranked",
       "ukrRate": 21.3,
       "club": "Free Agent",
-      "notes": ["standard setup", "no modifications", "recreational style"]
+      "notes": [
+        "standard setup",
+        "no modifications",
+        "recreational style"
+      ]
     },
     {
       "id": "31",
@@ -458,12 +548,15 @@
       "email": "vadym.hryshchenko@example.com",
       "role": "player",
       "password": "Player031!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 62,
       "club": "Dnipro Net Masters",
-      "notes": ["long pips", "spin disruption", "backhand specialist"]
+      "notes": [
+        "long pips",
+        "spin disruption",
+        "backhand specialist"
+      ]
     },
     {
       "id": "32",
@@ -473,12 +566,15 @@
       "email": "anastasiia.kovtun@example.com",
       "role": "player",
       "password": "Player032!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 68,
       "club": "Marina Tennis Club",
-      "notes": ["right-handed", "consistent rallies", "solid defense"]
+      "notes": [
+        "right-handed",
+        "consistent rallies",
+        "solid defense"
+      ]
     },
     {
       "id": "33",
@@ -488,12 +584,15 @@
       "email": "taras.honchar@example.com",
       "role": "player",
       "password": "Player033!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 47.3,
       "club": "Odesa Smash Club",
-      "notes": ["left-handed", "unconventional angles", "active play"]
+      "notes": [
+        "left-handed",
+        "unconventional angles",
+        "active play"
+      ]
     },
     {
       "id": "34",
@@ -503,12 +602,15 @@
       "email": "khrystyna.levchenko@example.com",
       "role": "player",
       "password": "Player034!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "MSIC",
       "ukrRate": 94.6,
       "club": "TC Paris",
-      "notes": ["right-handed", "high precision", "top-tier control"]
+      "notes": [
+        "right-handed",
+        "high precision",
+        "top-tier control"
+      ]
     },
     {
       "id": "35",
@@ -518,12 +620,15 @@
       "email": "vitalii.nazarenko@example.com",
       "role": "player",
       "password": "Player035!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 53.4,
       "club": "Kharkiv Ace Club",
-      "notes": ["short pips", "quick response", "close table"]
+      "notes": [
+        "short pips",
+        "quick response",
+        "close table"
+      ]
     },
     {
       "id": "36",
@@ -533,12 +638,15 @@
       "email": "yelyzaveta.kolomiiets@example.com",
       "role": "player",
       "password": "Player036!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 38.9,
       "club": "VicCourt",
-      "notes": ["right-handed", "agile movement", "steady game"]
+      "notes": [
+        "right-handed",
+        "agile movement",
+        "steady game"
+      ]
     },
     {
       "id": "37",
@@ -548,12 +656,15 @@
       "email": "oleh.mazur@example.com",
       "role": "player",
       "password": "Player037!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "1st Category",
       "ukrRate": 64.8,
       "club": "Lviv Lawn TC",
-      "notes": ["penhold grip", "traditional style", "fast attacks"]
+      "notes": [
+        "penhold grip",
+        "traditional style",
+        "fast attacks"
+      ]
     },
     {
       "id": "38",
@@ -563,12 +674,15 @@
       "email": "diana.serhiienko@example.com",
       "role": "player",
       "password": "Player038!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "CMS",
       "ukrRate": 80.1,
       "club": "Olympic TC",
-      "notes": ["left-handed", "creative shots", "strong offense"]
+      "notes": [
+        "left-handed",
+        "creative shots",
+        "strong offense"
+      ]
     },
     {
       "id": "39",
@@ -578,12 +692,15 @@
       "email": "yurii.fedorenko@example.com",
       "role": "player",
       "password": "Player039!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "3rd Category",
       "ukrRate": 12,
       "club": "Free Agent",
-      "notes": ["long pips", "defensive style", "experienced player"]
+      "notes": [
+        "long pips",
+        "defensive style",
+        "experienced player"
+      ]
     },
     {
       "id": "40",
@@ -593,12 +710,15 @@
       "email": "veronika.prykhodko@example.com",
       "role": "player",
       "password": "Player040!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "1st Category",
       "ukrRate": 70.2,
       "club": "Warsaw Sports Center",
-      "notes": ["right-handed", "balanced style", "good stamina"]
+      "notes": [
+        "right-handed",
+        "balanced style",
+        "good stamina"
+      ]
     },
     {
       "id": "41",
@@ -608,12 +728,15 @@
       "email": "hlib.tymoshenko@example.com",
       "role": "player",
       "password": "Player041!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 55,
       "club": "Odesa Smash Club",
-      "notes": ["left-handed", "dynamic play", "strong serves"]
+      "notes": [
+        "left-handed",
+        "dynamic play",
+        "strong serves"
+      ]
     },
     {
       "id": "42",
@@ -623,12 +746,15 @@
       "email": "ivanna.soroka@example.com",
       "role": "player",
       "password": "Player042!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 66.4,
       "club": "Kyiv Tennis Academy",
-      "notes": ["short pips", "aggressive blocks", "fast tempo"]
+      "notes": [
+        "short pips",
+        "aggressive blocks",
+        "fast tempo"
+      ]
     },
     {
       "id": "43",
@@ -638,12 +764,15 @@
       "email": "stepan.koval@example.com",
       "role": "player",
       "password": "Player043!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "Unranked",
       "ukrRate": 17.8,
       "club": "Free Agent",
-      "notes": ["right-handed", "standard play", "casual style"]
+      "notes": [
+        "right-handed",
+        "standard play",
+        "casual style"
+      ]
     },
     {
       "id": "44",
@@ -653,12 +782,15 @@
       "email": "marta.dmytriieva@example.com",
       "role": "player",
       "password": "Player044!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 45.1,
       "club": "Kharkiv Ace Club",
-      "notes": ["anti-spin", "deceptive play", "slow tempo"]
+      "notes": [
+        "anti-spin",
+        "deceptive play",
+        "slow tempo"
+      ]
     },
     {
       "id": "45",
@@ -668,12 +800,15 @@
       "email": "stanislav.kuzmenko@example.com",
       "role": "player",
       "password": "Player045!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "1st Category",
       "ukrRate": 61.2,
       "club": "VicCourt",
-      "notes": ["right-handed", "solid basics", "consistent attack"]
+      "notes": [
+        "right-handed",
+        "solid basics",
+        "consistent attack"
+      ]
     },
     {
       "id": "46",
@@ -683,12 +818,15 @@
       "email": "alisa.doroshenko@example.com",
       "role": "player",
       "password": "Player046!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "MS",
       "ukrRate": 86,
       "club": "Dnipro Net Masters",
-      "notes": ["left-handed", "strategic player", "precise placement"]
+      "notes": [
+        "left-handed",
+        "strategic player",
+        "precise placement"
+      ]
     },
     {
       "id": "47",
@@ -698,12 +836,15 @@
       "email": "nazar.bilous@example.com",
       "role": "player",
       "password": "Player047!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 51.8,
       "club": "Campione TC",
-      "notes": ["penhold grip", "wrist snap", "fast counter"]
+      "notes": [
+        "penhold grip",
+        "wrist snap",
+        "fast counter"
+      ]
     },
     {
       "id": "48",
@@ -713,12 +854,15 @@
       "email": "yana.havryliuk@example.com",
       "role": "player",
       "password": "Player048!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 62.5,
       "club": "Odesa Smash Club",
-      "notes": ["right-handed", "reliable strokes", "good focus"]
+      "notes": [
+        "right-handed",
+        "reliable strokes",
+        "good focus"
+      ]
     },
     {
       "id": "49",
@@ -728,12 +872,15 @@
       "email": "artur.sobchuk@example.com",
       "role": "player",
       "password": "Player049!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "2nd Category",
       "ukrRate": 49,
       "club": "Prague Tennis Park",
-      "notes": ["long pips", "defensive tactics", "spin confusion"]
+      "notes": [
+        "long pips",
+        "defensive tactics",
+        "spin confusion"
+      ]
     },
     {
       "id": "50",
@@ -743,12 +890,15 @@
       "email": "polina.kravts@example.com",
       "role": "player",
       "password": "Player050!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 76.3,
       "club": "Lviv Lawn TC",
-      "notes": ["right-handed", "aggressive style", "fast footwork"]
+      "notes": [
+        "right-handed",
+        "aggressive style",
+        "fast footwork"
+      ]
     },
     {
       "id": "51",
@@ -758,12 +908,15 @@
       "email": "vladislav.kornienko@example.com",
       "role": "player",
       "password": "Player051!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 64,
       "club": "Kharkiv Ace Club",
-      "notes": ["left-handed", "powerful drives", "active movement"]
+      "notes": [
+        "left-handed",
+        "powerful drives",
+        "active movement"
+      ]
     },
     {
       "id": "52",
@@ -773,12 +926,15 @@
       "email": "yeva.andriyenko@example.com",
       "role": "player",
       "password": "Player052!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 28.2,
       "club": "Marina Tennis Club",
-      "notes": ["right-handed", "junior player", "steady progress"]
+      "notes": [
+        "right-handed",
+        "junior player",
+        "steady progress"
+      ]
     },
     {
       "id": "53",
@@ -788,12 +944,15 @@
       "email": "kyrylo.martynov@example.com",
       "role": "player",
       "password": "Player053!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 67.5,
       "club": "Dnipro Net Masters",
-      "notes": ["short pips", "fast tempo", "close table"]
+      "notes": [
+        "short pips",
+        "fast tempo",
+        "close table"
+      ]
     },
     {
       "id": "54",
@@ -803,12 +962,15 @@
       "email": "myroslava.pakhomova@example.com",
       "role": "player",
       "password": "Player054!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 53.9,
       "club": "VicCourt",
-      "notes": ["right-handed", "balanced game", "good concentration"]
+      "notes": [
+        "right-handed",
+        "balanced game",
+        "good concentration"
+      ]
     },
     {
       "id": "55",
@@ -818,12 +980,15 @@
       "email": "semen.hordiienko@example.com",
       "role": "player",
       "password": "Player055!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "Unranked",
       "ukrRate": 16.2,
       "club": "Free Agent",
-      "notes": ["left-handed", "unorthodox style", "experienced"]
+      "notes": [
+        "left-handed",
+        "unorthodox style",
+        "experienced"
+      ]
     },
     {
       "id": "56",
@@ -833,12 +998,15 @@
       "email": "uliana.stepanenko@example.com",
       "role": "player",
       "password": "Player056!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 79.8,
       "club": "Lviv Lawn TC",
-      "notes": ["defensive chopper", "heavy spin", "resilient defense"]
+      "notes": [
+        "defensive chopper",
+        "heavy spin",
+        "resilient defense"
+      ]
     },
     {
       "id": "57",
@@ -848,12 +1016,15 @@
       "email": "lev.kosheliov@example.com",
       "role": "player",
       "password": "Player057!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MSIC",
       "ukrRate": 98.9,
       "club": "Olympic TC",
-      "notes": ["right-handed", "elite technique", "powerful attack"]
+      "notes": [
+        "right-handed",
+        "elite technique",
+        "powerful attack"
+      ]
     },
     {
       "id": "58",
@@ -863,12 +1034,15 @@
       "email": "svitlana.denysenko@example.com",
       "role": "player",
       "password": "Player058!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "2nd Category",
       "ukrRate": 45.8,
       "club": "Rot-Weiss Berlin",
-      "notes": ["long pips", "experienced defender", "spin disruption"]
+      "notes": [
+        "long pips",
+        "experienced defender",
+        "spin disruption"
+      ]
     },
     {
       "id": "59",
@@ -878,12 +1052,15 @@
       "email": "borys.nesterenko@example.com",
       "role": "player",
       "password": "Player059!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 49.5,
       "club": "Kharkiv Ace Club",
-      "notes": ["right-handed", "standard technique", "steady rallies"]
+      "notes": [
+        "right-handed",
+        "standard technique",
+        "steady rallies"
+      ]
     },
     {
       "id": "60",
@@ -893,12 +1070,15 @@
       "email": "karyna.lazareva@example.com",
       "role": "player",
       "password": "Player060!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 65.9,
       "club": "Dnipro Net Masters",
-      "notes": ["left-handed", "tactical control", "smooth strokes"]
+      "notes": [
+        "left-handed",
+        "tactical control",
+        "smooth strokes"
+      ]
     },
     {
       "id": "61",
@@ -908,12 +1088,15 @@
       "email": "anton.ovsiienko@example.com",
       "role": "player",
       "password": "Player061!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 60.5,
       "club": "Kyiv Tennis Academy",
-      "notes": ["right-handed", "offensive player", "strong drives"]
+      "notes": [
+        "right-handed",
+        "offensive player",
+        "strong drives"
+      ]
     },
     {
       "id": "62",
@@ -923,12 +1106,15 @@
       "email": "maryna.kolos@example.com",
       "role": "player",
       "password": "Player062!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 39.8,
       "club": "Odesa Smash Club",
-      "notes": ["penhold grip", "agile wrist", "quick attacks"]
+      "notes": [
+        "penhold grip",
+        "agile wrist",
+        "quick attacks"
+      ]
     },
     {
       "id": "63",
@@ -938,12 +1124,15 @@
       "email": "rostyslav.yakovenko@example.com",
       "role": "player",
       "password": "Player063!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52.6,
       "club": "VicCourt",
-      "notes": ["short pips", "fast blocks", "flat hits"]
+      "notes": [
+        "short pips",
+        "fast blocks",
+        "flat hits"
+      ]
     },
     {
       "id": "64",
@@ -953,12 +1142,15 @@
       "email": "alla.vlasova@example.com",
       "role": "player",
       "password": "Player064!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "Unranked",
       "ukrRate": 19.8,
       "club": "Free Agent",
-      "notes": ["right-handed", "recreational player", "steady style"]
+      "notes": [
+        "right-handed",
+        "recreational player",
+        "steady style"
+      ]
     },
     {
       "id": "65",
@@ -968,12 +1160,15 @@
       "email": "viktor.vereshchak@example.com",
       "role": "player",
       "password": "Player065!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "CMS",
       "ukrRate": 72.4,
       "club": "Warsaw Sports Center",
-      "notes": ["left-handed", "aggressive style", "good court coverage"]
+      "notes": [
+        "left-handed",
+        "aggressive style",
+        "good court coverage"
+      ]
     },
     {
       "id": "66",
@@ -983,12 +1178,15 @@
       "email": "inna.zaitseva@example.com",
       "role": "player",
       "password": "Player066!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "London, UK",
       "status": "MS",
       "ukrRate": 90.5,
       "club": "Wimbledon Club",
-      "notes": ["right-handed", "top-tier skill", "strategic player"]
+      "notes": [
+        "right-handed",
+        "top-tier skill",
+        "strategic player"
+      ]
     },
     {
       "id": "67",
@@ -998,12 +1196,15 @@
       "email": "yehor.shcherbak@example.com",
       "role": "player",
       "password": "Player067!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 63.5,
       "club": "Campione TC",
-      "notes": ["long pips", "defensive player", "spin variation"]
+      "notes": [
+        "long pips",
+        "defensive player",
+        "spin variation"
+      ]
     },
     {
       "id": "68",
@@ -1013,12 +1214,15 @@
       "email": "sofiia.bezrukova@example.com",
       "role": "player",
       "password": "Player068!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 30.5,
       "club": "Kharkiv Ace Club",
-      "notes": ["right-handed", "junior player", "fast learner"]
+      "notes": [
+        "right-handed",
+        "junior player",
+        "fast learner"
+      ]
     },
     {
       "id": "69",
@@ -1028,12 +1232,15 @@
       "email": "valerii.lymar@example.com",
       "role": "player",
       "password": "Player069!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48,
       "club": "Dnipro Net Masters",
-      "notes": ["anti-spin", "control game", "patient defense"]
+      "notes": [
+        "anti-spin",
+        "control game",
+        "patient defense"
+      ]
     },
     {
       "id": "70",
@@ -1043,12 +1250,15 @@
       "email": "olena.rybalchenko@example.com",
       "role": "player",
       "password": "Player070!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "CMS",
       "ukrRate": 73.5,
       "club": "Odesa Smash Club",
-      "notes": ["left-handed", "tactical play", "strong control"]
+      "notes": [
+        "left-handed",
+        "tactical play",
+        "strong control"
+      ]
     },
     {
       "id": "71",
@@ -1058,12 +1268,15 @@
       "email": "andriy.chumak@example.com",
       "role": "player",
       "password": "Player071!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 56.2,
       "club": "Lviv Lawn TC",
-      "notes": ["right-handed", "consistent play", "good footwork"]
+      "notes": [
+        "right-handed",
+        "consistent play",
+        "good footwork"
+      ]
     },
     {
       "id": "72",
@@ -1073,12 +1286,15 @@
       "email": "mariya.hrytsai@example.com",
       "role": "player",
       "password": "Player072!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "CMS",
       "ukrRate": 82,
       "club": "TC Paris",
-      "notes": ["short pips", "fast attacks", "close table"]
+      "notes": [
+        "short pips",
+        "fast attacks",
+        "close table"
+      ]
     },
     {
       "id": "73",
@@ -1088,12 +1304,15 @@
       "email": "oleksii.savchuk@example.com",
       "role": "player",
       "password": "Player073!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MSIC",
       "ukrRate": 96.1,
       "club": "Olympic TC",
-      "notes": ["right-handed", "elite player", "powerful loops"]
+      "notes": [
+        "right-handed",
+        "elite player",
+        "powerful loops"
+      ]
     },
     {
       "id": "74",
@@ -1103,12 +1322,15 @@
       "email": "tetiana.bohdanova@example.com",
       "role": "player",
       "password": "Player074!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "ukrRate": 16.9,
       "club": "Free Agent",
-      "notes": ["standard setup", "no modifications", "recreational"]
+      "notes": [
+        "standard setup",
+        "no modifications",
+        "recreational"
+      ]
     },
     {
       "id": "75",
@@ -1118,12 +1340,15 @@
       "email": "illia.baranov@example.com",
       "role": "player",
       "password": "Player075!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 53.8,
       "club": "Kharkiv Ace Club",
-      "notes": ["left-handed", "dynamic play", "good angles"]
+      "notes": [
+        "left-handed",
+        "dynamic play",
+        "good angles"
+      ]
     },
     {
       "id": "76",
@@ -1133,12 +1358,15 @@
       "email": "diana.lutsenko@example.com",
       "role": "player",
       "password": "Player076!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 68.9,
       "club": "Dnipro Net Masters",
-      "notes": ["penhold grip", "quick wrist action", "active play"]
+      "notes": [
+        "penhold grip",
+        "quick wrist action",
+        "active play"
+      ]
     },
     {
       "id": "77",
@@ -1148,12 +1376,15 @@
       "email": "vadym.hnatenko@example.com",
       "role": "player",
       "password": "Player077!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 61.5,
       "club": "Odesa Smash Club",
-      "notes": ["right-handed", "solid basics", "reliable strokes"]
+      "notes": [
+        "right-handed",
+        "solid basics",
+        "reliable strokes"
+      ]
     },
     {
       "id": "78",
@@ -1163,12 +1394,15 @@
       "email": "nadiia.yarova@example.com",
       "role": "player",
       "password": "Player078!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "2nd Category",
       "ukrRate": 42.8,
       "club": "Prague Tennis Park",
-      "notes": ["long pips", "defensive play", "spin reversal"]
+      "notes": [
+        "long pips",
+        "defensive play",
+        "spin reversal"
+      ]
     },
     {
       "id": "79",
@@ -1178,12 +1412,15 @@
       "email": "hryhorii.tarasenko@example.com",
       "role": "player",
       "password": "Player079!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 38,
       "club": "Kyiv Tennis Academy",
-      "notes": ["right-handed", "energetic play", "fast pace"]
+      "notes": [
+        "right-handed",
+        "energetic play",
+        "fast pace"
+      ]
     },
     {
       "id": "80",
@@ -1193,12 +1430,15 @@
       "email": "olha.kulish@example.com",
       "role": "player",
       "password": "Player080!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 77,
       "club": "Lviv Lawn TC",
-      "notes": ["left-handed", "strategic play", "strong defense"]
+      "notes": [
+        "left-handed",
+        "strategic play",
+        "strong defense"
+      ]
     },
     {
       "id": "81",
@@ -1208,12 +1448,15 @@
       "email": "dmytro.yurchenko@example.com",
       "role": "player",
       "password": "Player081!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48.5,
       "club": "VicCourt",
-      "notes": ["right-handed", "balanced game", "steady rallies"]
+      "notes": [
+        "right-handed",
+        "balanced game",
+        "steady rallies"
+      ]
     },
     {
       "id": "82",
@@ -1223,12 +1466,15 @@
       "email": "yaroslava.kozak@example.com",
       "role": "player",
       "password": "Player082!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 65,
       "club": "Kharkiv Ace Club",
-      "notes": ["short pips", "fast tempo", "aggressive blocks"]
+      "notes": [
+        "short pips",
+        "fast tempo",
+        "aggressive blocks"
+      ]
     },
     {
       "id": "83",
@@ -1238,12 +1484,15 @@
       "email": "pavlo.zinchenko@example.com",
       "role": "player",
       "password": "Player083!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "MS",
       "ukrRate": 91.8,
       "club": "Rot-Weiss Berlin",
-      "notes": ["right-handed", "master level", "strong topspin"]
+      "notes": [
+        "right-handed",
+        "master level",
+        "strong topspin"
+      ]
     },
     {
       "id": "84",
@@ -1253,12 +1502,15 @@
       "email": "oksana.malenko@example.com",
       "role": "player",
       "password": "Player084!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 68.5,
       "club": "Marina Tennis Club",
-      "notes": ["left-handed", "tactical player", "good placement"]
+      "notes": [
+        "left-handed",
+        "tactical player",
+        "good placement"
+      ]
     },
     {
       "id": "85",
@@ -1268,12 +1520,15 @@
       "email": "roman.hnatiuk@example.com",
       "role": "player",
       "password": "Player085!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 51.2,
       "club": "Dnipro Net Masters",
-      "notes": ["anti-spin", "deceptive play", "slow game"]
+      "notes": [
+        "anti-spin",
+        "deceptive play",
+        "slow game"
+      ]
     },
     {
       "id": "86",
@@ -1283,12 +1538,15 @@
       "email": "yevheniia.husieva@example.com",
       "role": "player",
       "password": "Player086!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "CMS",
       "ukrRate": 75.2,
       "club": "Odesa Smash Club",
-      "notes": ["right-handed", "controlled attack", "solid technique"]
+      "notes": [
+        "right-handed",
+        "controlled attack",
+        "solid technique"
+      ]
     },
     {
       "id": "87",
@@ -1298,12 +1556,15 @@
       "email": "mykhailo.ostapenko@example.com",
       "role": "player",
       "password": "Player087!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 29.5,
       "club": "Lviv Lawn TC",
-      "notes": ["long pips", "defensive style", "junior player"]
+      "notes": [
+        "long pips",
+        "defensive style",
+        "junior player"
+      ]
     },
     {
       "id": "88",
@@ -1313,12 +1574,15 @@
       "email": "alina.dovhan@example.com",
       "role": "player",
       "password": "Player088!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "MS",
       "ukrRate": 87.3,
       "club": "Warsaw Sports Center",
-      "notes": ["left-handed", "top-tier skill", "aggressive offense"]
+      "notes": [
+        "left-handed",
+        "top-tier skill",
+        "aggressive offense"
+      ]
     },
     {
       "id": "89",
@@ -1328,12 +1592,15 @@
       "email": "sviatoslav.chepurnyi@example.com",
       "role": "player",
       "password": "Player089!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52,
       "club": "Campione TC",
-      "notes": ["right-handed", "experienced player", "steady style"]
+      "notes": [
+        "right-handed",
+        "experienced player",
+        "steady style"
+      ]
     },
     {
       "id": "90",
@@ -1343,12 +1610,15 @@
       "email": "anhelina.semenova@example.com",
       "role": "player",
       "password": "Player090!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 58,
       "club": "VicCourt",
-      "notes": ["penhold grip", "flexible wrist", "close table"]
+      "notes": [
+        "penhold grip",
+        "flexible wrist",
+        "close table"
+      ]
     },
     {
       "id": "91",
@@ -1358,12 +1628,15 @@
       "email": "artem.kachan@example.com",
       "role": "player",
       "password": "Player091!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 62.4,
       "club": "Kharkiv Ace Club",
-      "notes": ["right-handed", "solid attack", "good mobility"]
+      "notes": [
+        "right-handed",
+        "solid attack",
+        "good mobility"
+      ]
     },
     {
       "id": "92",
@@ -1373,12 +1646,15 @@
       "email": "viktoriia.borysova@example.com",
       "role": "player",
       "password": "Player092!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "Unranked",
       "ukrRate": 20.5,
       "club": "Free Agent",
-      "notes": ["standard setup", "no modifications", "casual style"]
+      "notes": [
+        "standard setup",
+        "no modifications",
+        "casual style"
+      ]
     },
     {
       "id": "93",
@@ -1388,12 +1664,15 @@
       "email": "ihor.chornyi@example.com",
       "role": "player",
       "password": "Player093!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 70,
       "club": "Dnipro Net Masters",
-      "notes": ["short pips", "fast blocks", "aggressive tempo"]
+      "notes": [
+        "short pips",
+        "fast blocks",
+        "aggressive tempo"
+      ]
     },
     {
       "id": "94",
@@ -1403,12 +1682,15 @@
       "email": "valeriia.kostrub@example.com",
       "role": "player",
       "password": "Player094!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 40.8,
       "club": "Kyiv Tennis Academy",
-      "notes": ["left-handed", "junior player", "active movement"]
+      "notes": [
+        "left-handed",
+        "junior player",
+        "active movement"
+      ]
     },
     {
       "id": "95",
@@ -1418,12 +1700,15 @@
       "email": "kostiantyn.duda@example.com",
       "role": "player",
       "password": "Player095!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "MS",
       "ukrRate": 93.1,
       "club": "Prague Tennis Park",
-      "notes": ["right-handed", "master level", "high precision"]
+      "notes": [
+        "right-handed",
+        "master level",
+        "high precision"
+      ]
     },
     {
       "id": "96",
@@ -1433,12 +1718,15 @@
       "email": "liubov.melnychenko@example.com",
       "role": "player",
       "password": "Player096!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 74,
       "club": "Lviv Lawn TC",
-      "notes": ["long pips", "defensive play", "spin specialist"]
+      "notes": [
+        "long pips",
+        "defensive play",
+        "spin specialist"
+      ]
     },
     {
       "id": "97",
@@ -1448,12 +1736,15 @@
       "email": "oleksandr.horobets@example.com",
       "role": "player",
       "password": "Player097!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 46.9,
       "club": "Kharkiv Ace Club",
-      "notes": ["right-handed", "experienced player", "solid defense"]
+      "notes": [
+        "right-handed",
+        "experienced player",
+        "solid defense"
+      ]
     },
     {
       "id": "98",
@@ -1463,12 +1754,15 @@
       "email": "darya.sobolieva@example.com",
       "role": "player",
       "password": "Player098!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "MS",
       "ukrRate": 83.5,
       "club": "TC Paris",
-      "notes": ["left-handed", "offensive player", "strong loops"]
+      "notes": [
+        "left-handed",
+        "offensive player",
+        "strong loops"
+      ]
     },
     {
       "id": "99",
@@ -1478,12 +1772,15 @@
       "email": "maksym.havryliuk@example.com",
       "role": "player",
       "password": "Player099!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52.8,
       "club": "VicCourt",
-      "notes": ["anti-spin", "control style", "patient tactics"]
+      "notes": [
+        "anti-spin",
+        "control style",
+        "patient tactics"
+      ]
     },
     {
       "id": "100",
@@ -1493,12 +1790,15 @@
       "email": "kateryna.bilyk@example.com",
       "role": "player",
       "password": "Player100!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "CMS",
       "ukrRate": 78.8,
       "club": "Olympic TC",
-      "notes": ["right-handed", "controlled play", "reliable strokes"]
+      "notes": [
+        "right-handed",
+        "controlled play",
+        "reliable strokes"
+      ]
     },
     {
       "id": "101",
@@ -1508,12 +1808,15 @@
       "email": "yurii.kharchenko@example.com",
       "role": "player",
       "password": "Player101!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 65.2,
       "club": "Odesa Smash Club",
-      "notes": ["penhold grip", "traditional style", "quick reflexes"]
+      "notes": [
+        "penhold grip",
+        "traditional style",
+        "quick reflexes"
+      ]
     },
     {
       "id": "102",
@@ -1523,12 +1826,15 @@
       "email": "anna.lohinova@example.com",
       "role": "player",
       "password": "Player102!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "3rd Category",
       "ukrRate": 30.1,
       "club": "Dnipro Net Masters",
-      "notes": ["right-handed", "junior player", "consistent rallies"]
+      "notes": [
+        "right-handed",
+        "junior player",
+        "consistent rallies"
+      ]
     },
     {
       "id": "103",
@@ -1538,12 +1844,15 @@
       "email": "serhiy.hryn@example.com",
       "role": "player",
       "password": "Player103!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "Unranked",
       "ukrRate": 17,
       "club": "Free Agent",
-      "notes": ["short pips", "flat hitting", "active play"]
+      "notes": [
+        "short pips",
+        "flat hitting",
+        "active play"
+      ]
     },
     {
       "id": "104",
@@ -1553,12 +1862,15 @@
       "email": "veronika.shpak@example.com",
       "role": "player",
       "password": "Player104!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "1st Category",
       "ukrRate": 69.5,
       "club": "Warsaw Sports Center",
-      "notes": ["left-handed", "tactical play", "good placement"]
+      "notes": [
+        "left-handed",
+        "tactical play",
+        "good placement"
+      ]
     },
     {
       "id": "105",
@@ -1568,12 +1880,15 @@
       "email": "tymofii.rybak@example.com",
       "role": "player",
       "password": "Player105!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 55.7,
       "club": "Marina Tennis Club",
-      "notes": ["right-handed", "active play", "solid basics"]
+      "notes": [
+        "right-handed",
+        "active play",
+        "solid basics"
+      ]
     },
     {
       "id": "106",
@@ -1583,12 +1898,15 @@
       "email": "yelyzaveta.zubkova@example.com",
       "role": "player",
       "password": "Player106!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "CMS",
       "ukrRate": 75.8,
       "club": "Kharkiv Ace Club",
-      "notes": ["long pips", "defensive style", "spin manipulation"]
+      "notes": [
+        "long pips",
+        "defensive style",
+        "spin manipulation"
+      ]
     },
     {
       "id": "107",
@@ -1598,12 +1916,15 @@
       "email": "vladyslav.nedashkivskyi@example.com",
       "role": "player",
       "password": "Player107!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48.9,
       "club": "VicCourt",
-      "notes": ["right-handed", "balanced game", "steady progress"]
+      "notes": [
+        "right-handed",
+        "balanced game",
+        "steady progress"
+      ]
     },
     {
       "id": "108",
@@ -1613,12 +1934,15 @@
       "email": "iryna.makarenko@example.com",
       "role": "player",
       "password": "Player108!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "2nd Category",
       "ukrRate": 47,
       "club": "Rot-Weiss Berlin",
-      "notes": ["left-handed", "experienced player", "tactical control"]
+      "notes": [
+        "left-handed",
+        "experienced player",
+        "tactical control"
+      ]
     },
     {
       "id": "109",
@@ -1628,12 +1952,15 @@
       "email": "bohdan.oliynyk@example.com",
       "role": "player",
       "password": "Player109!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "MSIC",
       "ukrRate": 97,
       "club": "Odesa Smash Club",
-      "notes": ["right-handed", "elite player", "powerful attacks"]
+      "notes": [
+        "right-handed",
+        "elite player",
+        "powerful attacks"
+      ]
     },
     {
       "id": "110",
@@ -1643,12 +1970,15 @@
       "email": "sofiia.fedorova@example.com",
       "role": "player",
       "password": "Player110!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "CMS",
       "ukrRate": 79.5,
       "club": "Kyiv Tennis Academy",
-      "notes": ["short pips", "fast tempo", "aggressive blocks"]
+      "notes": [
+        "short pips",
+        "fast tempo",
+        "aggressive blocks"
+      ]
     },
     {
       "id": "111",
@@ -1658,12 +1988,15 @@
       "email": "nazar.dyachuk@example.com",
       "role": "player",
       "password": "Player111!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 27.6,
       "club": "Lviv Lawn TC",
-      "notes": ["right-handed", "junior player", "fast footwork"]
+      "notes": [
+        "right-handed",
+        "junior player",
+        "fast footwork"
+      ]
     },
     {
       "id": "112",
@@ -1673,12 +2006,15 @@
       "email": "oksana.vasylenko@example.com",
       "role": "player",
       "password": "Player112!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 63.8,
       "club": "Dnipro Net Masters",
-      "notes": ["penhold grip", "flexible wrist", "active play"]
+      "notes": [
+        "penhold grip",
+        "flexible wrist",
+        "active play"
+      ]
     },
     {
       "id": "113",
@@ -1688,12 +2024,15 @@
       "email": "mykola.skrypnyk@example.com",
       "role": "player",
       "password": "Player113!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 54.1,
       "club": "Kharkiv Ace Club",
-      "notes": ["anti-spin", "control game", "deceptive spin"]
+      "notes": [
+        "anti-spin",
+        "control game",
+        "deceptive spin"
+      ]
     },
     {
       "id": "114",
@@ -1703,12 +2042,15 @@
       "email": "yana.hrytsaienko@example.com",
       "role": "player",
       "password": "Player114!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "CMS",
       "ukrRate": 73,
       "club": "Prague Tennis Park",
-      "notes": ["left-handed", "tactical control", "smooth strokes"]
+      "notes": [
+        "left-handed",
+        "tactical control",
+        "smooth strokes"
+      ]
     },
     {
       "id": "115",
@@ -1718,12 +2060,15 @@
       "email": "artem.blyzniuk@example.com",
       "role": "player",
       "password": "Player115!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "ukrRate": 14.5,
       "club": "Free Agent",
-      "notes": ["right-handed", "recreational", "steady style"]
+      "notes": [
+        "right-handed",
+        "recreational",
+        "steady style"
+      ]
     },
     {
       "id": "116",
@@ -1733,12 +2078,15 @@
       "email": "polina.kyseliova@example.com",
       "role": "player",
       "password": "Player116!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 67.2,
       "club": "Campione TC",
-      "notes": ["long pips", "defensive play", "spin reversal"]
+      "notes": [
+        "long pips",
+        "defensive play",
+        "spin reversal"
+      ]
     },
     {
       "id": "117",
@@ -1748,12 +2096,15 @@
       "email": "taras.prykhodko@example.com",
       "role": "player",
       "password": "Player117!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 61.9,
       "club": "Odesa Smash Club",
-      "notes": ["right-handed", "solid attack", "good stamina"]
+      "notes": [
+        "right-handed",
+        "solid attack",
+        "good stamina"
+      ]
     },
     {
       "id": "118",
@@ -1763,12 +2114,15 @@
       "email": "mariya.shapovalova@example.com",
       "role": "player",
       "password": "Player118!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 26,
       "club": "Lviv Lawn TC",
-      "notes": ["right-handed", "junior player", "developing skills"]
+      "notes": [
+        "right-handed",
+        "junior player",
+        "developing skills"
+      ]
     },
     {
       "id": "119",
@@ -1778,12 +2132,15 @@
       "email": "oleh.saienko@example.com",
       "role": "player",
       "password": "Player119!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "MS",
       "ukrRate": 91.2,
       "club": "Dnipro Net Masters",
-      "notes": ["left-handed", "master level", "strategic offense"]
+      "notes": [
+        "left-handed",
+        "master level",
+        "strategic offense"
+      ]
     },
     {
       "id": "120",
@@ -1793,12 +2150,15 @@
       "email": "nataliia.kuznetsova@example.com",
       "role": "player",
       "password": "Player120!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "CMS",
       "ukrRate": 76.8,
       "club": "Warsaw Sports Center",
-      "notes": ["short pips", "fast blocks", "close table"]
+      "notes": [
+        "short pips",
+        "fast blocks",
+        "close table"
+      ]
     },
     {
       "id": "121",
@@ -1808,12 +2168,15 @@
       "email": "danylo.laptev@example.com",
       "role": "player",
       "password": "Player121!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 55.2,
       "club": "Olympic TC",
-      "notes": ["right-handed", "solid basics", "consistent rallies"]
+      "notes": [
+        "right-handed",
+        "solid basics",
+        "consistent rallies"
+      ]
     },
     {
       "id": "122",
@@ -1823,12 +2186,15 @@
       "email": "viktoriia.reva@example.com",
       "role": "player",
       "password": "Player122!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 66.8,
       "club": "Kharkiv Ace Club",
-      "notes": ["left-handed", "tactical control", "active movement"]
+      "notes": [
+        "left-handed",
+        "tactical control",
+        "active movement"
+      ]
     },
     {
       "id": "123",
@@ -1838,12 +2204,15 @@
       "email": "ivan.kostiuk@example.com",
       "role": "player",
       "password": "Player123!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48.2,
       "club": "VicCourt",
-      "notes": ["penhold grip", "experienced player", "quick wrist"]
+      "notes": [
+        "penhold grip",
+        "experienced player",
+        "quick wrist"
+      ]
     },
     {
       "id": "124",
@@ -1853,12 +2222,15 @@
       "email": "khrystyna.movchan@example.com",
       "role": "player",
       "password": "Player124!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 69.1,
       "club": "Odesa Smash Club",
-      "notes": ["long pips", "defensive style", "spin specialist"]
+      "notes": [
+        "long pips",
+        "defensive style",
+        "spin specialist"
+      ]
     },
     {
       "id": "125",
@@ -1868,12 +2240,15 @@
       "email": "rostyslav.palii@example.com",
       "role": "player",
       "password": "Player125!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "MSIC",
       "ukrRate": 98.2,
       "club": "TC Paris",
-      "notes": ["right-handed", "elite player", "high precision"]
+      "notes": [
+        "right-handed",
+        "elite player",
+        "high precision"
+      ]
     },
     {
       "id": "126",
@@ -1883,12 +2258,13 @@
       "email": "yuliia.babych@example.com",
       "role": "player",
       "password": "Player126!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 32,
       "club": "Lviv Lawn TC",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     },
     {
       "id": "127",
@@ -1898,12 +2274,13 @@
       "email": "andriy.vlasenko@example.com",
       "role": "player",
       "password": "Player127!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52.9,
       "club": "Dnipro Net Masters",
-      "notes": ["left-handed"]
+      "notes": [
+        "left-handed"
+      ]
     },
     {
       "id": "128",
@@ -1913,12 +2290,13 @@
       "email": "olena.danyliuk@example.com",
       "role": "player",
       "password": "Player128!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "Unranked",
       "ukrRate": 19.1,
       "club": "Free Agent",
-      "notes": ["anti-spin"]
+      "notes": [
+        "anti-spin"
+      ]
     },
     {
       "id": "129",
@@ -1928,12 +2306,13 @@
       "email": "denys.kudriavtsev@example.com",
       "role": "player",
       "password": "Player129!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 63.6,
       "club": "Kharkiv Ace Club",
-      "notes": ["short pips"]
+      "notes": [
+        "short pips"
+      ]
     },
     {
       "id": "130",
@@ -1943,12 +2322,13 @@
       "email": "anastasiia.demchenko@example.com",
       "role": "player",
       "password": "Player130!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "CMS",
       "ukrRate": 73.9,
       "club": "VicCourt",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     },
     {
       "id": "131",
@@ -1958,12 +2338,13 @@
       "email": "hlib.zakharov@example.com",
       "role": "player",
       "password": "Player131!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "1st Category",
       "ukrRate": 67.8,
       "club": "Rot-Weiss Berlin",
-      "notes": ["left-handed"]
+      "notes": [
+        "left-handed"
+      ]
     },
     {
       "id": "132",
@@ -1973,12 +2354,13 @@
       "email": "tetiana.klymenko@example.com",
       "role": "player",
       "password": "Player132!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 61.4,
       "club": "Odesa Smash Club",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     },
     {
       "id": "133",
@@ -1988,12 +2370,13 @@
       "email": "yevhen.pozyvailo@example.com",
       "role": "player",
       "password": "Player133!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 57.5,
       "club": "Kyiv Tennis Academy",
-      "notes": ["long pips"]
+      "notes": [
+        "long pips"
+      ]
     },
     {
       "id": "134",
@@ -2003,12 +2386,13 @@
       "email": "margarita.filipova@example.com",
       "role": "player",
       "password": "Player134!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 80.5,
       "club": "Lviv Lawn TC",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     },
     {
       "id": "135",
@@ -2018,12 +2402,13 @@
       "email": "stanislav.dudka@example.com",
       "role": "player",
       "password": "Player135!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 45,
       "club": "Dnipro Net Masters",
-      "notes": ["penhold grip"]
+      "notes": [
+        "penhold grip"
+      ]
     },
     {
       "id": "136",
@@ -2033,12 +2418,13 @@
       "email": "daryna.romanova@example.com",
       "role": "player",
       "password": "Player136!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "2nd Category",
       "ukrRate": 39.2,
       "club": "Warsaw Sports Center",
-      "notes": ["left-handed"]
+      "notes": [
+        "left-handed"
+      ]
     },
     {
       "id": "137",
@@ -2048,12 +2434,13 @@
       "email": "roman.vlasov@example.com",
       "role": "player",
       "password": "Player137!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 65.1,
       "club": "Kharkiv Ace Club",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     },
     {
       "id": "138",
@@ -2063,12 +2450,13 @@
       "email": "alisa.kravchenko@example.com",
       "role": "player",
       "password": "Player138!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "MS",
       "ukrRate": 89.8,
       "club": "Prague Tennis Park",
-      "notes": ["short pips"]
+      "notes": [
+        "short pips"
+      ]
     },
     {
       "id": "139",
@@ -2078,12 +2466,13 @@
       "email": "vladislav.semenchenko@example.com",
       "role": "player",
       "password": "Player139!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 54,
       "club": "Marina Tennis Club",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     },
     {
       "id": "140",
@@ -2093,12 +2482,13 @@
       "email": "kateryna.yurieva@example.com",
       "role": "player",
       "password": "Player140!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "ukrRate": 16,
       "club": "Free Agent",
-      "notes": ["none"]
+      "notes": [
+        "none"
+      ]
     },
     {
       "id": "141",
@@ -2108,12 +2498,13 @@
       "email": "mark.dovzhenko@example.com",
       "role": "player",
       "password": "Player141!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 68.7,
       "club": "Odesa Smash Club",
-      "notes": ["left-handed"]
+      "notes": [
+        "left-handed"
+      ]
     },
     {
       "id": "142",
@@ -2123,12 +2514,13 @@
       "email": "svitlana.boiko@example.com",
       "role": "player",
       "password": "Player142!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "CMS",
       "ukrRate": 72.8,
       "club": "Dnipro Net Masters",
-      "notes": ["long pips"]
+      "notes": [
+        "long pips"
+      ]
     },
     {
       "id": "143",
@@ -2138,12 +2530,13 @@
       "email": "yaroslav.lysytsia@example.com",
       "role": "player",
       "password": "Player143!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 28.9,
       "club": "Lviv Lawn TC",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     },
     {
       "id": "144",
@@ -2153,12 +2546,13 @@
       "email": "inna.marchuk@example.com",
       "role": "player",
       "password": "Player144!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "CMS",
       "ukrRate": 77.5,
       "club": "TC Paris",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     },
     {
       "id": "145",
@@ -2168,12 +2562,13 @@
       "email": "kyrylo.kostiuchenko@example.com",
       "role": "player",
       "password": "Player145!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MSIC",
       "ukrRate": 95.2,
       "club": "Campione TC",
-      "notes": ["penhold grip"]
+      "notes": [
+        "penhold grip"
+      ]
     },
     {
       "id": "146",
@@ -2183,12 +2578,13 @@
       "email": "viktoriia.hromova@example.com",
       "role": "player",
       "password": "Player146!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 64.2,
       "club": "Kharkiv Ace Club",
-      "notes": ["left-handed"]
+      "notes": [
+        "left-handed"
+      ]
     },
     {
       "id": "147",
@@ -2198,12 +2594,13 @@
       "email": "pavlo.sokolov@example.com",
       "role": "player",
       "password": "Player147!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "ukrRate": 11.2,
       "club": "Free Agent",
-      "notes": ["anti-spin"]
+      "notes": [
+        "anti-spin"
+      ]
     },
     {
       "id": "148",
@@ -2213,12 +2610,13 @@
       "email": "yelyzaveta.panchuk@example.com",
       "role": "player",
       "password": "Player148!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 70.4,
       "club": "Odesa Smash Club",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     },
     {
       "id": "149",
@@ -2228,12 +2626,13 @@
       "email": "anton.lukianenko@example.com",
       "role": "player",
       "password": "Player149!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 56,
       "club": "Dnipro Net Masters",
-      "notes": ["short pips"]
+      "notes": [
+        "short pips"
+      ]
     },
     {
       "id": "150",
@@ -2243,12 +2642,13 @@
       "email": "sofiia.rud@example.com",
       "role": "player",
       "password": "Player150!",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MS",
       "ukrRate": 85,
       "club": "Olympic TC",
-      "notes": ["right-handed"]
+      "notes": [
+        "right-handed"
+      ]
     }
   ],
   "tournaments": [
@@ -2268,7 +2668,16 @@
       "currentParticipants": 24,
       "tables": 8,
       "status": "Ongoing",
-      "playerIds": [39, 40, 41, 42, 43, 44, 45, 46]
+      "playerIds": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
     },
     {
       "id": "5",
@@ -2286,7 +2695,16 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "playerIds": [47, 48, 49, 50, 51, 52, 53, 54]
+      "playerIds": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ]
     },
     {
       "id": "6",
@@ -2304,7 +2722,16 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "playerIds": [47, 48, 49, 50, 51, 52, 53, 54]
+      "playerIds": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ]
     },
     {
       "name": "Kharkiv Super Cup",
@@ -2313,7 +2740,11 @@
       "timeStart": "18:19",
       "timeEnd": "17:19",
       "location": "Kharkiv",
-      "players": [15, 10, 5],
+      "players": [
+        15,
+        10,
+        5
+      ],
       "competitionType": "Single",
       "bracketFormat": "Single Elimination",
       "matchFormat": "Best of 3",

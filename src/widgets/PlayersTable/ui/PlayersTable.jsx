@@ -12,7 +12,7 @@ import TableRow from '@mui/material/TableRow';
 
 import { useGetPlayersQuery } from '@/entities/player';
 
-function PlayersTable({ value }) {
+function PlayersTable({ inputValue }) {
   const { t } = useTranslation('players');
   const columns = [
     { id: 'fullName', label: t('columns.fullName'), minWidth: 200 },
@@ -50,11 +50,7 @@ function PlayersTable({ value }) {
 
   useEffect(() => {
     setPage(0); // eslint-disable-line react-hooks/set-state-in-effect
-  }, [value.trim()]);
-
-  const filteredPlayers = players.filter((row) =>
-    row.fullName.toLowerCase().includes(value.toLowerCase()),
-  );
+  }, [inputValue.trim()]);
 
   if (isLoading) return t('loading');
   if (isError) return <div>{t('error')}</div>;
@@ -68,9 +64,11 @@ function PlayersTable({ value }) {
     setPage(0);
   };
 
-  const sortedPlayers = [...filteredPlayers].sort(
-    (a, b) => b.ukrRate - a.ukrRate,
-  );
+  const filteredAndSortedPlayers = players
+    .filter((row) =>
+      row.fullName.toLowerCase().includes(inputValue.toLowerCase()),
+    )
+    .toSorted((a, b) => b.ukrRate - a.ukrRate);
 
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
@@ -90,7 +88,7 @@ function PlayersTable({ value }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {sortedPlayers
+            {filteredAndSortedPlayers
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => (
                 <TableRow
@@ -117,7 +115,7 @@ function PlayersTable({ value }) {
       <TablePagination
         rowsPerPageOptions={[10, 25, 50, 100]}
         component="div"
-        count={sortedPlayers.length}
+        count={filteredAndSortedPlayers.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}

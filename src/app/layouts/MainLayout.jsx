@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
 import { Box } from '@mui/material';
 
-import Footer from '../../widgets/Footer/Footer';
-import { Header } from '../../widgets/Header';
-import { Sidebar } from '../../widgets/Sidebar';
+import Footer from '@/widgets/Footer/Footer';
+import { Header } from '@/widgets/Header';
+import { Sidebar } from '@/widgets/Sidebar';
 
 function MainLayout() {
   return (

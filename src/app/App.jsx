@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { Dashboard } from '@/pages/Dashboard';
 import { PlayerForm } from '@/pages/PlayerForm';
+import { PlayerPage } from '@/pages/PlayerPage';
 import { Players } from '@/pages/Players';
 import { Tournaments } from '@/pages/Tournaments';
 import { Account } from '../pages/Account';
@@ -38,7 +39,7 @@ function App() {
         />
         <Route path="/players" element={<Players />} />
         <Route path="/players/add" element={<PlayerForm />} />
-        <Route path="/players/:id" element={<PlayerForm />} />
+        <Route path="/players/:id" element={<PlayerPage />} />
       </Route>
     </Routes>
   );
