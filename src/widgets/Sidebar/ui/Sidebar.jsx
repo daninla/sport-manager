@@ -14,7 +14,9 @@ function Sidebar() {
     data: tournament,
     isLoading,
     error,
-  } = useGetTournamentByIdQuery(id, { skip: !tournamentMatch });
+  } = useGetTournamentByIdQuery(id, {
+    skip: !tournamentMatch || tournamentMatch.params.id === 'add',
+  });
 
   if (isLoading) return 'Loading...';
   if (error) return <Typography variant="h6">Ошибка загрузки</Typography>;
