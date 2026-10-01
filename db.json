@@ -4,2151 +4,2251 @@
       "id": "1",
       "fullName": "Oleksandr Boiko",
       "age": 24,
+      "sex": "male",
+      "email": "oleksandr.boiko@example.com",
+      "role": "player",
+      "password": "Player001!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 64.2,
-      "worldRate": 3100,
       "club": "Kyiv Tennis Academy",
-      "notes": [
-        "Right-handed",
-        "Aggressive baseline",
-        "Active footwork"
-      ]
+      "notes": ["right-handed", "aggressive baseline", "active footwork"]
     },
     {
       "id": "2",
       "fullName": "Olena Kovalchuk",
       "age": 21,
+      "sex": "female",
+      "email": "olena.kovalchuk@example.com",
+      "role": "player",
+      "password": "Player002!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 78.5,
-      "worldRate": 1850,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Left-handed",
-        "Counter-attacker",
-        "Good stamina"
-      ]
+      "notes": ["left-handed", "counter-attacker", "good stamina"]
     },
     {
       "id": "3",
       "fullName": "Maksym Shevchenko",
       "age": 29,
+      "sex": "male",
+      "email": "maksym.shevchenko@example.com",
+      "role": "player",
+      "password": "Player003!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "MS",
       "ukrRate": 91,
-      "worldRate": 950,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Short pips",
-        "Forehand oriented",
-        "Fast attacks"
-      ]
+      "notes": ["short pips", "forehand oriented", "fast attacks"]
     },
     {
       "id": "4",
       "fullName": "Daryna Bondarenko",
       "age": 19,
+      "sex": "female",
+      "email": "daryna.bondarenko@example.com",
+      "role": "player",
+      "password": "Player004!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 42,
-      "worldRate": 5400,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Right-handed",
-        "Baseline player",
-        "Consistent rallies"
-      ]
+      "notes": ["right-handed", "baseline player", "consistent rallies"]
     },
     {
       "id": "5",
       "fullName": "Ihor Tkachenko",
       "age": 35,
+      "sex": "male",
+      "email": "ihor.tkachenko@example.com",
+      "role": "player",
+      "password": "Player005!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 55.8,
-      "worldRate": 0,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Long pips",
-        "Backhand defense",
-        "Spin reversal"
-      ]
+      "notes": ["long pips", "backhand defense", "spin reversal"]
     },
     {
       "id": "6",
       "fullName": "Anna Kravchenko",
       "age": 22,
+      "sex": "female",
+      "email": "anna.kravchenko@example.com",
+      "role": "player",
+      "password": "Player006!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 68.3,
-      "worldRate": 2400,
       "club": "Marina Tennis Club",
-      "notes": [
-        "Left-handed",
-        "Tactical player",
-        "Good placement"
-      ]
+      "notes": ["left-handed", "tactical player", "good placement"]
     },
     {
       "id": "7",
       "fullName": "Dmytro Moroz",
       "age": 27,
+      "sex": "male",
+      "email": "dmytro.moroz@example.com",
+      "role": "player",
+      "password": "Player007!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52.1,
-      "worldRate": 4100,
       "club": "VicCourt",
-      "notes": [
-        "Penhold grip",
-        "Quick wrist action",
-        "Close-to-table"
-      ]
+      "notes": ["penhold grip", "quick wrist action", "close-to-table"]
     },
     {
       "id": "8",
       "fullName": "Sofiia Oliynyk",
       "age": 18,
+      "sex": "female",
+      "email": "sofiia.oliynyk@example.com",
+      "role": "player",
+      "password": "Player008!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 31.4,
-      "worldRate": 6200,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Right-handed",
-        "Aggressive style",
-        "Fast learner"
-      ]
+      "notes": ["right-handed", "aggressive style", "fast learner"]
     },
     {
       "id": "9",
       "fullName": "Artem Rudenko",
       "age": 31,
+      "sex": "male",
+      "email": "artem.rudenko@example.com",
+      "role": "player",
+      "password": "Player009!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "Unranked",
       "ukrRate": 18.5,
-      "worldRate": 0,
       "club": "Campione TC",
-      "notes": [
-        "Anti-spin rubber",
-        "Spin manipulation",
-        "Control player"
-      ]
+      "notes": ["anti-spin rubber", "spin manipulation", "control player"]
     },
     {
       "id": "10",
       "fullName": "Yuliia Polishchuk",
       "age": 26,
+      "sex": "female",
+      "email": "yuliia.polishchuk@example.com",
+      "role": "player",
+      "password": "Player010!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "MS",
       "ukrRate": 88.7,
-      "worldRate": 1120,
       "club": "Warsaw Sports Center",
-      "notes": [
-        "Left-handed",
-        "Defender style",
-        "Chopping specialist"
-      ]
+      "notes": ["left-handed", "defender style", "chopping specialist"]
     },
     {
       "id": "11",
       "fullName": "Pavlo Lysenko",
       "age": 23,
+      "sex": "male",
+      "email": "pavlo.lysenko@example.com",
+      "role": "player",
+      "password": "Player011!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 51,
-      "worldRate": 4800,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Right-handed",
-        "Offensive style",
-        "Powerful drives"
-      ]
+      "notes": ["right-handed", "offensive style", "powerful drives"]
     },
     {
       "id": "12",
       "fullName": "Kateryna Savchenko",
       "age": 20,
+      "sex": "female",
+      "email": "kateryna.savchenko@example.com",
+      "role": "player",
+      "password": "Player012!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 63.9,
-      "worldRate": 3300,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Short pips",
-        "Backhand speed",
-        "Counter-hitting"
-      ]
+      "notes": ["short pips", "backhand speed", "counter-hitting"]
     },
     {
       "id": "13",
       "fullName": "Andriy Petrenko",
       "age": 28,
+      "sex": "male",
+      "email": "andriy.petrenko@example.com",
+      "role": "player",
+      "password": "Player013!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MSIC",
       "ukrRate": 97.4,
-      "worldRate": 780,
       "club": "Olympic TC",
-      "notes": [
-        "Aggressive looper",
-        "Topspin heavy",
-        "Offensive style"
-      ]
+      "notes": ["aggressive looper", "topspin heavy", "offensive style"]
     },
     {
       "id": "14",
       "fullName": "Nataliia Marchenko",
       "age": 33,
+      "sex": "female",
+      "email": "nataliia.marchenko@example.com",
+      "role": "player",
+      "password": "Player014!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 44.5,
-      "worldRate": 0,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Right-handed",
-        "Balanced play",
-        "Reliable blocks"
-      ]
+      "notes": ["right-handed", "balanced play", "reliable blocks"]
     },
     {
       "id": "15",
       "fullName": "Serhiy Melnyk",
       "age": 25,
+      "sex": "male",
+      "email": "serhiy.melnyk@example.com",
+      "role": "player",
+      "password": "Player015!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "1st Category",
       "ukrRate": 62.1,
-      "worldRate": 3900,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Left-handed",
-        "Dynamic play",
-        "Good service"
-      ]
+      "notes": ["left-handed", "dynamic play", "good service"]
     },
     {
       "id": "16",
       "fullName": "Mariya Vasylenko",
       "age": 17,
+      "sex": "female",
+      "email": "mariya.vasylenko@example.com",
+      "role": "player",
+      "password": "Player016!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 25.8,
-      "worldRate": 7100,
       "club": "Kyiv Tennis Academy",
-      "notes": [
-        "Right-handed",
-        "Developing player",
-        "Steady strokes"
-      ]
+      "notes": ["right-handed", "developing player", "steady strokes"]
     },
     {
       "id": "17",
       "fullName": "Vladyslav Klymenko",
       "age": 30,
+      "sex": "male",
+      "email": "vladyslav.klymenko@example.com",
+      "role": "player",
+      "password": "Player017!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "CMS",
       "ukrRate": 79.2,
-      "worldRate": 2050,
       "club": "Prague Tennis Park",
-      "notes": [
-        "Penhold grip",
-        "Asian style",
-        "Wrist flexibility"
-      ]
+      "notes": ["penhold grip", "asian style", "wrist flexibility"]
     },
     {
       "id": "18",
       "fullName": "Oksana Zakharchenko",
       "age": 29,
+      "sex": "female",
+      "email": "oksana.zakharchenko@example.com",
+      "role": "player",
+      "password": "Player018!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "Unranked",
       "ukrRate": 15,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Standard setup",
-        "No modifications",
-        "General play"
-      ]
+      "notes": ["standard setup", "no modifications", "general play"]
     },
     {
       "id": "19",
       "fullName": "Roman Pavlenko",
       "age": 22,
+      "sex": "male",
+      "email": "roman.pavlenko@example.com",
+      "role": "player",
+      "password": "Player019!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48.6,
-      "worldRate": 5100,
       "club": "VicCourt",
-      "notes": [
-        "Long pips",
-        "Defensive play",
-        "Deceptive spin"
-      ]
+      "notes": ["long pips", "defensive play", "deceptive spin"]
     },
     {
       "id": "20",
       "fullName": "Viktoriia Humeniuk",
       "age": 25,
+      "sex": "female",
+      "email": "viktoriia.humeniuk@example.com",
+      "role": "player",
+      "password": "Player020!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MS",
       "ukrRate": 84.3,
-      "worldRate": 1450,
       "club": "Marina Tennis Club",
-      "notes": [
-        "Left-handed",
-        "Offensive player",
-        "Strong forehand"
-      ]
+      "notes": ["left-handed", "offensive player", "strong forehand"]
     },
     {
       "id": "21",
       "fullName": "Yaroslava Sydorenko",
       "age": 21,
+      "sex": "female",
+      "email": "yaroslava.sydorenko@example.com",
+      "role": "player",
+      "password": "Player021!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 59.4,
-      "worldRate": 4200,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Right-handed",
-        "All-round style",
-        "Good mobility"
-      ]
+      "notes": ["right-handed", "all-round style", "good mobility"]
     },
     {
       "id": "22",
       "fullName": "Alina Karpenko",
       "age": 27,
+      "sex": "female",
+      "email": "alina.karpenko@example.com",
+      "role": "player",
+      "password": "Player022!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "1st Category",
       "ukrRate": 67,
-      "worldRate": 2900,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Short pips",
-        "Fast blocking",
-        "Flat hits"
-      ]
+      "notes": ["short pips", "fast blocking", "flat hits"]
     },
     {
       "id": "23",
       "fullName": "Denys Ponomarenko",
       "age": 32,
+      "sex": "male",
+      "email": "denys.ponomarenko@example.com",
+      "role": "player",
+      "password": "Player023!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "CMS",
       "ukrRate": 73.8,
-      "worldRate": 2300,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Defensive chopper",
-        "Heavy backspin",
-        "Patient play"
-      ]
+      "notes": ["defensive chopper", "heavy backspin", "patient play"]
     },
     {
       "id": "24",
       "fullName": "Iryna Panchenko",
       "age": 24,
+      "sex": "female",
+      "email": "iryna.panchenko@example.com",
+      "role": "player",
+      "password": "Player024!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "MS",
       "ukrRate": 92.5,
-      "worldRate": 990,
       "club": "Rot-Weiss Berlin",
-      "notes": [
-        "Left-handed",
-        "Tactical play",
-        "Smart placement"
-      ]
+      "notes": ["left-handed", "tactical play", "smart placement"]
     },
     {
       "id": "25",
       "fullName": "Yevhen Levytskyi",
       "age": 26,
+      "sex": "male",
+      "email": "yevhen.levytskyi@example.com",
+      "role": "player",
+      "password": "Player025!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 65.5,
-      "worldRate": 3050,
       "club": "Campione TC",
-      "notes": [
-        "Right-handed",
-        "Offensive drive",
-        "Solid technique"
-      ]
+      "notes": ["right-handed", "offensive drive", "solid technique"]
     },
     {
       "id": "26",
       "fullName": "Valentyna Dyachenko",
       "age": 36,
+      "sex": "female",
+      "email": "valentyna.dyachenko@example.com",
+      "role": "player",
+      "password": "Player026!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 50.2,
-      "worldRate": 0,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Anti-spin",
-        "Control game",
-        "Patience tactic"
-      ]
+      "notes": ["anti-spin", "control game", "patience tactic"]
     },
     {
       "id": "27",
       "fullName": "Mykola Romaniuk",
       "age": 19,
+      "sex": "male",
+      "email": "mykola.romaniuk@example.com",
+      "role": "player",
+      "password": "Player027!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "3rd Category",
       "ukrRate": 29.8,
-      "worldRate": 6800,
       "club": "VicCourt",
-      "notes": [
-        "Right-handed",
-        "Energetic play",
-        "Fast footwork"
-      ]
+      "notes": ["right-handed", "energetic play", "fast footwork"]
     },
     {
       "id": "28",
       "fullName": "Tetiana Shvets",
       "age": 23,
+      "sex": "female",
+      "email": "tetiana.shvets@example.com",
+      "role": "player",
+      "password": "Player028!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "CMS",
       "ukrRate": 74.9,
-      "worldRate": 2150,
       "club": "Kyiv Tennis Academy",
-      "notes": [
-        "Left-handed",
-        "Smart tactics",
-        "Versatile game"
-      ]
+      "notes": ["left-handed", "smart tactics", "versatile game"]
     },
     {
       "id": "29",
       "fullName": "Bohdan Franko",
       "age": 28,
+      "sex": "male",
+      "email": "bohdan.franko@example.com",
+      "role": "player",
+      "password": "Player029!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "MS",
       "ukrRate": 89.1,
-      "worldRate": 1280,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Right-handed",
-        "Power hitter",
-        "Aggressive drives"
-      ]
+      "notes": ["right-handed", "power hitter", "aggressive drives"]
     },
     {
       "id": "30",
       "fullName": "Olena Vlasenko",
       "age": 30,
+      "sex": "female",
+      "email": "olena.vlasenko@example.com",
+      "role": "player",
+      "password": "Player030!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "Unranked",
       "ukrRate": 21.3,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Standard setup",
-        "No modifications",
-        "Recreational style"
-      ]
+      "notes": ["standard setup", "no modifications", "recreational style"]
     },
     {
       "id": "31",
       "fullName": "Vadym Hryshchenko",
       "age": 25,
+      "sex": "male",
+      "email": "vadym.hryshchenko@example.com",
+      "role": "player",
+      "password": "Player031!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 62,
-      "worldRate": 3750,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Long pips",
-        "Spin disruption",
-        "Backhand specialist"
-      ]
+      "notes": ["long pips", "spin disruption", "backhand specialist"]
     },
     {
       "id": "32",
       "fullName": "Anastasiia Kovtun",
       "age": 20,
+      "sex": "female",
+      "email": "anastasiia.kovtun@example.com",
+      "role": "player",
+      "password": "Player032!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 68,
-      "worldRate": 2700,
       "club": "Marina Tennis Club",
-      "notes": [
-        "Right-handed",
-        "Consistent rallies",
-        "Solid defense"
-      ]
+      "notes": ["right-handed", "consistent rallies", "solid defense"]
     },
     {
       "id": "33",
       "fullName": "Taras Honchar",
       "age": 34,
+      "sex": "male",
+      "email": "taras.honchar@example.com",
+      "role": "player",
+      "password": "Player033!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 47.3,
-      "worldRate": 0,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Left-handed",
-        "Unconventional angles",
-        "Active play"
-      ]
+      "notes": ["left-handed", "unconventional angles", "active play"]
     },
     {
       "id": "34",
       "fullName": "Khrystyna Levchenko",
       "age": 22,
+      "sex": "female",
+      "email": "khrystyna.levchenko@example.com",
+      "role": "player",
+      "password": "Player034!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "MSIC",
       "ukrRate": 94.6,
-      "worldRate": 820,
       "club": "TC Paris",
-      "notes": [
-        "Right-handed",
-        "High precision",
-        "Top-tier control"
-      ]
+      "notes": ["right-handed", "high precision", "top-tier control"]
     },
     {
       "id": "35",
       "fullName": "Vitalii Nazarenko",
       "age": 27,
+      "sex": "male",
+      "email": "vitalii.nazarenko@example.com",
+      "role": "player",
+      "password": "Player035!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 53.4,
-      "worldRate": 4900,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Short pips",
-        "Quick response",
-        "Close table"
-      ]
+      "notes": ["short pips", "quick response", "close table"]
     },
     {
       "id": "36",
       "fullName": "Yelyzaveta Kolomiiets",
       "age": 18,
+      "sex": "female",
+      "email": "yelyzaveta.kolomiiets@example.com",
+      "role": "player",
+      "password": "Player036!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 38.9,
-      "worldRate": 5900,
       "club": "VicCourt",
-      "notes": [
-        "Right-handed",
-        "Agile movement",
-        "Steady game"
-      ]
+      "notes": ["right-handed", "agile movement", "steady game"]
     },
     {
       "id": "37",
       "fullName": "Oleh Mazur",
       "age": 29,
+      "sex": "male",
+      "email": "oleh.mazur@example.com",
+      "role": "player",
+      "password": "Player037!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "1st Category",
       "ukrRate": 64.8,
-      "worldRate": 3150,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Penhold grip",
-        "Traditional style",
-        "Fast attacks"
-      ]
+      "notes": ["penhold grip", "traditional style", "fast attacks"]
     },
     {
       "id": "38",
       "fullName": "Diana Serhiienko",
       "age": 21,
+      "sex": "female",
+      "email": "diana.serhiienko@example.com",
+      "role": "player",
+      "password": "Player038!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "CMS",
       "ukrRate": 80.1,
-      "worldRate": 1650,
       "club": "Olympic TC",
-      "notes": [
-        "Left-handed",
-        "Creative shots",
-        "Strong offense"
-      ]
+      "notes": ["left-handed", "creative shots", "strong offense"]
     },
     {
       "id": "39",
       "fullName": "Yurii Fedorenko",
       "age": 38,
+      "sex": "male",
+      "email": "yurii.fedorenko@example.com",
+      "role": "player",
+      "password": "Player039!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "3rd Category",
       "ukrRate": 12,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Long pips",
-        "Defensive style",
-        "Experienced player"
-      ]
+      "notes": ["long pips", "defensive style", "experienced player"]
     },
     {
       "id": "40",
       "fullName": "Veronika Prykhodko",
       "age": 25,
+      "sex": "female",
+      "email": "veronika.prykhodko@example.com",
+      "role": "player",
+      "password": "Player040!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "1st Category",
       "ukrRate": 70.2,
-      "worldRate": 2350,
       "club": "Warsaw Sports Center",
-      "notes": [
-        "Right-handed",
-        "Balanced style",
-        "Good stamina"
-      ]
+      "notes": ["right-handed", "balanced style", "good stamina"]
     },
     {
       "id": "41",
       "fullName": "Hlib Tymoshenko",
       "age": 23,
+      "sex": "male",
+      "email": "hlib.tymoshenko@example.com",
+      "role": "player",
+      "password": "Player041!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 55,
-      "worldRate": 4500,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Left-handed",
-        "Dynamic play",
-        "Strong serves"
-      ]
+      "notes": ["left-handed", "dynamic play", "strong serves"]
     },
     {
       "id": "42",
       "fullName": "Ivanna Soroka",
       "age": 26,
+      "sex": "female",
+      "email": "ivanna.soroka@example.com",
+      "role": "player",
+      "password": "Player042!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 66.4,
-      "worldRate": 2950,
       "club": "Kyiv Tennis Academy",
-      "notes": [
-        "Short pips",
-        "Aggressive blocks",
-        "Fast tempo"
-      ]
+      "notes": ["short pips", "aggressive blocks", "fast tempo"]
     },
     {
       "id": "43",
       "fullName": "Stepan Koval",
       "age": 31,
+      "sex": "male",
+      "email": "stepan.koval@example.com",
+      "role": "player",
+      "password": "Player043!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "Unranked",
       "ukrRate": 17.8,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Right-handed",
-        "Standard play",
-        "Casual style"
-      ]
+      "notes": ["right-handed", "standard play", "casual style"]
     },
     {
       "id": "44",
       "fullName": "Marta Dmytriieva",
       "age": 19,
+      "sex": "female",
+      "email": "marta.dmytriieva@example.com",
+      "role": "player",
+      "password": "Player044!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 45.1,
-      "worldRate": 5050,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Anti-spin",
-        "Deceptive play",
-        "Slow tempo"
-      ]
+      "notes": ["anti-spin", "deceptive play", "slow tempo"]
     },
     {
       "id": "45",
       "fullName": "Stanislav Kuzmenko",
       "age": 27,
+      "sex": "male",
+      "email": "stanislav.kuzmenko@example.com",
+      "role": "player",
+      "password": "Player045!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "1st Category",
       "ukrRate": 61.2,
-      "worldRate": 3850,
       "club": "VicCourt",
-      "notes": [
-        "Right-handed",
-        "Solid basics",
-        "Consistent attack"
-      ]
+      "notes": ["right-handed", "solid basics", "consistent attack"]
     },
     {
       "id": "46",
       "fullName": "Alisa Doroshenko",
       "age": 24,
+      "sex": "female",
+      "email": "alisa.doroshenko@example.com",
+      "role": "player",
+      "password": "Player046!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "MS",
       "ukrRate": 86,
-      "worldRate": 1380,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Left-handed",
-        "Strategic player",
-        "Precise placement"
-      ]
+      "notes": ["left-handed", "strategic player", "precise placement"]
     },
     {
       "id": "47",
       "fullName": "Nazar Bilous",
       "age": 22,
+      "sex": "male",
+      "email": "nazar.bilous@example.com",
+      "role": "player",
+      "password": "Player047!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 51.8,
-      "worldRate": 5200,
       "club": "Campione TC",
-      "notes": [
-        "Penhold grip",
-        "Wrist snap",
-        "Fast counter"
-      ]
+      "notes": ["penhold grip", "wrist snap", "fast counter"]
     },
     {
       "id": "48",
       "fullName": "Yana Havryliuk",
       "age": 28,
+      "sex": "female",
+      "email": "yana.havryliuk@example.com",
+      "role": "player",
+      "password": "Player048!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 62.5,
-      "worldRate": 3600,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Right-handed",
-        "Reliable strokes",
-        "Good focus"
-      ]
+      "notes": ["right-handed", "reliable strokes", "good focus"]
     },
     {
       "id": "49",
       "fullName": "Artur Sobchuk",
       "age": 33,
+      "sex": "male",
+      "email": "artur.sobchuk@example.com",
+      "role": "player",
+      "password": "Player049!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "2nd Category",
       "ukrRate": 49,
-      "worldRate": 0,
       "club": "Prague Tennis Park",
-      "notes": [
-        "Long pips",
-        "Defensive tactics",
-        "Spin confusion"
-      ]
+      "notes": ["long pips", "defensive tactics", "spin confusion"]
     },
     {
       "id": "50",
       "fullName": "Polina Kravts",
       "age": 20,
+      "sex": "female",
+      "email": "polina.kravts@example.com",
+      "role": "player",
+      "password": "Player050!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 76.3,
-      "worldRate": 1950,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Right-handed",
-        "Aggressive style",
-        "Fast footwork"
-      ]
+      "notes": ["right-handed", "aggressive style", "fast footwork"]
     },
     {
       "id": "51",
       "fullName": "Vladislav Kornienko",
       "age": 25,
+      "sex": "male",
+      "email": "vladislav.kornienko@example.com",
+      "role": "player",
+      "password": "Player051!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 64,
-      "worldRate": 3250,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Left-handed",
-        "Powerful drives",
-        "Active movement"
-      ]
+      "notes": ["left-handed", "powerful drives", "active movement"]
     },
     {
       "id": "52",
       "fullName": "Yeva Andriyenko",
       "age": 17,
+      "sex": "female",
+      "email": "yeva.andriyenko@example.com",
+      "role": "player",
+      "password": "Player052!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 28.2,
-      "worldRate": 6500,
       "club": "Marina Tennis Club",
-      "notes": [
-        "Right-handed",
-        "Junior player",
-        "Steady progress"
-      ]
+      "notes": ["right-handed", "junior player", "steady progress"]
     },
     {
       "id": "53",
       "fullName": "Kyrylo Martynov",
       "age": 29,
+      "sex": "male",
+      "email": "kyrylo.martynov@example.com",
+      "role": "player",
+      "password": "Player053!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 67.5,
-      "worldRate": 2800,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Short pips",
-        "Fast tempo",
-        "Close table"
-      ]
+      "notes": ["short pips", "fast tempo", "close table"]
     },
     {
       "id": "54",
       "fullName": "Myroslava Pakhomova",
       "age": 23,
+      "sex": "female",
+      "email": "myroslava.pakhomova@example.com",
+      "role": "player",
+      "password": "Player054!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 53.9,
-      "worldRate": 4600,
       "club": "VicCourt",
-      "notes": [
-        "Right-handed",
-        "Balanced game",
-        "Good concentration"
-      ]
+      "notes": ["right-handed", "balanced game", "good concentration"]
     },
     {
       "id": "55",
       "fullName": "Semen Hordiienko",
       "age": 30,
+      "sex": "male",
+      "email": "semen.hordiienko@example.com",
+      "role": "player",
+      "password": "Player055!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "Unranked",
       "ukrRate": 16.2,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Left-handed",
-        "Unorthodox style",
-        "Experienced"
-      ]
+      "notes": ["left-handed", "unorthodox style", "experienced"]
     },
     {
       "id": "56",
       "fullName": "Uliana Stepanenko",
       "age": 21,
+      "sex": "female",
+      "email": "uliana.stepanenko@example.com",
+      "role": "player",
+      "password": "Player056!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 79.8,
-      "worldRate": 1720,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Defensive chopper",
-        "Heavy spin",
-        "Resilient defense"
-      ]
+      "notes": ["defensive chopper", "heavy spin", "resilient defense"]
     },
     {
       "id": "57",
       "fullName": "Lev Kosheliov",
       "age": 26,
+      "sex": "male",
+      "email": "lev.kosheliov@example.com",
+      "role": "player",
+      "password": "Player057!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MSIC",
       "ukrRate": 98.9,
-      "worldRate": 650,
       "club": "Olympic TC",
-      "notes": [
-        "Right-handed",
-        "Elite technique",
-        "Powerful attack"
-      ]
+      "notes": ["right-handed", "elite technique", "powerful attack"]
     },
     {
       "id": "58",
       "fullName": "Svitlana Denysenko",
       "age": 35,
+      "sex": "female",
+      "email": "svitlana.denysenko@example.com",
+      "role": "player",
+      "password": "Player058!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "2nd Category",
       "ukrRate": 45.8,
-      "worldRate": 0,
       "club": "Rot-Weiss Berlin",
-      "notes": [
-        "Long pips",
-        "Experienced defender",
-        "Spin disruption"
-      ]
+      "notes": ["long pips", "experienced defender", "spin disruption"]
     },
     {
       "id": "59",
       "fullName": "Borys Nesterenko",
       "age": 22,
+      "sex": "male",
+      "email": "borys.nesterenko@example.com",
+      "role": "player",
+      "password": "Player059!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 49.5,
-      "worldRate": 5450,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Right-handed",
-        "Standard technique",
-        "Steady rallies"
-      ]
+      "notes": ["right-handed", "standard technique", "steady rallies"]
     },
     {
       "id": "60",
       "fullName": "Karyna Lazareva",
       "age": 27,
+      "sex": "female",
+      "email": "karyna.lazareva@example.com",
+      "role": "player",
+      "password": "Player060!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 65.9,
-      "worldRate": 3000,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Left-handed",
-        "Tactical control",
-        "Smooth strokes"
-      ]
+      "notes": ["left-handed", "tactical control", "smooth strokes"]
     },
     {
       "id": "61",
       "fullName": "Anton Ovsiienko",
       "age": 24,
+      "sex": "male",
+      "email": "anton.ovsiienko@example.com",
+      "role": "player",
+      "password": "Player061!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 60.5,
-      "worldRate": 3950,
       "club": "Kyiv Tennis Academy",
-      "notes": [
-        "Right-handed",
-        "Offensive player",
-        "Strong drives"
-      ]
+      "notes": ["right-handed", "offensive player", "strong drives"]
     },
     {
       "id": "62",
       "fullName": "Maryna Kolos",
       "age": 19,
+      "sex": "female",
+      "email": "maryna.kolos@example.com",
+      "role": "player",
+      "password": "Player062!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "2nd Category",
       "ukrRate": 39.8,
-      "worldRate": 5800,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Penhold grip",
-        "Agile wrist",
-        "Quick attacks"
-      ]
+      "notes": ["penhold grip", "agile wrist", "quick attacks"]
     },
     {
       "id": "63",
       "fullName": "Rostyslav Yakovenko",
       "age": 28,
+      "sex": "male",
+      "email": "rostyslav.yakovenko@example.com",
+      "role": "player",
+      "password": "Player063!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52.6,
-      "worldRate": 5000,
       "club": "VicCourt",
-      "notes": [
-        "Short pips",
-        "Fast blocks",
-        "Flat hits"
-      ]
+      "notes": ["short pips", "fast blocks", "flat hits"]
     },
     {
       "id": "64",
       "fullName": "Alla Vlasova",
       "age": 32,
+      "sex": "female",
+      "email": "alla.vlasova@example.com",
+      "role": "player",
+      "password": "Player064!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "Unranked",
       "ukrRate": 19.8,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Right-handed",
-        "Recreational player",
-        "Steady style"
-      ]
+      "notes": ["right-handed", "recreational player", "steady style"]
     },
     {
       "id": "65",
       "fullName": "Viktor Vereshchak",
       "age": 21,
+      "sex": "male",
+      "email": "viktor.vereshchak@example.com",
+      "role": "player",
+      "password": "Player065!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "CMS",
       "ukrRate": 72.4,
-      "worldRate": 2250,
       "club": "Warsaw Sports Center",
-      "notes": [
-        "Left-handed",
-        "Aggressive style",
-        "Good court coverage"
-      ]
+      "notes": ["left-handed", "aggressive style", "good court coverage"]
     },
     {
       "id": "66",
       "fullName": "Inna Zaitseva",
       "age": 25,
+      "sex": "female",
+      "email": "inna.zaitseva@example.com",
+      "role": "player",
+      "password": "Player066!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "London, UK",
       "status": "MS",
       "ukrRate": 90.5,
-      "worldRate": 1180,
       "club": "Wimbledon Club",
-      "notes": [
-        "Right-handed",
-        "Top-tier skill",
-        "Strategic player"
-      ]
+      "notes": ["right-handed", "top-tier skill", "strategic player"]
     },
     {
       "id": "67",
       "fullName": "Yehor Shcherbak",
       "age": 23,
+      "sex": "male",
+      "email": "yehor.shcherbak@example.com",
+      "role": "player",
+      "password": "Player067!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 63.5,
-      "worldRate": 3350,
       "club": "Campione TC",
-      "notes": [
-        "Long pips",
-        "Defensive player",
-        "Spin variation"
-      ]
+      "notes": ["long pips", "defensive player", "spin variation"]
     },
     {
       "id": "68",
       "fullName": "Sofiia Bezrukova",
       "age": 18,
+      "sex": "female",
+      "email": "sofiia.bezrukova@example.com",
+      "role": "player",
+      "password": "Player068!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 30.5,
-      "worldRate": 6400,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Right-handed",
-        "Junior player",
-        "Fast learner"
-      ]
+      "notes": ["right-handed", "junior player", "fast learner"]
     },
     {
       "id": "69",
       "fullName": "Valerii Lymar",
       "age": 37,
+      "sex": "male",
+      "email": "valerii.lymar@example.com",
+      "role": "player",
+      "password": "Player069!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48,
-      "worldRate": 0,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Anti-spin",
-        "Control game",
-        "Patient defense"
-      ]
+      "notes": ["anti-spin", "control game", "patient defense"]
     },
     {
       "id": "70",
       "fullName": "Olena Rybalchenko",
       "age": 26,
+      "sex": "female",
+      "email": "olena.rybalchenko@example.com",
+      "role": "player",
+      "password": "Player070!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "CMS",
       "ukrRate": 73.5,
-      "worldRate": 2200,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Left-handed",
-        "Tactical play",
-        "Strong control"
-      ]
+      "notes": ["left-handed", "tactical play", "strong control"]
     },
     {
       "id": "71",
       "fullName": "Andriy Chumak",
       "age": 20,
+      "sex": "male",
+      "email": "andriy.chumak@example.com",
+      "role": "player",
+      "password": "Player071!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 56.2,
-      "worldRate": 4300,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Right-handed",
-        "Consistent play",
-        "Good footwork"
-      ]
+      "notes": ["right-handed", "consistent play", "good footwork"]
     },
     {
       "id": "72",
       "fullName": "Mariya Hrytsai",
       "age": 22,
+      "sex": "female",
+      "email": "mariya.hrytsai@example.com",
+      "role": "player",
+      "password": "Player072!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "CMS",
       "ukrRate": 82,
-      "worldRate": 1520,
       "club": "TC Paris",
-      "notes": [
-        "Short pips",
-        "Fast attacks",
-        "Close table"
-      ]
+      "notes": ["short pips", "fast attacks", "close table"]
     },
     {
       "id": "73",
       "fullName": "Oleksii Savchuk",
       "age": 30,
+      "sex": "male",
+      "email": "oleksii.savchuk@example.com",
+      "role": "player",
+      "password": "Player073!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MSIC",
       "ukrRate": 96.1,
-      "worldRate": 880,
       "club": "Olympic TC",
-      "notes": [
-        "Right-handed",
-        "Elite player",
-        "Powerful loops"
-      ]
+      "notes": ["right-handed", "elite player", "powerful loops"]
     },
     {
       "id": "74",
       "fullName": "Tetiana Bohdanova",
       "age": 29,
+      "sex": "female",
+      "email": "tetiana.bohdanova@example.com",
+      "role": "player",
+      "password": "Player074!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "ukrRate": 16.9,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Standard setup",
-        "No modifications",
-        "Recreational"
-      ]
+      "notes": ["standard setup", "no modifications", "recreational"]
     },
     {
       "id": "75",
       "fullName": "Illia Baranov",
       "age": 24,
+      "sex": "male",
+      "email": "illia.baranov@example.com",
+      "role": "player",
+      "password": "Player075!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 53.8,
-      "worldRate": 4700,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Left-handed",
-        "Dynamic play",
-        "Good angles"
-      ]
+      "notes": ["left-handed", "dynamic play", "good angles"]
     },
     {
       "id": "76",
       "fullName": "Diana Lutsenko",
       "age": 21,
+      "sex": "female",
+      "email": "diana.lutsenko@example.com",
+      "role": "player",
+      "password": "Player076!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 68.9,
-      "worldRate": 2600,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Penhold grip",
-        "Quick wrist action",
-        "Active play"
-      ]
+      "notes": ["penhold grip", "quick wrist action", "active play"]
     },
     {
       "id": "77",
       "fullName": "Vadym Hnatenko",
       "age": 27,
+      "sex": "male",
+      "email": "vadym.hnatenko@example.com",
+      "role": "player",
+      "password": "Player077!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 61.5,
-      "worldRate": 3800,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Right-handed",
-        "Solid basics",
-        "Reliable strokes"
-      ]
+      "notes": ["right-handed", "solid basics", "reliable strokes"]
     },
     {
       "id": "78",
       "fullName": "Nadiia Yarova",
       "age": 34,
+      "sex": "female",
+      "email": "nadiia.yarova@example.com",
+      "role": "player",
+      "password": "Player078!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "2nd Category",
       "ukrRate": 42.8,
-      "worldRate": 0,
       "club": "Prague Tennis Park",
-      "notes": [
-        "Long pips",
-        "Defensive play",
-        "Spin reversal"
-      ]
+      "notes": ["long pips", "defensive play", "spin reversal"]
     },
     {
       "id": "79",
       "fullName": "Hryhorii Tarasenko",
       "age": 18,
+      "sex": "male",
+      "email": "hryhorii.tarasenko@example.com",
+      "role": "player",
+      "password": "Player079!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 38,
-      "worldRate": 6000,
       "club": "Kyiv Tennis Academy",
-      "notes": [
-        "Right-handed",
-        "Energetic play",
-        "Fast pace"
-      ]
+      "notes": ["right-handed", "energetic play", "fast pace"]
     },
     {
       "id": "80",
       "fullName": "Olha Kulish",
       "age": 23,
+      "sex": "female",
+      "email": "olha.kulish@example.com",
+      "role": "player",
+      "password": "Player080!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 77,
-      "worldRate": 1800,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Left-handed",
-        "Strategic play",
-        "Strong defense"
-      ]
+      "notes": ["left-handed", "strategic play", "strong defense"]
     },
     {
       "id": "81",
       "fullName": "Dmytro Yurchenko",
       "age": 25,
+      "sex": "male",
+      "email": "dmytro.yurchenko@example.com",
+      "role": "player",
+      "password": "Player081!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48.5,
-      "worldRate": 5600,
       "club": "VicCourt",
-      "notes": [
-        "Right-handed",
-        "Balanced game",
-        "Steady rallies"
-      ]
+      "notes": ["right-handed", "balanced game", "steady rallies"]
     },
     {
       "id": "82",
       "fullName": "Yaroslava Kozak",
       "age": 20,
+      "sex": "female",
+      "email": "yaroslava.kozak@example.com",
+      "role": "player",
+      "password": "Player082!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 65,
-      "worldRate": 3100,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Short pips",
-        "Fast tempo",
-        "Aggressive blocks"
-      ]
+      "notes": ["short pips", "fast tempo", "aggressive blocks"]
     },
     {
       "id": "83",
       "fullName": "Pavlo Zinchenko",
       "age": 31,
+      "sex": "male",
+      "email": "pavlo.zinchenko@example.com",
+      "role": "player",
+      "password": "Player083!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "MS",
       "ukrRate": 91.8,
-      "worldRate": 1050,
       "club": "Rot-Weiss Berlin",
-      "notes": [
-        "Right-handed",
-        "Master level",
-        "Strong topspin"
-      ]
+      "notes": ["right-handed", "master level", "strong topspin"]
     },
     {
       "id": "84",
       "fullName": "Oksana Malenko",
       "age": 28,
+      "sex": "female",
+      "email": "oksana.malenko@example.com",
+      "role": "player",
+      "password": "Player084!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 68.5,
-      "worldRate": 2650,
       "club": "Marina Tennis Club",
-      "notes": [
-        "Left-handed",
-        "Tactical player",
-        "Good placement"
-      ]
+      "notes": ["left-handed", "tactical player", "good placement"]
     },
     {
       "id": "85",
       "fullName": "Roman Hnatiuk",
       "age": 22,
+      "sex": "male",
+      "email": "roman.hnatiuk@example.com",
+      "role": "player",
+      "password": "Player085!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 51.2,
-      "worldRate": 5300,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Anti-spin",
-        "Deceptive play",
-        "Slow game"
-      ]
+      "notes": ["anti-spin", "deceptive play", "slow game"]
     },
     {
       "id": "86",
       "fullName": "Yevheniia Husieva",
       "age": 26,
+      "sex": "female",
+      "email": "yevheniia.husieva@example.com",
+      "role": "player",
+      "password": "Player086!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "CMS",
       "ukrRate": 75.2,
-      "worldRate": 2100,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Right-handed",
-        "Controlled attack",
-        "Solid technique"
-      ]
+      "notes": ["right-handed", "controlled attack", "solid technique"]
     },
     {
       "id": "87",
       "fullName": "Mykhailo Ostapenko",
       "age": 19,
+      "sex": "male",
+      "email": "mykhailo.ostapenko@example.com",
+      "role": "player",
+      "password": "Player087!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 29.5,
-      "worldRate": 6600,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Long pips",
-        "Defensive style",
-        "Junior player"
-      ]
+      "notes": ["long pips", "defensive style", "junior player"]
     },
     {
       "id": "88",
       "fullName": "Alina Dovhan",
       "age": 27,
+      "sex": "female",
+      "email": "alina.dovhan@example.com",
+      "role": "player",
+      "password": "Player088!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "MS",
       "ukrRate": 87.3,
-      "worldRate": 1250,
       "club": "Warsaw Sports Center",
-      "notes": [
-        "Left-handed",
-        "Top-tier skill",
-        "Aggressive offense"
-      ]
+      "notes": ["left-handed", "top-tier skill", "aggressive offense"]
     },
     {
       "id": "89",
       "fullName": "Sviatoslav Chepurnyi",
       "age": 33,
+      "sex": "male",
+      "email": "sviatoslav.chepurnyi@example.com",
+      "role": "player",
+      "password": "Player089!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52,
-      "worldRate": 0,
       "club": "Campione TC",
-      "notes": [
-        "Right-handed",
-        "Experienced player",
-        "Steady style"
-      ]
+      "notes": ["right-handed", "experienced player", "steady style"]
     },
     {
       "id": "90",
       "fullName": "Anhelina Semenova",
       "age": 24,
+      "sex": "female",
+      "email": "anhelina.semenova@example.com",
+      "role": "player",
+      "password": "Player090!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 58,
-      "worldRate": 4050,
       "club": "VicCourt",
-      "notes": [
-        "Penhold grip",
-        "Flexible wrist",
-        "Close table"
-      ]
+      "notes": ["penhold grip", "flexible wrist", "close table"]
     },
     {
       "id": "91",
       "fullName": "Artem Kachan",
       "age": 21,
+      "sex": "male",
+      "email": "artem.kachan@example.com",
+      "role": "player",
+      "password": "Player091!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 62.4,
-      "worldRate": 3500,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Right-handed",
-        "Solid attack",
-        "Good mobility"
-      ]
+      "notes": ["right-handed", "solid attack", "good mobility"]
     },
     {
       "id": "92",
       "fullName": "Viktoriia Borysova",
       "age": 30,
+      "sex": "female",
+      "email": "viktoriia.borysova@example.com",
+      "role": "player",
+      "password": "Player092!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "Unranked",
       "ukrRate": 20.5,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Standard setup",
-        "No modifications",
-        "Casual style"
-      ]
+      "notes": ["standard setup", "no modifications", "casual style"]
     },
     {
       "id": "93",
       "fullName": "Ihor Chornyi",
       "age": 26,
+      "sex": "male",
+      "email": "ihor.chornyi@example.com",
+      "role": "player",
+      "password": "Player093!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 70,
-      "worldRate": 2450,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Short pips",
-        "Fast blocks",
-        "Aggressive tempo"
-      ]
+      "notes": ["short pips", "fast blocks", "aggressive tempo"]
     },
     {
       "id": "94",
       "fullName": "Valeriia Kostrub",
       "age": 18,
+      "sex": "female",
+      "email": "valeriia.kostrub@example.com",
+      "role": "player",
+      "password": "Player094!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 40.8,
-      "worldRate": 5500,
       "club": "Kyiv Tennis Academy",
-      "notes": [
-        "Left-handed",
-        "Junior player",
-        "Active movement"
-      ]
+      "notes": ["left-handed", "junior player", "active movement"]
     },
     {
       "id": "95",
       "fullName": "Kostiantyn Duda",
       "age": 29,
+      "sex": "male",
+      "email": "kostiantyn.duda@example.com",
+      "role": "player",
+      "password": "Player095!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "MS",
       "ukrRate": 93.1,
-      "worldRate": 920,
       "club": "Prague Tennis Park",
-      "notes": [
-        "Right-handed",
-        "Master level",
-        "High precision"
-      ]
+      "notes": ["right-handed", "master level", "high precision"]
     },
     {
       "id": "96",
       "fullName": "Liubov Melnychenko",
       "age": 23,
+      "sex": "female",
+      "email": "liubov.melnychenko@example.com",
+      "role": "player",
+      "password": "Player096!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 74,
-      "worldRate": 2250,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Long pips",
-        "Defensive play",
-        "Spin specialist"
-      ]
+      "notes": ["long pips", "defensive play", "spin specialist"]
     },
     {
       "id": "97",
       "fullName": "Oleksandr Horobets",
       "age": 36,
+      "sex": "male",
+      "email": "oleksandr.horobets@example.com",
+      "role": "player",
+      "password": "Player097!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 46.9,
-      "worldRate": 0,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Right-handed",
-        "Experienced player",
-        "Solid defense"
-      ]
+      "notes": ["right-handed", "experienced player", "solid defense"]
     },
     {
       "id": "98",
       "fullName": "Darya Sobolieva",
       "age": 22,
+      "sex": "female",
+      "email": "darya.sobolieva@example.com",
+      "role": "player",
+      "password": "Player098!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "MS",
       "ukrRate": 83.5,
-      "worldRate": 1500,
       "club": "TC Paris",
-      "notes": [
-        "Left-handed",
-        "Offensive player",
-        "Strong loops"
-      ]
+      "notes": ["left-handed", "offensive player", "strong loops"]
     },
     {
       "id": "99",
       "fullName": "Maksym Havryliuk",
       "age": 25,
+      "sex": "male",
+      "email": "maksym.havryliuk@example.com",
+      "role": "player",
+      "password": "Player099!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52.8,
-      "worldRate": 5150,
       "club": "VicCourt",
-      "notes": [
-        "Anti-spin",
-        "Control style",
-        "Patient tactics"
-      ]
+      "notes": ["anti-spin", "control style", "patient tactics"]
     },
     {
       "id": "100",
       "fullName": "Kateryna Bilyk",
       "age": 27,
+      "sex": "female",
+      "email": "kateryna.bilyk@example.com",
+      "role": "player",
+      "password": "Player100!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "CMS",
       "ukrRate": 78.8,
-      "worldRate": 1750,
       "club": "Olympic TC",
-      "notes": [
-        "Right-handed",
-        "Controlled play",
-        "Reliable strokes"
-      ]
+      "notes": ["right-handed", "controlled play", "reliable strokes"]
     },
     {
       "id": "101",
       "fullName": "Yurii Kharchenko",
       "age": 28,
+      "sex": "male",
+      "email": "yurii.kharchenko@example.com",
+      "role": "player",
+      "password": "Player101!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 65.2,
-      "worldRate": 2980,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Penhold grip",
-        "Traditional style",
-        "Quick reflexes"
-      ]
+      "notes": ["penhold grip", "traditional style", "quick reflexes"]
     },
     {
       "id": "102",
       "fullName": "Anna Lohinova",
       "age": 19,
+      "sex": "female",
+      "email": "anna.lohinova@example.com",
+      "role": "player",
+      "password": "Player102!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "3rd Category",
       "ukrRate": 30.1,
-      "worldRate": 6300,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Right-handed",
-        "Junior player",
-        "Consistent rallies"
-      ]
+      "notes": ["right-handed", "junior player", "consistent rallies"]
     },
     {
       "id": "103",
       "fullName": "Serhiy Hryn",
       "age": 31,
+      "sex": "male",
+      "email": "serhiy.hryn@example.com",
+      "role": "player",
+      "password": "Player103!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "Unranked",
       "ukrRate": 17,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Short pips",
-        "Flat hitting",
-        "Active play"
-      ]
+      "notes": ["short pips", "flat hitting", "active play"]
     },
     {
       "id": "104",
       "fullName": "Veronika Shpak",
       "age": 24,
+      "sex": "female",
+      "email": "veronika.shpak@example.com",
+      "role": "player",
+      "password": "Player104!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "1st Category",
       "ukrRate": 69.5,
-      "worldRate": 2500,
       "club": "Warsaw Sports Center",
-      "notes": [
-        "Left-handed",
-        "Tactical play",
-        "Good placement"
-      ]
+      "notes": ["left-handed", "tactical play", "good placement"]
     },
     {
       "id": "105",
       "fullName": "Tymofii Rybak",
       "age": 20,
+      "sex": "male",
+      "email": "tymofii.rybak@example.com",
+      "role": "player",
+      "password": "Player105!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 55.7,
-      "worldRate": 4400,
       "club": "Marina Tennis Club",
-      "notes": [
-        "Right-handed",
-        "Active play",
-        "Solid basics"
-      ]
+      "notes": ["right-handed", "active play", "solid basics"]
     },
     {
       "id": "106",
       "fullName": "Yelyzaveta Zubkova",
       "age": 25,
+      "sex": "female",
+      "email": "yelyzaveta.zubkova@example.com",
+      "role": "player",
+      "password": "Player106!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "CMS",
       "ukrRate": 75.8,
-      "worldRate": 2000,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Long pips",
-        "Defensive style",
-        "Spin manipulation"
-      ]
+      "notes": ["long pips", "defensive style", "spin manipulation"]
     },
     {
       "id": "107",
       "fullName": "Vladyslav Nedashkivskyi",
       "age": 23,
+      "sex": "male",
+      "email": "vladyslav.nedashkivskyi@example.com",
+      "role": "player",
+      "password": "Player107!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48.9,
-      "worldRate": 5500,
       "club": "VicCourt",
-      "notes": [
-        "Right-handed",
-        "Balanced game",
-        "Steady progress"
-      ]
+      "notes": ["right-handed", "balanced game", "steady progress"]
     },
     {
       "id": "108",
       "fullName": "Iryna Makarenko",
       "age": 32,
+      "sex": "female",
+      "email": "iryna.makarenko@example.com",
+      "role": "player",
+      "password": "Player108!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "2nd Category",
       "ukrRate": 47,
-      "worldRate": 0,
       "club": "Rot-Weiss Berlin",
-      "notes": [
-        "Left-handed",
-        "Experienced player",
-        "Tactical control"
-      ]
+      "notes": ["left-handed", "experienced player", "tactical control"]
     },
     {
       "id": "109",
       "fullName": "Bohdan Oliynyk",
       "age": 27,
+      "sex": "male",
+      "email": "bohdan.oliynyk@example.com",
+      "role": "player",
+      "password": "Player109!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "MSIC",
       "ukrRate": 97,
-      "worldRate": 800,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Right-handed",
-        "Elite player",
-        "Powerful attacks"
-      ]
+      "notes": ["right-handed", "elite player", "powerful attacks"]
     },
     {
       "id": "110",
       "fullName": "Sofiia Fedorova",
       "age": 21,
+      "sex": "female",
+      "email": "sofiia.fedorova@example.com",
+      "role": "player",
+      "password": "Player110!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "CMS",
       "ukrRate": 79.5,
-      "worldRate": 1680,
       "club": "Kyiv Tennis Academy",
-      "notes": [
-        "Short pips",
-        "Fast tempo",
-        "Aggressive blocks"
-      ]
+      "notes": ["short pips", "fast tempo", "aggressive blocks"]
     },
     {
       "id": "111",
       "fullName": "Nazar Dyachuk",
       "age": 18,
+      "sex": "male",
+      "email": "nazar.dyachuk@example.com",
+      "role": "player",
+      "password": "Player111!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 27.6,
-      "worldRate": 6900,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Right-handed",
-        "Junior player",
-        "Fast footwork"
-      ]
+      "notes": ["right-handed", "junior player", "fast footwork"]
     },
     {
       "id": "112",
       "fullName": "Oksana Vasylenko",
       "age": 29,
+      "sex": "female",
+      "email": "oksana.vasylenko@example.com",
+      "role": "player",
+      "password": "Player112!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "1st Category",
       "ukrRate": 63.8,
-      "worldRate": 3300,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Penhold grip",
-        "Flexible wrist",
-        "Active play"
-      ]
+      "notes": ["penhold grip", "flexible wrist", "active play"]
     },
     {
       "id": "113",
       "fullName": "Mykola Skrypnyk",
       "age": 26,
+      "sex": "male",
+      "email": "mykola.skrypnyk@example.com",
+      "role": "player",
+      "password": "Player113!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 54.1,
-      "worldRate": 4550,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Anti-spin",
-        "Control game",
-        "Deceptive spin"
-      ]
+      "notes": ["anti-spin", "control game", "deceptive spin"]
     },
     {
       "id": "114",
       "fullName": "Yana Hrytsaienko",
       "age": 22,
+      "sex": "female",
+      "email": "yana.hrytsaienko@example.com",
+      "role": "player",
+      "password": "Player114!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "CMS",
       "ukrRate": 73,
-      "worldRate": 2180,
       "club": "Prague Tennis Park",
-      "notes": [
-        "Left-handed",
-        "Tactical control",
-        "Smooth strokes"
-      ]
+      "notes": ["left-handed", "tactical control", "smooth strokes"]
     },
     {
       "id": "115",
       "fullName": "Artem Blyzniuk",
       "age": 34,
+      "sex": "male",
+      "email": "artem.blyzniuk@example.com",
+      "role": "player",
+      "password": "Player115!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "ukrRate": 14.5,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": [
-        "Right-handed",
-        "Recreational",
-        "Steady style"
-      ]
+      "notes": ["right-handed", "recreational", "steady style"]
     },
     {
       "id": "116",
       "fullName": "Polina Kyseliova",
       "age": 20,
+      "sex": "female",
+      "email": "polina.kyseliova@example.com",
+      "role": "player",
+      "password": "Player116!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 67.2,
-      "worldRate": 2850,
       "club": "Campione TC",
-      "notes": [
-        "Long pips",
-        "Defensive play",
-        "Spin reversal"
-      ]
+      "notes": ["long pips", "defensive play", "spin reversal"]
     },
     {
       "id": "117",
       "fullName": "Taras Prykhodko",
       "age": 25,
+      "sex": "male",
+      "email": "taras.prykhodko@example.com",
+      "role": "player",
+      "password": "Player117!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 61.9,
-      "worldRate": 3700,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Right-handed",
-        "Solid attack",
-        "Good stamina"
-      ]
+      "notes": ["right-handed", "solid attack", "good stamina"]
     },
     {
       "id": "118",
       "fullName": "Mariya Shapovalova",
       "age": 17,
+      "sex": "female",
+      "email": "mariya.shapovalova@example.com",
+      "role": "player",
+      "password": "Player118!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 26,
-      "worldRate": 7300,
       "club": "Lviv Lawn TC",
-      "notes": [
-        "Right-handed",
-        "Junior player",
-        "Developing skills"
-      ]
+      "notes": ["right-handed", "junior player", "developing skills"]
     },
     {
       "id": "119",
       "fullName": "Oleh Saienko",
       "age": 30,
+      "sex": "male",
+      "email": "oleh.saienko@example.com",
+      "role": "player",
+      "password": "Player119!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "MS",
       "ukrRate": 91.2,
-      "worldRate": 1080,
       "club": "Dnipro Net Masters",
-      "notes": [
-        "Left-handed",
-        "Master level",
-        "Strategic offense"
-      ]
+      "notes": ["left-handed", "master level", "strategic offense"]
     },
     {
       "id": "120",
       "fullName": "Nataliia Kuznetsova",
       "age": 28,
+      "sex": "female",
+      "email": "nataliia.kuznetsova@example.com",
+      "role": "player",
+      "password": "Player120!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "CMS",
       "ukrRate": 76.8,
-      "worldRate": 1900,
       "club": "Warsaw Sports Center",
-      "notes": [
-        "Short pips",
-        "Fast blocks",
-        "Close table"
-      ]
+      "notes": ["short pips", "fast blocks", "close table"]
     },
     {
       "id": "121",
       "fullName": "Danylo Laptev",
       "age": 23,
+      "sex": "male",
+      "email": "danylo.laptev@example.com",
+      "role": "player",
+      "password": "Player121!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 55.2,
-      "worldRate": 4450,
       "club": "Olympic TC",
-      "notes": [
-        "Right-handed",
-        "Solid basics",
-        "Consistent rallies"
-      ]
+      "notes": ["right-handed", "solid basics", "consistent rallies"]
     },
     {
       "id": "122",
       "fullName": "Viktoriia Reva",
       "age": 26,
+      "sex": "female",
+      "email": "viktoriia.reva@example.com",
+      "role": "player",
+      "password": "Player122!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 66.8,
-      "worldRate": 2900,
       "club": "Kharkiv Ace Club",
-      "notes": [
-        "Left-handed",
-        "Tactical control",
-        "Active movement"
-      ]
+      "notes": ["left-handed", "tactical control", "active movement"]
     },
     {
       "id": "123",
       "fullName": "Ivan Kostiuk",
       "age": 35,
+      "sex": "male",
+      "email": "ivan.kostiuk@example.com",
+      "role": "player",
+      "password": "Player123!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "2nd Category",
       "ukrRate": 48.2,
-      "worldRate": 0,
       "club": "VicCourt",
-      "notes": [
-        "Penhold grip",
-        "Experienced player",
-        "Quick wrist"
-      ]
+      "notes": ["penhold grip", "experienced player", "quick wrist"]
     },
     {
       "id": "124",
       "fullName": "Khrystyna Movchan",
       "age": 21,
+      "sex": "female",
+      "email": "khrystyna.movchan@example.com",
+      "role": "player",
+      "password": "Player124!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 69.1,
-      "worldRate": 2550,
       "club": "Odesa Smash Club",
-      "notes": [
-        "Long pips",
-        "Defensive style",
-        "Spin specialist"
-      ]
+      "notes": ["long pips", "defensive style", "spin specialist"]
     },
     {
       "id": "125",
       "fullName": "Rostyslav Palii",
       "age": 27,
+      "sex": "male",
+      "email": "rostyslav.palii@example.com",
+      "role": "player",
+      "password": "Player125!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "MSIC",
       "ukrRate": 98.2,
-      "worldRate": 700,
       "club": "TC Paris",
-      "notes": [
-        "Right-handed",
-        "Elite player",
-        "High precision"
-      ]
+      "notes": ["right-handed", "elite player", "high precision"]
     },
     {
       "id": "126",
       "fullName": "Yuliia Babych",
       "age": 19,
+      "sex": "female",
+      "email": "yuliia.babych@example.com",
+      "role": "player",
+      "password": "Player126!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 32,
-      "worldRate": 6100,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     },
     {
       "id": "127",
       "fullName": "Andriy Vlasenko",
       "age": 24,
+      "sex": "male",
+      "email": "andriy.vlasenko@example.com",
+      "role": "player",
+      "password": "Player127!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 52.9,
-      "worldRate": 4950,
       "club": "Dnipro Net Masters",
-      "notes": "Left-handed"
+      "notes": ["left-handed"]
     },
     {
       "id": "128",
       "fullName": "Olena Danyliuk",
       "age": 31,
+      "sex": "female",
+      "email": "olena.danyliuk@example.com",
+      "role": "player",
+      "password": "Player128!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "Unranked",
       "ukrRate": 19.1,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": "Anti-spin"
+      "notes": ["anti-spin"]
     },
     {
       "id": "129",
       "fullName": "Denys Kudriavtsev",
       "age": 22,
+      "sex": "male",
+      "email": "denys.kudriavtsev@example.com",
+      "role": "player",
+      "password": "Player129!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 63.6,
-      "worldRate": 3400,
       "club": "Kharkiv Ace Club",
-      "notes": "Short pips"
+      "notes": ["short pips"]
     },
     {
       "id": "130",
       "fullName": "Anastasiia Demchenko",
       "age": 25,
+      "sex": "female",
+      "email": "anastasiia.demchenko@example.com",
+      "role": "player",
+      "password": "Player130!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "CMS",
       "ukrRate": 73.9,
-      "worldRate": 2220,
       "club": "VicCourt",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     },
     {
       "id": "131",
       "fullName": "Hlib Zakharov",
       "age": 28,
+      "sex": "male",
+      "email": "hlib.zakharov@example.com",
+      "role": "player",
+      "password": "Player131!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Berlin, Germany",
       "status": "1st Category",
       "ukrRate": 67.8,
-      "worldRate": 2780,
       "club": "Rot-Weiss Berlin",
-      "notes": "Left-handed"
+      "notes": ["left-handed"]
     },
     {
       "id": "132",
       "fullName": "Tetiana Klymenko",
       "age": 20,
+      "sex": "female",
+      "email": "tetiana.klymenko@example.com",
+      "role": "player",
+      "password": "Player132!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 61.4,
-      "worldRate": 3850,
       "club": "Odesa Smash Club",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     },
     {
       "id": "133",
       "fullName": "Yevhen Pozyvailo",
       "age": 29,
+      "sex": "male",
+      "email": "yevhen.pozyvailo@example.com",
+      "role": "player",
+      "password": "Player133!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 57.5,
-      "worldRate": 4120,
       "club": "Kyiv Tennis Academy",
-      "notes": "Long pips"
+      "notes": ["long pips"]
     },
     {
       "id": "134",
       "fullName": "Margarita Filipova",
       "age": 23,
+      "sex": "female",
+      "email": "margarita.filipova@example.com",
+      "role": "player",
+      "password": "Player134!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "CMS",
       "ukrRate": 80.5,
-      "worldRate": 1580,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     },
     {
       "id": "135",
       "fullName": "Stanislav Dudka",
       "age": 33,
+      "sex": "male",
+      "email": "stanislav.dudka@example.com",
+      "role": "player",
+      "password": "Player135!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 45,
-      "worldRate": 0,
       "club": "Dnipro Net Masters",
-      "notes": "Penhold grip"
+      "notes": ["penhold grip"]
     },
     {
       "id": "136",
       "fullName": "Daryna Romanova",
       "age": 18,
+      "sex": "female",
+      "email": "daryna.romanova@example.com",
+      "role": "player",
+      "password": "Player136!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Warsaw, Poland",
       "status": "2nd Category",
       "ukrRate": 39.2,
-      "worldRate": 5700,
       "club": "Warsaw Sports Center",
-      "notes": "Left-handed"
+      "notes": ["left-handed"]
     },
     {
       "id": "137",
       "fullName": "Roman Vlasov",
       "age": 26,
+      "sex": "male",
+      "email": "roman.vlasov@example.com",
+      "role": "player",
+      "password": "Player137!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 65.1,
-      "worldRate": 3150,
       "club": "Kharkiv Ace Club",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     },
     {
       "id": "138",
       "fullName": "Alisa Kravchenko",
       "age": 27,
+      "sex": "female",
+      "email": "alisa.kravchenko@example.com",
+      "role": "player",
+      "password": "Player138!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Prague, Czech Republic",
       "status": "MS",
       "ukrRate": 89.8,
-      "worldRate": 1150,
       "club": "Prague Tennis Park",
-      "notes": "Short pips"
+      "notes": ["short pips"]
     },
     {
       "id": "139",
       "fullName": "Vladislav Semenchenko",
       "age": 21,
+      "sex": "male",
+      "email": "vladislav.semenchenko@example.com",
+      "role": "player",
+      "password": "Player139!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "2nd Category",
       "ukrRate": 54,
-      "worldRate": 4750,
       "club": "Marina Tennis Club",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     },
     {
       "id": "140",
       "fullName": "Kateryna Yurieva",
       "age": 30,
+      "sex": "female",
+      "email": "kateryna.yurieva@example.com",
+      "role": "player",
+      "password": "Player140!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "ukrRate": 16,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": "None"
+      "notes": ["none"]
     },
     {
       "id": "141",
       "fullName": "Mark Dovzhenko",
       "age": 25,
+      "sex": "male",
+      "email": "mark.dovzhenko@example.com",
+      "role": "player",
+      "password": "Player141!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 68.7,
-      "worldRate": 2680,
       "club": "Odesa Smash Club",
-      "notes": "Left-handed"
+      "notes": ["left-handed"]
     },
     {
       "id": "142",
       "fullName": "Svitlana Boiko",
       "age": 22,
+      "sex": "female",
+      "email": "svitlana.boiko@example.com",
+      "role": "player",
+      "password": "Player142!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "CMS",
       "ukrRate": 72.8,
-      "worldRate": 2300,
       "club": "Dnipro Net Masters",
-      "notes": "Long pips"
+      "notes": ["long pips"]
     },
     {
       "id": "143",
       "fullName": "Yaroslav Lysytsia",
       "age": 19,
+      "sex": "male",
+      "email": "yaroslav.lysytsia@example.com",
+      "role": "player",
+      "password": "Player143!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Lviv, Ukraine",
       "status": "3rd Category",
       "ukrRate": 28.9,
-      "worldRate": 6700,
       "club": "Lviv Lawn TC",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     },
     {
       "id": "144",
       "fullName": "Inna Marchuk",
       "age": 24,
+      "sex": "female",
+      "email": "inna.marchuk@example.com",
+      "role": "player",
+      "password": "Player144!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Paris, France",
       "status": "CMS",
       "ukrRate": 77.5,
-      "worldRate": 1820,
       "club": "TC Paris",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     },
     {
       "id": "145",
       "fullName": "Kyrylo Kostiuchenko",
       "age": 31,
+      "sex": "male",
+      "email": "kyrylo.kostiuchenko@example.com",
+      "role": "player",
+      "password": "Player145!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MSIC",
       "ukrRate": 95.2,
-      "worldRate": 850,
       "club": "Campione TC",
-      "notes": "Penhold grip"
+      "notes": ["penhold grip"]
     },
     {
       "id": "146",
       "fullName": "Viktoriia Hromova",
       "age": 28,
+      "sex": "female",
+      "email": "viktoriia.hromova@example.com",
+      "role": "player",
+      "password": "Player146!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kharkiv, Ukraine",
       "status": "1st Category",
       "ukrRate": 64.2,
-      "worldRate": 3280,
       "club": "Kharkiv Ace Club",
-      "notes": "Left-handed"
+      "notes": ["left-handed"]
     },
     {
       "id": "147",
       "fullName": "Pavlo Sokolov",
       "age": 37,
+      "sex": "male",
+      "email": "pavlo.sokolov@example.com",
+      "role": "player",
+      "password": "Player147!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Zaporizhzhia, Ukraine",
       "status": "Unranked",
       "ukrRate": 11.2,
-      "worldRate": 0,
       "club": "Free Agent",
-      "notes": "Anti-spin"
+      "notes": ["anti-spin"]
     },
     {
       "id": "148",
       "fullName": "Yelyzaveta Panchuk",
       "age": 20,
+      "sex": "female",
+      "email": "yelyzaveta.panchuk@example.com",
+      "role": "player",
+      "password": "Player148!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Odesa, Ukraine",
       "status": "1st Category",
       "ukrRate": 70.4,
-      "worldRate": 2420,
       "club": "Odesa Smash Club",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     },
     {
       "id": "149",
       "fullName": "Anton Lukianenko",
       "age": 23,
+      "sex": "male",
+      "email": "anton.lukianenko@example.com",
+      "role": "player",
+      "password": "Player149!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Dnipro, Ukraine",
       "status": "2nd Category",
       "ukrRate": 56,
-      "worldRate": 4350,
       "club": "Dnipro Net Masters",
-      "notes": "Short pips"
+      "notes": ["short pips"]
     },
     {
       "id": "150",
       "fullName": "Sofiia Rud",
       "age": 26,
+      "sex": "female",
+      "email": "sofiia.rud@example.com",
+      "role": "player",
+      "password": "Player150!",
+      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
       "city": "Kyiv, Ukraine",
       "status": "MS",
       "ukrRate": 85,
-      "worldRate": 1400,
       "club": "Olympic TC",
-      "notes": "Right-handed"
+      "notes": ["right-handed"]
     }
   ],
   "tournaments": [
@@ -2168,16 +2268,7 @@
       "currentParticipants": 24,
       "tables": 8,
       "status": "Ongoing",
-      "playerIds": [
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46
-      ]
+      "playerIds": [39, 40, 41, 42, 43, 44, 45, 46]
     },
     {
       "id": "5",
@@ -2195,16 +2286,7 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "playerIds": [
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
-      ]
+      "playerIds": [47, 48, 49, 50, 51, 52, 53, 54]
     },
     {
       "id": "6",
@@ -2222,16 +2304,7 @@
       "currentParticipants": 48,
       "tables": 12,
       "status": "Upcoming",
-      "playerIds": [
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
-      ]
+      "playerIds": [47, 48, 49, 50, 51, 52, 53, 54]
     },
     {
       "name": "Kharkiv Super Cup",
@@ -2240,11 +2313,7 @@
       "timeStart": "18:19",
       "timeEnd": "17:19",
       "location": "Kharkiv",
-      "players": [
-        15,
-        10,
-        5
-      ],
+      "players": [15, 10, 5],
       "competitionType": "Single",
       "bracketFormat": "Single Elimination",
       "matchFormat": "Best of 3",
@@ -3220,40 +3289,6 @@
       },
       "status": "Upcoming",
       "tournamentId": null
-    }
-  ],
-  "users": [
-    {
-      "id": "1",
-      "fullName": "Test Testovych",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
-      "age": 30,
-      "sex": "none",
-      "email": "test@gmail.com",
-      "city": "Zaporizhzhia, Ukraine",
-      "status": "Unranked",
-      "ukrRate": 16.9,
-      "worldRate": 0,
-      "club": "Free Agent",
-      "notes": "None",
-      "password": "test",
-      "role": "player"
-    },
-    {
-      "fullName": "danila",
-      "photo": "https://img.magnific.com/premium-photo/create-silhouette-person-with-question-mark-center-their-chest-face-silhou_939033-147153.jpg?semt=ais_hybrid&w=740&q=80",
-      "age": 0,
-      "sex": "male",
-      "email": "idanila331@gmail.com",
-      "city": "gvn ",
-      "status": "",
-      "ukrRate": 0,
-      "worldRate": 0,
-      "club": "",
-      "notes": "gyhbkhkm",
-      "password": "12345678",
-      "role": "player",
-      "id": "akv422aA0wc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

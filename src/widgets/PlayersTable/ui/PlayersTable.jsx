@@ -30,14 +30,16 @@ function PlayersTable({ value }) {
       minWidth: 150,
       format: (value) => value.toLocaleString('en-US'),
     },
-    {
-      id: 'worldRate',
-      label: t('columns.worldRate'),
-      minWidth: 150,
-      format: (value) => value.toLocaleString('en-US'),
-    },
     { id: 'club', label: t('columns.club'), minWidth: 200 },
-    { id: 'notes', label: t('columns.notes'), minWidth: 200 },
+    {
+      id: 'notes',
+      label: t('columns.notes'),
+      minWidth: 200,
+      format: (value) => {
+        const notesStr = value.join(', ');
+        return notesStr[0].toUpperCase() + notesStr.slice(1);
+      },
+    },
   ];
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -99,9 +101,7 @@ function PlayersTable({ value }) {
                     const value = row[column.id];
                     return (
                       <TableCell key={column.id} align={column.align}>
-                        {column.format && typeof value === 'number'
-                          ? column.format(value)
-                          : value}
+                        {column.format ? column.format(value) : value}
                       </TableCell>
                     );
                   })}
@@ -111,7 +111,7 @@ function PlayersTable({ value }) {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[10, 25, 50, 100]}
         component="div"
         count={filteredPlayers.length}
         rowsPerPage={rowsPerPage}
