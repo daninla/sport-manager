@@ -68,6 +68,10 @@ function PlayersTable({ value }) {
     setPage(0);
   };
 
+  const sortedPlayers = [...filteredPlayers].sort(
+    (a, b) => b.ukrRate - a.ukrRate,
+  );
+
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
       <TableContainer>
@@ -86,7 +90,7 @@ function PlayersTable({ value }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredPlayers
+            {sortedPlayers
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => (
                 <TableRow
@@ -113,7 +117,7 @@ function PlayersTable({ value }) {
       <TablePagination
         rowsPerPageOptions={[10, 25, 50, 100]}
         component="div"
-        count={filteredPlayers.length}
+        count={sortedPlayers.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
