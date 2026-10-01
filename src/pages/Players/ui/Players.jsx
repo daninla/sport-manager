@@ -42,7 +42,7 @@ function Players() {
         }}
         renderInput={(params) => <TextField {...params} label={t('search')} />}
       />
-      <PlayersTable value={inputValue} players={players}/>
+      <PlayersTable value={inputValue} players={players} />
     </Box>
   );
 }

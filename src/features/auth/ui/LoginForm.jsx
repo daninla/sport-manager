@@ -1,9 +1,5 @@
-import { useState } from 'react';
-import toast from 'react-hot-toast';
-import { useTranslation } from 'react-i18next';
-import { Link, useNavigate } from 'react-router';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { Link } from 'react-router';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import {
   Box,
   Button,
@@ -15,56 +11,14 @@ import {
   Typography,
 } from '@mui/material';
 import { ErrorMessage, Form, Formik } from 'formik';
-import * as yup from 'yup';
 
-import { useLazyGetUserByEmailQuery } from '../../../entities/user/api/userApi';
+import { defaultValuesLogin } from '../model/defaultValues';
+import useLoginForm from '../model/useLoginForm';
+import { loginSchema } from '../model/validationSchemas';
 
-const initialValues = {
-  email: '',
-  password: '',
-};
-
-const loginSchema = yup.object({
-  email: yup.string().email('invalidEmail').required('requiredEmail'),
-  password: yup.string().required('requiredPassword'),
-});
-
-function Login() {
-  const { t } = useTranslation('auth');
-  const [getUserByEmail] = useLazyGetUserByEmailQuery();
-  const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
-
-  const handleSignIn = ({ email, password }) => {
-    const signInPromise = (async () => {
-      const users = await getUserByEmail(email).unwrap();
-      const [user] = users;
-      if (!user) {
-        throw new Error(t('notFoundEmail'));
-      }
-
-      if (user.password !== password) {
-        throw new Error(t('invalidPass'));
-      }
-
-      localStorage.setItem('currentUser', JSON.stringify(user));
-      navigate('/');
-
-      return user;
-    })();
-
-    return toast.promise(signInPromise, {
-      loading: t('loading'),
-      success: t('success'),
-      error: (err) =>
-        `${t('signInError')}: ${err.message || t('unknownError')}`,
-    });
-  };
-
-  const handleClickShowPassword = () => {
-    setShowPassword((visible) => !visible);
-  };
-
+function LoginForm() {
+  const { t, showPassword, handleClickShowPassword, handleSignIn } =
+    useLoginForm();
   const renderForm = ({
     values,
     isValid,
@@ -167,25 +121,15 @@ function Login() {
     );
   };
   return (
-    <Box
-      sx={{
-        maxWidth: '450px',
-        width: '100%',
-      }}
+    <Formik
+      initialValues={defaultValuesLogin}
+      onSubmit={handleSignIn}
+      validationSchema={loginSchema}
+      enableReinitialize
     >
-      <Typography variant="h4" align="center" sx={{ mb: '30px' }}>
-        {t('signInTitle')}
-      </Typography>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={handleSignIn}
-        validationSchema={loginSchema}
-        enableReinitialize
-      >
-        {renderForm}
-      </Formik>
-    </Box>
+      {renderForm}
+    </Formik>
   );
 }
 
-export default Login;
+export default LoginForm;
