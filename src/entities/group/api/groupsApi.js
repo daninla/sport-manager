@@ -3,7 +3,11 @@ import { baseApi } from '@/shared/api/baseApi';
 export const groupApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getGroupsByTournamentId: builder.query({
-      query: (tournamentId) => `/groups?tournamentId=${tournamentId}`,
+      query: () => '/groups',
+      transformResponse: (groups, meta, tournamentId) =>
+        groups.filter(
+          (group) => String(group.tournamentId) === String(tournamentId),
+        ),
       providesTags: (result, error, tournamentId) =>
         result
           ? [

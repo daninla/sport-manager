@@ -2176,7 +2176,11 @@
         43,
         44,
         45,
-        46
+        46,
+        123,
+        100,
+        134,
+        150
       ]
     },
     {
@@ -2230,7 +2234,9 @@
         51,
         52,
         53,
-        54
+        54,
+        44,
+        39
       ]
     },
     {
@@ -2257,24 +2263,61 @@
   ],
   "groups": [
     {
-      "id": "g1",
       "tournamentId": "4",
-      "name": "Group A",
+      "name": "A",
       "playerIds": [
-        39,
-        40,
-        41
-      ]
+        "44",
+        "40",
+        "42",
+        "41"
+      ],
+      "id": "zZXj7N26KJM"
     },
     {
-      "id": "g2",
       "tournamentId": "4",
-      "name": "Group B",
+      "name": "B",
       "playerIds": [
-        42,
-        43,
-        44
-      ]
+        "45",
+        "46",
+        "39",
+        "43"
+      ],
+      "id": "VF1YYmyzoBQ"
+    },
+    {
+      "tournamentId": "4",
+      "name": "C",
+      "playerIds": [
+        "150",
+        "134",
+        "100",
+        "123"
+      ],
+      "id": "6un2N5p5caw"
+    },
+    {
+      "tournamentId": "6",
+      "name": "A",
+      "playerIds": [
+        "39",
+        "44",
+        "47",
+        "51",
+        "54"
+      ],
+      "id": "1c49WZbp1y8"
+    },
+    {
+      "tournamentId": "6",
+      "name": "B",
+      "playerIds": [
+        "48",
+        "52",
+        "53",
+        "49",
+        "50"
+      ],
+      "id": "j0KyHK82v70"
     }
   ],
   "matches": [

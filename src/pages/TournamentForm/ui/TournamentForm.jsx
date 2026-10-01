@@ -15,10 +15,8 @@ import {
 } from '@mui/material';
 import { Field, Form, Formik } from 'formik';
 
-import { useGetPlayersQuery } from '@/entities/player';
-import {
-  useCreateTournamentMutation,
-} from '@/entities/tournament';
+import { useGetPlayersQuery } from '@/entities/player/api/playerApi';
+import { useCreateTournamentMutation } from '@/entities/tournament';
 
 import styles from './TournamentForm.module.css';
 
@@ -40,10 +38,12 @@ const initialValues = {
   status: 'draft',
 };
 
+
 function TournamentForm() {
   const navigate = useNavigate();
   const { t } = useTranslation('tournamentForm');
-  const { data: players = [], isLoading: isPlayersLoading } = useGetPlayersQuery();
+  const { data: players = [], isLoading: isPlayersLoading } =
+    useGetPlayersQuery();
   const [selectedPlayers, setSelectedPlayers] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [createTournament, { isLoading: isTournamentCreating }] =
@@ -63,14 +63,13 @@ function TournamentForm() {
     if (!playerName) return;
 
     const matchedPlayer = players.find(
-      (player) =>
-        player.fullName.toLowerCase() === playerName.toLowerCase()
+      (player) => player.fullName.toLowerCase() === playerName.toLowerCase(),
     );
 
     if (!matchedPlayer) return;
 
     const alreadyAdded = selectedPlayers.some(
-      (player) => player.id === matchedPlayer.id
+      (player) => player.id === matchedPlayer.id,
     );
 
     if (!alreadyAdded) {
@@ -148,12 +147,7 @@ function TournamentForm() {
         <Box className={styles['group-container']}>
           <Box className={styles['field-container']}>
             <label htmlFor="title">{t('name')}</label>
-            <Field
-              type="text"
-              name="name"
-              id="title"
-              placeholder={t('name')}
-            />
+            <Field type="text" name="name" id="title" placeholder={t('name')} />
           </Box>
 
           <Box className={styles['field-container']}>
@@ -296,10 +290,7 @@ function TournamentForm() {
               loading={isPlayersLoading}
               sx={{ width: '100%', marginBottom: '1rem' }}
               renderInput={(params) => (
-                <TextField
-                  {...params}
-                  placeholder={t('playerSearch')}
-                />
+                <TextField {...params} placeholder={t('playerSearch')} />
               )}
             />
 

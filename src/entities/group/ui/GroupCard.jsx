@@ -11,12 +11,22 @@ import {
 
 export const GroupCard = ({ title, players = [] }) => {
   return (
-    <Card variant="outlined" sx={{ minWidth: 260, borderRadius: 2 }}>
-      <CardContent sx={{ p: 2, '&:last-child': { pb: 2 } }}>
+    <Card
+      variant="outlined"
+      sx={{ minWidth: 230, borderRadius: 2, border: '1px solid #a7a4a4' }}
+    >
+      <CardContent sx={{ '&:last-child': { pb: 2 } }}>
         <Typography
           variant="h6"
           component="div"
-          sx={{ fontWeight: 600, mb: 1 }}
+          sx={{
+            fontWeight: 600,
+            mb: 1,
+            borderBottom: '1px solid #a7a4a4',
+            pb: 1,
+            backgroundColor: '#5e81c2',
+            textAlign: 'center',
+          }}
         >
           {title}
         </Typography>

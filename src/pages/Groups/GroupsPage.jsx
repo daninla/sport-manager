@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import {
+  Alert,
   Box,
   CircularProgress,
   Container,
@@ -8,20 +9,24 @@ import {
   Typography,
 } from '@mui/material';
 
+import { useGetGroupsByTournamentIdQuery } from '@/entities/group/api/groupsApi';
 import { useGetTournamentPlayersQuery } from '@/entities/tournament/api/tournamentApi';
+import { GroupCreationForm } from '@/features/draw';
 
 import { GroupCard } from '@/entities/group/ui/GroupCard';
 
 const GroupsPage = () => {
-  // 1. Достаем ID турнира из URL (/tournaments/:id/groups)
   const { id: tournamentId } = useParams();
-
-  // 2. Запрашиваем участников этого турнира
   const {
     data: tournamentPlayers = [],
     isLoading,
     isError,
   } = useGetTournamentPlayersQuery(tournamentId);
+  const {
+    data: groups = [],
+    isLoading: isGroupsLoading,
+    isError: isGroupsError,
+  } = useGetGroupsByTournamentIdQuery(tournamentId);
 
   if (isLoading) {
     return (
@@ -41,54 +46,64 @@ const GroupsPage = () => {
     );
   }
 
-  // 3. Тестовая временная группа для проверки UI карточки (первые 3 игрока)
-  const testGroupPlayers = tournamentPlayers.slice(0, 3);
-
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
+    <Container
+      maxWidth="lg"
+      sx={{ py: 4, width: { xs: '100%', md: '85%' }, ml: 0, mr: 'auto' }}
+    >
       <Typography variant="h4" component="h1" sx={{ fontWeight: 700, mb: 1 }}>
-        Группы турнира #{tournamentId}
+        Группы турнира
       </Typography>
-
-      <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
-        Всего участников в турнире: {tournamentPlayers.length}
+      <Typography
+        variant="body1"
+        color="text.secondary"
+        sx={{ mb: 4, display: 'flex', gap: 0.5 }}
+      >
+        Всего игроков в турнире #{tournamentId}:
+        <Box component="span" sx={{ fontWeight: 600, color: 'primary.main' }}>
+          {tournamentPlayers.length}
+        </Box>
       </Typography>
 
       <Grid container spacing={3}>
-        {/* Карточка 1: Проверка рендера карточки группы с игроками */}
-        <Grid item xs={12} sm={6} md={4}>
-          <GroupCard title="Группа A (Тест)" players={testGroupPlayers} />
-        </Grid>
-
-        {/* Карточка 2: Проверка рендера пустой карточки */}
-        <Grid item xs={12} sm={6} md={4}>
-          <GroupCard title="Группа B (Пустая)" players={[]} />
-        </Grid>
-
-        {/* Список всех участников турнира для контроля */}
-        <Grid item xs={12}>
-          <Paper variant="outlined" sx={{ p: 3, mt: 2, borderRadius: 2 }}>
-            <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
-              Список всех доступных игроков турнира:
-            </Typography>
-
-            {tournamentPlayers.length > 0 ? (
-              <Box component="ol" sx={{ pl: 2, margin: 0 }}>
-                {tournamentPlayers.map((player) => (
-                  <Box component="li" key={player.id} sx={{ py: 0.5 }}>
-                    <Typography variant="body2">
-                      <strong>ID: {player.id}</strong> — {player.fullName}
-                    </Typography>
-                  </Box>
-                ))}
-              </Box>
-            ) : (
+        <Grid size={{ xs: 12, md: 8 }}>
+          {isGroupsLoading ? (
+            <Box sx={{ display: 'flex', justifyContent: 'center', py: 6 }}>
+              <CircularProgress />
+            </Box>
+          ) : isGroupsError ? (
+            <Alert severity="error">Не удалось загрузить группы турнира.</Alert>
+          ) : groups.length ? (
+            <Grid container spacing={2}>
+              {groups.map((group) => {
+                // Карточке передаём объекты игроков, а в группе хранятся только их ID.
+                const groupPlayerIds = new Set(
+                  (group.playerIds || []).map(String),
+                );
+                const groupPlayers = tournamentPlayers.filter((player) =>
+                  groupPlayerIds.has(String(player.id)),
+                );
+                return (
+                  <Grid key={group.id} size={{ xs: 12, sm: 6, lg: 4 }}>
+                    <GroupCard title={group.name} players={groupPlayers} />
+                  </Grid>
+                );
+              })}
+            </Grid>
+          ) : (
+            <Paper variant="outlined" sx={{ p: 3 }}>
               <Typography color="text.secondary">
-                В этом турнире пока нет зарегистрированных участников (массив
-                playerIds пуст).
+                Групп пока нет. Создайте первую с помощью формы.
               </Typography>
-            )}
-          </Paper>
+            </Paper>
+          )}
+        </Grid>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <GroupCreationForm
+            tournamentId={tournamentId}
+            tournamentPlayers={tournamentPlayers}
+            groups={groups}
+          />
         </Grid>
       </Grid>
     </Container>

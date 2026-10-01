@@ -1,7 +1,5 @@
-import {
-  useGetMatchesByTournamentQuery,
-  useGetPlayersQuery,
-} from '../api/matchApi';
+import { useGetPlayersQuery } from '@/entities/player/api/playerApi';
+import { useGetMatchesByTournamentQuery } from '../api/matchApi';
 
 export function useEnrichedMatches(tournamentId) {
   const { data: matchesData, isLoading: isMatchesLoading } =

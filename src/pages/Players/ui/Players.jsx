@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { AddPlayerBtn } from '@/features/add-player';
 import { Autocomplete, Box, TextField } from '@mui/material';
 
-import { useGetPlayersQuery } from '@/entities/player';
+import { useGetPlayersQuery } from '@/entities/player/api/playerApi';
 
 import { PlayersTable } from '@/widgets/PlayersTable';
 

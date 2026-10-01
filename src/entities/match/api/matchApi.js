@@ -36,17 +36,6 @@ export const matchApi = baseApi.injectEndpoints({
       providesTags: (result, error, id) => [{ type: 'Match', id }],
     }),
 
-    getPlayers: builder.query({
-      query: () => '/players',
-      providesTags: (result) =>
-        result
-          ? [
-              ...result.map(({ id }) => ({ type: 'Player', id })),
-              { type: 'Player', id: 'LIST' },
-            ]
-          : [{ type: 'Player', id: 'LIST' }],
-    }),
-
     updateMatch: builder.mutation({
       query: ({ id, ...patch }) => ({
         url: `/matches/${id}`,
@@ -68,6 +57,5 @@ export const {
   useGetMatchesQuery,
   useGetMatchesByTournamentQuery,
   useGetMatchByIdQuery,
-  useGetPlayersQuery,
   useUpdateMatchMutation,
 } = matchApi;

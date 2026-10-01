@@ -8,9 +8,9 @@ import matchReducer, {
   undo,
 } from './matchSlice';
 
+import { useGetPlayersQuery } from '@/entities/player/api/playerApi';
 import {
   useGetMatchByIdQuery,
-  useGetPlayersQuery,
   useUpdateMatchMutation,
 } from '../../../entities/match/api/matchApi';
 
@@ -105,7 +105,6 @@ export function useLiveMatchController(matchId) {
       handleFinish();
     }
   };
-
 
   return {
     matchState,
