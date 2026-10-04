@@ -1,0 +1,18 @@
+{
+  "loading": "Завантаження турніру...",
+  "error": "Помилка завантаження турніру",
+  "notFound": "Турнір не знайдено",
+  "back": "Повернутися до турнірів",
+  "details": "Деталі:",
+  "location": "Місце:",
+  "ageCategory": "Вікова категорія:",
+  "competitionType": "Тип змагання:",
+  "format": "Формат:",
+  "matchFormat": "Формат матчів:",
+  "pointsPerGame": "Очки за гру:",
+  "participants": "Учасники:",
+  "matches": "Матчі ({{count}}):",
+  "status": "Статус:",
+  "playedMatches": "Зіграні та поточні матчі",
+  "upcomingMatches": "Майбутні матчі"
+}

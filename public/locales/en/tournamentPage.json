@@ -1,0 +1,18 @@
+{
+  "loading": "Loading tournament...",
+  "error": "Error loading tournament",
+  "notFound": "Tournament not found",
+  "back": "Back to Tournaments",
+  "details": "Details:",
+  "location": "Location:",
+  "ageCategory": "Age category:",
+  "competitionType": "Type of competition:",
+  "format": "Format:",
+  "matchFormat": "Match Format:",
+  "pointsPerGame": "Points for the game:",
+  "participants": "Participants:",
+  "matches": "Matches ({{count}}):",
+  "status": "Status:",
+  "playedMatches": "Played and ongoing matches",
+  "upcomingMatches": "Upcoming matches"
+}

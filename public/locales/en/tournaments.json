@@ -1,0 +1,8 @@
+{
+  "loading": "Loading tournaments...",
+  "error": "Error loading tournaments",
+  "matchCount": "There are {{count}} tournaments matching your filter",
+  "addTournament": "Add new Tournament",
+  "delete": "Delete",
+  "deleting": "Deleting..."
+}
