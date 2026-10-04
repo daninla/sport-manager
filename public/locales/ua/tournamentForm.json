@@ -51,7 +51,19 @@
     { "value": 7, "label": "До 7 партій" }
   ],
   "isRating": [
-    {"value": false, "label": "Звичайний"},
-    {"value": true, "label": "Рейтинг"}
-  ]
+    { "value": false, "label": "Звичайний" },
+    { "value": true, "label": "Рейтинг" }
+  ],
+  "columns": {
+    "fullName": "Повне ім'я",
+    "age": "Вік",
+    "city": "Місто",
+    "status": "Статус",
+    "ukrRate": "Рейтинг",
+    "club": "Клуб",
+    "notes": "Примітки",
+    "add": "Додати гравця"
+  },
+  "rowsPerPage": "Рядків на сторінку",
+  "of": "з"
 }

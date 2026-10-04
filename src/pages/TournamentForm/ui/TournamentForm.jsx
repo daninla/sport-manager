@@ -6,15 +6,12 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CancelIcon from '@mui/icons-material/Cancel';
 import SaveIcon from '@mui/icons-material/Save';
 import {
-  Autocomplete,
   Box,
   Button,
-  Chip,
   Stack,
   Step,
   StepLabel,
   Stepper,
-  TextField,
   Typography,
 } from '@mui/material';
 import dayjs from 'dayjs';
@@ -27,15 +24,12 @@ import { initialValues } from '../model/initialValues';
 
 import GeneralStep from './steps/GeneralStep';
 import ParametersStep from './steps/ParametersStep';
+import ParticipantsStep from './steps/ParticipantsStep';
 import RestrictionsStep from './steps/RestrictionsStep';
-
-import styles from './TournamentForm.module.css';
 
 function TournamentForm() {
   const navigate = useNavigate();
   const { t } = useTranslation('tournamentForm');
-  const { data: players = [], isLoading: isPlayersLoading } =
-    useGetPlayersQuery();
   const [activeStep, setActiveStep] = useState(0);
   const [selectedPlayers, setSelectedPlayers] = useState([]);
   const [searchValue, setSearchValue] = useState('');
@@ -43,6 +37,24 @@ function TournamentForm() {
     useCreateTournamentMutation();
 
   const { data: clubs = [] } = useGetClubsQuery();
+
+  const {
+    data: players = [],
+    isLoading: isPlayersLoading,
+    error: errorPlayers,
+  } = useGetPlayersQuery();
+
+  const filteredPlayers = players.filter((player) =>
+    player.fullName?.toLowerCase().includes(searchValue.trim().toLowerCase()),
+  );
+
+  const handleTogglePlayer = (player) => {
+    setSelectedPlayers((prev) =>
+      prev.some((selectedPlayer) => selectedPlayer.id === player.id)
+        ? prev.filter((selectedPlayer) => selectedPlayer.id !== player.id)
+        : [...prev, player],
+    );
+  };
 
   const steps = t('steps', { returnObjects: true });
   const ageCategories = t('ageCategories', { returnObjects: true });
@@ -82,10 +94,6 @@ function TournamentForm() {
     }
 
     setSearchValue('');
-  };
-
-  const handleRemovePlayer = (id) => {
-    setSelectedPlayers((prev) => prev.filter((player) => player.id !== id));
   };
 
   const mapCompetitionType = (type) => {
@@ -196,43 +204,17 @@ function TournamentForm() {
           )}
           {/* Participants */}
           {activeStep === 3 && (
-            <>
-              <Box className={styles['group-container']}>
-                <Box className={styles['field-container']}>
-                  <label>{t('players')}</label>
-
-                  <Autocomplete
-                    freeSolo
-                    options={players}
-                    getOptionLabel={(option) =>
-                      typeof option === 'string' ? option : option.fullName
-                    }
-                    inputValue={searchValue}
-                    onInputChange={(event, newInputValue) => {
-                      setSearchValue(newInputValue);
-                    }}
-                    onChange={(event, newValue) => {
-                      handleAddPlayer(newValue);
-                    }}
-                    loading={isPlayersLoading}
-                    sx={{ width: '100%', marginBottom: '1rem' }}
-                    renderInput={(params) => (
-                      <TextField {...params} placeholder={t('playerSearch')} />
-                    )}
-                  />
-
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                    {selectedPlayers.map((player) => (
-                      <Chip
-                        key={player.id}
-                        label={player.fullName}
-                        onDelete={() => handleRemovePlayer(player.id)}
-                      />
-                    ))}
-                  </Box>
-                </Box>
-              </Box>
-            </>
+            <ParticipantsStep
+              t={t}
+              players={players}
+              isPlayersLoading={isPlayersLoading}
+              errorPlayers={errorPlayers}
+              filteredPlayers={filteredPlayers}
+              searchValue={searchValue}
+              selectedPlayers={selectedPlayers}
+              setSearchValue={setSearchValue}
+              handleTogglePlayer={handleTogglePlayer}
+            />
           )}
         </Stack>
 
@@ -318,8 +300,9 @@ function TournamentForm() {
           border: '3px solid #081627',
           borderRadius: '10px',
           padding: '30px',
+          mt: `${activeStep === 3 ? '50px' : '0px'}`,
           minWidth: '100px',
-          maxWidth: '550px',
+          maxWidth: `${activeStep === 3 ? '1550px' : '550px'}`,
           width: '100%',
         }}
       >

@@ -53,5 +53,17 @@
   "isRating": [
     { "value": false, "label": "Regular" },
     { "value": true, "label": "Rating" }
-  ]
+  ],
+  "columns": {
+    "fullName": "Full name",
+    "age": "Age",
+    "city": "City",
+    "status": "Status",
+    "rate": "Rate",
+    "club": "Club",
+    "notes": "Notes",
+    "add": "Add player"
+  },
+  "rowsPerPage": "Rows per page",
+  "of": "of"
 }

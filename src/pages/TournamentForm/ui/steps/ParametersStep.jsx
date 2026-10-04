@@ -21,15 +21,17 @@ function ParametersStep({
     <>
       <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
         <FormControl fullWidth>
-          <InputLabel>{t('competitionType')}</InputLabel>
+          <InputLabel id="competition-type-label">
+            {t('competitionType')}
+          </InputLabel>
           <Select
+            id="competition-type"
+            labelId="competition-type-label"
+            label={t('competitionType')}
             name="tournamentType"
             value={values.tournamentType}
             onChange={handleChange}
           >
-            <MenuItem value="" disabled>
-              Select type
-            </MenuItem>
             {competitionTypes.map((type) => (
               <MenuItem key={type.value} value={type.value}>
                 {type.label}
@@ -38,11 +40,15 @@ function ParametersStep({
           </Select>
         </FormControl>
         <FormControl fullWidth>
-          <InputLabel>{t('format')}</InputLabel>
-          <Select name="format" value={values.format} onChange={handleChange}>
-            <MenuItem value="" disabled>
-              Select format
-            </MenuItem>
+          <InputLabel id="format-label">{t('format')}</InputLabel>
+          <Select
+            id="format"
+            labelId="format-label"
+            label={t('format')}
+            name="format"
+            value={values.format}
+            onChange={handleChange}
+          >
             {tournamentFormats.map((format) => (
               <MenuItem key={format.value} value={format.value}>
                 {format.label}
@@ -54,15 +60,15 @@ function ParametersStep({
 
       <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
         <FormControl fullWidth>
-          <InputLabel>{t('gamesToWin')}</InputLabel>
+          <InputLabel id="games-to-win-label">{t('gamesToWin')}</InputLabel>
           <Select
+            id="games-to-win"
+            labelId="games-to-win-label"
+            label={t('gamesToWin')}
             name="gamesToWin"
             value={values.gamesToWin}
             onChange={handleChange}
           >
-            <MenuItem value="" disabled>
-              Select game to win
-            </MenuItem>
             {gamesFormats.map((format) => (
               <MenuItem key={format.value} value={format.value}>
                 {format.label}
@@ -84,8 +90,15 @@ function ParametersStep({
 
       <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
         <FormControl sx={{ width: `${values.isRated ? '100%' : '234px'}` }}>
-          <InputLabel>{t('typeTournament')}</InputLabel>
-          <Select name="isRated" value={values.isRated} onChange={handleChange}>
+          <InputLabel id="is-rated-label">{t('typeTournament')}</InputLabel>
+          <Select
+            id="is-rated"
+            labelId="is-rated-label"
+            label={t('typeTournament')}
+            name="isRated"
+            value={values.isRated}
+            onChange={handleChange}
+          >
             {isRating.map((format) => (
               <MenuItem key={format.value} value={format.value}>
                 {format.label}

@@ -20,15 +20,15 @@ function RestrictionsStep({
   return (
     <>
       <FormControl fullWidth>
-        <InputLabel>{t('ageCategory')}</InputLabel>
+        <InputLabel id="age-category-label">{t('ageCategory')}</InputLabel>
         <Select
+          id="age-category"
+          labelId="age-category-label"
+          label={t('ageCategory')}
           name="ageCategory"
           value={values.ageCategory}
           onChange={handleChange}
         >
-          <MenuItem value="" disabled>
-            Select age category
-          </MenuItem>
           {ageCategories.map((age) => (
             <MenuItem key={age.value} value={age.value}>
               {age.label}
