@@ -4,28 +4,35 @@
   "ageCategory": "Age category",
   "date": "Date",
   "timeStart": "Start time",
-  "timeEnd": "End time",
+  "club": "Club",
   "location": "Location",
   "competitionType": "Type of competition",
   "format": "Format",
   "playersLimit": "Limit of players",
   "gamesToWin": "Number of parties",
-  "pointsPerGame": "Points for the game",
   "typeTournament": "Type tournament",
-  "regular": "Regular",
-  "rating": "Rating",
   "ratingCoefficient": "Rating coefficient",
+  "ratingLimit": "Rating",
+  "gender": "Gender",
+  "all": "All",
+  "men": "Men",
+  "women": "Women",
+  "players": "Players",
+  "playerSearch": "Player search",
   "return": "Return",
   "reset": "Reset",
   "save": "Save",
+  "next": "Next",
+  "back": "Back",
+  "steps": ["General", "Parameters", "Restrictions", "Participants"],
   "ageCategories": [
     { "value": "U12", "label": "Up to 12 years old" },
     { "value": "U14", "label": "Up to 14 years old" },
     { "value": "U16", "label": "Up to 16 years old" },
     { "value": "U18", "label": "Up to 18 years old" },
     { "value": "U21", "label": "Up to 21 years old" },
-    { "value": "adult", "label": "Adults" },
-    { "value": "open", "label": "Open category" }
+    { "value": "Adults", "label": "Adults" },
+    { "value": "Open category", "label": "Open category" }
   ],
   "competitionTypes": [
     { "value": "single", "label": "Single" },
@@ -34,7 +41,6 @@
   ],
   "tournamentFormats": [
     { "value": "single_elimination", "label": "Single Elimination" },
-    { "value": "double_elimination", "label": "Double Elimination" },
     { "value": "swiss_system", "label": "Swiss System" },
     { "value": "round_robin", "label": "Round Robin" },
     { "value": "mixed_system", "label": "Mixed System" }
@@ -43,5 +49,9 @@
     { "value": 3, "label": "Up to 3 parties" },
     { "value": 5, "label": "Up to 5 parties" },
     { "value": 7, "label": "Up to 7 parties" }
+  ],
+  "isRating": [
+    { "value": false, "label": "Regular" },
+    { "value": true, "label": "Rating" }
   ]
 }
