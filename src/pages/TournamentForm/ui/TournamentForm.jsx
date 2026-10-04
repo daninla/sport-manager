@@ -71,31 +71,6 @@ function TournamentForm() {
     setActiveStep((prev) => prev - 1);
   };
 
-  const handleAddPlayer = (value) => {
-    if (!value) return;
-
-    const playerName =
-      typeof value === 'string' ? value.trim() : value.fullName?.trim();
-
-    if (!playerName) return;
-
-    const matchedPlayer = players.find(
-      (player) => player.fullName.toLowerCase() === playerName.toLowerCase(),
-    );
-
-    if (!matchedPlayer) return;
-
-    const alreadyAdded = selectedPlayers.some(
-      (player) => player.id === matchedPlayer.id,
-    );
-
-    if (!alreadyAdded) {
-      setSelectedPlayers((prev) => [...prev, matchedPlayer]);
-    }
-
-    setSearchValue('');
-  };
-
   const mapCompetitionType = (type) => {
     switch (type) {
       case 'team':
