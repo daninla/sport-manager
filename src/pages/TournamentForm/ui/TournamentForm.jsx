@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -15,6 +16,8 @@ import {
   Typography,
 } from '@mui/material';
 import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 import { Form, Formik } from 'formik';
 
 import { useGetClubsQuery } from '@/entities/club/api/clubApi';
@@ -26,6 +29,9 @@ import GeneralStep from './steps/GeneralStep';
 import ParametersStep from './steps/ParametersStep';
 import ParticipantsStep from './steps/ParticipantsStep';
 import RestrictionsStep from './steps/RestrictionsStep';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 function TournamentForm() {
   const navigate = useNavigate();
@@ -95,38 +101,47 @@ function TournamentForm() {
     }
   };
 
-  const mapMatchFormat = (gamesToWin) => {
-    const games = Number(gamesToWin) || 3;
-    return `Best of ${games}`;
-  };
-
   const handleSubmit = async (values) => {
-    if (selectedPlayers.length === 0) {
-      return;
-    }
+    const addPromise = (async () => {
+      const playerIds = selectedPlayers.map((player) => Number(player.id));
 
-    const playerIds = selectedPlayers.map((player) => Number(player.id));
+      const startsAt = dayjs.tz(
+        `${values.date}T${values.timeStart}:00`,
+        'Europe/Kyiv',
+      );
 
-    const tournamentPayload = {
-      name: values.name,
-      ageCategory: values.ageCategory,
-      date: values.date,
-      timeStart: values.timeStart,
-      clubId: values.clubId,
-      location: values.location,
-      players: playerIds,
-      competitionType: mapCompetitionType(values.tournamentType),
-      bracketFormat: mapBracketFormat(values.format),
-      matchFormat: mapMatchFormat(values.gamesToWin),
-      pointsPerGame: 11,
-      maxParticipants: Number(values.playersLimit) || playerIds.length,
-      currentParticipants: playerIds.length,
-      status: 'Upcoming',
-    };
+      const tournamentPayload = {
+        name: values.name,
+        startsAt,
+        clubId: values.clubId,
+        location: values.location,
+        tablesCount: values.tablesCount,
+        competitionType: mapCompetitionType(values.tournamentType),
+        bracketFormat: mapBracketFormat(values.format),
+        matchFormat: Number(values.gamesToWin) || 3,
+        maxParticipants: Number(values.playersLimit),
+        isRated: values.isRated,
+        ratingCoefficient: values.ratingCoefficient,
+        ageCategory: values.ageCategory,
+        ratingLimit: values.ratingLimit || null,
+        gender: values.gender,
+        players: playerIds,
+        currentParticipants: playerIds.length,
+        status: 'Upcoming',
+      };
 
-    await createTournament(tournamentPayload).unwrap();
+      const newTournament = await createTournament(tournamentPayload).unwrap();
 
-    navigate('/tournaments');
+      navigate('/tournaments');
+
+      return newTournament;
+    })();
+
+    return toast.promise(addPromise, {
+      loading: t('addLoading'),
+      success: t('addSuccess'),
+      error: (err) => `${t('error')}: ${err?.message}`,
+    });
   };
 
   const renderForm = ({ values, handleChange, handleBlur, setFieldValue }) => {
@@ -224,6 +239,7 @@ function TournamentForm() {
           )}
           {activeStep < steps.length - 1 ? (
             <Button
+              key="next"
               type="button"
               color="secondary"
               variant="contained"
@@ -235,12 +251,13 @@ function TournamentForm() {
             </Button>
           ) : (
             <Button
+              key="submit"
               type="submit"
               color="secondary"
               variant="contained"
               size="large"
               startIcon={<SaveIcon />}
-              disabled={isTournamentCreating || selectedPlayers.length === 0}
+              disabled={isTournamentCreating}
             >
               {t('save')}
             </Button>

@@ -97,6 +97,16 @@ function GeneralStep({
         onChange={handleChange}
         onBlur={handleBlur}
       />
+
+      <TextField
+        type="number"
+        label={t('tablesCount')}
+        variant="outlined"
+        name="tablesCount"
+        value={values.tablesCount}
+        onChange={handleChange}
+        onBlur={handleBlur}
+      />
     </>
   );
 }

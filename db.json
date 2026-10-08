@@ -2249,6 +2249,25 @@
       "currentParticipants": 3,
       "status": "Upcoming",
       "id": "BO1nAzTdAcc"
+    },
+    {
+      "name": "Test tournament",
+      "ageCategory": "Adults",
+      "date": "2026-10-07",
+      "timeStart": "16:35",
+      "clubId": "1",
+      "location": "Kyiv, 15 Sportivna Street",
+      "players": [
+        1
+      ],
+      "competitionType": "Single",
+      "bracketFormat": "Single Elimination",
+      "matchFormat": "Best of 3",
+      "pointsPerGame": 11,
+      "maxParticipants": 16,
+      "currentParticipants": 1,
+      "status": "Upcoming",
+      "id": "nwG4mXxTnEk"
     }
   ],
   "matches": [

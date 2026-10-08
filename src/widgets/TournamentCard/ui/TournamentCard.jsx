@@ -156,7 +156,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
           }}
         />
         <Typography sx={{ color: '#8892b0', fontSize: '0.85rem' }}>
-          {tournament.matchFormat}
+          {`Best of ${tournament.bestOf}`}
         </Typography>
       </Box>
 
