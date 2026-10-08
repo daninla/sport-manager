@@ -29,10 +29,10 @@ export const tournamentApi = baseApi.injectEndpoints({
     }),
 
     updateTournament: builder.mutation({
-      query: ({ id, ...patch }) => ({
+      query: ({ id, ...body }) => ({
         url: `tournaments/${id}`,
-        method: 'PATCH',
-        body: patch,
+        method: 'PUT',
+        body,
       }),
       invalidatesTags: (result, error, { id }) => [
         { type: 'Tournament', id },

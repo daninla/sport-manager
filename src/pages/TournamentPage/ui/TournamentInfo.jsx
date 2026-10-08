@@ -63,8 +63,8 @@ function TournamentInfo({ tournament, t }) {
         {tournament.isRated && (
           <>
             <Typography>
-              <span style={{ fontWeight: 'bold' }}>{t('ratingCoeff')}</span>
-              {tournament.ratingCoeff}
+              <span style={{ fontWeight: 'bold' }}>{t('ratingCoefficient')}</span>
+              {tournament.ratingCoefficient}
             </Typography>
           </>
         )}

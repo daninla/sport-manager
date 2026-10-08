@@ -13,7 +13,7 @@
   "matchFormat": "Формат матчів:",
   "pointsPerGame": "Очки за гру:",
   "gender": "Стать:",
-  "ratingCoeff": "Рейтинговий коефіцієнт:",
+  "ratingCoefficient": "Рейтинговий коефіцієнт:",
   "participants": "Учасники:",
   "matches": "Матчі ({{count}}):",
   "status": "Статус:",

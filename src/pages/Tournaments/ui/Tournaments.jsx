@@ -59,7 +59,7 @@ function TournamentsPage() {
                 key={tournament.id}
                 tournament={tournament}
                 onOpen={(id) => navigate(`/tournaments/${id}`)}
-                onEdit={(id) => navigate(`/tournaments/${id}/edit`)}
+                onEdit={(id) => navigate(`/tournaments/edit/${id}`)}
               />
             ))}
           </Box>

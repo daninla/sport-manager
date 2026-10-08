@@ -5,12 +5,13 @@ import { PlayerForm } from '@/pages/PlayerForm';
 import { Players } from '@/pages/Players';
 import { Tournaments } from '@/pages/Tournaments';
 import { Account } from '../pages/Account';
+import { Login, Register } from '../pages/Auth';
 import { Club } from '../pages/Club';
 import { ClubAddPage } from '../pages/ClubAdd';
 import { ClubEditPage } from '../pages/ClubEdit';
 import { Clubs } from '../pages/Clubs';
-import { Login, Register } from '../pages/Auth';
-import { TournamentForm } from '../pages/TournamentForm';
+import { TournamentAddPage } from '../pages/TournamentAdd';
+import { TournamentEditPage } from '../pages/TournamentEdit';
 import TournamentPage from '../pages/TournamentPage';
 import { TournamentParticipants } from '../pages/TournamentParticipants';
 import { TournamentPlayoff } from '../pages/TournamentPlayOff';
@@ -36,7 +37,8 @@ function App() {
           <Route path="edit/:id" element={<ClubEditPage />} />
         </Route>
         <Route path="/tournaments" element={<Tournaments />} />
-        <Route path="/tournaments/add" element={<TournamentForm />} />
+        <Route path="/tournaments/add" element={<TournamentAddPage />} />
+        <Route path="/tournaments/edit/:id" element={<TournamentEditPage />} />
         <Route path="/tournaments/:id/*" element={<TournamentPage />} />
         <Route
           path="/tournaments/:id/participants"

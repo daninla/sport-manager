@@ -1,7 +1,10 @@
 {
-  "heading": "Додати новий турнір",
+  "addHeading": "Додати новий турнір",
+  "editHeading": "Редагувати турнір",
   "addLoading": "Додавання турніру...",
   "addSuccess": "Турнір додано",
+  "editLoading": "Оновлення турніру...",
+  "editSuccess": "Турнір оновлено",
   "error": "Помилка",
   "name": "Назва",
   "ageCategory": "Вікова категорія",
@@ -23,12 +26,19 @@
   "women": "Жінки",
   "players": "Гравці",
   "playerSearch": "Пошук гравця",
+  "noPlayersFound": "Гравців не знайдено",
   "return": "Повернутися",
   "reset": "Скинути",
   "save": "Зберегти",
   "next": "Далі",
   "back": "Назад",
   "steps": ["Загальні", "Параметри", "Обмеження", "Учасники"],
+  "statusLabel": "Статус",
+  "status": [
+    {"value": "Upcoming", "label": "Майбутний"},
+    {"value": "Ongoing", "label": "Поточний"},
+    {"value": "Completed", "label": "Завершений"}
+  ],
   "ageCategories": [
     { "value": "U12", "label": "До 12 років" },
     { "value": "U14", "label": "До 14 років" },

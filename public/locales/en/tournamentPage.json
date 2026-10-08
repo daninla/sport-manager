@@ -13,7 +13,7 @@
   "matchFormat": "Match Format:",
   "pointsPerGame": "Points for the game:",
   "gender": "Gender:",
-  "ratingCoeff": "Rating coefficient:",
+  "ratingCoefficient": "Rating coefficient:",
   "participants": "Participants:",
   "matches": "Matches ({{count}}):",
   "status": "Status:",

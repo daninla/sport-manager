@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CancelIcon from '@mui/icons-material/Cancel';
@@ -22,8 +22,9 @@ import { Form, Formik } from 'formik';
 
 import { useGetClubsQuery } from '@/entities/club/api/clubApi';
 import { useGetPlayersQuery } from '@/entities/player';
-import { useCreateTournamentMutation } from '@/entities/tournament';
-import { initialValues } from '../model/initialValues';
+import { useUpdateTournamentMutation } from '@/entities/tournament';
+import { useGetTournamentByIdQuery } from '../../../entities/tournament';
+import { defaultValues } from '../model/defaultValues';
 
 import GeneralStep from './steps/GeneralStep';
 import ParametersStep from './steps/ParametersStep';
@@ -33,14 +34,37 @@ import RestrictionsStep from './steps/RestrictionsStep';
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-function TournamentForm() {
+function TournamentEditPage() {
   const navigate = useNavigate();
+  const { id } = useParams();
   const { t } = useTranslation('tournamentForm');
   const [activeStep, setActiveStep] = useState(0);
   const [selectedPlayers, setSelectedPlayers] = useState([]);
   const [searchValue, setSearchValue] = useState('');
-  const [createTournament, { isLoading: isTournamentCreating }] =
-    useCreateTournamentMutation();
+
+  const { data: tournament = {} } = useGetTournamentByIdQuery(id);
+
+  const tournamentStart = tournament.startsAt
+    ? dayjs(tournament.startsAt).tz('Europe/Kyiv')
+    : null;
+
+  const tournamentType = tournament.competitionType?.toLowerCase();
+
+  const tournamentFormat = tournament.bracketFormat?.toLowerCase().replaceAll(' ', '_');
+
+  const initialValues = {
+    ...defaultValues,
+    ...tournament,
+    date: tournamentStart?.format('YYYY-MM-DD') ?? defaultValues.date,
+    timeStart: tournamentStart?.format('HH:mm') ?? defaultValues.timeStart,
+    tournamentType: tournamentType ?? defaultValues.tournamentType,
+    format: tournamentFormat ?? defaultValues.format,
+    gamesToWin: tournament.matchFormat ?? defaultValues.gamesToWin,
+    playersLimit: tournament.maxParticipants ?? defaultValues.playersLimit,
+  };
+
+  const [updateTournament, { isLoading: isTournamentUpdating }] =
+    useUpdateTournamentMutation();
 
   const { data: clubs = [] } = useGetClubsQuery();
 
@@ -63,6 +87,7 @@ function TournamentForm() {
   };
 
   const steps = t('steps', { returnObjects: true });
+  const status = t('status', { returnObjects: true });
   const ageCategories = t('ageCategories', { returnObjects: true });
   const competitionTypes = t('competitionTypes', { returnObjects: true });
   const tournamentFormats = t('tournamentFormats', { returnObjects: true });
@@ -127,19 +152,22 @@ function TournamentForm() {
         gender: values.gender,
         players: playerIds,
         currentParticipants: playerIds.length,
-        status: 'Upcoming',
+        status: values.status,
       };
 
-      const newTournament = await createTournament(tournamentPayload).unwrap();
+      const updatedTournament = await updateTournament({
+        id,
+        ...tournamentPayload,
+      }).unwrap();
 
       navigate('/tournaments');
 
-      return newTournament;
+      return updatedTournament;
     })();
 
     return toast.promise(addPromise, {
-      loading: t('addLoading'),
-      success: t('addSuccess'),
+      loading: t('editLoading'),
+      success: t('editSuccess'),
       error: (err) => `${t('error')}: ${err?.message}`,
     });
   };
@@ -163,6 +191,7 @@ function TournamentForm() {
               t={t}
               dayjs={dayjs}
               clubs={clubs}
+              status={status}
               values={values}
               handleChange={handleChange}
               handleBlur={handleBlur}
@@ -257,7 +286,7 @@ function TournamentForm() {
               variant="contained"
               size="large"
               startIcon={<SaveIcon />}
-              disabled={isTournamentCreating}
+              disabled={isTournamentUpdating}
             >
               {t('save')}
             </Button>
@@ -299,7 +328,7 @@ function TournamentForm() {
         }}
       >
         <Typography variant="h4" align="center" sx={{ mb: '30px' }}>
-          {t('heading')}
+          {t('editHeading')}
         </Typography>
 
         <Formik
@@ -314,4 +343,4 @@ function TournamentForm() {
   );
 }
 
-export default TournamentForm;
+export default TournamentEditPage;

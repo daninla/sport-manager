@@ -153,7 +153,7 @@ function ParticipantsStep({
                 ) : (
                   <TableRow>
                     <TableCell colSpan={columnsPlayer.length} align="center">
-                      No players found
+                      {t('noPlayersFound')}
                     </TableCell>
                   </TableRow>
                 )}

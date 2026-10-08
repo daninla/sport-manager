@@ -1,7 +1,10 @@
 {
-  "heading": "Add New Tournament",
+  "addHeading": "Add New Tournament",
+  "editHeading": "Edit Tournament",
   "addLoading": "Adding tournament...",
   "addSuccess": "Tournament added",
+  "editLoading": "Updating tournament...",
+  "editSuccess": "Tournament updated",
   "error": "Error",
   "name": "Name",
   "ageCategory": "Age category",
@@ -23,12 +26,19 @@
   "women": "Women",
   "players": "Players",
   "playerSearch": "Player search",
+  "noPlayersFound": "No players found",
   "return": "Return",
   "reset": "Reset",
   "save": "Save",
   "next": "Next",
   "back": "Back",
   "steps": ["General", "Parameters", "Restrictions", "Participants"],
+  "statusLabel": "Status",
+  "status": [
+    {"value": "Upcoming", "label": "Upcoming"},
+    {"value": "Ongoing", "label": "Ongoing"},
+    {"value": "Completed", "label": "Completed"}
+  ],
   "ageCategories": [
     { "value": "U12", "label": "Up to 12 years old" },
     { "value": "U14", "label": "Up to 14 years old" },

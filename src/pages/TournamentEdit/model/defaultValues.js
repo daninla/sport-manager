@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-export const initialValues = {
+export const defaultValues = {
   name: '',
   date: dayjs().format('YYYY-MM-DD'),
   timeStart: dayjs().format('HH:mm'),
@@ -13,7 +13,7 @@ export const initialValues = {
   gamesToWin: 3,
   isRated: false,
   ratingCoefficient: 0,
-  status: 'draft',
+  status: 'Upcoming',
   ageCategory: '',
   ratingLimit: '',
   gender: 'all',
