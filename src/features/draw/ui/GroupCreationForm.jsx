@@ -9,7 +9,10 @@ import {
   Typography,
 } from '@mui/material';
 
-import { useCreateGroupMutation } from '@/entities/group';
+import {
+  useCreateGroupMutation,
+  useUpdateGroupMutation,
+} from '@/entities/group';
 import {
   addPlayersToGroupManually,
   addPlayersToGroupRandomly,
@@ -19,19 +22,33 @@ export const GroupCreationForm = ({
   tournamentId,
   tournamentPlayers,
   groups,
+  editingGroup,
+  onCancelEdit,
 }) => {
-  const [name, setName] = useState('');
-  const [capacity, setCapacity] = useState(4);
-  const [manualMode, setManualMode] = useState(false);
-  const [selectedPlayers, setSelectedPlayers] = useState([]);
+  const [name, setName] = useState(() => editingGroup?.name || '');
+  const [capacity, setCapacity] = useState(
+    () => Number(editingGroup?.capacity) || 1,
+  );
+  const [manualMode, setManualMode] = useState(Boolean(editingGroup));
+  const [selectedPlayers, setSelectedPlayers] = useState(() => {
+    const playerIds = new Set((editingGroup?.playerIds || []).map(String));
+    return tournamentPlayers.filter((player) =>
+      playerIds.has(String(player.id)),
+    );
+  });
   const [createGroup, { isLoading: isCreating, error: createError }] =
     useCreateGroupMutation();
+  const [updateGroup, { isLoading: isUpdating, error: updateError }] =
+    useUpdateGroupMutation();
 
   const assignedPlayerIds = new Set(
     groups.flatMap((group) => group.playerIds || []).map(String),
   );
+  const editingPlayerIds = new Set((editingGroup?.playerIds || []).map(String));
   const availablePlayers = tournamentPlayers.filter(
-    (player) => !assignedPlayerIds.has(String(player.id)),
+    (player) =>
+      !assignedPlayerIds.has(String(player.id)) ||
+      editingPlayerIds.has(String(player.id)),
   );
 
   const resetForm = () => {
@@ -62,22 +79,42 @@ export const GroupCreationForm = ({
     if (created) resetForm();
   };
 
+  const handleUpdate = () => {
+    if (!editingGroup) return;
+
+    return updateGroup({
+      id: editingGroup.id,
+      tournamentId: String(tournamentId),
+      name: name.trim(),
+      capacity: Number(capacity),
+      playerIds: selectedPlayers.map((player) => player.id),
+    })
+      .unwrap()
+      .then(onCancelEdit, () => undefined);
+  };
+
   return (
     <Paper
       component="form"
       variant="outlined"
+      data-group-editor
       onSubmit={(event) => {
         event.preventDefault();
-        handleManualCreate();
+        if (editingGroup) {
+          handleUpdate();
+        } else if (manualMode) {
+          handleManualCreate();
+        }
       }}
       sx={{ p: 3 }}
     >
       <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
-        Создать группу
+        {editingGroup ? 'Изменить группу' : 'Создать группу'}
       </Typography>
       <TextField
         fullWidth
         required
+        disabled={isUpdating}
         label="Название группы"
         value={name}
         onChange={(event) => setName(event.target.value)}
@@ -87,19 +124,20 @@ export const GroupCreationForm = ({
         fullWidth
         required
         type="number"
+        disabled={isUpdating}
         label="Игроков в группе"
         value={capacity}
-        onChange={(event) => {
-          setCapacity(Math.max(1, Number(event.target.value)));
-          setSelectedPlayers([]);
-        }}
+        onChange={(event) =>
+          setCapacity(Math.max(1, Number(event.target.value)))
+        }
         slotProps={{
           htmlInput: { min: 1, max: tournamentPlayers.length },
         }}
         sx={{ mb: 2 }}
       />
       <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-        Свободно игроков: {availablePlayers.length}
+        {editingGroup ? 'Доступно игроков для группы' : 'Свободно игроков'}:{' '}
+        {availablePlayers.length}
       </Typography>
 
       {/* Вручную можно выбрать только свободных игроков и не больше лимита. */}
@@ -107,6 +145,7 @@ export const GroupCreationForm = ({
         <Autocomplete
           multiple
           disableCloseOnSelect
+          disabled={isUpdating}
           options={availablePlayers}
           value={selectedPlayers}
           onChange={(_, players) =>
@@ -128,9 +167,14 @@ export const GroupCreationForm = ({
         />
       )}
 
-      {createError && (
+      {createError && !editingGroup && (
         <Alert severity="error" sx={{ mb: 2 }}>
           Не удалось создать группу. Попробуйте еще раз.
+        </Alert>
+      )}
+      {updateError && (
+        <Alert severity="error" sx={{ mb: 2 }}>
+          Не удалось изменить группу. Попробуйте еще раз.
         </Alert>
       )}
       {availablePlayers.length < Number(capacity) && (

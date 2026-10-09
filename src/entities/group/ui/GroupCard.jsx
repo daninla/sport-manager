@@ -9,11 +9,27 @@ import {
   Typography,
 } from '@mui/material';
 
-export const GroupCard = ({ title, players = [] }) => {
+export const GroupCard = ({
+  title,
+  players = [],
+  onDoubleClick,
+  disabled = false,
+  isEditing = false,
+}) => {
   return (
     <Card
       variant="outlined"
-      sx={{ minWidth: 230, borderRadius: 2, border: '1px solid #a7a4a4' }}
+      onDoubleClick={disabled ? undefined : onDoubleClick}
+      aria-disabled={disabled}
+      sx={{
+        minWidth: 230,
+        borderRadius: 2,
+        border: isEditing ? '2px solid' : '1px solid #a7a4a4',
+        borderColor: isEditing ? 'primary.main' : undefined,
+        opacity: disabled && !isEditing ? 0.55 : 1,
+        pointerEvents: disabled ? 'none' : 'auto',
+        cursor: disabled ? 'default' : 'pointer',
+      }}
     >
       <CardContent sx={{ '&:last-child': { pb: 2 } }}>
         <Typography

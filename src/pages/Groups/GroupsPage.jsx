@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   Alert,
@@ -17,6 +18,7 @@ import { GroupCard } from '@/entities/group/ui/GroupCard';
 
 const GroupsPage = () => {
   const { id: tournamentId } = useParams();
+  const [editingGroup, setEditingGroup] = useState(null);
   const {
     data: tournamentPlayers = [],
     isLoading,
@@ -27,7 +29,7 @@ const GroupsPage = () => {
     isLoading: isGroupsLoading,
     isError: isGroupsError,
   } = useGetGroupsByTournamentIdQuery(tournamentId);
-
+  
   if (isLoading) {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
@@ -49,6 +51,14 @@ const GroupsPage = () => {
   return (
     <Container
       maxWidth="lg"
+      onClick={(event) => {
+        if (
+          editingGroup &&
+          !event.target.closest?.('[data-group-card], [data-group-editor]')
+        ) {
+          setEditingGroup(null);
+        }
+      }}
       sx={{ py: 4, width: { xs: '100%', md: '85%' }, ml: 0, mr: 'auto' }}
     >
       <Typography variant="h4" component="h1" sx={{ fontWeight: 700, mb: 1 }}>
@@ -84,8 +94,18 @@ const GroupsPage = () => {
                   groupPlayerIds.has(String(player.id)),
                 );
                 return (
-                  <Grid key={group.id} size={{ xs: 12, sm: 6, lg: 4 }}>
-                    <GroupCard title={group.name} players={groupPlayers} />
+                  <Grid
+                    key={group.id}
+                    size={{ xs: 12, sm: 6, lg: 4 }}
+                    data-group-card
+                  >
+                    <GroupCard
+                      title={group.name}
+                      players={groupPlayers}
+                      onDoubleClick={() => setEditingGroup(group)}
+                      disabled={Boolean(editingGroup)}
+                      isEditing={String(editingGroup?.id) === String(group.id)}
+                    />
                   </Grid>
                 );
               })}
@@ -100,9 +120,12 @@ const GroupsPage = () => {
         </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
           <GroupCreationForm
+            key={editingGroup ? `edit-${editingGroup.id}` : 'create'}
             tournamentId={tournamentId}
             tournamentPlayers={tournamentPlayers}
             groups={groups}
+            editingGroup={editingGroup}
+            onCancelEdit={() => setEditingGroup(null)}
           />
         </Grid>
       </Grid>

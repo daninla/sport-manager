@@ -2275,14 +2275,14 @@
     },
     {
       "tournamentId": "4",
-      "name": "B",
+      "name": "B1",
       "playerIds": [
-        "45",
-        "46",
         "39",
-        "43"
+        "43",
+        "46"
       ],
-      "id": "VF1YYmyzoBQ"
+      "id": "VF1YYmyzoBQ",
+      "capacity": 3
     },
     {
       "tournamentId": "4",
