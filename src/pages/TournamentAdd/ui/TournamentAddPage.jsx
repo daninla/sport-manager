@@ -100,7 +100,8 @@ function TournamentAddPage() {
     return toast.promise(addPromise, {
       loading: t('addLoading'),
       success: t('addSuccess'),
-      error: (err) => `${t('error')}: ${err?.message}`,
+      error: (err) =>
+        `${t('error')}: ${err?.data?.error || err?.error || err?.message || ''}`,
     });
   };
 
