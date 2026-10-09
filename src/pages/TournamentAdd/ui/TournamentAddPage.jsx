@@ -66,7 +66,7 @@ function TournamentAddPage() {
   const ageCategories = t('ageCategories', { returnObjects: true });
   const competitionTypes = t('competitionTypes', { returnObjects: true });
   const tournamentFormats = t('tournamentFormats', { returnObjects: true });
-  const gamesFormats = t('gamesFormats', { returnObjects: true });
+  const bestOf = t('bestOf', { returnObjects: true });
   const isRating = t('isRating', { returnObjects: true });
 
   const handleNext = () => {
@@ -75,30 +75,6 @@ function TournamentAddPage() {
 
   const handleBack = () => {
     setActiveStep((prev) => prev - 1);
-  };
-
-  const mapCompetitionType = (type) => {
-    switch (type) {
-      case 'team':
-        return 'Team';
-      case 'double':
-        return 'Double';
-      case 'single':
-      default:
-        return 'Single';
-    }
-  };
-
-  const mapBracketFormat = (format) => {
-    switch (format) {
-      case 'round_robin':
-        return 'Round Robin';
-      case 'swiss':
-        return 'Swiss System';
-      case 'single_elimination':
-      default:
-        return 'Single Elimination';
-    }
   };
 
   const handleSubmit = async (values) => {
@@ -110,27 +86,11 @@ function TournamentAddPage() {
         'Europe/Kyiv',
       );
 
-      const tournamentPayload = {
-        name: values.name,
+      const newTournament = await createTournament({
+        playerIds,
         startsAt,
-        clubId: values.clubId,
-        location: values.location,
-        tablesCount: values.tablesCount,
-        competitionType: mapCompetitionType(values.tournamentType),
-        bracketFormat: mapBracketFormat(values.format),
-        matchFormat: Number(values.gamesToWin) || 3,
-        maxParticipants: Number(values.playersLimit),
-        isRated: values.isRated,
-        ratingCoefficient: values.ratingCoefficient,
-        ageCategory: values.ageCategory,
-        ratingLimit: values.ratingLimit || null,
-        gender: values.gender,
-        players: playerIds,
-        currentParticipants: playerIds.length,
-        status: values.status,
-      };
-
-      const newTournament = await createTournament(tournamentPayload).unwrap();
+        ...values,
+      }).unwrap();
 
       navigate('/tournaments');
 
@@ -175,7 +135,7 @@ function TournamentAddPage() {
               t={t}
               competitionTypes={competitionTypes}
               tournamentFormats={tournamentFormats}
-              gamesFormats={gamesFormats}
+              bestOf={bestOf}
               isRating={isRating}
               values={values}
               handleChange={handleChange}

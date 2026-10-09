@@ -15,8 +15,8 @@
   "tablesCount": "Кількість столів",
   "competitionType": "Тип змагання",
   "format": "Формат",
-  "playersLimit": "Ліміт гравців",
-  "gamesToWin": "Кількість партій",
+  "maxParticipants": "Ліміт гравців",
+  "bestOfLabel": "Кількість партій",
   "typeTournament": "Тип турніру",
   "ratingCoefficient": "Коефіцієнт рейтингу",
   "ratingLimit": "Рейтинг",
@@ -59,7 +59,7 @@
     { "value": "round_robin", "label": "Кожен з кожним" },
     { "value": "mixed_system", "label": "Змішана система" }
   ],
-  "gamesFormats": [
+  "bestOf": [
     { "value": 3, "label": "До 3 партій" },
     { "value": 5, "label": "До 5 партій" },
     { "value": 7, "label": "До 7 партій" }

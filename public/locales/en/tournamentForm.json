@@ -15,8 +15,8 @@
   "tablesCount": "Table count",
   "competitionType": "Type of competition",
   "format": "Format",
-  "playersLimit": "Limit of players",
-  "gamesToWin": "Number of parties",
+  "maxParticipants": "Limit of players",
+  "bestOfLabel": "Number of parties",
   "typeTournament": "Type tournament",
   "ratingCoefficient": "Rating coefficient",
   "ratingLimit": "Rating",
@@ -59,7 +59,7 @@
     { "value": "round_robin", "label": "Round Robin" },
     { "value": "mixed_system", "label": "Mixed System" }
   ],
-  "gamesFormats": [
+  "bestOf": [
     { "value": 3, "label": "Up to 3 parties" },
     { "value": 5, "label": "Up to 5 parties" },
     { "value": 7, "label": "Up to 7 parties" }

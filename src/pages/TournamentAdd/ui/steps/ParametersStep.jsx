@@ -11,7 +11,7 @@ function ParametersStep({
   t,
   competitionTypes,
   tournamentFormats,
-  gamesFormats,
+  bestOf,
   isRating,
   values,
   handleChange,
@@ -60,16 +60,16 @@ function ParametersStep({
 
       <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
         <FormControl fullWidth>
-          <InputLabel id="games-to-win-label">{t('gamesToWin')}</InputLabel>
+          <InputLabel id="bestOf-label">{t('bestOfLabel')}</InputLabel>
           <Select
-            id="games-to-win"
-            labelId="games-to-win-label"
-            label={t('gamesToWin')}
-            name="gamesToWin"
-            value={values.gamesToWin}
+            id="bestOf-win"
+            labelId="bestOf-label"
+            label={t('bestOfLabel')}
+            name="bestOf"
+            value={values.bestOf}
             onChange={handleChange}
           >
-            {gamesFormats.map((format) => (
+            {bestOf.map((format) => (
               <MenuItem key={format.value} value={format.value}>
                 {format.label}
               </MenuItem>
@@ -79,10 +79,10 @@ function ParametersStep({
         <TextField
           fullWidth
           type="number"
-          label={t('playersLimit')}
+          label={t('maxParticipants')}
           variant="outlined"
-          name="playersLimit"
-          value={values.playersLimit}
+          name="maxParticipants"
+          value={values.maxParticipants}
           onChange={handleChange}
           onBlur={handleBlur}
         />
