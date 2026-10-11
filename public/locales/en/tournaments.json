@@ -3,6 +3,7 @@
   "error": "Error loading tournaments",
   "matchCount": "There are {{count}} tournaments matching your filter",
   "addTournament": "Add new Tournament",
+  "edit": "Edit",
   "delete": "Delete",
   "deleting": "Deleting..."
 }

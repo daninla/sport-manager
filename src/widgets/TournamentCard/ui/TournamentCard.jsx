@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import tennisIcon from '../../Header/iconAssets/icons/ping-pong.png';
 import { DeleteTournamentButton } from '@/features/delete-tournament';
 import EditIcon from '@mui/icons-material/Edit';
@@ -21,6 +22,7 @@ import { useEnrichedMatches } from '../../../entities/match/model/useEnrichedMat
 import MatchStatusBage from '../../../shared/ui/MatchStatusBage/MatchStatusBage';
 
 export function TournamentCard({ tournament, onOpen, onEdit }) {
+  const { t } = useTranslation('tournaments');
   const tournamentId = String(tournament?.id || '');
 
   const { matches, isLoading } = useEnrichedMatches(tournamentId);
@@ -119,7 +121,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
             >
               <EditIcon fontSize="small" />
             </ListItemIcon>
-            <ListItemText primary="Edit" />
+            <ListItemText primary={t('edit')} />
           </MenuItem>
 
           <DeleteTournamentButton

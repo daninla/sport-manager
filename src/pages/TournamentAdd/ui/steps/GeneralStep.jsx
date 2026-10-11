@@ -1,11 +1,4 @@
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  Stack,
-  TextField,
-} from '@mui/material';
+import { Stack, TextField } from '@mui/material';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -14,7 +7,6 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 function GeneralStep({
   t,
   dayjs,
-  clubs,
   values,
   handleChange,
   handleBlur,
@@ -62,31 +54,6 @@ function GeneralStep({
           />
         </Stack>
       </LocalizationProvider>
-
-      <FormControl fullWidth>
-        <InputLabel>{t('club')}</InputLabel>
-        <Select
-          name="clubId"
-          value={values.clubId}
-          onChange={(event) => {
-            const selectedClub = clubs.find(
-              (club) => club.id === event.target.value,
-            );
-
-            setFieldValue('clubId', event.target.value);
-            setFieldValue('location', selectedClub?.address ?? '');
-          }}
-        >
-          <MenuItem value="" disabled>
-            Select club
-          </MenuItem>
-          {clubs.map((club) => (
-            <MenuItem key={club.id} value={club.id}>
-              {club.title}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
 
       <TextField
         fullWidth

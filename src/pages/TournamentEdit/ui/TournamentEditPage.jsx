@@ -20,7 +20,6 @@ import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 import { Form, Formik } from 'formik';
 
-import { useGetClubsQuery } from '@/entities/club/api/clubApi';
 import { useGetPlayersQuery } from '@/entities/player';
 import { useUpdateTournamentMutation } from '@/entities/tournament';
 import { useGetTournamentByIdQuery } from '../../../entities/tournament';
@@ -65,8 +64,6 @@ function TournamentEditPage() {
 
   const [updateTournament, { isLoading: isTournamentUpdating }] =
     useUpdateTournamentMutation();
-
-  const { data: clubs = [] } = useGetClubsQuery();
 
   const {
     data: players = [],
@@ -148,7 +145,6 @@ function TournamentEditPage() {
             <GeneralStep
               t={t}
               dayjs={dayjs}
-              clubs={clubs}
               status={status}
               values={values}
               handleChange={handleChange}

@@ -14,7 +14,6 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 function GeneralStep({
   t,
   dayjs,
-  clubs,
   status,
   values,
   handleChange,
@@ -63,31 +62,6 @@ function GeneralStep({
           />
         </Stack>
       </LocalizationProvider>
-
-      <FormControl fullWidth>
-        <InputLabel>{t('club')}</InputLabel>
-        <Select
-          name="clubId"
-          value={values.clubId}
-          onChange={(event) => {
-            const selectedClub = clubs.find(
-              (club) => club.id === event.target.value,
-            );
-
-            setFieldValue('clubId', event.target.value);
-            setFieldValue('location', selectedClub?.address ?? '');
-          }}
-        >
-          <MenuItem value="" disabled>
-            Select club
-          </MenuItem>
-          {clubs.map((club) => (
-            <MenuItem key={club.id} value={club.id}>
-              {club.title}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
 
       <TextField
         fullWidth

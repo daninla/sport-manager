@@ -5,7 +5,6 @@ export const initialValues = {
   date: dayjs().format('YYYY-MM-DD'),
   timeStart: dayjs().format('HH:mm'),
   location: '',
-  clubId: '',
   tablesCount: 4,
   maxParticipants: 16,
   tournamentType: 'single',
