@@ -11,17 +11,15 @@ import {
 
 import {
   useCreateGroupMutation,
+  useCreateRandomGroupMutation,
   useUpdateGroupMutation,
 } from '@/entities/group';
-import {
-  addPlayersToGroupManually,
-  addPlayersToGroupRandomly,
-} from '../model/groupCreation';
+import { addPlayersToGroupManually } from '../model/groupCreation';
 
 export const GroupCreationForm = ({
   tournamentId,
   tournamentPlayers,
-  groups,
+  availablePlayers,
   editingGroup,
   onCancelEdit,
 }) => {
@@ -31,25 +29,16 @@ export const GroupCreationForm = ({
   );
   const [manualMode, setManualMode] = useState(Boolean(editingGroup));
   const [selectedPlayers, setSelectedPlayers] = useState(() => {
-    const playerIds = new Set((editingGroup?.playerIds || []).map(String));
-    return tournamentPlayers.filter((player) =>
-      playerIds.has(String(player.id)),
-    );
+    return editingGroup?.players || [];
   });
   const [createGroup, { isLoading: isCreating, error: createError }] =
     useCreateGroupMutation();
+  const [
+    createRandomGroup,
+    { isLoading: isCreatingRandom, error: randomError },
+  ] = useCreateRandomGroupMutation();
   const [updateGroup, { isLoading: isUpdating, error: updateError }] =
     useUpdateGroupMutation();
-
-  const assignedPlayerIds = new Set(
-    groups.flatMap((group) => group.playerIds || []).map(String),
-  );
-  const editingPlayerIds = new Set((editingGroup?.playerIds || []).map(String));
-  const availablePlayers = tournamentPlayers.filter(
-    (player) =>
-      !assignedPlayerIds.has(String(player.id)) ||
-      editingPlayerIds.has(String(player.id)),
-  );
 
   const resetForm = () => {
     setName('');
@@ -68,16 +57,14 @@ export const GroupCreationForm = ({
     if (created) resetForm();
   };
 
-  const handleRandomCreate = async () => {
-    const created = await addPlayersToGroupRandomly({
-      tournamentId,
-      name,
-      capacity,
-      availablePlayers,
-      createGroup,
-    });
-    if (created) resetForm();
-  };
+  const handleRandomCreate = () =>
+    createRandomGroup({
+      tournamentId: String(tournamentId),
+      name: name.trim(),
+      capacity: Number(capacity),
+    })
+      .unwrap()
+      .then(resetForm, () => undefined);
 
   const handleUpdate = () => {
     if (!editingGroup) return;
@@ -172,6 +159,11 @@ export const GroupCreationForm = ({
           Не удалось создать группу. Попробуйте еще раз.
         </Alert>
       )}
+      {randomError && !editingGroup && (
+        <Alert severity="error" sx={{ mb: 2 }}>
+          Не удалось создать группу. Попробуйте еще раз.
+        </Alert>
+      )}
       {updateError && (
         <Alert severity="error" sx={{ mb: 2 }}>
           Не удалось изменить группу. Попробуйте еще раз.
@@ -188,7 +180,9 @@ export const GroupCreationForm = ({
           type="button"
           variant="contained"
           disabled={
+            Boolean(editingGroup) ||
             isCreating ||
+            isCreatingRandom ||
             !name.trim() ||
             availablePlayers.length < Number(capacity)
           }
@@ -202,11 +196,18 @@ export const GroupCreationForm = ({
             variant="outlined"
             disabled={
               isCreating ||
+              isUpdating ||
               !name.trim() ||
               selectedPlayers.length !== Number(capacity)
             }
           >
-            {isCreating ? 'Создание...' : 'Создать группу вручную'}
+            {isUpdating
+              ? 'Сохранение...'
+              : editingGroup
+                ? 'Сохранить изменения'
+                : isCreating
+                  ? 'Создание...'
+                  : 'Создать группу вручную'}
           </Button>
         ) : (
           <Button

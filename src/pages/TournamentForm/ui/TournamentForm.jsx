@@ -38,7 +38,6 @@ const initialValues = {
   status: 'draft',
 };
 
-
 function TournamentForm() {
   const navigate = useNavigate();
   const { t } = useTranslation('tournamentForm');
@@ -117,7 +116,7 @@ function TournamentForm() {
       return;
     }
 
-    const playerIds = selectedPlayers.map((player) => Number(player.id));
+    const playerIds = selectedPlayers.map((player) => String(player.id));
 
     const tournamentPayload = {
       name: values.name,
@@ -126,13 +125,12 @@ function TournamentForm() {
       timeStart: values.timeStart,
       timeEnd: values.timeEnd,
       location: values.location,
-      players: playerIds,
+      playerIds,
       competitionType: mapCompetitionType(values.tournamentType),
       bracketFormat: mapBracketFormat(values.format),
       matchFormat: mapMatchFormat(values.gamesToWin),
       pointsPerGame: Number(values.pointsPerGame) || 11,
       maxParticipants: Number(values.playersLimit) || playerIds.length,
-      currentParticipants: playerIds.length,
       status: 'Upcoming',
     };
 

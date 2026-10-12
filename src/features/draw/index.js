@@ -1,5 +1,2 @@
 export { GroupCreationForm } from './ui/GroupCreationForm';
-export {
-  addPlayersToGroupManually,
-  addPlayersToGroupRandomly,
-} from './model/groupCreation';
+export { addPlayersToGroupManually } from './model/groupCreation';

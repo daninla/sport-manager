@@ -1,4 +1,5 @@
 import { baseApi } from '@/shared/api/baseApi';
+import { isMockApi } from '@/shared/config/apiConfig';
 
 export const matchApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -21,7 +22,14 @@ export const matchApi = baseApi.injectEndpoints({
       invalidatesTags: ['Tournament'],
     }),
     getMatchesByTournament: builder.query({
-      query: (tournamentId) => `/matches?tournamentId=${tournamentId}`,
+      query: (tournamentId) =>
+        isMockApi ? '/matches' : `/matches?tournamentId=${tournamentId}`,
+      transformResponse: (matches, _, tournamentId) =>
+        isMockApi
+          ? matches.filter(
+              (match) => String(match.tournamentId) === String(tournamentId),
+            )
+          : matches,
       providesTags: (result, error, tournamentId) =>
         result
           ? [
@@ -36,11 +44,46 @@ export const matchApi = baseApi.injectEndpoints({
       providesTags: (result, error, id) => [{ type: 'Match', id }],
     }),
 
-    updateMatch: builder.mutation({
-      query: ({ id, ...patch }) => ({
-        url: `/matches/${id}`,
-        method: 'PATCH',
-        body: patch,
+    startMatch: builder.mutation({
+      query: ({ id }) => ({
+        url: `/matches/${id}/start`,
+        method: 'POST',
+      }),
+      invalidatesTags: (result, error, { id }) => [
+        { type: 'Match', id },
+        { type: 'Match', id: 'LIST' },
+        'MatchesByTournament',
+      ],
+    }),
+    finishMatch: builder.mutation({
+      query: ({ id }) => ({
+        url: `/matches/${id}/finish`,
+        method: 'POST',
+      }),
+      invalidatesTags: (result, error, { id }) => [
+        { type: 'Match', id },
+        { type: 'Match', id: 'LIST' },
+        'MatchesByTournament',
+      ],
+    }),
+    recordMatchPoint: builder.mutation({
+      query: ({ id, player }) => ({
+        url: `/matches/${id}/points`,
+        method: 'POST',
+        body: { player },
+      }),
+      invalidatesTags: (result, error, { id, tournamentId }) => [
+        { type: 'Match', id },
+        { type: 'Match', id: 'LIST' },
+        ...(tournamentId
+          ? [{ type: 'MatchesByTournament', id: tournamentId }]
+          : []),
+      ],
+    }),
+    undoMatchAction: builder.mutation({
+      query: ({ id }) => ({
+        url: `/matches/${id}/undo`,
+        method: 'POST',
       }),
       invalidatesTags: (result, error, { id, tournamentId }) => [
         { type: 'Match', id },
@@ -57,5 +100,8 @@ export const {
   useGetMatchesQuery,
   useGetMatchesByTournamentQuery,
   useGetMatchByIdQuery,
-  useUpdateMatchMutation,
+  useStartMatchMutation,
+  useFinishMatchMutation,
+  useRecordMatchPointMutation,
+  useUndoMatchActionMutation,
 } = matchApi;

@@ -1,38 +1,28 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import {
   Alert,
   Box,
   CircularProgress,
-  FormControl,
-  InputLabel,
-  MenuItem,
   Paper,
-  Select,
   Stack,
   Typography,
 } from '@mui/material';
 
-import { createPlayerLookup } from '../../../entities/player/playerUtils.js';
 import {
   useGetPlayoffMatchesByTournamentIdQuery,
-  useGetTournamentsQuery,
-  useUpdatePlayoffMatchMutation,
+  useSubmitPlayoffMatchResultMutation,
 } from '../../../entities/tournament/index.js';
-import { resolveMatchAndAdvance } from '../../../entities/tournament/playoff/advanceWinner.js';
 
 import { MatchScoreDialog } from '../../../widgets/PlayoffBracket/ui/MatchScoreDialog.jsx';
 import { PlayoffBracket } from '../../../widgets/PlayoffBracket/ui/PlayoffWidget.jsx';
 
-export function PlayoffPage({ players = [] }) {
+export function PlayoffPage() {
   const { id } = useParams();
   const selectedTournamentId = Number(id) || null;
   const [activeMatchForScore, setActiveMatchForScore] = useState(null);
 
-  // RTK Query hooks
-  const { data: tournaments = [], isLoading: isLoadingTournaments } =
-    useGetTournamentsQuery();
   const {
     data: matches = [],
     isLoading: isLoadingMatches,
@@ -41,50 +31,14 @@ export function PlayoffPage({ players = [] }) {
     skip: !selectedTournamentId,
   });
 
-  const [updatePlayoffMatch] = useUpdatePlayoffMatchMutation();
+  const [submitMatchResult] = useSubmitPlayoffMatchResultMutation();
 
-  // Pre-indexed player lookup map
-  const playerLookup = useMemo(() => createPlayerLookup(players), [players]);
-
-  // Handle score submission and automatic progression
-  const handleSaveScore = async (matchId, score) => {
-    try {
-      // 1. Calculate updated state using tournament logic
-      const updatedMatches = resolveMatchAndAdvance(
-        matches,
-        matchId,
-        score,
-        playerLookup,
-      );
-
-      // 2. Identify the modified current match
-      const updatedCurrentMatch = updatedMatches.find(
-        (m) => String(m.id) === String(matchId),
-      );
-      if (updatedCurrentMatch) {
-        await updatePlayoffMatch(updatedCurrentMatch).unwrap();
-      }
-
-      // 3. Identify and persist the advanced successor match in the next round
-      const successorMatch = updatedMatches.find((m) => {
-        const original = matches.find(
-          (orig) => String(orig.id) === String(m.id),
-        );
-        //It picks another match that just received a new player.
-        return (
-          String(m.id) !== String(matchId) &&
-          (m.player1Id !== original?.player1Id ||
-            m.player2Id !== original?.player2Id)
-        );
-      });
-
-      if (successorMatch) {
-        await updatePlayoffMatch(successorMatch).unwrap();
-      }
-    } catch (err) {
-      console.error('Failed to update playoff match score:', err);
-    }
-  };
+  const handleSaveScore = (matchId, score) =>
+    submitMatchResult({
+      id: matchId,
+      tournamentId: selectedTournamentId,
+      score,
+    }).unwrap();
 
   return (
     <Box
@@ -132,20 +86,19 @@ export function PlayoffPage({ players = [] }) {
       ) : (
         <PlayoffBracket
           matches={matches}
-          players={players}
-          tournamentId={selectedTournamentId}
           onEditMatch={(match) => setActiveMatchForScore(match)}
         />
       )}
 
       {/* Score Dialog */}
-      <MatchScoreDialog
-        open={Boolean(activeMatchForScore)}
-        match={activeMatchForScore}
-        playerLookup={playerLookup}
-        onClose={() => setActiveMatchForScore(null)}
-        onSave={handleSaveScore}
-      />
+      {activeMatchForScore && (
+        <MatchScoreDialog
+          open
+          match={activeMatchForScore}
+          onClose={() => setActiveMatchForScore(null)}
+          onSave={handleSaveScore}
+        />
+      )}
     </Box>
   );
 }

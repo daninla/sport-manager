@@ -11,6 +11,7 @@ const submitGroup = async ({
     await createGroup({
       tournamentId: String(tournamentId),
       name: name.trim(),
+      capacity: Number(capacity),
       playerIds,
     }).unwrap();
     return true;
@@ -33,32 +34,3 @@ export const addPlayersToGroupManually = ({
     playerIds: selectedPlayers.map((player) => player.id),
     createGroup,
   });
-
-export const addPlayersToGroupRandomly = ({
-  tournamentId,
-  name,
-  capacity,
-  availablePlayers,
-  createGroup,
-}) => {
-  if (availablePlayers.length < Number(capacity)) return Promise.resolve(false);
-
-  const shuffledPlayers = [...availablePlayers];
-  for (let index = shuffledPlayers.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1));
-    [shuffledPlayers[index], shuffledPlayers[randomIndex]] = [
-      shuffledPlayers[randomIndex],
-      shuffledPlayers[index],
-    ];
-  }
-
-  return submitGroup({
-    tournamentId,
-    name,
-    capacity,
-    playerIds: shuffledPlayers
-      .slice(0, Number(capacity))
-      .map((player) => player.id),
-    createGroup,
-  });
-};

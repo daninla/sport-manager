@@ -16,14 +16,16 @@ import {
   Typography,
 } from '@mui/material';
 
-import { useEnrichedMatches } from '../../../entities/match/model/useEnrichedMatches';
+import { useGetMatchesByTournamentQuery } from '@/entities/match';
 
 import MatchStatusBage from '../../../shared/ui/MatchStatusBage/MatchStatusBage';
 
 export function TournamentCard({ tournament, onOpen, onEdit }) {
   const tournamentId = String(tournament?.id || '');
 
-  const { matches, isLoading } = useEnrichedMatches(tournamentId);
+  const { data: matches = [] } = useGetMatchesByTournamentQuery(tournamentId, {
+    skip: !tournamentId,
+  });
 
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -202,7 +204,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                   textAlign: 'left',
                 }}
               >
-                {match.player1?.fullName || `Игрок ${match.player1Id}`}
+                {match.player1?.fullName || 'Ожидает участника'}
               </Typography>
 
               <Typography
@@ -228,7 +230,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                   textAlign: 'right',
                 }}
               >
-                {match.player2?.fullName || `Игрок ${match.player2Id}`}
+                {match.player2?.fullName || 'Ожидает участника'}
               </Typography>
             </Box>
             <Typography

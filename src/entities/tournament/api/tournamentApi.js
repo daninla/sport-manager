@@ -1,4 +1,5 @@
 import { baseApi } from '@/shared/api/baseApi';
+import { isMockApi } from '@/shared/config/apiConfig';
 
 export const tournamentApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -15,35 +16,6 @@ export const tournamentApi = baseApi.injectEndpoints({
     getTournamentById: builder.query({
       query: (id) => `/tournaments/${id}`,
       providesTags: (result, error, id) => [{ type: 'Tournament', id }],
-    }),
-
-    getTournamentPlayers: builder.query({
-      async queryFn(tournamentId, _, __, fetchWithBQ) {
-        const tournamentResponse = await fetchWithBQ(
-          `/tournaments/${tournamentId}`,
-        );
-        if (tournamentResponse.error)
-          return { error: tournamentResponse.error };
-
-        const playerIds = tournamentResponse.data?.playerIds || [];
-
-        if (playerIds.length === 0) {
-          return { data: [] };
-        }
-
-        const playersResponse = await fetchWithBQ('/players');
-        if (playersResponse.error) return { error: playersResponse.error };
-
-        const tournamentPlayers = playersResponse.data.filter((player) =>
-          playerIds.includes(Number(player.id)),
-        );
-
-        return { data: tournamentPlayers };
-      },
-      providesTags: (result, error, tournamentId) => [
-        { type: 'Tournament', id: tournamentId },
-        { type: 'Player', id: `TOURNAMENT_${tournamentId}` },
-      ],
     }),
 
     deleteTournament: builder.mutation({
@@ -77,39 +49,30 @@ export const tournamentApi = baseApi.injectEndpoints({
       invalidatesTags: [{ type: 'Tournament', id: 'LIST' }],
     }),
 
-    getMatchesByTournamentId: builder.query({
-      query: (tournamentId) => `/matches?tournamentId=${tournamentId}`,
-      providesTags: (result, error, tournamentId) => [
-        { type: 'Tournament', id: tournamentId },
-      ],
-    }),
-    getPlayoffMatches: builder.query({
-      query: () => '/playoffMatches',
-      providesTags: ['Tournament'],
-    }),
     getPlayoffMatchesByTournamentId: builder.query({
-      query: (tournamentId) => `/playoffMatches?tournamentId=${tournamentId}`,
+      query: (tournamentId) =>
+        isMockApi
+          ? '/playoffMatches'
+          : `/playoffMatches?tournamentId=${tournamentId}`,
+      transformResponse: (matches, _, tournamentId) =>
+        isMockApi
+          ? matches.filter(
+              (match) => String(match.tournamentId) === String(tournamentId),
+            )
+          : matches,
       providesTags: (result, error, tournamentId) => [
         { type: 'Tournament', id: tournamentId },
       ],
     }),
-    updatePlayoffMatch: builder.mutation({
-      query: ({ id, ...patch }) => ({
-        url: `/playoffMatches/${id}`,
-        method: 'PATCH',
-        body: patch,
+    submitPlayoffMatchResult: builder.mutation({
+      query: ({ id, score }) => ({
+        url: `/playoffMatches/${id}/result`,
+        method: 'POST',
+        body: { score },
       }),
       invalidatesTags: (result, error, { tournamentId }) => [
         { type: 'Tournament', id: tournamentId },
       ],
-    }),
-    createPlayoffMatch: builder.mutation({
-      query: (playoffMatchData) => ({
-        url: '/playoffMatches',
-        method: 'POST',
-        body: playoffMatchData,
-      }),
-      invalidatesTags: ['Tournament'],
     }),
   }),
 });
@@ -120,11 +83,6 @@ export const {
   useDeleteTournamentMutation,
   useCreateTournamentMutation,
   useUpdateTournamentMutation,
-  useGetMatchesByTournamentIdQuery,
-  useCreateMatchMutation,
-  useGetPlayoffMatchesQuery,
   useGetPlayoffMatchesByTournamentIdQuery,
-  useUpdatePlayoffMatchMutation,
-  useCreatePlayoffMatchMutation,
-  useGetTournamentPlayersQuery,
+  useSubmitPlayoffMatchResultMutation,
 } = tournamentApi;

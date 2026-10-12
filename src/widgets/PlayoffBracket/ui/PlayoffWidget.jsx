@@ -1,19 +1,13 @@
-import React, { useMemo } from 'react';
-import { Box, Typography } from '@mui/material';
-import { createPlayerLookup } from '../../../entities/player/playerUtils.js';
-import { groupAndSortTournamentRounds, isRoundLocked} from '../../../entities/tournament/playoff/bracketPlayoff.js';
+import { useMemo } from 'react';
 import { RoundColumn } from './RoundColumn.jsx';
+import { Box, Typography } from '@mui/material';
 
-export function PlayoffBracket({
-  matches = [],
-  players = [],
-  tournamentId,
-  onEditMatch
-}) {
-  const playerLookup = useMemo(() => createPlayerLookup(players), [players]);
+import { groupAndSortTournamentRounds } from '../../../entities/tournament/playoff/bracketPlayoff.js';
+
+export function PlayoffBracket({ matches = [], onEditMatch }) {
   const sortedRounds = useMemo(
-    () => groupAndSortTournamentRounds(matches, tournamentId),
-    [matches, tournamentId]
+    () => groupAndSortTournamentRounds(matches),
+    [matches],
   );
 
   if (!sortedRounds.length) {
@@ -37,7 +31,7 @@ export function PlayoffBracket({
         overflowX: 'auto',
         p: 3,
         bgcolor: '#f8fafc',
-        borderRadius: 2
+        borderRadius: 2,
       }}
     >
       {sortedRounds.map(([roundName, roundMatches], roundIndex) => (
@@ -47,9 +41,7 @@ export function PlayoffBracket({
           matches={roundMatches}
           roundIndex={roundIndex}
           totalRounds={totalRounds}
-          playerLookup={playerLookup}
           onEditMatch={onEditMatch}
-          isLocked={isRoundLocked(roundIndex, sortedRounds)}
         />
       ))}
     </Box>

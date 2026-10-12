@@ -10,8 +10,11 @@ import {
   Typography,
 } from '@mui/material';
 
-import { useGetGroupsByTournamentIdQuery } from '@/entities/group/api/groupsApi';
-import { useGetTournamentPlayersQuery } from '@/entities/tournament/api/tournamentApi';
+import {
+  useGetAvailablePlayersForGroupQuery,
+  useGetGroupsByTournamentIdQuery,
+} from '@/entities/group/api/groupsApi';
+import { useGetTournamentByIdQuery } from '@/entities/tournament';
 import { GroupCreationForm } from '@/features/draw';
 
 import { GroupCard } from '@/entities/group/ui/GroupCard';
@@ -20,16 +23,22 @@ const GroupsPage = () => {
   const { id: tournamentId } = useParams();
   const [editingGroup, setEditingGroup] = useState(null);
   const {
-    data: tournamentPlayers = [],
+    data: tournament,
     isLoading,
     isError,
-  } = useGetTournamentPlayersQuery(tournamentId);
+  } = useGetTournamentByIdQuery(tournamentId);
+  const tournamentPlayers = tournament?.players || [];
   const {
     data: groups = [],
     isLoading: isGroupsLoading,
     isError: isGroupsError,
   } = useGetGroupsByTournamentIdQuery(tournamentId);
-  
+  const { data: availablePlayers = [], isError: isAvailablePlayersError } =
+    useGetAvailablePlayersForGroupQuery({
+      tournamentId,
+      groupId: editingGroup?.id,
+    });
+
   if (isLoading) {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
@@ -86,13 +95,6 @@ const GroupsPage = () => {
           ) : groups.length ? (
             <Grid container spacing={2}>
               {groups.map((group) => {
-                // Карточке передаём объекты игроков, а в группе хранятся только их ID.
-                const groupPlayerIds = new Set(
-                  (group.playerIds || []).map(String),
-                );
-                const groupPlayers = tournamentPlayers.filter((player) =>
-                  groupPlayerIds.has(String(player.id)),
-                );
                 return (
                   <Grid
                     key={group.id}
@@ -101,7 +103,7 @@ const GroupsPage = () => {
                   >
                     <GroupCard
                       title={group.name}
-                      players={groupPlayers}
+                      players={group.players || []}
                       onDoubleClick={() => setEditingGroup(group)}
                       disabled={Boolean(editingGroup)}
                       isEditing={String(editingGroup?.id) === String(group.id)}
@@ -123,10 +125,15 @@ const GroupsPage = () => {
             key={editingGroup ? `edit-${editingGroup.id}` : 'create'}
             tournamentId={tournamentId}
             tournamentPlayers={tournamentPlayers}
-            groups={groups}
+            availablePlayers={availablePlayers}
             editingGroup={editingGroup}
             onCancelEdit={() => setEditingGroup(null)}
           />
+          {isAvailablePlayersError && (
+            <Alert severity="error" sx={{ mt: 2 }}>
+              Не удалось загрузить список доступных игроков.
+            </Alert>
+          )}
         </Grid>
       </Grid>
     </Container>
