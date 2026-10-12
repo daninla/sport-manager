@@ -6,8 +6,8 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+
 import { useGetTournamentByIdQuery } from '@/entities/tournament';
-import { useGetPlayersQuery } from '@/entities/player';
 
 const columns = [
   { id: 'fullName', label: 'Full name', minWidth: 200 },
@@ -39,65 +39,57 @@ function TournamentPlayersTable() {
   const navigate = useNavigate();
   const usersPath = '/players';
   const { id } = useParams();
-  const { data: players = [], isLoadingPlayers, isError } = useGetPlayersQuery();
-  const { data: tournament, isLoadingTournament, error } = useGetTournamentByIdQuery(id);
+  const {
+    data: tournament,
+    isLoading: isLoadingTournament,
+    error,
+  } = useGetTournamentByIdQuery(id);
 
-  if (isLoadingTournament || isLoadingPlayers) return 'Loading...';
-  if (isError || error) return <div>Ошибка загрузки</div>;
+  if (isLoadingTournament) return 'Loading...';
+  if (error) return <div>Ошибка загрузки</div>;
 
-  const rawPlayerIds = Array.isArray(tournament?.players)
-    ? tournament.players
-    : Array.isArray(tournament?.playerIds)
-      ? tournament.playerIds
-      : [];
-
-  const playerIdsSet = new Set(rawPlayerIds.map((value) => Number(value)));
-  const filteredPlayers = players.filter(({ id }) => playerIdsSet.has(Number(id)));
+  const players = tournament?.players || [];
 
   return (
-    <Paper sx={{ m:'20px',width: '100%', overflow: 'hidden' }}>
+    <Paper sx={{ m: '20px', width: '100%', overflow: 'hidden' }}>
       <TableContainer>
         <Table stickyHeader>
           <TableHead>
             <TableRow>
               {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  sx={{ minWidth: column.minWidth }}
-                >
+                <TableCell key={column.id} sx={{ minWidth: column.minWidth }}>
                   {column.label}
                 </TableCell>
               ))}
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredPlayers
-              .map((row) => (
-                <TableRow
-                  hover
-                  role="checkbox"
-                  tabIndex={-1}
-                  key={row.id}
-                  sx={{ cursor: 'pointer', textDecoration: 'none' }}
-                  onClick={() => navigate(`${usersPath}/${row.id}`)}
-                >
-                  {columns.map((column) => {
-                    const value = row[column.id];
-                    return (
-                      <TableCell key={column.id}>
-                        {column.format && typeof value === 'number'
-                          ? column.format(value)
-                          : value}
-                      </TableCell>
-                    );
-                  })}
-                </TableRow>
-              ))}
+            {players.map((row) => (
+              <TableRow
+                hover
+                role="checkbox"
+                tabIndex={-1}
+                key={row.id}
+                sx={{ cursor: 'pointer', textDecoration: 'none' }}
+                onClick={() => navigate(`${usersPath}/${row.id}`)}
+              >
+                {columns.map((column) => {
+                  const value = row[column.id];
+                  return (
+                    <TableCell key={column.id}>
+                      {column.format && typeof value === 'number'
+                        ? column.format(value)
+                        : value}
+                    </TableCell>
+                  );
+                })}
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </TableContainer>
-      </Paper>  
-    )
+    </Paper>
+  );
 }
 
-export default TournamentPlayersTable
+export default TournamentPlayersTable;

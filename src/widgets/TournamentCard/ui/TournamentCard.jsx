@@ -16,14 +16,16 @@ import {
   Typography,
 } from '@mui/material';
 
-import { useEnrichedMatches } from '../../../entities/match/model/useEnrichedMatches';
+import { useGetMatchesByTournamentQuery } from '@/entities/match';
 
 import MatchStatusBage from '../../../shared/ui/MatchStatusBage/MatchStatusBage';
 
 export function TournamentCard({ tournament, onOpen, onEdit }) {
   const tournamentId = String(tournament?.id || '');
 
-  const { matches, isLoading } = useEnrichedMatches(tournamentId);
+  const { data: matches = [] } = useGetMatchesByTournamentQuery(tournamentId, {
+    skip: !tournamentId,
+  });
 
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -48,6 +50,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
 
   return (
     <Box
+      className="responsive-tournament-card"
       onClick={() => onOpen && onOpen(tournamentId)}
       sx={{
         display: 'flex',
@@ -56,7 +59,8 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
         backgroundColor: '#040b22',
         borderRadius: '12px',
         p: '20px',
-        width: '300px',
+        width: { xs: '100%', sm: '300px' },
+        maxWidth: '100%',
         border: '1px solid rgba(255, 255, 255, 0.08)',
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
         cursor: 'pointer',
@@ -200,7 +204,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                   textAlign: 'left',
                 }}
               >
-                {match.player1?.fullName || `Игрок ${match.player1Id}`}
+                {match.player1?.fullName || 'Ожидает участника'}
               </Typography>
 
               <Typography
@@ -226,7 +230,7 @@ export function TournamentCard({ tournament, onOpen, onEdit }) {
                   textAlign: 'right',
                 }}
               >
-                {match.player2?.fullName || `Игрок ${match.player2Id}`}
+                {match.player2?.fullName || 'Ожидает участника'}
               </Typography>
             </Box>
             <Typography

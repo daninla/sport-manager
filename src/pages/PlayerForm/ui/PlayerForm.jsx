@@ -62,8 +62,8 @@ function PlayerForm() {
               border: '1px solid',
               borderColor: 'secondary.main',
               borderRadius: '3em',
-              width: '20em',
-              height: '30em',
+              width: { xs: 'min(100%, 20em)', sm: '20em' },
+              height: { xs: 'min(24em, 80vw)', sm: '30em' },
               transition: '0.2s',
               cursor: 'pointer',
               overflow: 'hidden',
@@ -152,7 +152,8 @@ function PlayerForm() {
                           }
                         }}
                         sx={{
-                          minWidth: '20em',
+                          minWidth: { xs: 0, sm: '20em' },
+                          width: { xs: '100%', sm: 'auto' },
                           '& .MuiInputBase-input': {
                             fontSize: '1.3em',
                           },

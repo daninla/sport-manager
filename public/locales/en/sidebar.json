@@ -12,5 +12,8 @@
   "Playoff": "Playoff",
   "Monitor": "Monitor",
   "Rating": "Rating",
-  "Documents": "Documents"
+  "Documents": "Documents",
+  "Stream": "Stream",
+  "loading": "Loading...",
+  "error": "Unable to load tournament navigation"
 }

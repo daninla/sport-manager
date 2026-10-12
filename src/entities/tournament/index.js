@@ -9,7 +9,6 @@ export {
   useDeleteTournamentMutation,
   useCreateTournamentMutation,
   useUpdateTournamentMutation,
-  useUpdatePlayoffMatchMutation,
 } from './api/tournamentApi';
 export { default as TournamentStatusFallback } from './ui/TournamentStatusFallback';
 
@@ -33,7 +32,9 @@ export const useTournamentMatches = (matches = []) => {
     return {
       matches: allMatches,
       playedMatches: allMatches.filter((match) => match?.status !== 'Upcoming'),
-      upcomingMatches: allMatches.filter((match) => match?.status === 'Upcoming'),
+      upcomingMatches: allMatches.filter(
+        (match) => match?.status === 'Upcoming',
+      ),
     };
   }, [normalizedMatches]);
 };

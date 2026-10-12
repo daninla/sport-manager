@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 function AuthLayout() {
   return (
     <Box
+      className="auth-layout"
       component="main"
       sx={{
         display: 'flex',

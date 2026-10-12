@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { AddPlayerBtn } from '@/features/add-player';
 import { Autocomplete, Box, TextField } from '@mui/material';
 
-import { useGetPlayersQuery } from '@/entities/player';
+import { useGetPlayersQuery } from '@/entities/player/api/playerApi';
 
 import { PlayersTable } from '@/widgets/PlayersTable';
 
@@ -37,7 +37,8 @@ function Players() {
         }}
         options={Array.from(new Set(players.map(({ fullName }) => fullName)))}
         sx={{
-          maxWidth: '50%',
+          maxWidth: { xs: '100%', sm: '50%' },
+          width: '100%',
           margin: '1em 0',
         }}
         renderInput={(params) => <TextField {...params} label={t('search')} />}

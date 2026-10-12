@@ -21,9 +21,15 @@ import { useMatchTimer } from '@/features/manage-live-match/model/useMatchTimer'
 import MatchStatusBage from '@/shared/ui/MatchStatusBage/MatchStatusBage';
 
 function MatchTableRow({ match, index }) {
-  const { matchState, addPoint, undo, setStatus } = useLiveMatchController(
-    match.id,
-  );
+  const {
+    matchState,
+    addPoint,
+    undo,
+    setStatus,
+    canUndo,
+    isActionLoading,
+    isActionError,
+  } = useLiveMatchController(match.id);
 
   const time = useMatchTimer(
     matchState.timeStart ?? match.timeStart,
@@ -48,6 +54,7 @@ function MatchTableRow({ match, index }) {
           {!isFinished && (
             <Button
               size="small"
+              disabled={isActionLoading}
               onClick={changeStatus}
               sx={{ border: '1px black solid' }}
             >
@@ -68,7 +75,7 @@ function MatchTableRow({ match, index }) {
           : '—'}
       </TableCell>
       <TableCell>
-        <PlayerName playerId={match.player1Id} />
+        <PlayerName player={match.player1} />
       </TableCell>
       <TableCell align="center" sx={{ whiteSpace: 'nowrap' }}>
         <Box
@@ -81,7 +88,7 @@ function MatchTableRow({ match, index }) {
         >
           <Button
             size="small"
-            disabled={!isActive}
+            disabled={!isActive || isActionLoading}
             onClick={() => addPoint('player1')}
             sx={{ background: '#1d646d', color: 'white' }}
           >
@@ -95,7 +102,7 @@ function MatchTableRow({ match, index }) {
           </Box>
           <Button
             size="small"
-            disabled={!isActive}
+            disabled={!isActive || isActionLoading}
             onClick={() => addPoint('player2')}
             sx={{ background: '#1d646d', color: 'white' }}
           >
@@ -103,16 +110,21 @@ function MatchTableRow({ match, index }) {
           </Button>
           <Button
             size="small"
-            disabled={!matchState.actionHistory?.length}
+            disabled={!canUndo || isActionLoading}
             onClick={undo}
             sx={{ background: '#faa865' }}
           >
             Undo
           </Button>
         </Box>
+        {isActionError && (
+          <Typography variant="caption" color="error">
+            Не удалось обновить матч. Попробуйте еще раз.
+          </Typography>
+        )}
       </TableCell>
       <TableCell>
-        <PlayerName playerId={match.player2Id} />
+        <PlayerName player={match.player2} />
       </TableCell>
       <TableCell align="right" sx={{ whiteSpace: 'nowrap' }}>
         {time}

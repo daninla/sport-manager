@@ -30,6 +30,7 @@ function Sidebar() {
 
   return (
     <Box
+      className="site-sidebar"
       sx={{
         color: 'white',
         backgroundColor: 'secondary.main',
@@ -38,11 +39,13 @@ function Sidebar() {
       }}
     >
       <Box
+        className="site-sidebar-menu"
         sx={{ width: '100%', py: 5, display: 'flex', flexDirection: 'column' }}
       >
         {items.map((item) => (
           <Box
             key={item.path}
+            className="site-sidebar-link"
             component={NavLink}
             to={item.path}
             sx={{
@@ -63,6 +66,7 @@ function Sidebar() {
           </Box>
         ))}
         <Box
+          className="site-sidebar-link"
           component="a"
           href="https://www.twitch.tv/"
           target="_blank"

@@ -22,3 +22,80 @@ body,
   color: #1e293b;
   overflow: hidden;
 }
+
+@media (max-width: 900px) {
+  .site-layout {
+    height: 100dvh !important;
+    min-height: 100dvh;
+  }
+
+  .site-layout-body {
+    min-height: 0;
+    flex-direction: column !important;
+  }
+
+  .site-sidebar-shell {
+    width: 100% !important;
+    flex-shrink: 0;
+  }
+
+  .site-sidebar {
+    height: auto !important;
+  }
+
+  .site-sidebar-menu {
+    flex-direction: row !important;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 8px 16px !important;
+    scrollbar-width: thin;
+  }
+
+  .site-sidebar-link {
+    flex: 0 0 auto;
+    margin: 0 !important;
+    padding: 8px 4px !important;
+    font-size: 15px !important;
+    white-space: nowrap;
+  }
+
+  .site-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .site-content main {
+    min-width: 0;
+  }
+
+  .site-content main > .MuiBox-root {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .site-header .MuiToolbar-root {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-layout {
+    height: auto !important;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .site-content .MuiTableContainer-root {
+    max-width: calc(100vw - 32px);
+  }
+
+  .site-content .MuiTablePagination-toolbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .site-content main > .MuiBox-root {
+    padding: 16px !important;
+  }
+}

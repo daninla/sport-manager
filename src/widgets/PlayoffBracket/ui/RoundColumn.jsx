@@ -1,11 +1,9 @@
-import React from 'react';
-import { Box, Paper, Typography } from '@mui/material';
 import { PlayoffMatchCard } from './MatchCard.jsx';
+import { Box, Paper, Typography } from '@mui/material';
 
 const CARD_WIDTH = 240;
-const CARD_HEIGHT = 140;      // Must strictly match the height in MatchCard.jsx
 const BASE_SLOT_HEIGHT = 160; // Base slot container height for Round 1
-const CONNECTOR_WIDTH = 40;   // Horizontal connector line length
+const CONNECTOR_WIDTH = 40; // Horizontal connector line length
 const LINE_COLOR = '#94a3b8'; // Slate 400
 
 /**
@@ -23,7 +21,7 @@ function BracketConnector({ height }) {
       sx={{
         width: CONNECTOR_WIDTH,
         height: `${height}px`,
-        flexShrink: 0
+        flexShrink: 0,
       }}
     >
       <svg
@@ -80,9 +78,7 @@ export function RoundColumn({
   matches = [],
   roundIndex,
   totalRounds,
-  playerLookup,
   onEditMatch,
-  isLocked = false
 }) {
   const hasNextRound = roundIndex < totalRounds - 1;
   const currentSlotHeight = BASE_SLOT_HEIGHT * Math.pow(2, roundIndex);
@@ -103,7 +99,7 @@ export function RoundColumn({
             bgcolor: 'primary.50',
             border: '1px solid',
             borderColor: 'primary.100',
-            borderRadius: 2
+            borderRadius: 2,
           }}
         >
           <Typography
@@ -113,7 +109,7 @@ export function RoundColumn({
               fontSize: '0.85rem',
               letterSpacing: 0.5,
               color: 'primary.dark',
-              textTransform: 'uppercase'
+              textTransform: 'uppercase',
             }}
           >
             {roundName}
@@ -127,7 +123,9 @@ export function RoundColumn({
       {/* 2. Grid Body: Matches and SVG Lines start at the exact same Y coordinate */}
       <Box sx={{ display: 'flex', flexDirection: 'row' }}>
         {/* Matches Column */}
-        <Box sx={{ width: CARD_WIDTH, display: 'flex', flexDirection: 'column' }}>
+        <Box
+          sx={{ width: CARD_WIDTH, display: 'flex', flexDirection: 'column' }}
+        >
           {matches.map((match) => (
             <Box
               key={match.id}
@@ -135,15 +133,10 @@ export function RoundColumn({
                 height: `${currentSlotHeight}px`,
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
               }}
             >
-              <PlayoffMatchCard
-                match={match}
-                playerLookup={playerLookup}
-                isLocked={isLocked}
-                onEditMatch={onEditMatch}
-              />
+              <PlayoffMatchCard match={match} onEditMatch={onEditMatch} />
             </Box>
           ))}
         </Box>
@@ -151,9 +144,11 @@ export function RoundColumn({
         {/* SVG Connectors Column (Aligned 1-to-1 with matches) */}
         {hasNextRound && (
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            {Array.from({ length: Math.ceil(matches.length / 2) }).map((_, pairIdx) => (
-              <BracketConnector key={pairIdx} height={nextSlotHeight} />
-            ))}
+            {Array.from({ length: Math.ceil(matches.length / 2) }).map(
+              (_, pairIdx) => (
+                <BracketConnector key={pairIdx} height={nextSlotHeight} />
+              ),
+            )}
           </Box>
         )}
       </Box>

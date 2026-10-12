@@ -1,16 +1,14 @@
-import React from 'react';
-import {
-  Card,
-  CardContent,
-  Typography,
-  Box,
-  Divider,
-  Chip,
-  Button,
-} from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import LockIcon from '@mui/icons-material/Lock';
-import { getPlayerDisplayName } from '../../../entities/player/playerUtils.js';
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Chip,
+  Divider,
+  Typography,
+} from '@mui/material';
 
 function getStatusChipColor(status) {
   switch (status?.toLowerCase()) {
@@ -25,31 +23,28 @@ function getStatusChipColor(status) {
   }
 }
 
-export function PlayoffMatchCard({ match, playerLookup, onEditMatch, isLocked = false }) {
+export function PlayoffMatchCard({ match, onEditMatch }) {
   if (!match) return null;
 
-  const player1Name = getPlayerDisplayName(match.player1Id, match.player1, playerLookup);
-  const player2Name = getPlayerDisplayName(match.player2Id, match.player2, playerLookup);
-
+  const player1Name = match.player1?.fullName || 'Ожидает участника';
+  const player2Name = match.player2?.fullName || 'Ожидает участника';
+  const hasBothPlayers = Boolean(match.player1 && match.player2);
+  const canEdit = hasBothPlayers && match.canEdit !== false;
   const isPlayer1Winner =
     match.winnerId !== null &&
     match.winnerId !== undefined &&
-    String(match.winnerId) === String(match.player1Id);
-
+    String(match.winnerId) === String(match.player1?.id);
   const isPlayer2Winner =
     match.winnerId !== null &&
     match.winnerId !== undefined &&
-    String(match.winnerId) === String(match.player2Id);
-  const hasBothPlayers = Boolean(match.player1Id || match.player1) && Boolean(match.player2Id || match.player2);
-
-  const canEdit =hasBothPlayers && !isLocked;
+    String(match.winnerId) === String(match.player2?.id);
 
   return (
     <Card
       variant="outlined"
       sx={{
         width: 240,
-        height: 140, // Fixed height for exact line alignment
+        height: 140,
         borderRadius: 2,
         boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
         borderColor: match.status === 'Finished' ? 'grey.300' : 'primary.light',
@@ -60,20 +55,34 @@ export function PlayoffMatchCard({ match, playerLookup, onEditMatch, isLocked = 
         bgcolor: '#ffffff',
         zIndex: 2,
         '&:hover': {
-          boxShadow: '0 4px 12px rgba(0,0,0,0.12)'
-        }
+          boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
+        },
       }}
     >
       <CardContent sx={{ p: 1.25, '&:last-child': { pb: 1 } }}>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.75 }}>
-          <Typography variant="caption" fontWeight="bold" color="text.secondary">
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            mb: 0.75,
+          }}
+        >
+          <Typography
+            variant="caption"
+            fontWeight="bold"
+            color="text.secondary"
+          >
             MATCH #{match.matchIndex}
           </Typography>
           <Chip
-            size="small"
             label={match.status || 'Pending'}
             color={getStatusChipColor(match.status)}
-            sx={{ height: 18, fontSize: '0.65rem', textTransform: 'capitalize' }}
+            sx={{
+              height: 18,
+              fontSize: '0.65rem',
+              textTransform: 'capitalize',
+            }}
           />
         </Box>
 
@@ -83,7 +92,7 @@ export function PlayoffMatchCard({ match, playerLookup, onEditMatch, isLocked = 
             justifyContent: 'space-between',
             alignItems: 'center',
             py: 0.25,
-            fontWeight: isPlayer1Winner ? 700 : 400
+            fontWeight: isPlayer1Winner ? 700 : 400,
           }}
         >
           <Typography
@@ -92,12 +101,15 @@ export function PlayoffMatchCard({ match, playerLookup, onEditMatch, isLocked = 
             sx={{
               maxWidth: 160,
               fontSize: '0.8rem',
-              color: isPlayer1Winner ? 'primary.main' : 'text.primary'
+              color: isPlayer1Winner ? 'primary.main' : 'text.primary',
             }}
           >
             {player1Name}
           </Typography>
-          <Typography variant="body2" sx={{ fontWeight: 'inherit', fontSize: '0.8rem' }}>
+          <Typography
+            variant="body2"
+            sx={{ fontWeight: 'inherit', fontSize: '0.8rem' }}
+          >
             {match.score?.player1 ?? 0}
           </Typography>
         </Box>
@@ -110,7 +122,7 @@ export function PlayoffMatchCard({ match, playerLookup, onEditMatch, isLocked = 
             justifyContent: 'space-between',
             alignItems: 'center',
             py: 0.25,
-            fontWeight: isPlayer2Winner ? 700 : 400
+            fontWeight: isPlayer2Winner ? 700 : 400,
           }}
         >
           <Typography
@@ -119,12 +131,15 @@ export function PlayoffMatchCard({ match, playerLookup, onEditMatch, isLocked = 
             sx={{
               maxWidth: 160,
               fontSize: '0.8rem',
-              color: isPlayer2Winner ? 'primary.main' : 'text.primary'
+              color: isPlayer2Winner ? 'primary.main' : 'text.primary',
             }}
           >
             {player2Name}
           </Typography>
-          <Typography variant="body2" sx={{ fontWeight: 'inherit', fontSize: '0.8rem' }}>
+          <Typography
+            variant="body2"
+            sx={{ fontWeight: 'inherit', fontSize: '0.8rem' }}
+          >
             {match.score?.player2 ?? 0}
           </Typography>
         </Box>
@@ -135,13 +150,18 @@ export function PlayoffMatchCard({ match, playerLookup, onEditMatch, isLocked = 
               fullWidth
               size="small"
               variant="text"
-              startIcon={<EditIcon sx={{ fontSize: 14 }} />}
+              startIcon={
+                canEdit ? (
+                  <EditIcon sx={{ fontSize: 14 }} />
+                ) : (
+                  <LockIcon sx={{ fontSize: 13 }} />
+                )
+              }
               disabled={!canEdit}
-              startIcon={isLocked ? <LockIcon sx={{ fontSize: 13 }} /> : <EditIcon sx={{ fontSize: 14 }} />}
               onClick={() => onEditMatch(match)}
               sx={{ fontSize: '0.7rem', py: 0 }}
             >
-              {isLocked ? 'Locked' : match.status === 'Finished' ? 'Edit Score' : 'Enter Score'}
+              {match.status === 'Finished' ? 'Edit Score' : 'Enter Score'}
             </Button>
           </Box>
         )}

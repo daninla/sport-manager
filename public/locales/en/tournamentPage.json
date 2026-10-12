@@ -14,5 +14,25 @@
   "matches": "Matches ({{count}}):",
   "status": "Status:",
   "playedMatches": "Played and ongoing matches",
-  "upcomingMatches": "Upcoming matches"
+  "upcomingMatches": "Upcoming matches",
+  "table": {
+    "match": "Match",
+    "tour": "Round",
+    "start": "Start",
+    "player1": "Player 1",
+    "score": "Score",
+    "player2": "Player 2",
+    "duration": "Duration"
+  },
+  "formats": {
+    "Single": "Single",
+    "Double": "Double",
+    "Team": "Team",
+    "Single Elimination": "Single Elimination",
+    "Double Elimination": "Double Elimination",
+    "Swiss System": "Swiss System",
+    "Round Robin": "Round Robin",
+    "Mixed System": "Mixed System"
+  },
+  "bestOf": "Best of {{count}}"
 }

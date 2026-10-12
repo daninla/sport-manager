@@ -14,5 +14,25 @@
   "matches": "Матчі ({{count}}):",
   "status": "Статус:",
   "playedMatches": "Зіграні та поточні матчі",
-  "upcomingMatches": "Майбутні матчі"
+  "upcomingMatches": "Майбутні матчі",
+  "table": {
+    "match": "Матч",
+    "tour": "Тур",
+    "start": "Початок",
+    "player1": "Гравець 1",
+    "score": "Рахунок",
+    "player2": "Гравець 2",
+    "duration": "Тривалість"
+  },
+  "formats": {
+    "Single": "Одиночний",
+    "Double": "Парний",
+    "Team": "Командний",
+    "Single Elimination": "Олімпійська система",
+    "Double Elimination": "Система з подвійним вибуванням",
+    "Swiss System": "Швейцарська система",
+    "Round Robin": "Кругова система",
+    "Mixed System": "Змішана система"
+  },
+  "bestOf": "До {{count}} партій"
 }

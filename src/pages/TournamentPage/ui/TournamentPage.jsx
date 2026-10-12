@@ -32,7 +32,7 @@ function TournamentPage() {
   const status = tournament.status;
 
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ p: { xs: 2, md: 4 }, minWidth: 0 }}>
       <BaseButton text={t('back')} address="/tournaments" />
       <Typography variant="h4">{tournament.name}</Typography>
 

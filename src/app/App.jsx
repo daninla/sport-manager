@@ -10,6 +10,7 @@ import { ClubAddPage } from '../pages/ClubAdd';
 import { ClubEditPage } from '../pages/ClubEdit';
 import { Clubs } from '../pages/Clubs';
 import { Login, Register } from '../pages/Auth';
+import GroupsPage from '../pages/Groups/GroupsPage';
 import { TournamentForm } from '../pages/TournamentForm';
 import TournamentPage from '../pages/TournamentPage';
 import { TournamentParticipants } from '../pages/TournamentParticipants';
@@ -38,6 +39,7 @@ function App() {
         <Route path="/tournaments" element={<Tournaments />} />
         <Route path="/tournaments/add" element={<TournamentForm />} />
         <Route path="/tournaments/:id/*" element={<TournamentPage />} />
+        <Route path="/tournaments/:id/groups" element={<GroupsPage />} />
         <Route
           path="/tournaments/:id/participants"
           element={<TournamentParticipants />}
