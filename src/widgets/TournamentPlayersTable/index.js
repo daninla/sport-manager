@@ -1,0 +1,1 @@
+export {default as TournamentPlayersTable} from './ui/TournamentPlayersTable';

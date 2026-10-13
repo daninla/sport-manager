@@ -1,0 +1,25 @@
+{
+  "loading": "Loading players...",
+  "error": "Error loading players",
+  "fetchError": "Fetch error",
+  "search": "Search",
+  "addPlayer": "Add player",
+  "editPlayer": "Edit player",
+  "playerTitle": "Player {{id}}",
+  "save": "Save",
+  "reset": "Reset",
+  "noData": "No data",
+  "loadingError": "Unable to load player data",
+  "notesTitle": "Notes",
+  "playerFallback": "Player {{id}}",
+  "columns": {
+    "fullName": "Full name",
+    "age": "Age",
+    "city": "City",
+    "status": "Status",
+    "ukrRate": "Ukrainian rate",
+    "worldRate": "World rate",
+    "club": "Club",
+    "notes": "Notes"
+  }
+}
