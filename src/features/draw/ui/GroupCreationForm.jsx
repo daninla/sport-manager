@@ -25,7 +25,7 @@ export const GroupCreationForm = ({
 }) => {
   const [name, setName] = useState(() => editingGroup?.name || '');
   const [capacity, setCapacity] = useState(
-    () => Number(editingGroup?.capacity) || 1,
+    () => Number(editingGroup?.capacity) || 0,
   );
   const [manualMode, setManualMode] = useState(Boolean(editingGroup));
   const [selectedPlayers, setSelectedPlayers] = useState(() => {
@@ -138,7 +138,7 @@ export const GroupCreationForm = ({
           onChange={(_, players) =>
             setSelectedPlayers(players.slice(0, Number(capacity)))
           }
-          getOptionLabel={(player) => player.fullName}
+          getOptionLabel={(player) => player.firstName + ' ' + player.lastName}
           isOptionEqualToValue={(option, value) =>
             String(option.id) === String(value.id)
           }

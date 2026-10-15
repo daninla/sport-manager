@@ -64,7 +64,7 @@ export const GroupCard = ({
                         {index + 1}.
                       </Typography>
                       <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                        {player.fullName}
+                        {player.firstName} {player.lastName}
                       </Typography>
                     </Box>
                   }

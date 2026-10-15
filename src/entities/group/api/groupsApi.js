@@ -1,17 +1,22 @@
-import { baseApi } from '@/shared/api/baseApi';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
 import { isMockApi } from '@/shared/config/apiConfig';
 
-export const groupApi = baseApi.injectEndpoints({
+export const groupApi = createApi({
+  reducerPath: 'groupApi',
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5001/api' }),
+  tagTypes: ['Group', 'Groups', 'Player'],
   endpoints: (builder) => ({
     getGroupsByTournamentId: builder.query({
-      query: (tournamentId) =>
-        isMockApi ? '/groups' : `/groups?tournamentId=${tournamentId}`,
-      transformResponse: (groups, _, tournamentId) =>
-        isMockApi
-          ? groups.filter(
-              (group) => String(group.tournamentId) === String(tournamentId),
-            )
-          : groups,
+      query: (tournamentId) => ({
+        url: '/groups',
+        params: { tournamentId },
+      }),
+      transformResponse: (groups) =>
+        groups.map(({ tournament_id, ...group }) => ({
+          ...group,
+          tournamentId: group.tournamentId ?? tournament_id,
+        })),
       providesTags: (result, error, tournamentId) =>
         result
           ? [
@@ -32,7 +37,7 @@ export const groupApi = baseApi.injectEndpoints({
         { type: 'Player', id: `AVAILABLE_${tournamentId}` },
       ],
     }),
-
+    
     createRandomGroup: builder.mutation({
       query: ({ tournamentId, name, capacity }) => ({
         url: '/groups/random',
@@ -47,22 +52,20 @@ export const groupApi = baseApi.injectEndpoints({
 
     getAvailablePlayersForGroup: builder.query({
       query: ({ tournamentId, groupId }) => ({
-        url: isMockApi
-          ? `/tournaments/${tournamentId}`
-          : '/groups/available-players',
-        ...(!isMockApi && {
-          params: { tournamentId, ...(groupId ? { groupId } : {}) },
-        }),
+        url: '/groups/available-players',
+        params: {
+          tournamentId,
+          ...(groupId ? { groupId } : {}),
+        },
       }),
-      transformResponse: (response) =>
-        isMockApi ? response.players || [] : response,
+      transformResponse: (response) => response,
       providesTags: (result, error, { tournamentId }) => [
         { type: 'Player', id: `AVAILABLE_${tournamentId}` },
       ],
     }),
 
     updateGroup: builder.mutation({
-      query: ({ id, ...patch }) => ({
+      query: ({ id, tournamentId, ...patch }) => ({
         url: `/groups/${id}`,
         method: 'PATCH',
         body: patch,
@@ -75,7 +78,7 @@ export const groupApi = baseApi.injectEndpoints({
     }),
 
     deleteGroup: builder.mutation({
-      query: ({ id }) => ({
+      query: ({ id, tournamentId }) => ({
         url: `/groups/${id}`,
         method: 'DELETE',
       }),
