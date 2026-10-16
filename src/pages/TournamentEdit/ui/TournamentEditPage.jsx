@@ -122,8 +122,7 @@ function TournamentEditPage() {
     return toast.promise(addPromise, {
       loading: t('editLoading'),
       success: t('editSuccess'),
-      error: (err) =>
-        `${t('error')}: ${err?.data?.error || err?.error || err?.message || ''}`,
+      error: (err) => `${t('error')}: ${err.data.message}`,
     });
   };
 

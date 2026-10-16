@@ -11,7 +11,7 @@ export const defaultValues = {
   format: 'single_elimination',
   bestOf: 3,
   isRated: false,
-  ratingCoefficient: 0,
+  ratingCoefficient: 0.00,
   status: 'Upcoming',
   ageCategory: '',
   ratingLimit: 0,
