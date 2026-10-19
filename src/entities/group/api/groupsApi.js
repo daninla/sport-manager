@@ -37,8 +37,8 @@ export const groupApi = createApi({
         { type: 'Player', id: `AVAILABLE_${tournamentId}` },
       ],
     }),
-    
-    createRandomGroup: builder.mutation({
+
+    createRandomGroups: builder.mutation({
       query: ({ tournamentId, name, capacity }) => ({
         url: '/groups/random',
         method: 'POST',
@@ -94,7 +94,7 @@ export const groupApi = createApi({
 export const {
   useGetGroupsByTournamentIdQuery,
   useCreateGroupMutation,
-  useCreateRandomGroupMutation,
+  useCreateRandomGroupsMutation,
   useGetAvailablePlayersForGroupQuery,
   useUpdateGroupMutation,
   useDeleteGroupMutation,

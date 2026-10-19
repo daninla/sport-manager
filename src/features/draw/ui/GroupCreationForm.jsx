@@ -11,7 +11,7 @@ import {
 
 import {
   useCreateGroupMutation,
-  useCreateRandomGroupMutation,
+  useCreateRandomGroupsMutation,
   useUpdateGroupMutation,
 } from '@/entities/group';
 import { addPlayersToGroupManually } from '../model/groupCreation';
@@ -34,9 +34,9 @@ export const GroupCreationForm = ({
   const [createGroup, { isLoading: isCreating, error: createError }] =
     useCreateGroupMutation();
   const [
-    createRandomGroup,
+    createRandomGroups,
     { isLoading: isCreatingRandom, error: randomError },
-  ] = useCreateRandomGroupMutation();
+  ] = useCreateRandomGroupsMutation();
   const [updateGroup, { isLoading: isUpdating, error: updateError }] =
     useUpdateGroupMutation();
 
@@ -58,7 +58,7 @@ export const GroupCreationForm = ({
   };
 
   const handleRandomCreate = () =>
-    createRandomGroup({
+    createRandomGroups({
       tournamentId: String(tournamentId),
       name: name.trim(),
       capacity: Number(capacity),
@@ -169,12 +169,6 @@ export const GroupCreationForm = ({
           Не удалось изменить группу. Попробуйте еще раз.
         </Alert>
       )}
-      {availablePlayers.length < Number(capacity) && (
-        <Alert severity="warning" sx={{ mb: 2 }}>
-          Для группы такого размера недостаточно свободных игроков.
-        </Alert>
-      )}
-
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
         <Button
           type="button"
@@ -184,11 +178,11 @@ export const GroupCreationForm = ({
             isCreating ||
             isCreatingRandom ||
             !name.trim() ||
-            availablePlayers.length < Number(capacity)
+            availablePlayers.length === 0
           }
           onClick={handleRandomCreate}
         >
-          Добавить случайно
+          Создать все группы
         </Button>
         {manualMode ? (
           <Button
