@@ -39,6 +39,7 @@ const GroupsPage = () => {
       groupId: editingGroup?.id,
     });
 
+
   if (isLoading) {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
@@ -61,10 +62,11 @@ const GroupsPage = () => {
     <Container
       maxWidth="lg"
       onClick={(event) => {
-        if (
-          editingGroup &&
-          !event.target.closest?.('[data-group-card], [data-group-editor]')
-        ) {
+        if (!editingGroup) return;
+
+        if (!event.currentTarget.contains(event.target)) return;
+
+        if (!event.target.closest?.('[data-group-card], [data-group-editor]')) {
           setEditingGroup(null);
         }
       }}
@@ -102,6 +104,8 @@ const GroupsPage = () => {
                     data-group-card
                   >
                     <GroupCard
+                      id={group.id}
+                      tournamentId={tournamentId}
                       title={group.name}
                       players={group.players || []}
                       onDoubleClick={() => setEditingGroup(group)}

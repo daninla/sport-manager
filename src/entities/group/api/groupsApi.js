@@ -39,10 +39,10 @@ export const groupApi = createApi({
     }),
 
     createRandomGroups: builder.mutation({
-      query: ({ tournamentId, name, capacity }) => ({
+      query: ({ tournamentId, capacity }) => ({
         url: '/groups/random',
         method: 'POST',
-        body: { tournamentId, name, capacity },
+        body: { tournamentId, capacity },
       }),
       invalidatesTags: (result, error, { tournamentId }) => [
         { type: 'Groups', id: tournamentId },
