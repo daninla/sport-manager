@@ -35,14 +35,20 @@ function Players() {
           setInputValue(newInputValue);
           setOpen(newInputValue.trim().length > 0);
         }}
-        options={Array.from(new Set(players.map(({ fullName }) => fullName)))}
+        options={Array.from(
+          new Set(
+            players.map(
+              ({ first_name, last_name }) => `${first_name} ${last_name}`,
+            ),
+          ),
+        )}
         sx={{
           maxWidth: '50%',
           margin: '1em 0',
         }}
         renderInput={(params) => <TextField {...params} label={t('search')} />}
       />
-      <PlayersTable inputValue={inputValue} players={players}/>
+      <PlayersTable inputValue={inputValue} players={players} />
     </Box>
   );
 }

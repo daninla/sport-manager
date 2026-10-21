@@ -15,31 +15,32 @@ import { useGetPlayersQuery } from '@/entities/player';
 function PlayersTable({ inputValue }) {
   const { t } = useTranslation('players');
   const columns = [
-    { id: 'fullName', label: t('columns.fullName'), minWidth: 200 },
+    {
+      id: 'full_name',
+      label: t('columns.fullName'),
+      minWidth: 200,
+      valueGetter: (value, row) => `${row.first_name} ${row.last_name}`,
+    },
     {
       id: 'age',
       label: t('columns.age'),
-      minWidth: 100,
-      format: (value) => value.toLocaleString('en-US'),
+      minWidth: 150,
+      valueGetter: (value, row) =>
+        row.birth_date
+          ? Math.floor(
+              (new Date() - new Date(row.birth_date)) /
+                (1000 * 60 * 60 * 24 * 365.25),
+            )
+          : null,
     },
     { id: 'city', label: t('columns.city'), minWidth: 200 },
-    { id: 'status', label: t('columns.status'), minWidth: 200 },
+    { id: 'rank_category', label: t('columns.rankCategory'), minWidth: 150 },
     {
-      id: 'ukrRate',
+      id: 'ukr_rating',
       label: t('columns.ukrRate'),
       minWidth: 150,
-      format: (value) => value.toLocaleString('en-US'),
     },
     { id: 'club', label: t('columns.club'), minWidth: 200 },
-    {
-      id: 'notes',
-      label: t('columns.notes'),
-      minWidth: 200,
-      format: (value) => {
-        const notesStr = value.join(', ');
-        return notesStr[0].toUpperCase() + notesStr.slice(1);
-      },
-    },
   ];
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -66,7 +67,9 @@ function PlayersTable({ inputValue }) {
 
   const filteredAndSortedPlayers = players
     .filter((row) =>
-      row.fullName.toLowerCase().includes(inputValue.toLowerCase()),
+      `${row.firstName} ${row.lastName}`
+        .toLowerCase()
+        .includes(inputValue.toLowerCase()),
     )
     .toSorted((a, b) => b.ukrRate - a.ukrRate);
 
@@ -93,20 +96,17 @@ function PlayersTable({ inputValue }) {
               .map((row) => (
                 <TableRow
                   hover
-                  role="checkbox"
-                  tabIndex={-1}
                   key={row.id}
                   sx={{ cursor: 'pointer', textDecoration: 'none' }}
-                  onClick={() => navigate(row.id)}
+                  onClick={() => navigate(`${row.id}`)}
                 >
-                  {columns.map((column) => {
-                    const value = row[column.id];
-                    return (
-                      <TableCell key={column.id} align={column.align}>
-                        {column.format ? column.format(value) : value}
-                      </TableCell>
-                    );
-                  })}
+                  {columns.map((column) => (
+                    <TableCell key={column.id} align={column.align}>
+                      {(column.valueGetter
+                        ? column.valueGetter(row[column.id], row)
+                        : row[column.id]) ?? t('noData')}
+                    </TableCell>
+                  ))}
                 </TableRow>
               ))}
           </TableBody>

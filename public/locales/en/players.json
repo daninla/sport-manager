@@ -2,6 +2,7 @@
   "loading": "Loading players...",
   "error": "Error loading players",
   "fetchError": "Fetch error",
+  "noData": "no data",
   "search": "Search",
   "addPlayer": "Add player",
   "editPlayer": "Edit player",
@@ -10,9 +11,8 @@
     "fullName": "Full name",
     "age": "Age",
     "city": "City",
-    "status": "Status",
+    "rankCategory": "Rank category",
     "ukrRate": "Ukrainian rate",
-    "worldRate": "World rate",
     "club": "Club",
     "notes": "Notes"
   }
