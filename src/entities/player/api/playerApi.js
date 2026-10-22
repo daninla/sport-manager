@@ -17,7 +17,7 @@ export const playerApi = baseApi.injectEndpoints({
     updatePlayer: builder.mutation({
       query: ({ id, ...data }) => ({
         url: `/players/${id}`,
-        method: 'PATCH',
+        method: 'PUT',
         body: data,
       }),
       invalidatesTags: ['Player'],

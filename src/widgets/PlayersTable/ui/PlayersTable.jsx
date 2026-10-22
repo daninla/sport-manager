@@ -9,6 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import dayjs from 'dayjs';
 
 import { useGetPlayersQuery } from '@/entities/player';
 
@@ -26,12 +27,7 @@ function PlayersTable({ inputValue }) {
       label: t('columns.age'),
       minWidth: 150,
       valueGetter: (value, row) =>
-        row.birth_date
-          ? Math.floor(
-              (new Date() - new Date(row.birth_date)) /
-                (1000 * 60 * 60 * 24 * 365.25),
-            )
-          : null,
+        row.birth_date ? dayjs().diff(dayjs(row.birth_date), 'year') : null,
     },
     { id: 'city', label: t('columns.city'), minWidth: 200 },
     { id: 'rank_category', label: t('columns.rankCategory'), minWidth: 150 },
@@ -104,7 +100,7 @@ function PlayersTable({ inputValue }) {
                     <TableCell key={column.id} align={column.align}>
                       {(column.valueGetter
                         ? column.valueGetter(row[column.id], row)
-                        : row[column.id]) ?? t('noData')}
+                        : row[column.id]) || t('noData')}
                     </TableCell>
                   ))}
                 </TableRow>

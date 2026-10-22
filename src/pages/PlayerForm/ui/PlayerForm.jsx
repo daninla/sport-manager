@@ -1,239 +1,218 @@
-// import { useParams } from 'react-router';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate, useParams } from 'react-router';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import CancelIcon from '@mui/icons-material/Cancel';
+import SaveIcon from '@mui/icons-material/Save';
 import {
   Box,
-  // Button,
-  MenuItem,
-  Select,
+  Button,
   Stack,
-  // TextField,
+  Step,
+  StepLabel,
+  Stepper,
   Typography,
 } from '@mui/material';
 // import { skipToken } from '@reduxjs/toolkit/query';
-import {
-  // FieldArray,
-  Form,
-  Formik,
-} from 'formik';
+import { Form, Formik } from 'formik';
+import { toFormikValidationSchema } from 'zod-formik-adapter';
 
-import { EMPTY_PLAYER, useCreatePlayerMutation } from '@/entities/player';
+import {
+  EMPTY_PLAYER,
+  useCreatePlayerMutation,
+  useUpdatePlayerMutation,
+} from '@/entities/player';
 import { playerFormSchema } from '../model/validationSchemas';
 
-import BaseButton from '@/shared/ui/BaseButton/BaseButton';
-import { PlayerDataField } from '@/widgets/PlayerDataField';
-
-import styles from '../styles/playerForm.module.css';
+import GameData from './steps/GameData';
+import PersonalData from './steps/PersonalData';
 
 function PlayerForm() {
-  const [createPlayer] = useCreatePlayerMutation();
+  const navigate = useNavigate();
+  const { t } = useTranslation('playerForm');
+
+  const [createPlayer, { isLoading: isPlayerCreating }] =
+    useCreatePlayerMutation();
+  // const [updatePlayer] = useUpdatePlayerMutation();
+
+  const [activeStep, setActiveStep] = useState(0);
 
   const onSubmitForm = async (values) => {
-    const player = {
-      ...values,
-      notes: values.notes.filter((value) => value),
-    };
-    await createPlayer(player).unwrap();
+    await createPlayer(values).unwrap();
+    navigate(-1);
   };
 
-  const renderForm = ({ values, handleChanges }) => (
-    <Box sx={{ margin: '1em auto' }}>
-      <BaseButton text="Back to players" address="/players/" />
+  const steps = t('steps', { returnObjects: true });
+
+  const renderForm = ({
+    values,
+    handleChange,
+    handleBlur,
+    setFieldValue,
+    errors,
+    touched,
+    validateForm,
+    setTouched,
+  }) => {
+    const handleNext = async () => {
+      const step1Fields = ['user_email', 'city', 'sex', 'birth_date'];
+      const currentErrors = await validateForm();
+
+      if (activeStep === 0) {
+        const hasStep1Errors = step1Fields.some(
+          (field) => currentErrors[field],
+        );
+
+        if (hasStep1Errors) {
+          const step1Touched = step1Fields.reduce((acc, field) => {
+            acc[field] = true;
+            return acc;
+          }, {});
+          setTouched({ ...touched, ...step1Touched });
+        } else {
+          setActiveStep((prev) => prev + 1);
+        }
+      }
+    };
+
+    const handleBack = () => {
+      setActiveStep((prev) => prev - 1);
+    };
+
+    return (
       <Form>
-        <Box
-          sx={{
-            margin: '1em auto',
-            width: 'fit-content',
-            border: '3px solid',
-            borderRadius: '2em',
-            padding: '1em 3em',
-          }}
-        >
-          <fieldset className={styles['data-fieldset']}>
-            <legend>Biography</legend>
-            <PlayerDataField labelText="Full name" inputId="fullName" />
-            <PlayerDataField labelText="Age" inputId="age" inputType="number" />
-            <Stack direction="row" sx={{ alignItems: 'center', gap: '0.5em' }}>
-              <label htmlFor="playerSexInp">
-                <Typography variant="h5">Sex:</Typography>
-              </label>
-              <Select
-                id="sex"
-                sx={{ maxHeight: '1.5em', width: '7em', textAlign: 'center' }}
-              >
-                <MenuItem value="male">male</MenuItem>
-                <MenuItem value="gemale">gemale</MenuItem>
-                <MenuItem value="else">else</MenuItem>
-              </Select>
-            </Stack>
-            <PlayerDataField labelText="City" inputId="city" />
-            <Stack direction="row" sx={{ alignItems: 'center', gap: '0.5em' }}>
-              <label htmlFor="playerPhotoInp">
-                <Typography variant="h5">Photo:</Typography>
-              </label>
-              <input
-                type="file"
-                accept="image/png, image/jpeg, image/jpg"
-                id="playerPhotoInp"
+        <Stack gap={1}>
+          <Stepper
+            activeStep={activeStep}
+            alternativeLabel
+            sx={{ width: '75%', margin: '0.5em auto' }}
+          >
+            {steps.map((label) => (
+              <Step key={label}>
+                <StepLabel>{label}</StepLabel>
+              </Step>
+            ))}
+          </Stepper>
+          <Stack>
+            {activeStep === 0 ? (
+              <PersonalData
+                values={values}
+                handleChange={handleChange}
+                handleBlur={handleBlur}
+                setFieldValue={setFieldValue}
+                errors={errors}
+                touched={touched}
+                t={t}
               />
-            </Stack>
-          </fieldset>
-          <fieldset className={styles['data-fieldset']}>
-            <legend>Game data</legend>
-            <PlayerDataField labelText="Status" inputId="status" />
-            <PlayerDataField
-              labelText="Rating"
-              inputId="ukrRate"
-              inputType="number"
-            />
-            <PlayerDataField labelText="Club" inputId="club" />
-          </fieldset>
-          <Stack direction='row' sx={{margin: '1em auto 0'}}>
-            <BaseButton type="reset" text='Reset' color='error'></BaseButton>
-            <BaseButton type="submit" text='Submit' color='success'></BaseButton>
+            ) : (
+              <GameData
+                values={values}
+                handleChange={handleChange}
+                handleBlur={handleBlur}
+                errors={errors}
+                touched={touched}
+                t={t}
+              />
+            )}
           </Stack>
-        </Box>
+          <Stack
+            spacing={2}
+            alignItems="center"
+            justifyContent="center"
+            direction={{ xs: 'column', md: 'row' }}
+            sx={{ margin: '0.5em' }}
+          >
+            {activeStep !== 0 ? (
+              <Button
+                type="button"
+                color="secondary"
+                variant="contained"
+                size="large"
+                startIcon={<ArrowBackIcon />}
+                onClick={handleBack}
+              >
+                {t('back')}
+              </Button>
+            ) : (
+              <Button
+                type="button"
+                color="warning"
+                variant="contained"
+                size="large"
+                startIcon={<ArrowBackIcon />}
+                onClick={() => navigate(-1)}
+              >
+                {t('return')}
+              </Button>
+            )}
+            {activeStep < steps.length - 1 ? (
+              <Button
+                key="next"
+                type="button"
+                color="secondary"
+                variant="contained"
+                size="large"
+                endIcon={<ArrowForwardIcon />}
+                onClick={handleNext}
+              >
+                {t('next')}
+              </Button>
+            ) : (
+              <Button
+                key="submit"
+                type="submit"
+                color="secondary"
+                variant="contained"
+                size="large"
+                startIcon={<SaveIcon />}
+                disabled={isPlayerCreating}
+              >
+                {t('save')}
+              </Button>
+            )}
+            <Button
+              type="reset"
+              color="error"
+              variant="contained"
+              size="large"
+              startIcon={<CancelIcon />}
+              onClick={() => setActiveStep(0)}
+            >
+              {t('reset')}
+            </Button>
+          </Stack>
+        </Stack>
       </Form>
-    </Box>
-  );
-
-  // const {
-  //   data: fetchedPlayer,
-  //   isLoading,
-  //   isError,
-  // } = useGetPlayerByIdQuery(id ?? skipToken);
-
-  // const player = fetchedPlayer ?? EMPTY_PLAYER;
-
-  // if (id && isLoading) return 'Loading...';
-  // if (id && isError) return 'Loading error!';
-
-  // const initialValues = {
-  //   ...player,
-  //   notes: player.notes.length > 0 ? [...player.notes, ''] : [''],
-  // };
-
-  // const renderForm = ({ values, handleChange }) => (
-  //   <Form>
-  //     <Box sx={{ padding: '1em' }}>
-  //       <label htmlFor="photoInput" className={styles['photo-input-label']}>
-  //         <input
-  //           type="file"
-  //           accept="image/*"
-  //           className={styles['photo-input']}
-  //           id="photoInput"
-  //         />
-  //         <Box
-  //           sx={{
-  //             border: '1px solid',
-  //             borderColor: 'secondary.main',
-  //             borderRadius: '3em',
-  //             width: '20em',
-  //             height: '30em',
-  //             transition: '0.2s',
-  //             cursor: 'pointer',
-  //             overflow: 'hidden',
-  //             display: 'flex',
-  //             '&:hover': { backgroundColor: '#dddddd' },
-  //           }}
-  //         >
-  //           {player.photo ? (
-  //             <img
-  //               src="#"
-  //               alt="player photo"
-  //               className={styles['player-photo']}
-  //             />
-  //           ) : (
-  //             <PersonIcon
-  //               sx={{
-  //                 width: '5em',
-  //                 height: '5em',
-  //                 margin: 'auto',
-  //               }}
-  //             />
-  //           )}
-  //         </Box>
-  //       </label>
-  //       <Box>
-  //         <PlayerDataField labelText="Full name" inputId="fullName" />
-  //         <PlayerDataField labelText="Age" inputId="age" />
-  //         <PlayerDataField labelText="City" inputId="city" />
-  //         <PlayerDataField labelText="Satus" inputId="status" />
-  //         <PlayerDataField labelText="Club" inputId="club" />
-  //         <PlayerDataField labelText="Ukrainian rate" inputId="ukrRate" />
-  //         <PlayerDataField labelText="World rate" inputId="worldRate" />
-  //         <Typography variant="h5">Notes:</Typography>
-  //         <FieldArray name="notes">
-  //           {({ push, remove }) => (
-  //             <ul className={styles['notes-list']}>
-  //               {values.notes.map((note, index) => {
-  //                 return (
-  //                   <li key={index}>
-  //                     <TextField
-  //                       name={`notes.${index}`}
-  //                       value={note}
-  //                       variant="standard"
-  //                       onChange={(e) => {
-  //                         handleChange(e);
-
-  //                         const nextNotes = [...values.notes];
-  //                         nextNotes[index] = e.target.value;
-
-  //                         if (!nextNotes.includes('')) {
-  //                           push('');
-  //                         } else {
-  //                           nextNotes.forEach((note, index) => {
-  //                             if (!note && index !== nextNotes.length - 1) {
-  //                               remove(index);
-  //                             }
-  //                           });
-  //                         }
-  //                       }}
-  //                       sx={{
-  //                         minWidth: '20em',
-  //                         '& .MuiInputBase-input': {
-  //                           fontSize: '1.3em',
-  //                         },
-  //                       }}
-  //                     />
-  //                   </li>
-  //                 );
-  //               })}
-  //             </ul>
-  //           )}
-  //         </FieldArray>
-  //       </Box>
-  //       <Stack
-  //         direction="row"
-  //         gap={10}
-  //         sx={{ margin: '1em 0', justifyContent: 'center' }}
-  //       >
-  //         <Button
-  //           variant="contained"
-  //           type="submit"
-  //           sx={{ fontSize: '1.1em', borderRadius: '0.5em' }}
-  //         >
-  //           Save
-  //         </Button>
-  //         <Button
-  //           variant="contained"
-  //           type="reset"
-  //           sx={{ fontSize: '1.1em', borderRadius: '0.5em' }}
-  //         >
-  //           Reset
-  //         </Button>
-  //       </Stack>
-  //     </Box>
-  //   </Form>
-  // );
+    );
+  };
 
   return (
-    <Formik
-      initialValues={EMPTY_PLAYER}
-      onSubmit={onSubmitForm}
-      validationSchema={playerFormSchema}
-      enableReinitialize
+    <Box
+      sx={{
+        margin: '2em auto',
+        padding: '2em',
+        width: '30%',
+        border: '3px solid #081627',
+        borderRadius: '2em',
+      }}
     >
-      {renderForm}
-    </Formik>
+      <Typography
+        variant="h1"
+        sx={{ fontSize: '2em', marginBottom: '0.5em' }}
+        align="center"
+      >
+        {t('addNewPlayer')}
+      </Typography>
+      <Formik
+        initialValues={EMPTY_PLAYER}
+        onSubmit={onSubmitForm}
+        validationSchema={toFormikValidationSchema(playerFormSchema)}
+        enableReinitialize
+      >
+        {renderForm}
+      </Formik>
+    </Box>
   );
 }
 

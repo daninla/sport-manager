@@ -1,0 +1,20 @@
+{
+  "addNewPlayer": "Add new player",
+  "steps": ["Personal data", "Game data"],
+  "email": "Email",
+  "city": "City, Country",
+  "sex": "Sex",
+  "male":"Male",
+  "female":"Female",
+  "birthDate": "Birth date",
+  "club": "Club",
+  "ukrRating": "Ukrainian rating",
+  "rankCategory": "Rank category",
+  "notes": "Notes",
+  "back": "Back",
+  "return": "Return",
+  "next": "Next",
+  "save": "Save",
+  "reset": "Reset"
+
+}

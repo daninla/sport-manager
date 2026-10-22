@@ -40,6 +40,7 @@ function App() {
         <Route path="/players" element={<Players />} />
         <Route path="/players/add" element={<PlayerForm />} />
         <Route path="/players/:id" element={<PlayerPage />} />
+        <Route path="/players/edit/:id" element={<PlayerForm />} />
       </Route>
     </Routes>
   );
