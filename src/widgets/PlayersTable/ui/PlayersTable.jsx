@@ -37,7 +37,7 @@ function PlayersTable({ inputValue }) {
     { id: 'rank_category', label: t('columns.rankCategory'), minWidth: 150 },
     {
       id: 'ukr_rating',
-      label: t('columns.ukrRate'),
+      label: t('columns.ukr_rating'),
       minWidth: 150,
     },
     { id: 'club', label: t('columns.club'), minWidth: 200 },
@@ -71,7 +71,7 @@ function PlayersTable({ inputValue }) {
         .toLowerCase()
         .includes(inputValue.toLowerCase()),
     )
-    .toSorted((a, b) => b.ukrRate - a.ukrRate);
+    .toSorted((a, b) => b.ukr_rating - a.ukr_rating);
 
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>

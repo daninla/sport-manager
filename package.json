@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --open",
-    "server": "json-server db.json --port 5000",
-    "start": "concurrently \"npm run server\" \"npm run dev\"",
+    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -40,7 +39,6 @@
     "@types/react-dom": "^19.2.3",
     "@uvarovag/eslint-config-feature-sliced-flat": "^1.0.11",
     "@vitejs/plugin-react": "^6.0.4",
-    "concurrently": "^10.0.4",
     "eslint": "^9.39.5",
     "eslint-plugin-boundaries": "^7.2.0",
     "eslint-plugin-import": "^2.32.0",
