@@ -19,6 +19,7 @@ function PersonalData({
   setFieldValue,
   errors,
   touched,
+  setFieldTouched,
   t,
 }) {
   return (
@@ -43,35 +44,40 @@ function PersonalData({
         helperText={touched.city && errors.city}
       />
       <Stack direction="row" gap={2} sx={{ '& > *': { width: '100%' } }}>
-        <FormControl>
+        <FormControl error={touched.sex && Boolean(errors.sex)}>
           <InputLabel>{t('sex')}</InputLabel>
           <Select
             label={t('sex')}
             value={values?.sex}
             onChange={handleChange}
+            onBlur={handleBlur}
             name="sex"
           >
             <MenuItem value={'male'}>{t('male')}</MenuItem>
             <MenuItem value={'female'}>{t('female')}</MenuItem>
           </Select>
+          {touched.sex && errors.sex && (
+            <FormHelperText>{errors.sex}</FormHelperText>
+          )}
         </FormControl>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
             label={t('birthDate')}
             format="DD.MM.YYYY"
-            name="birth_date"
             value={values?.birth_date ? dayjs(values.birth_date) : null}
-            onChange={(newValue) =>
+            onChange={(newValue) => {
               setFieldValue(
                 'birth_date',
                 newValue?.isValid() ? newValue.format('YYYY-MM-DD') : null,
-              )
-            }
+              );
+              setFieldTouched('birth_date', true, true);
+            }}
             slotProps={{
               textField: {
-                onBlur: handleBlur,
+                onBlur: () => setFieldTouched('birth_date', true),
                 error: touched.birth_date && Boolean(errors.birth_date),
                 helperText: touched.birth_date && errors.birth_date,
+                name: 'birth_date',
               },
             }}
           />

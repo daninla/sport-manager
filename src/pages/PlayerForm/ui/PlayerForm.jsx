@@ -54,6 +54,8 @@ function PlayerForm() {
     touched,
     validateForm,
     setTouched,
+    setFieldTouched,
+    isValid
   }) => {
     const handleNext = async () => {
       const step1Fields = ['user_email', 'city', 'sex', 'birth_date'];
@@ -104,6 +106,7 @@ function PlayerForm() {
                 errors={errors}
                 touched={touched}
                 t={t}
+                setFieldTouched={setFieldTouched}
               />
             ) : (
               <GameData
@@ -166,7 +169,7 @@ function PlayerForm() {
                 variant="contained"
                 size="large"
                 startIcon={<SaveIcon />}
-                disabled={isPlayerCreating}
+                disabled={isPlayerCreating || !isValid}
               >
                 {t('save')}
               </Button>
