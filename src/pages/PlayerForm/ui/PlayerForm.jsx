@@ -14,13 +14,14 @@ import {
   Stepper,
   Typography,
 } from '@mui/material';
-// import { skipToken } from '@reduxjs/toolkit/query';
+import { skipToken } from '@reduxjs/toolkit/query';
 import { Form, Formik } from 'formik';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
 
 import {
   EMPTY_PLAYER,
   useCreatePlayerMutation,
+  useGetPlayerByIdQuery,
   useUpdatePlayerMutation,
 } from '@/entities/player';
 import { playerFormSchema } from '../model/validationSchemas';
@@ -31,15 +32,32 @@ import PersonalData from './steps/PersonalData';
 function PlayerForm() {
   const navigate = useNavigate();
   const { t } = useTranslation('playerForm');
+  const { id } = useParams();
+
+  const {
+    data: fetchedPlayer,
+    isLoading,
+    isError,
+  } = useGetPlayerByIdQuery(id ?? skipToken);
 
   const [createPlayer, { isLoading: isPlayerCreating }] =
     useCreatePlayerMutation();
-  // const [updatePlayer] = useUpdatePlayerMutation();
+  const [updatePlayer, { isLoading: isPlayerUpdating }] =
+    useUpdatePlayerMutation();
 
   const [activeStep, setActiveStep] = useState(0);
 
+  if (id && isLoading) return 'Loading...';
+  if (id && isError) return 'Loading error!';
+
   const onSubmitForm = async (values) => {
-    await createPlayer(values).unwrap();
+    const improvedValues = {
+      ...values,
+      ukr_rating: parseFloat(values.ukr_rating),
+    };
+    id
+      ? await updatePlayer(improvedValues).unwrap()
+      : await createPlayer(improvedValues).unwrap();
     navigate(-1);
   };
 
@@ -55,7 +73,7 @@ function PlayerForm() {
     validateForm,
     setTouched,
     setFieldTouched,
-    isValid
+    isValid,
   }) => {
     const handleNext = async () => {
       const step1Fields = ['user_email', 'city', 'sex', 'birth_date'];
@@ -169,7 +187,7 @@ function PlayerForm() {
                 variant="contained"
                 size="large"
                 startIcon={<SaveIcon />}
-                disabled={isPlayerCreating || !isValid}
+                disabled={!isValid || isPlayerCreating || isPlayerUpdating}
               >
                 {t('save')}
               </Button>
@@ -208,7 +226,7 @@ function PlayerForm() {
         {t('addNewPlayer')}
       </Typography>
       <Formik
-        initialValues={EMPTY_PLAYER}
+        initialValues={fetchedPlayer ?? EMPTY_PLAYER}
         onSubmit={onSubmitForm}
         validationSchema={toFormikValidationSchema(playerFormSchema)}
         enableReinitialize

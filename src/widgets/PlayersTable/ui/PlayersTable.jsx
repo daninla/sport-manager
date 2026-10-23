@@ -94,7 +94,7 @@ function PlayersTable({ inputValue }) {
                   hover
                   key={row.id}
                   sx={{ cursor: 'pointer', textDecoration: 'none' }}
-                  onClick={() => navigate(`${row.id}`)}
+                  onClick={() => navigate(`${row.id}/edit`)} // CHECKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
                 >
                   {columns.map((column) => (
                     <TableCell key={column.id} align={column.align}>
