@@ -1,0 +1,46 @@
+import { useEffect, useState } from 'react';
+
+export const useMatchTimer = (startedAt, status, duration) => {
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+
+  const isActive = status === 'Ongoing';
+  const isFinished = status === 'Finished';
+
+  useEffect(() => {
+    if (isFinished) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setElapsedSeconds(Number(duration) || 0);
+      return;
+    }
+
+    if (isActive && startedAt) {
+      const calculateElapsed = () => {
+        const startMs = new Date(startedAt).getTime();
+        if (isNaN(startMs)) return;
+
+        const diffInSeconds = Math.max(
+          0,
+          Math.floor((Date.now() - startMs) / 1000),
+        );
+        setElapsedSeconds(diffInSeconds);
+      };
+
+      calculateElapsed();
+      const interval = setInterval(calculateElapsed, 1000);
+      return () => clearInterval(interval);
+    }
+
+    setElapsedSeconds(0);
+  }, [startedAt, status, duration, isActive, isFinished]);
+
+  const safeSeconds = Number.isNaN(elapsedSeconds) ? 0 : elapsedSeconds;
+  const hours = Math.floor(safeSeconds / 3600);
+  const minutes = Math.floor((safeSeconds % 3600) / 60);
+  const seconds = safeSeconds % 60;
+
+  const pad = (num) => String(num).padStart(2, '0');
+
+  return hours > 0
+    ? `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
+    : `${pad(minutes)}:${pad(seconds)}`;
+};

@@ -1,0 +1,24 @@
+{
+  "status": {
+    "Upcoming": "Заплановано",
+    "Ongoing": "Триває",
+    "Finished": "Завершено",
+    "Completed": "Завершено"
+  },
+  "scoreBySets": "Рахунок за сетами",
+  "completedSets": "Завершені сети",
+  "currentSet": "Поточний сет",
+  "setNumber": "Сет {{number}}",
+  "table": {
+    "match": "Матч",
+    "tour": "Тур",
+    "start": "Початок",
+    "player1": "Гравець 1",
+    "score": "Рахунок",
+    "player2": "Гравець 2",
+    "duration": "Тривалість",
+    "startMatch": "Почати",
+    "finishMatch": "Завершити",
+    "undo": "Скасувати дію"
+  }
+}

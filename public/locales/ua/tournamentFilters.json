@@ -1,0 +1,16 @@
+{
+  "status": "Статус турніру",
+  "format": "Формат сітки",
+  "statuses": {
+    "Upcoming": "Майбутні",
+    "Ongoing": "Поточні",
+    "Completed": "Завершені"
+  },
+  "formats": {
+    "Single Elimination": "Олімпійська система",
+    "Double Elimination": "Система з подвійним вибуванням",
+    "Swiss System": "Швейцарська система",
+    "Round Robin": "Кругова система",
+    "Mixed System": "Змішана система"
+  }
+}

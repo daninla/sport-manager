@@ -1,0 +1,16 @@
+{
+  "status": "Tournament Status",
+  "format": "Bracket Format",
+  "statuses": {
+    "Upcoming": "Upcoming",
+    "Ongoing": "Ongoing",
+    "Completed": "Completed"
+  },
+  "formats": {
+    "Single Elimination": "Single Elimination",
+    "Double Elimination": "Double Elimination",
+    "Swiss System": "Swiss System",
+    "Round Robin": "Round Robin",
+    "Mixed System": "Mixed System"
+  }
+}

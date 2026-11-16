@@ -1,0 +1,20 @@
+{
+  "loading": "Loading tournaments...",
+  "error": "Error loading tournaments",
+  "matchCount": "There are {{count}} tournaments matching your filter",
+  "addTournament": "Add new Tournament",
+  "delete": "Delete",
+  "deleting": "Deleting...",
+  "edit": "Edit",
+  "match": "Match {{number}}",
+  "versus": "vs",
+  "live": "LIVE",
+  "formats": {
+    "Single Elimination": "Single Elimination",
+    "Double Elimination": "Double Elimination",
+    "Swiss System": "Swiss System",
+    "Round Robin": "Round Robin",
+    "Mixed System": "Mixed System"
+  },
+  "bestOf": "Best of {{count}}"
+}

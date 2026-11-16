@@ -1,0 +1,24 @@
+{
+  "status": {
+    "Upcoming": "Upcoming",
+    "Ongoing": "Ongoing",
+    "Finished": "Finished",
+    "Completed": "Completed"
+  },
+  "scoreBySets": "Score by sets",
+  "completedSets": "Completed sets",
+  "currentSet": "Current set",
+  "setNumber": "Set {{number}}",
+  "table": {
+    "match": "Match",
+    "tour": "Round",
+    "start": "Start",
+    "player1": "Player 1",
+    "score": "Score",
+    "player2": "Player 2",
+    "duration": "Duration",
+    "startMatch": "Start",
+    "finishMatch": "Finish",
+    "undo": "Undo"
+  }
+}
