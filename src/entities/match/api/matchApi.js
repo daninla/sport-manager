@@ -1,5 +1,4 @@
 import { baseApi } from '@/shared/api/baseApi';
-import { isMockApi } from '@/shared/config/apiConfig';
 
 export const matchApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -22,14 +21,10 @@ export const matchApi = baseApi.injectEndpoints({
       invalidatesTags: ['Tournament'],
     }),
     getMatchesByTournament: builder.query({
-      query: (tournamentId) =>
-        isMockApi ? '/matches' : `/matches?tournamentId=${tournamentId}`,
-      transformResponse: (matches, _, tournamentId) =>
-        isMockApi
-          ? matches.filter(
-              (match) => String(match.tournamentId) === String(tournamentId),
-            )
-          : matches,
+      query: (tournamentId) => ({
+        url: '/matches',
+        params: { tournamentId },
+      }),
       providesTags: (result, error, tournamentId) =>
         result
           ? [

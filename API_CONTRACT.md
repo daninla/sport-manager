@@ -1,8 +1,6 @@
 # Frontend API Contract
 
-The frontend targets `http://localhost:5000` by default for the current
-json-server mock. Set `VITE_API_BASE_URL=http://localhost:5001/api` to point it
-at the Express API.
+The frontend targets the Express API at `http://localhost:5000/api` by default.
 
 IDs are opaque strings at the HTTP boundary. The backend may store integer IDs
 in PostgreSQL, but it should serialize them consistently as strings. The client
@@ -170,10 +168,5 @@ progression.
 
 ## Implementation Status
 
-The client and `db.json` are prepared for these read shapes. The Express server
-currently implements only group routes, and those routes do not yet return
-expanded players or implement all documented commands. `json-server` can serve
-the static nested fixtures, but it does not implement random group assignment,
-available-player filtering, live-score commands, or playoff progression. Those
-workflows require the corresponding Express endpoints before switching the
-frontend to the Express base URL.
+The Express server currently implements group routes only. Other documented
+workflows require their corresponding Express endpoints.
