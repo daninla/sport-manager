@@ -47,9 +47,9 @@ function TournamentEditPage() {
     ? dayjs(tournament.startsAt).tz('Europe/Kyiv')
     : null;
 
-  const tournamentType = tournament.competitionType?.toLowerCase();
+  const competitionType = tournament.competitionType?.toLowerCase();
 
-  const tournamentFormat = tournament.bracketFormat
+  const bracketFormat = tournament.bracketFormat
     ?.toLowerCase()
     .replaceAll(' ', '_');
 
@@ -58,8 +58,8 @@ function TournamentEditPage() {
     ...tournament,
     date: tournamentStart?.format('YYYY-MM-DD') ?? defaultValues.date,
     timeStart: tournamentStart?.format('HH:mm') ?? defaultValues.timeStart,
-    tournamentType: tournamentType ?? defaultValues.tournamentType,
-    format: tournamentFormat ?? defaultValues.format,
+    competitionType: competitionType ?? defaultValues.competitionType,
+    bracketFormat: bracketFormat ?? defaultValues.bracketFormat,
   };
 
   const [updateTournament, { isLoading: isTournamentUpdating }] =

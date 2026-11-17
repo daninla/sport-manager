@@ -28,8 +28,8 @@ function ParametersStep({
             id="competition-type"
             labelId="competition-type-label"
             label={t('competitionType')}
-            name="tournamentType"
-            value={values.tournamentType}
+            name="competitionType"
+            value={values.competitionType}
             onChange={handleChange}
           >
             {competitionTypes.map((type) => (
@@ -45,8 +45,8 @@ function ParametersStep({
             id="format"
             labelId="format-label"
             label={t('format')}
-            name="format"
-            value={values.format}
+            name="bracketFormat"
+            value={values.bracketFormat}
             onChange={handleChange}
           >
             {tournamentFormats.map((format) => (
